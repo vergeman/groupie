@@ -2,10 +2,28 @@ source 'http://rubygems.org'
 
 gem 'rails', '3.0.1'
 
+gem 'rake', '0.8.7' #fix rake exrror w/ 1.9.2 and rake 0.9.0 - use 'bundle exec rake db:migrate'
+
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'sqlite3-ruby', :require => 'sqlite3'
+
+gem 'will_paginate', '3.0.pre2'
+
+group :development do
+  gem 'rspec-rails', '2.0.1'
+  gem 'faker', '0.3.1'
+  gem 'annotate-models', '1.0.4' #for mode schema notes
+end
+
+group :test do
+  gem 'rspec-rails', '2.0.1'
+  gem 'factory_girl_rails', '1.0'
+  gem 'webrat'
+end
+
+
 
 # Use unicorn as the web server
 # gem 'unicorn'
