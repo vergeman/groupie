@@ -1,0 +1,2 @@
+#Groupie
+A Ruby on Rails project to help groups plan a night out.
