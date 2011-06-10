@@ -4,7 +4,7 @@ describe PagesController do
 render_views
 
   before (:each) do
-    @base_title = "Groupie"
+    @base_title = "Get Together"
   end
 
 
@@ -63,6 +63,25 @@ render_views
     #correct title
     it "should have title 'contact'" do
       response.should have_selector('title', :content => "#{@base_title} | Contact")
+    end
+  end
+
+
+
+  describe "GET 'howitworks'" do
+
+    before (:each) do
+      get :how
+    end
+
+    #contact page exists
+    it "should be successful" do
+      response.should be_success
+    end
+
+    #correct title
+    it "should have title 'contact'" do
+      response.should have_selector('title', :content => "#{@base_title} | How it works")
     end
   end
 

@@ -4,7 +4,8 @@ module ApplicationHelper
 #returns title
 
   def title
-    base_title = "Groupie"
+    # @title defined in controller
+    base_title = "Get Together"
   
     if @title.nil?
       base_title
