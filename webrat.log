@@ -23,3 +23,7 @@ REQUESTING PAGE: GET / with {} and HTTP headers {}
 REQUESTING PAGE: GET /howitworks with {} and HTTP headers {"HTTP_REFERER"=>"/"}
 REQUESTING PAGE: GET /about with {} and HTTP headers {"HTTP_REFERER"=>"/howitworks"}
 REQUESTING PAGE: GET /contact with {} and HTTP headers {"HTTP_REFERER"=>"/about"}
+REQUESTING PAGE: GET / with {} and HTTP headers {}
+REQUESTING PAGE: GET /howitworks with {} and HTTP headers {"HTTP_REFERER"=>"/"}
+REQUESTING PAGE: GET /about with {} and HTTP headers {"HTTP_REFERER"=>"/howitworks"}
+REQUESTING PAGE: GET /contact with {} and HTTP headers {"HTTP_REFERER"=>"/about"}

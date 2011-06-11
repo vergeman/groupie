@@ -11,6 +11,8 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 
 gem 'will_paginate', '3.0.pre2'
 
+gem 'devise'
+
 group :development do
   gem 'rspec-rails', '2.0.1'
   gem 'faker', '0.3.1'
