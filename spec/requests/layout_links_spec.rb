@@ -26,4 +26,19 @@ describe "LayoutLinks" do
     response.should have_selector('title', :content => "How it works")
   end
 
+  #Footer link tests
+  it "should have the right links on the footer" do 
+    visit root_path
+
+    click_link "How it works"
+    response.should have_selector('title', :content => "How it works")
+
+    click_link "About"
+    response.should have_selector('title', :content => "About")
+
+    click_link "Contact"
+    response.should have_selector('title', :content => "Contact")
+
+  end
+
 end

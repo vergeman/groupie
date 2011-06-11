@@ -1,5 +1,8 @@
 .container {
-
+    margin-left: auto;
+    margin-right: auto;
+    width: 950px; /*span-24*/
+    margin: 0 auto;
 }
 
 /*body tag */
@@ -11,17 +14,59 @@ body {
 /*navigation tag */
 nav {
 
+
 }
+
+nav ul li {
+
+    display: inline;
+    list-style: none;
+
+}
+
+
 
 /*header tag*/
 header {
+    padding-top: 2em;
+
+
+    border-style: solid; 
+    border-width: 1px;
 
 }
+
+header h1 {
+    font-family: rockwell, arial, helvetica;
+    
+}
+
+header nav {
+    text-align: right;
+    float: right;
+    
+
+
+
+}
+
+/*section tag*/
+section {
+
+
+    border-style: solid; 
+    border-width: 1px;
+}
+
 
 
 /*footer tag*/
 
 footer {
+    text-align: center;
+
+    border-style: solid; 
+    border-width: 1px;
 
 
 }
