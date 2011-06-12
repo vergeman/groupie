@@ -76,3 +76,27 @@ footer nav {
 
 }
 
+
+
+/*error & flash */
+#error_explanation {
+    color: #c00;
+    
+}
+
+#error_explanation p {
+
+}
+
+#error_explanation ul li {
+
+}
+
+.field_with_errors {
+
+}
+
+.field_with_errors label {
+
+}
+
