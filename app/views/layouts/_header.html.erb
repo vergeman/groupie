@@ -1,16 +1,29 @@
 <header>
   
 
+
   <nav class="large">
+    <% if user_signed_in? %>
+    Hi, <%= current_user.username %>
+    <% end %>
     <ul>
       <!--
       <li><%= link_to "Home", home_path%></li>
       -->
-      <li><%= link_to "Sign in", new_user_session_path %></li>
+      <% unless user_signed_in? %>
+      <li><%= link_to "Login", new_user_session_path %></li>
+      <% end %>
+
+      <% if user_signed_in? %>
+
+      <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+      <li><%= link_to "Sign out", destroy_user_session_path %></li>
+      <% end %>
     </ul>
+
   </nav>
 
 <!-- banner -->
-  <h1><%= get_project_name %></h1>
+  <h1><%= link_to get_project_name, root_path %></h1>
 
 </header>
