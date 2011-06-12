@@ -40,5 +40,14 @@ describe "LayoutLinks" do
     response.should have_selector('title', :content => "Contact")
 
   end
+  
+  #Header link tests
+  it "should have a sign_in link on the header" do
+    visit root_path
+
+    click_link "Sign in"
+    response.shoudl have_selector('title', :content => "Sign in")
+    
+  end
 
 end
