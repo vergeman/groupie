@@ -1,5 +1,7 @@
 Groupie::Application.routes.draw do
 
+  devise_for :users
+
   match '/home', :to => 'pages#home'
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
