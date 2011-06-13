@@ -12,4 +12,8 @@
 #
 
 class Participant < ActiveRecord::Base
+  attr_accessible #want no attributes to be accessible to mass assignment
+
+  belongs_to :user
+  belongs_to :event
 end
