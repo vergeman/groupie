@@ -30,6 +30,10 @@ ActiveRecord::Schema.define(:version => 20110613023256) do
     t.integer  "event_id"
   end
 
+  add_index "groups", ["event_id"], :name => "index_groups_on_event_id"
+  add_index "groups", ["user_id", "event_id"], :name => "index_groups_on_user_id_and_event_id", :unique => true
+  add_index "groups", ["user_id"], :name => "index_groups_on_user_id"
+
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
     t.string   "encrypted_password",     :limit => 128, :default => "", :null => false
