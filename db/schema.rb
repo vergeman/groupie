@@ -13,12 +13,16 @@
 ActiveRecord::Schema.define(:version => 20110613220748) do
 
   create_table "events", :force => true do |t|
+    t.integer  "admin_id"
     t.string   "title"
     t.string   "description"
     t.datetime "event_date"
+    t.integer  "starting_votes"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "events", ["admin_id"], :name => "index_events_on_admin_id"
 
   create_table "participants", :force => true do |t|
     t.integer  "user_id"
