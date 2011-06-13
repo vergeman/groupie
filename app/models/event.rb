@@ -13,4 +13,9 @@
 #
 
 class Event < ActiveRecord::Base
+
+  attr_accessible :title, :description, :event_date
+
+  has_many :groups
+  has_many :events, :through => :groups
 end
