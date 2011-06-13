@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110613002301
+# Schema version: 20110613023256
 #
 # Table name: events
 #
