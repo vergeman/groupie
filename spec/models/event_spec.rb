@@ -7,7 +7,12 @@ describe Event do
   end
 
 
-  describe "participants" do
+
+
+
+
+
+  describe "participants associations" do
 
     it "should have a participants method" do
       @event.should respond_to(:participants)

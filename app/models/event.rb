@@ -23,4 +23,6 @@ class Event < ActiveRecord::Base
   validates :admin_id, :presence => true;
 #will probbaly need an association w/ admin_id as foreign_key for users
 
+  #ordering of event by date
+  default_scope :order => 'events.event_date DESC'
 end

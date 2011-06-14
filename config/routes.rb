@@ -39,7 +39,7 @@ Groupie::Application.routes.draw do
 
   #order matters w/ priority - so it won't treat "sign_in, etc" as a users resource
   #will have to toggle off if wanting different critieria (i.e. username)
-  resources :users
+  resources :users, :only => [:show]
 
   #--generated--
   #get "pages/home"

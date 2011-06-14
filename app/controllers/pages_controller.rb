@@ -1,7 +1,12 @@
 class PagesController < ApplicationController
+
   def home
     @title = 'Home'
+    if user_signed_in?
+      redirect_to user_path(:id => current_user)
+    end
   end
+
 
   def about
     @title = 'About'
