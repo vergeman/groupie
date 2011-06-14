@@ -20,5 +20,7 @@ class Event < ActiveRecord::Base
   has_many :participants
   has_many :users, :through => :participants
 
+  validates :admin_id, :presence => true;
 #will probbaly need an association w/ admin_id as foreign_key for users
+
 end

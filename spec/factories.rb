@@ -15,6 +15,7 @@ end
 
 Factory.define :event do |event|
   event.title "Test Drink Night"
+  event.admin_id 1
   event.description "Lets get crunked (test)"
   event.event_date Time.now + 7.days
   event.starting_votes 20
