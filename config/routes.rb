@@ -1,9 +1,5 @@
 Groupie::Application.routes.draw do
 
-  get "users/show"
-
-
-
   devise_for :users 
 
 #probably want to change paths/action as last step
