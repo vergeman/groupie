@@ -19,4 +19,6 @@ class Event < ActiveRecord::Base
 
   has_many :participants
   has_many :users, :through => :participants
+
+#will probbaly need an association w/ admin_id as foreign_key for users
 end

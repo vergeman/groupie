@@ -12,8 +12,10 @@
 #
 
 class Participant < ActiveRecord::Base
-  attr_accessible #want no attributes to be accessible to mass assignment
+  attr_accessible :user_id, :event_id, :votes_remaining
+      #seems we need to keep foreign keys accessible for associations to work
 
   belongs_to :user
   belongs_to :event
+
 end

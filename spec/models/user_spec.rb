@@ -120,4 +120,19 @@ describe User do
   end
 
 
+
+#association Participant check
+  describe "participants" do
+    
+    before(:each) do
+      @user = User.create!(@attr)
+    end
+
+
+    it "should have a participants method" do
+      @user.should respond_to(:participants)
+    end
+
+
+  end
 end
