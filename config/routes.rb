@@ -2,7 +2,37 @@ Groupie::Application.routes.draw do
 
   get "users/show"
 
-  devise_for :users
+
+
+  devise_for :users 
+
+#probably want to change paths/action as last step
+#======
+#change devise 'action' names
+
+#path_names will change the 'action' name (but not root path)
+
+  #devise_for :users , :path_names => {:sign_up => "register", 
+  #:sign_in => "login", :sign_out => "logout" }
+#========
+
+
+#=====
+#change devise scoping
+
+  #https://github.com/plataformatec/devise/wiki/How-To:-Change-the-default-sign_in-and-sign_out-routes
+
+  #these revise the scope (change from default users)
+  #devise_scope :user do
+  #  match '/login', :to => 'devise/sessions#new', :as => :new_user_session
+  #  match '/logout', :to => 'devise/sessions#destroy', :as => :destroy_user_session
+  #end
+
+#=====
+
+
+  #not best REST, but allows for username path
+  #match '/:id', :to => 'users#show', :as => :user
 
   match '/home', :to => 'pages#home'
   match '/about', :to => 'pages#about'
@@ -11,7 +41,9 @@ Groupie::Application.routes.draw do
 
   root :to => 'pages#home'
 
-
+  #order matters w/ priority - so it won't treat "sign_in, etc" as a users resource
+  #will have to toggle off if wanting different critieria (i.e. username)
+  resources :users
 
   #--generated--
   #get "pages/home"
