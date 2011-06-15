@@ -15,7 +15,7 @@
 
 class Event < ActiveRecord::Base
 
-  attr_accessible :title, :description, :event_date, :starting_votes
+  attr_accessible :admin_id, :title, :description, :event_date, :starting_votes
 
   has_many :participants
   has_many :users, :through => :participants
@@ -25,4 +25,6 @@ class Event < ActiveRecord::Base
 
   #ordering of event by date
   default_scope :order => 'events.event_date DESC'
+
+
 end

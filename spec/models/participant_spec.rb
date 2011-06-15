@@ -67,9 +67,9 @@ describe Participant do
       @user.participants.new(@attr.merge(:event_id => "")).should_not be_valid
     end
 
-    it "should require a nonblank votes_remaining" do
-      @user.participants.new(@attr.merge(:votes_remaining => "")).should_not be_valid
-    end
+    #it "should require a nonblank votes_remaining" do
+    #  @user.participants.new(@attr.merge(:votes_remaining => "")).should_not be_valid
+    #end
 
 
   end

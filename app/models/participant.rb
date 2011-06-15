@@ -20,6 +20,6 @@ class Participant < ActiveRecord::Base
 
   validates :user_id, :presence => true
   validates :event_id, :presence => true
-  validates :votes_remaining, :presence => true
+  #validates :votes_remaining, :presence => true
 
 end
