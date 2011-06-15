@@ -22,6 +22,11 @@ describe Event do
       Event.new(@attr).should_not be_valid
     end
 
+    it "should not have a blank title" do
+      @attr = { :title => "" }
+      Event.new(@attr).should_not be_valid
+    end
+
   end
 
   describe "user creation of event" do

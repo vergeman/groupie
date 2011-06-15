@@ -1,0 +1,28 @@
+<!-- events partial -->
+<%= form_for(@event) do |e| %>
+
+<div class = "field">
+  <%= e.label :title %> <br />
+  <%= e.text_field :title %>
+</div>
+
+<div class = "field">
+  <%= e.label :description %> <br />
+  <%= e.text_field :description %> <br />
+</div>
+
+<div class ="field">
+  <%= e.label :date %> <br />
+  <%= e.text_field :event_date %>
+</div>
+
+<div class ="field">
+  <%= e.label :starting_votes, "Initial Votes" %> <br />
+  <%= e.text_field :starting_votes %>
+</div>
+
+<div class = "actions">
+  <%= e.submit "Sign up" %>
+</div>
+
+<% end %>
