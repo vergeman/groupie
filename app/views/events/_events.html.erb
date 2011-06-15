@@ -1,6 +1,7 @@
 <!-- events partial -->
 <%= form_for(@event) do |e| %>
 
+<%= render 'shared/error_messages', :object => e.object %>
 <div class = "field">
   <%= e.label :title %> <br />
   <%= e.text_field :title %>
