@@ -39,20 +39,37 @@ describe EventsController do
     describe 'success' do
 
       before (:each) do
-        @event = Factory(:event)
-      end
-      
-      it "should have a valid factory generated variable" do
-        @event.should be_valid
+        @user = Factory(:user)
+        sign_in @user
+
+        @attr = { :title => "test",
+          :description => "ho",
+          :event_date => Time.now, 
+          :starting_votes => 20 }
+
       end
 
-      it "should create a user" do
-        
+
+      it "should have a signed in user" do
+        controller.user_signed_in?.should be_true
+      end
+      
+
+      it "should create an event" do
         lambda do
-          post :create, :event => @event
+          # @event = Factory.build(:event) #default is create
+          post :create, :event => @attr
         end.should change(Event, :count).by(1)
         
       end
+
+
+      it "should create a participant" do
+        lambda do
+          post :create, :event => @attr
+        end.should change(Participant, :count).by(1)
+      end
+
 
     end
 
