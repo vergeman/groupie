@@ -4,6 +4,13 @@ describe EventsController do
   render_views
 
   describe "GET 'new'" do
+
+    it "should have the right title" do
+      get :new
+      response.should have_selector("title", :content => "Create Event")
+    end
+
+
     #form tests
     it "should have a title field" do
       get :new
@@ -30,9 +37,42 @@ describe EventsController do
 
   describe "POST 'create'" do
 
-
-
     describe 'failure' do
+
+      before (:each) do
+        @user = Factory(:user)
+        sign_in @user
+         
+        @attr = { :title => "",
+          :description => "",
+          :event_date => "",
+          :starting_votes => "" }
+      end
+
+      it "should render the 'new' page" do
+        post :create, :event => @attr
+        response.should render_template('new')
+      end
+
+
+      it "should not create an event in the db" do
+
+        lambda do
+          post :create, :event => @attr
+        end.should change(Event, :count).by(0)
+
+      end
+
+
+      it "should not create an associated participant in the db" do
+
+        lambda do
+          post :create, :event => @attr
+        end.should change(Participant, :count).by(0)
+
+      end
+
+
     end
 
 
@@ -46,7 +86,6 @@ describe EventsController do
           :description => "ho",
           :event_date => Time.now, 
           :starting_votes => 20 }
-
       end
 
 
@@ -55,36 +94,44 @@ describe EventsController do
       end
       
 
-      it "should create an event" do
+      it "should create an event in the db" do
         lambda do
-          # @event = Factory.build(:event) #default is create
           post :create, :event => @attr
         end.should change(Event, :count).by(1)
         
       end
 
 
-      it "should create a participant" do
+      it "should create an associated participant in the db" do
         lambda do
           post :create, :event => @attr
         end.should change(Participant, :count).by(1)
       end
 
 
+      it "should redirect to 'somewhere'" do
+        #post :create, :event => @attr
+        #response.should redirect_to(events_path)
+        #FROM CREATE ACTION --> ADD PLACES
+        pending "successful redirection #{__FILE__}"
+      end
+
+
     end
 
 
-
-
-
-
   end
 
 
-
+ 
   describe "DELETE 'destroy'" do
 
+    pending "add 'DELETE destroy' to #{__FILE__}"
 
   end
+
+
+
+
 
 end

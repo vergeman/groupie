@@ -24,6 +24,7 @@ def create
 end
 
 
+#we will define this once the view for events are put in place
 def destroy
 end
 

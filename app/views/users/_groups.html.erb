@@ -1,10 +1,10 @@
-<nav class = "groups">
-  <ul>
+<nav class = "nav groups">
+  <ul class = "groups">
     <li><%= link_to "Create", new_event_path %></li>
 
     <% unless @user.participants.empty? %>
     
-    <li> <%= link_to "Get Togethers", '#' %> </li>
+    <li> <%= link_to "Get Togethers", user_path %> </li>
 
     <ul class = "events">
 

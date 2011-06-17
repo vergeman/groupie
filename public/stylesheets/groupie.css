@@ -44,9 +44,7 @@ header h1 {
 header nav {
     text-align: right;
     float: right;
-    
-
-
+   
 
 }
 
@@ -58,7 +56,11 @@ section {
     border-width: 1px;
 }
 
+section ul li {
+    list-style-type: none;
+    display: block;
 
+}
 
 /*footer tag*/
 
