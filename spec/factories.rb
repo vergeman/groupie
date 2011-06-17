@@ -25,3 +25,8 @@ Factory.define :place do |place|
   place.name "Test locale"
   place.description "a test location used for factory girl test"
 end
+
+Factory.define :schedule do |schedule|
+  schedule.event_id 1
+  schedule.place_id 1
+end

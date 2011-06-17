@@ -17,6 +17,9 @@ class Place < ActiveRecord::Base
   has_many :votes
   has_many :participants, :through => :votes
 
+  has_many :schedules
+  has_many :events, :through => :schedules
+
   validates :name, :presence => true
 
   default_scope :order => 'places.created_at DESC'

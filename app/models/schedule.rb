@@ -5,5 +5,8 @@ class Schedule < ActiveRecord::Base
   belongs_to :place
   belongs_to :event
 
+  validates :place_id, :presence => true
+  validates :event_id, :presence => true
+
 
 end
