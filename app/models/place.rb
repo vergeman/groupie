@@ -14,6 +14,9 @@ class Place < ActiveRecord::Base
 
   attr_accessible :name, :description
 
+  has_many :votes
+  has_many :participants, :through => :votes
+
   validates :name, :presence => true
 
   default_scope :order => 'places.created_at DESC'

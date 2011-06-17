@@ -12,4 +12,13 @@
 #
 
 class Vote < ActiveRecord::Base
+
+  attr_accessible :participant_id, :place_id, :vote
+
+  belongs_to :participant
+  belongs_to :place
+
+  validates :participant_id, :presence => true;
+  validates :place_id, :presence => true;
+
 end

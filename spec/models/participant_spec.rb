@@ -52,6 +52,20 @@ describe Participant do
   end
 
 
+  describe "place associations" do
+
+    it "should have a place association" do
+      @participant.should respond_to(:places)
+    end
+
+    it "should have a votes association" do
+      @participant.should respond_to(:votes)
+    end
+
+  end
+
+
+
   describe "validations" do
     
     before(:each) do

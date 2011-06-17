@@ -18,6 +18,9 @@ class Participant < ActiveRecord::Base
   belongs_to :user
   belongs_to :event
 
+  has_many :votes
+  has_many :places, :through => :votes
+
   validates :user_id, :presence => true
   validates :event_id, :presence => true
   #validates :votes_remaining, :presence => true
