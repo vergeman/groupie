@@ -7,8 +7,9 @@ class PlacesController < ApplicationController
   def create
     @user = User.find(current_user.id)
     @participant = Participant.find_by_user_id(@user.id)
-
-    @place = Place.create(params[:place])
+    @event
+ 
+    # @place = @participant.places.create(params[:place])
 
     if @place.save
       flash[:success] = "Place created."
@@ -17,6 +18,10 @@ class PlacesController < ApplicationController
       render 'places/new'
     end
       
+  end
+
+
+  def show
   end
 
   def destroy
