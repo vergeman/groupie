@@ -47,8 +47,10 @@ Groupie::Application.routes.draw do
   #  end
   #end
 
-
   resources :events, :only => [:new, :create, :destroy]
+
+  resources :places, :only => [:new, :create, :destroy]
+
   #--generated--
   #get "pages/home"
   #get "pages/about"

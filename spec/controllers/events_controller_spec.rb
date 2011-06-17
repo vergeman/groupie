@@ -110,10 +110,9 @@ describe EventsController do
 
 
       it "should redirect to 'somewhere'" do
-        #post :create, :event => @attr
-        #response.should redirect_to(events_path)
-        #FROM CREATE ACTION --> ADD PLACES
-        pending "successful redirection #{__FILE__}"
+        post :create, :event => @attr
+        response.should redirect_to(new_place_path)
+
       end
 
 
