@@ -1,0 +1,28 @@
+<!-- nav bar partial -->
+<nav class = "nav groups">
+  <ul class = "groups">
+    <li><%= link_to "Create", new_event_path %></li>
+
+    <% unless @user.participants.empty? %>
+    
+    <li> <%= link_to "Get Togethers", user_path %> </li>
+
+    <ul class = "event_title">
+
+      <% @events.each do |event| %>
+
+      <li><%= event.title %></li>
+
+      <% end %>
+      
+    </ul>
+
+    <% end %>
+
+
+  </ul>
+
+</nav>
+
+
+

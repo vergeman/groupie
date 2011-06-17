@@ -1,0 +1,21 @@
+<p>events partial</p>
+
+<ul class = "event_list">
+
+  <% @events.each do |event| %>
+
+  <div class = "event">
+      <li>
+    
+	<%= event.title %><br />
+	<%= event.description %><br />
+	<%= event.event_date %><br />
+	<%= event.starting_votes %><br />
+	
+      <li>
+    
+    </div>
+  
+  <% end %>
+
+</ul>
