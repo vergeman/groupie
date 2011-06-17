@@ -20,3 +20,8 @@ Factory.define :event do |event|
   event.event_date Time.now + 7.days
   event.starting_votes 20
 end
+
+Factory.define :place do |place|
+  place.name "Test locale"
+  place.description "a test location used for factory girl test"
+end

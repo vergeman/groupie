@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110613220748) do
+ActiveRecord::Schema.define(:version => 20110617034805) do
 
   create_table "events", :force => true do |t|
     t.integer  "admin_id"
@@ -34,6 +34,13 @@ ActiveRecord::Schema.define(:version => 20110613220748) do
 
   add_index "participants", ["event_id"], :name => "index_participants_on_event_id"
   add_index "participants", ["user_id"], :name => "index_participants_on_user_id"
+
+  create_table "places", :force => true do |t|
+    t.string   "name"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email",                                 :default => "", :null => false
