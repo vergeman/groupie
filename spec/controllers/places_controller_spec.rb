@@ -49,7 +49,7 @@ describe PlacesController do
       end
 
       it "should render the 'new' page" do
-        post :create, :event => @attr
+        post :create, :place => @attr
         response.should render_template('new')
       end
 
@@ -78,6 +78,8 @@ describe PlacesController do
           post :create, :place => { :name => @place.name, :description => @place.description }
         end.should change(Place, :count).by(1)
       end
+
+      pending "creation of places through tertirary relationship"
 
       #not sure about these tests yet
       it "should create an associated Vote record in the db" do

@@ -4,12 +4,13 @@ class PlacesController < ApplicationController
     @title = "Add Places"
   end
 
+
   def create
     @user = User.find(current_user.id)
     @participant = Participant.find_by_user_id(@user.id)
-    @event
+    # @event
  
-    # @place = @participant.places.create(params[:place])
+    @place = Place.create(params[:place])
 
     if @place.save
       flash[:success] = "Place created."
