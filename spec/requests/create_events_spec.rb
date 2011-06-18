@@ -2,15 +2,11 @@ require 'spec_helper'
 
 describe "CreateEvents" do
 
-
   describe "GET /create_events" do
 
     before(:each) do
       @user = Factory(:user)
-      visit new_user_session_path
-      fill_in :username, :with => @user.username
-      fill_in :password, :with => @user.password
-      click_button
+      integration_sign_in(@user)
     end
 
 
@@ -37,12 +33,7 @@ describe "CreateEvents" do
     describe "successful event creation" do
 
       before(:each) do
-          visit new_event_path
-          fill_in "Title", :with => "my_test_event"
-          fill_in "Description", :with => "hello"
-          fill_in "event_event_date", :with => "1-2-2011"
-          fill_in "Initial Votes", :with => "20"
-          click_button
+        integration_valid_event_creation
       end
 
 
@@ -54,12 +45,7 @@ describe "CreateEvents" do
       it "should create a new event" do
 
         lambda do
-          visit new_event_path
-          fill_in "Title", :with => "my_test_event"
-          fill_in "Description", :with => "hello"
-          fill_in "event_event_date", :with => "1-2-2011"
-          fill_in "Initial Votes", :with => "20"
-          click_button
+          integration_valid_event_creation
           response.should have_selector("div.flash.success")
         end.should change(Event, :count).by(1)
 
@@ -99,6 +85,32 @@ describe "CreateEvents" do
         end
 
       end
+
+
+
+      describe "GET event/:id/" do
+
+        before(:each) do
+          @event = @user.events.last
+          @place = @event.places.first
+        end
+
+        it "should be able to GET the event page" do
+          visit event_path(@event.id)
+          response.should be_success
+          #response.should have_selector(".places", :content => @event.id)
+        end
+
+        #it "the event page should have the place name displayed" do
+        #  visit event_path(@event.id)
+        #  response.should have_selector("li", :content => @place.name)
+        #end
+
+
+
+      end
+
+
 
     end
 

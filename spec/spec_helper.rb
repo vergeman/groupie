@@ -28,4 +28,27 @@ RSpec.configure do |config|
 
   #included for devise
   config.include Devise::TestHelpers, :type => :controller
+
+
+  #helper methods
+  def integration_sign_in(user)
+    visit new_user_session_path
+    fill_in :username, :with => user.username
+    fill_in :password, :with => user.password
+    click_button
+  end
+
+
+  def integration_valid_event_creation()
+    visit new_event_path
+    fill_in "Title", :with => "my_test_event"
+    fill_in "Description", :with => "hello"
+    fill_in "event_event_date", :with => "1-2-2011"
+    fill_in "Initial Votes", :with => "20"
+    click_button
+  end
+
+
+
+
 end

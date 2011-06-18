@@ -26,6 +26,8 @@ end
 
 
 def show
+  @places = Place.all
+
 end
 
 

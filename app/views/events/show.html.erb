@@ -1,2 +1,27 @@
-<h2>Events#show</h2>
+<h2>Events#show (places)</h2>
+
+<!-- event detail - places -->
+
+<ul class = "event_main_list">
+
+  <% @places.each do |place| %>
+
+  <div class = "places">
+    <li>
+
+      <%= place.name %><br />
+
+      Description: <br />
+      <p><%= place.description %>
+
+    </li>
+  </div>
+  
+  <% end %>
+
+
+
+
+
+<ul>
 
