@@ -109,9 +109,9 @@ describe EventsController do
       end
 
 
-      it "should redirect to 'new place path'" do
+      it "should redirect to 'new_event_place_path'" do
         post :create, :event => @attr
-        response.should redirect_to(new_place_path)
+        response.should redirect_to(new_event_place_path(Event.all.last.id))
 
       end
 

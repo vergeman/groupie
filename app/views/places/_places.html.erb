@@ -1,6 +1,5 @@
 <!-- places partial -->
-<%= form_for(@place) do |p| %>
-
+<%= form_for([@event, @place]) do |p| %>
 <%= render 'shared/error_messages', :object => p.object %>
 
 <div class = "field">

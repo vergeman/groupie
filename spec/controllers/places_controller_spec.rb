@@ -3,14 +3,19 @@ require 'spec_helper'
 describe PlacesController do
   render_views
 
+  before(:each) do
+    @event  = Factory(:event)
+  end
+
+
   describe "GET 'new'" do
     it "should be successful" do
-      get :new
+      get :new, :event_id => @event
       response.should be_success
     end
 
     it "should have the right title" do
-      get :new
+      get :new, :event_id => @event
       response.should have_selector("title", :content => "Add Places")
     end
 
@@ -19,12 +24,12 @@ describe PlacesController do
     describe "form fields" do
       
       it "should have a name field" do
-        get :new
+        get :new, :event_id => @event
         response.should have_selector("input[name='place[name]'][type='text']")
       end
 
       it "should have a description field" do
-        get :new
+        get :new, :event_id => @event
         response.should have_selector("input[name='place[description]'][type='text']")
       end
 
@@ -49,13 +54,13 @@ describe PlacesController do
       end
 
       it "should render the 'new' page" do
-        post :create, :place => @attr
+        post :create, :event_id => @event, :place => @attr
         response.should render_template('new')
       end
 
       it "should not create a place in the db" do
         lambda do
-          post :create, :place => @attr
+          post :create, :event_id => @event, :place => @attr
         end.should change(Place, :count).by(0)
       end
 
@@ -75,7 +80,7 @@ describe PlacesController do
 
       it "should create a place record in the db" do
         lambda do
-          post :create, :place => { :name => @place.name, :description => @place.description }
+          post :create, :event_id => @event, :place => { :name => @place.name, :description => @place.description }
         end.should change(Place, :count).by(1)
       end
 

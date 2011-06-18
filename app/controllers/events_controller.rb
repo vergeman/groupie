@@ -16,7 +16,7 @@ def create
 
   if @event.save
     flash[:success] = "Event created."
-    redirect_to(new_place_path)
+    redirect_to(new_event_place_path(@event))
 
   else
     render 'events/new'

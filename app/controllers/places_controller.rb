@@ -1,14 +1,18 @@
 class PlacesController < ApplicationController
   def new
-    @place = Place.new
     @title = "Add Places"
+    @event = Event.find(params[:event_id])
+    @place = @event.places.build
+
+
   end
 
 
   def create
     @user = User.find(current_user.id)
+    
     @participant = Participant.find_by_user_id(@user.id)
-    # @event
+    @event = Event.find(params[:event_id])
  
     @place = Place.create(params[:place])
 
@@ -16,7 +20,7 @@ class PlacesController < ApplicationController
       flash[:success] = "Place created."
       #redirect_to(someplace_path)
     else
-      render 'places/new'
+      render :new, :event_id => @event
     end
       
   end
