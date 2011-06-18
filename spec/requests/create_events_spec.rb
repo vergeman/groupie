@@ -95,6 +95,7 @@ describe "CreateEvents" do
           fill_in "Name", :with => "this is a test place"
           fill_in "Description", :with => "this is a test description"          
           click_button
+          @event = Event.all.last
           @place = Event.all.last.places.first  #ugly
         end
 
@@ -107,8 +108,13 @@ describe "CreateEvents" do
           response.should have_selector("li", :content => @place.name)
         end
 
+        it "should have a link to the place detail page" do
+          response.should have_selector("li a", :href => event_place_path(@event, @place) )
+        end
+        
+
         it "should be able to GET the event page" do
-          visit event_path(:event_id)
+          visit event_path(@event)
           response.should be_success
         end
 
@@ -129,6 +135,17 @@ describe "CreateEvents" do
     
       end
 
+
+      describe "view of specific place" do
+        
+        pending "request to nested view of specified place"
+        it "should have the place" do
+          #visit event_place_path(:event_id => @event.id, :id => @place.id) 
+          #response.should be_success
+        end
+
+
+      end
 
 
     end

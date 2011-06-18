@@ -9,7 +9,8 @@
   <div class = "places">
     <li>
 
-      <%= place.name %><br />
+      <%= link_to place.name, 
+	  event_place_path(params[:id], place.id) %><br />
 
       Description: <br />
       <p><%= place.description %>

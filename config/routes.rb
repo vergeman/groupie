@@ -47,8 +47,9 @@ Groupie::Application.routes.draw do
   #  end
   #end
 
-  resources :events, :only => [:show, :new, :create, :destroy] do
-    resources :places, :only => [:show, :new, :create, :destroy]
+
+  resources :events, :only => [:new, :create, :destroy, :show] do
+    resources :places, :only => [:new, :create, :destroy, :show]
   end
 
   #--generated--
