@@ -80,10 +80,24 @@ describe "CreateEvents" do
       end
 
 
-      it "should manifest as a link to the appropriate event" do
+      it "should manifest as a nav bar link to the appropriate event" do
         visit user_path(@user.id)
-        response.should have_selector("a", :href => event_path(Event.all.last.id), 
+        response.should have_selector(".event_title li") do |f|
+
+          f.should have_selector("a", :href => event_path(Event.all.last.id), 
                                       :content => Event.all.last.title) 
+        end
+
+      end
+
+
+      it "should have a titular link on the main display" do
+        visit user_path(@user.id)
+        response.should have_selector(".event_list li") do |f|
+          f.should have_selector("a", :href => event_path(Event.all.last.id), 
+                                      :content => Event.all.last.title) 
+        end
+
       end
 
     end

@@ -7,7 +7,7 @@
   <div class = "event">
       <li>
     
-	<%= event.title %><br />
+	<%= link_to event.title, event_path(event.id) %><br />
 	<%= event.description %><br />
 	<%= event.event_date %><br />
 	<%= event.starting_votes %><br />
