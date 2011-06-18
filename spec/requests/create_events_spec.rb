@@ -66,7 +66,7 @@ describe "CreateEvents" do
       end
 
 
-      it "should be visible on user path reload in nav_bar" do
+      it "appropriate event should be visible on user path reload in nav_bar" do
 
         visit user_path(@user.id)
         response.should have_selector("ul.event_title", :content => "my_test_event")
@@ -77,6 +77,13 @@ describe "CreateEvents" do
       it "should be visible on user path reload in user show page" do
         visit user_path(@user.id)
         response.should have_selector("div.event", :content => "my_test_event")
+      end
+
+
+      it "should manifest as a link to the appropriate event" do
+        visit user_path(@user.id)
+        response.should have_selector("a", :href => event_path(Event.all.last.id), 
+                                      :content => Event.all.last.title) 
       end
 
     end
