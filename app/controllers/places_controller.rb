@@ -8,15 +8,16 @@ class PlacesController < ApplicationController
 
   def create
     @event = Event.find(params[:event_id])
-
-    @place = @event.schedules.create(params[:place].merge(:event_id => @event))
+    
+    @place = @event.places.create(:name => params[:place][:name], 
+                                  :description => params[:place][:description])
     # @place = @event
     # @place = Place.create(params[:place])
 
 
     if @place.save
       flash[:success] = "Place created."
-      #redirect_to(someplace_path)
+      redirect_to event_path(@event)
     else
       render :new, :event_id => @event
     end

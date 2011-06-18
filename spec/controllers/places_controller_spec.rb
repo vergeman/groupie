@@ -72,8 +72,6 @@ describe PlacesController do
         @place = Factory(:place)
         @user = Factory(:user)
         sign_in @user
-
-        @attr = { :name => "atestplace", :description => "thisisatestplace"} 
       end      
 
       it "should have a signed in user" do
@@ -85,7 +83,7 @@ describe PlacesController do
 
           post :create, 
           :event_id => @event, 
-          :place => { :name => @attr.name, :description => @attr.description }
+          :place => @place
 
         end.should change(Place, :count).by(1)
       end
@@ -98,13 +96,16 @@ describe PlacesController do
 
           post :create, 
           :event_id => @event, 
-          :place => { :name => @attr.name, :description => @attr.description }
+          :place => @place
 
         end.should change(Schedule, :count).by(1)
+
       end
 
 
-      it "should redirect 'somwehre'" do
+      it "should redirect 'event/:id'" do
+        post :create, :event_id => @event, :place => @place
+        response.should redirect_to event_path(@event)
       end
 
     end
