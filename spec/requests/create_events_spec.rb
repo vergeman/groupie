@@ -88,26 +88,45 @@ describe "CreateEvents" do
 
 
 
-      describe "GET event/:id/" do
+      describe "successful place creation" do
+        #upon event creation, redirected to new_event_place_path(:event_id)
 
         before(:each) do
-          @event = @user.events.last
-          @place = @event.places.first
+          fill_in "Name", :with => "this is a test place"
+          fill_in "Description", :with => "this is a test description"          
+          click_button
+          @place = Event.all.last.places.first  #ugly
+        end
+
+
+        it "should render a list of places given the event" do          
+          response.should have_selector(".places")
+        end
+
+        it "the event page should have the place name displayed" do
+          response.should have_selector("li", :content => @place.name)
         end
 
         it "should be able to GET the event page" do
-          visit event_path(@event.id)
+          visit event_path(:event_id)
           response.should be_success
-          #response.should have_selector(".places", :content => @event.id)
         end
 
-        #it "the event page should have the place name displayed" do
-        #  visit event_path(@event.id)
-        #  response.should have_selector("li", :content => @place.name)
-        #end
+      end
 
 
+      describe "failed place creation" do
 
+        before(:each) do
+          fill_in "Name", :with => ""
+          fill_in "Description", :with => ""          
+          click_button
+        end
+
+        it "should return an error message" do
+          response.should have_selector(".error_explanation")
+        end
+    
       end
 
 
