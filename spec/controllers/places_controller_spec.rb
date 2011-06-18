@@ -72,6 +72,8 @@ describe PlacesController do
         @place = Factory(:place)
         @user = Factory(:user)
         sign_in @user
+
+        @attr = { :name => "atestplace", :description => "thisisatestplace"} 
       end      
 
       it "should have a signed in user" do
@@ -80,14 +82,25 @@ describe PlacesController do
 
       it "should create a place record in the db" do
         lambda do
-          post :create, :event_id => @event, :place => { :name => @place.name, :description => @place.description }
+
+          post :create, 
+          :event_id => @event, 
+          :place => { :name => @attr.name, :description => @attr.description }
+
         end.should change(Place, :count).by(1)
       end
 
       pending "creation of places through tertirary relationship"
 
       #not sure about these tests yet
-      it "should create an associated Vote record in the db" do
+      it "should create an association Schedule record in the db" do
+        lambda do
+
+          post :create, 
+          :event_id => @event, 
+          :place => { :name => @attr.name, :description => @attr.description }
+
+        end.should change(Schedule, :count).by(1)
       end
 
 
