@@ -13,6 +13,7 @@ end
 def create
   # @event = current_user.events.build(params[:event])
   @user = User.find(current_user.id)
+  @events = @user.events
 
   @event = @user.events.create(params[:event].merge(:admin_id => @user.id))
 

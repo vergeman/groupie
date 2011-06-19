@@ -6,7 +6,7 @@
 
     <li><%= link_to "Create", new_event_path %></li>
 
-    <% unless @user.participants.empty? %>
+    <% unless @user.events.empty? %>
     
     <li> <%= link_to "Get Togethers", user_path(current_user.id) %> </li>
 

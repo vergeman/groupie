@@ -1,12 +1,19 @@
 class PlacesController < ApplicationController
   def new
     @title = "Add Places"
+    @user = User.find(current_user.id)
+    @events = @user.events
+
     @event = Event.find(params[:event_id])
+    
     @place = @event.places.build
   end
 
 
   def create
+    @user = User.find(current_user.id)
+    @events = @user.events
+
     @event = Event.find(params[:event_id])
     
     @place = @event.places.create(:name => params[:place][:name], 
