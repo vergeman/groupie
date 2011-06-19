@@ -1,0 +1,32 @@
+<!-- nav bar partial -->
+<nav class = "nav groups">
+  <ul class = "groups">
+
+    <% if user_signed_in? && (params[:controller] != 'devise/registrations' && params[:action] != 'edit') %> 
+
+    <li><%= link_to "Create", new_event_path %></li>
+
+    <% unless @user.participants.empty? %>
+    
+    <li> <%= link_to "Get Togethers", user_path(current_user.id) %> </li>
+
+    <ul class = "event_title">
+
+      <% @events.each do |event| %>
+
+      <li><%= link_to event.title, event_path(event.id) %></li>
+
+      <% end %>
+      
+    </ul>
+
+    <% end %>
+
+    <% end %>
+
+  </ul>
+
+</nav>
+
+
+

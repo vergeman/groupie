@@ -2,16 +2,18 @@ class EventsController < ApplicationController
   #before_filter :authenticate_user!
 
 def new
-  @event = Event.new
-  @title = "Create Event"
+  @user = User.find(current_user.id)
+  @events = @user.events
 
+  @title = "Create Event"
+  @event = Event.new
 end
 
 
 def create
   # @event = current_user.events.build(params[:event])
   @user = User.find(current_user.id)
-  
+
   @event = @user.events.create(params[:event].merge(:admin_id => @user.id))
 
   if @event.save
@@ -26,8 +28,9 @@ end
 
 
 def show
+  @user = User.find(current_user.id)
+  @events = @user.events
   @places = Place.all
-
 end
 
 
