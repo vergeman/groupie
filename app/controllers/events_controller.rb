@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  #before_filter :authenticate_user!
+  # before_filter :authenticate_user!
 
 def new
   @user = User.find(current_user.id)

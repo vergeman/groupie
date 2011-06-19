@@ -7,8 +7,6 @@ render_views
     @base_title = "Get Together"
   end
 
-
-
   describe "GET 'home'" do
 
     before (:each) do
@@ -32,6 +30,8 @@ render_views
   describe "GET 'about'" do
 
     before (:each) do
+      @user = Factory(:user)
+      sign_in @user
       get :about
     end
 
@@ -52,6 +52,8 @@ render_views
   describe "GET 'contact'" do
 
     before (:each) do
+      @user = Factory(:user)
+      sign_in @user
       get :contact
     end
 
@@ -71,6 +73,8 @@ render_views
   describe "GET 'howitworks'" do
 
     before (:each) do
+      @user = Factory(:user)
+      sign_in @user
       get :how
     end
 
