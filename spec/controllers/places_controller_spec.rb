@@ -4,6 +4,8 @@ describe PlacesController do
   render_views
 
   before(:each) do
+    @user = Factory(:user)
+    sign_in @user
     @event  = Factory(:event)
   end
 
@@ -47,8 +49,6 @@ describe PlacesController do
 
       before(:each) do
         @place = Factory(:place)
-        @user = Factory(:user)
-        sign_in @user
 
         @attr = { :name => "", :description => ""} 
       end
@@ -70,8 +70,7 @@ describe PlacesController do
 
       before(:each) do
         @place = Factory(:place)
-        @user = Factory(:user)
-        sign_in @user
+
       end      
 
       it "should have a signed in user" do

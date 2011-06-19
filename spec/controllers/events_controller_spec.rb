@@ -4,12 +4,15 @@ describe EventsController do
   render_views
 
   describe "GET 'new'" do
+    before(:each) do
+        @user = Factory(:user)
+        sign_in @user
+    end
 
     it "should have the right title" do
       get :new
       response.should have_selector("title", :content => "Create Event")
     end
-
 
     #form tests
     it "should have a title field" do

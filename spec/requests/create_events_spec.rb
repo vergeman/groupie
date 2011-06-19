@@ -6,7 +6,9 @@ describe "CreateEvents" do
 
     before(:each) do
       @user = Factory(:user)
+      integration_create_user(@user)
       integration_sign_in(@user)
+      # @events = @user.events
     end
 
 
@@ -37,7 +39,7 @@ describe "CreateEvents" do
       end
 
 
-      it "should have a signed in user" do
+      it "should have a signed in user" do        
         controller.should be_signed_in
       end
 

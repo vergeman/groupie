@@ -31,6 +31,15 @@ RSpec.configure do |config|
 
 
   #helper methods
+  def integration_create_user(user)
+    visit new_user_registration_path
+    fill_in "Username", :with => user.username
+    fill_in "Email", :with => user.email
+    fill_in "Password", :with => user.password
+    fill_in "Password confirmation", :with => user.password
+    click_button
+  end
+
   def integration_sign_in(user)
     visit new_user_session_path
     fill_in :username, :with => user.username
@@ -39,7 +48,7 @@ RSpec.configure do |config|
   end
 
 
-  def integration_valid_event_creation()
+  def integration_valid_event_creation
     visit new_event_path
     fill_in "Title", :with => "my_test_event"
     fill_in "Description", :with => "hello"
