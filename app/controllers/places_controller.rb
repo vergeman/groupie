@@ -1,4 +1,6 @@
 class PlacesController < ApplicationController
+  before_filter :authenticate_user!
+
   def new
     @title = "Add Places"
     @user = User.find(current_user.id)
