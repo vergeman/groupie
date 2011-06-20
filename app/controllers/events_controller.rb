@@ -31,7 +31,7 @@ end
 def show
   @user = User.find(current_user.id)
   @events = @user.events
-  @places = Place.all
+  @places = @events.find(params[:id]).places
 end
 
 

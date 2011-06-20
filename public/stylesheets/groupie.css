@@ -1,8 +1,9 @@
 .container {
     margin-left: auto;
     margin-right: auto;
-    width: 950px; /*span-24*/
+    width: 960px; /*span-24*/
     margin: 0 auto;
+
 }
 
 /*body tag */
@@ -13,8 +14,6 @@ body {
 
 /*navigation tag */
 nav {
-
-
 }
 
 nav ul li {
@@ -26,34 +25,33 @@ nav ul li {
 
 
 
-/*header tag*/
+
+/*header styling*/
 header {
-    padding-top: 2em;
 
-
-    border-style: solid; 
-    border-width: 1px;
+    //border-style: solid; 
+    //border-width: 1px;
 
 }
 
 header h1 {
-    font-family: rockwell, arial, helvetica;
-    
+    font-family: rockwell, arial, helvetica;    
 }
 
 header nav {
     text-align: right;
-    float: right;
-   
-
 }
+
+
+
+
 
 /*section tag*/
 section {
 
 
-    border-style: solid; 
-    border-width: 1px;
+    //border-style: solid; 
+    //border-width: 1px;
 }
 
 section ul li {
@@ -67,8 +65,8 @@ section ul li {
 footer {
     text-align: center;
 
-    border-style: solid; 
-    border-width: 1px;
+    //border-style: solid; 
+    //border-width: 1px;
 
 
 }

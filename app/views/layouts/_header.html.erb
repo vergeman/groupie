@@ -1,8 +1,12 @@
 <header>
-  
 
+<!-- banner -->
+<div id="banner" class="span-18">
+  <h1><%= link_to get_project_name, root_path %></h1>
+</div>
 
-  <nav class="account large">
+<div id="account" class="span-6 last">
+  <nav class="account">
     <% if user_signed_in? %>
     Hi, <%= current_user.username %>
     <% end %>
@@ -22,8 +26,10 @@
     </ul>
 
   </nav>
+</div>
 
-<!-- banner -->
-  <h1><%= link_to get_project_name, root_path %></h1>
+
+
+
 
 </header>
