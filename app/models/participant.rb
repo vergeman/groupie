@@ -24,7 +24,7 @@ class Participant < ActiveRecord::Base
   validates :user_id, :presence => true
   validates :event_id, :presence => true
 
-  validate_uniqueness_of :user_id, :scope => :event_id, :message => "only have have one association with event"
+  validates_uniqueness_of :user_id, :scope => :event_id, :message => "only have have one association with event"
   #validates :votes_remaining, :presence => true
 
 end
