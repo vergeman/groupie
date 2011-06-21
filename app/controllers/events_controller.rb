@@ -1,5 +1,5 @@
 class EventsController < ApplicationController
-  before_filter :authenticate_user!
+  #before_filter :authenticate_user!
 
 
 def new
@@ -33,12 +33,19 @@ end
 
 
 def show
-  @user = User.find(current_user.id)
-  @event = @user.events.find(params[:id])
   @place = Place.new
+  @event = Event.find(params[:id])
+  @places = @event.places
 
-  @events = @user.events
-  @places = @events.find(params[:id]).places
+  if signed_in?
+    @user = User.find(current_user.id)
+    @events = @user.events
+
+    # @event = @user.events.find(params[:id])
+    # @places = @events.find(params[:id]).places
+  end
+
+
 end
 
 
