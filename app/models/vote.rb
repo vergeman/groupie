@@ -21,4 +21,5 @@ class Vote < ActiveRecord::Base
   validates :participant_id, :presence => true;
   validates :place_id, :presence => true;
 
+  validates_uniqueness_of :participant_id, :scope => :place_id, :message => "only have one participant vote per place"
 end

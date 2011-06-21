@@ -20,5 +20,6 @@ class Schedule < ActiveRecord::Base
   validates :place_id, :presence => true
   validates :event_id, :presence => true
 
+  validate_uniquenes_of :place_id, :scope => :event_id, :message => "only have one unique place associated w/ event"
 
 end
