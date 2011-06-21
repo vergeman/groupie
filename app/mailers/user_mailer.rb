@@ -12,13 +12,19 @@ class UserMailer < ActionMailer::Base
   end
 
 
-  def event_email(user, title)
+  def event_email(user, event, host)
     @project_name = get_project_name
-    @event_title = title
+    @event = event
+    @host = host
+    logger.debug "event key " + @event.event_key
+    # @host = request.env["HTTP_HOST"]
+    
+    # @event_title = event.title
+    # @event_key = event.event_key 
 
     mail( :to => user.email,
           :from => "no-reply@" + @project_name.gsub(/\s+/,"") + ".com",
-          :subject => "You created " + @event_title + " at " + @project_name)
+          :subject => "You created " + @event.title + " at " + @project_name)
 
   end
 

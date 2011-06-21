@@ -16,7 +16,8 @@
 
 class Event < ActiveRecord::Base
 
-  attr_accessible :admin_id, :title, :description, :event_date, :starting_votes
+  attr_accessible :admin_id, :title, :description, :event_date, 
+  :starting_votes, :event_key
 
   has_many :participants
   has_many :users, :through => :participants

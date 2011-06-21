@@ -18,12 +18,14 @@ def create
   @user = User.find(current_user.id)
   @events = @user.events
 
-  @event = @user.events.create(params[:event].merge(:admin_id => @user.id))
+  @event = @user.events.create(params[:event].merge(:admin_id => @user.id, :event_key => create_event_key(@user.id) ))
 
   if @event.save
     flash[:success] = "Event created."
 
-    UserMailer.event_email(@user, @event.title).deliver
+    @host = request.env["HTTP_HOST"]
+
+    UserMailer.event_email(@user, @event, @host).deliver
 
     redirect_to(new_event_place_path(@event))
 
@@ -67,7 +69,7 @@ def show
 
   #email invite (cookie) - match to generated code
   #if params[:invite] match databse generated event key
-  if not params[:invite].nil?
+  if params[:invite] == @event.event_key
     cookies.signed[:event] = {:value => @event.id}
   end
 
@@ -82,8 +84,8 @@ end
 
 
 private
-def create_event_key(event_id)
-  Digest::SHA2.hexdigest("#{Time.now.utc}--#{event_id}")
+def create_event_key(user_id)
+  Digest::SHA2.hexdigest("#{Time.now.utc}--#{user_id}")
 end
 
 end

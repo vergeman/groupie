@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h2>You created <%= @event_title %> at <%= @project_name %></h2>
+    <h2>You created <%= @event.title %> at <%= @project_name %></h2>
 
+    <p>Forward to invite your friends to this event!
 
-
+    <p><%= link_to @event.title, url_for(:host => @host, :controller => "events", 
+      :action => "show", :id => @event.id, :invite => @event.event_key) %>
 
   </body>
 
