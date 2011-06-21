@@ -1,5 +1,5 @@
 class PlacesController < ApplicationController
-  before_filter :authenticate_user!
+  before_filter :authenticate_user! #, :except => [:show]
 
   def new
     @title = "Add Places"
@@ -35,11 +35,16 @@ class PlacesController < ApplicationController
 
 
   def show
-    @user = User.find(current_user.id)
-    @events = @user.events
+
+    if signed_in?
+      @user = User.find(current_user.id)
+      @events = @user.events
+    end
 
     @place =  Place.find(params[:id])
   end
+
+
 
   def destroy
   end
