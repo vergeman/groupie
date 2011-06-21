@@ -133,7 +133,11 @@ describe EventsController do
   end
 
 
+  describe "GET ':id'" do
 
+    pending "have add place form option displayed on event summary #{__FILE__}"
+
+  end
 
 
 end

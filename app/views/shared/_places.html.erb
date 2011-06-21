@@ -1,0 +1,19 @@
+<!-- places partial -->
+<%= form_for([@event, @place]) do |p| %>
+<%= render 'shared/error_messages', :object => p.object %>
+
+<div class = "field">
+  <%= p.label :name %> <br />
+  <%= p.text_field :name %>
+</div>
+
+<div class = "field">
+  <%= p.label :description %> <br />
+  <%= p.text_field :description %>
+</div>
+
+<div class = "actions">
+  <%= p.submit "Create Place" %>
+</div>
+
+<% end %>
