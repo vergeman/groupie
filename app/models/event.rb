@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110613220748
+# Schema version: 20110621173755
 #
 # Table name: events
 #
@@ -11,6 +11,7 @@
 #  starting_votes :integer
 #  created_at     :datetime
 #  updated_at     :datetime
+#  event_key      :string(255)
 #
 
 class Event < ActiveRecord::Base

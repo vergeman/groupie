@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  require 'digest'
+
   before_filter :authenticate_user!, :except => [:show]
   helper_method :cookies
 
@@ -78,6 +80,11 @@ end
 def destroy
 end
 
+
+private
+def create_event_key(event_id)
+  Digest::SHA2.hexdigest("#{Time.now.utc}--#{event_id}")
+end
 
 end
 

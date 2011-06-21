@@ -1,3 +1,15 @@
+# == Schema Information
+# Schema version: 20110621173755
+#
+# Table name: schedules
+#
+#  id         :integer         not null, primary key
+#  event_id   :integer
+#  place_id   :integer
+#  created_at :datetime
+#  updated_at :datetime
+#
+
 class Schedule < ActiveRecord::Base
 
   attr_accessible :event_id, :place_id
