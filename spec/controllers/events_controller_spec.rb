@@ -140,4 +140,10 @@ describe EventsController do
   end
 
 
+  describe "cookies" do
+
+    pending "cookie tests to #{__FILE__}"
+
+  end
+
 end

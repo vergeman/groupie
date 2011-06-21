@@ -16,4 +16,11 @@ describe UsersController do
     end
   end
 
+
+  describe "cookie test" do
+
+    pending "cookies via #{__FILE__}"
+
+  end
+
 end

@@ -1,6 +1,6 @@
 Groupie::Application.routes.draw do
 
-  devise_for :users 
+  devise_for :users, :controllers => {:registrations => "registrations" }
 
 #probably want to change paths/action as last step
 #======
