@@ -22,7 +22,7 @@
       <%= render 'shared/nav_bar' %>
     </div>
 
-    <div id="main" class="span-20 last">
+    <div id="main" class="span-19 last">
       <% flash.each do |key, message| %>
       <%= content_tag(:div, message, :class => "flash #{key}") %>
       <% end %>

@@ -29,8 +29,10 @@ nav ul li {
 /*header styling*/
 header {
 
-    //border-style: solid; 
-    //border-width: 1px;
+    /*
+    border-style: solid; 
+    border-width: 1px;
+    */
 
 }
 
@@ -50,8 +52,11 @@ header nav {
 section {
 
 
-    //border-style: solid; 
-    //border-width: 1px;
+    /*
+    border-style: solid; 
+    border-width: 1px;
+    */
+
 }
 
 section ul li {
@@ -60,14 +65,24 @@ section ul li {
 
 }
 
+
+/*participants*/
+#participants {
+    float: right;
+
+}
+
+
+
 /*footer tag*/
 
 footer {
     text-align: center;
 
-    //border-style: solid; 
-    //border-width: 1px;
-
+    /*
+    border-style: solid; 
+    border-width: 1px;
+    */
 
 }
 

@@ -41,7 +41,7 @@ def show
   @place = Place.new
   @event = Event.find(params[:id])
   @places = @event.places
-  
+
   if signed_in?
 
     #if signed in, we can take the GET param and add the event accordingly (no cookies needed)  #we need match key for auth - migrate db
@@ -59,6 +59,7 @@ def show
     @user = User.find(current_user.id)
     @events = @user.events
 
+    @participants = @event.participants
     # @event = @user.events.find(params[:id])
     # @places = @events.find(params[:id]).places
   end

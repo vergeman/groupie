@@ -1,0 +1,22 @@
+<!-- participants -->
+
+<div id = "participants"> 
+
+  <h3>Participants</h3>
+
+  <ul class = "participant_list">
+
+    <% @participants.each do |participant| %>
+
+    <div class = "participant">
+
+      <li>
+	<%= participant.user.username %><br />
+      </li>
+    </div>
+
+    <% end %>
+
+    <ul>
+
+</div>

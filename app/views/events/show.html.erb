@@ -1,5 +1,9 @@
 <h2>Events#show (places)</h2>
 
+<% if signed_in? %>
+<%= render 'participants' %>
+<% end %>
+
 <!-- event summary -->
 
 <p><%= @event.title %>
@@ -7,10 +11,11 @@
 
 <!-- add place form -->
 <% if user_signed_in? %>
-
 <%= render 'shared/places' %>
 
 <% end %>
+
+
 
 <!-- event detail - places -->
 
@@ -18,7 +23,7 @@
 
   <% @places.each do |place| %>
 
-  <div class = "places">
+  <div class = "place">
     <li>
 
       <%= link_to place.name, 
@@ -32,6 +37,11 @@
   
   <% end %>
 
+</ul>
 
-<ul>
+
+
+
+
+
 
