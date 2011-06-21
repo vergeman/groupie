@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   before_filter :authenticate_user!
 
+
 def new
   @user = User.find(current_user.id)
   @events = @user.events
@@ -19,6 +20,9 @@ def create
 
   if @event.save
     flash[:success] = "Event created."
+
+    UserMailer.event_email(@user, @event.title).deliver
+
     redirect_to(new_event_place_path(@event))
 
   else

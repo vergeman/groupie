@@ -27,5 +27,21 @@ Groupie::Application.configure do
 
   #Alan: pre-devise installation
   config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+
+  #Alan: smtp
+  config.action_mailer.delivery_method = :smtp
+  # Defaults to:
+  config.action_mailer.smtp_settings = {
+    # :address => 'localhost',
+    # :port => 25,
+    :enable_starttls_auto => false
+    # :domain => 'locahost',
+   }
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.raise_delivery_errors = true
+
+
 end
+
 
