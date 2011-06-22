@@ -103,7 +103,7 @@ describe "CreateEvents" do
 
 
         it "should render a list of places given the event" do          
-          response.should have_selector(".places")
+          response.should have_selector(".place")
         end
 
         it "the event page should have the place name displayed" do

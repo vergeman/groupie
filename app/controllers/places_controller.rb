@@ -29,6 +29,7 @@ class PlacesController < ApplicationController
       redirect_to event_path(@event)
     else
       render :new, :event_id => @event
+      #render event_path(@event.id)
     end
       
   end

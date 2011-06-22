@@ -13,6 +13,9 @@ gem 'will_paginate', '3.0.pre2'
 
 gem 'devise'
 
+#https://github.com/rails/jquery-ujs
+gem 'jquery-rails', '>= 1.0.3'
+
 group :development do
   gem 'rspec-rails'
 #  gem 'rspec-rails', '2.0.1'
