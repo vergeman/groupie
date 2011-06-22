@@ -41,7 +41,7 @@ Groupie::Application.routes.draw do
   #will have to toggle off if wanting different critieria (i.e. username)
   resources :users, :only => [:show]
 
-  resources :votes, :only => [:create, :destroy]
+  resources :votes, :only => [:create, :update, :destroy]
   #resources :users, :only => [:show] do
   #  member do
   #    get :events
