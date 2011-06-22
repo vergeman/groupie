@@ -31,9 +31,10 @@
 
       Description: <br />
       <p><%= place.description %>
+	
+      <p><%= render :partial => 'shared/vote', :locals => { :place => place } %>
 
-	<%= render 'shared/vote' %>
-
+	<br />
     </li>
   </div>
   

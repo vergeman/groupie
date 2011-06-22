@@ -1,14 +1,19 @@
 <div class="vote">
 
-  <div class="vote_up">
-    Vote_up
+  <div class="vote_up" style="cursor: pointer;">
+    Vote up
   </div>
 
+<!-- sum of participants votes -->
   <div class="vote_count">
-    count
+    <% if place.votes.empty? %>
+    <%= 0 %>
+    <% else %>
+    <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote]} %>
+    <% end %>
   </div>
 
-  <div class="vote_down">
+  <div class="vote_down" style="cursor: pointer;">
     Vote_down
   </div>
 

@@ -146,4 +146,10 @@ describe EventsController do
 
   end
 
+
+  describe "event vote rendering" do
+
+    pending "place in event should have sum of participants votes in #{__FILE__}"
+  end
+
 end
