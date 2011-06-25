@@ -4,15 +4,51 @@
 
 //jQuery active? test
 
+
 $(document).ready(function() {
     
-    $(".vote_up").click(function() { 
-	alert("vote up")
+    $(".vote_up").click(function(e) { 
+	e_id = $(".event").attr("id");
+	p_id = $(this).attr("id");
+
+	vote(e_id, p_id, 1)
+
     })
 
     $(".vote_down").click(function() { 
-	alert("vote down")
+	e_id = $(".event").attr("id");
+	p_id = $(this).attr("id");
+
+	vote(e_id, p_id, -1)
     })
 
 
 })
+
+
+function vote(e_id, p_id, v) {
+    var auth = $("meta[name=csrf-token]").attr("content")
+
+	$.ajax({
+	    type: "POST",
+	    url: "/votes/",
+	    dataType: "json",
+	    data: $.param({event_id: e_id, place_id: p_id, vote: v, 
+			   authenticity_token: auth
+			  }),
+	    error: {
+	    
+	    },
+	    success: function(data, textStatus) {
+		var obj = $.parseJSON(data);
+		console.log(obj);
+		//each loop response...but we don't really need it
+	    },
+	    complete: function(xhr) {
+
+	    }
+	});
+
+
+
+}

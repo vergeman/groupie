@@ -59,11 +59,36 @@ section {
 
 }
 
+.vote_up, .vote_down {
+    width: 20px;
+    height: 20px;
+    background-image: url("http://thumbs.reddit.com/t3_i5rto.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+    display: block;  
+    font-size: 1px;
+    text-indent: -9999em;
+    cursor: pointer;
+/*
+display: block renders the actual bacgkround according to diensiosn why
+text-indent: -9999em moves the text off the page
+*/
+}
+
+.vote_count {
+
+
+
+}
+
+
 section ul li {
     list-style-type: none;
     display: block;
 
 }
+
+
 
 
 /*participants*/

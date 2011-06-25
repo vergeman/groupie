@@ -1,11 +1,25 @@
 <div class="vote">
 
-  <div class="vote_up" style="cursor: pointer;">
+<!--
+   <div class="vote_up" style="cursor: pointer;">
     Vote up
   </div>
+<a class="vote_up" href="/events/62">vote up</a>
+-->
+<!--
+<%= link_to "vote up", votes_path(:participant_id => "12", :place_id => "4", :vote => "10"), :class => "vote_up", :remote => "true",
+:method => "post", :action => "create" %>
+-->
+
+<!--
+<%= button_to "vote up", :action => "create", :controller => "votes", :participant_id => "11", :place_id => "5", :vote => "10", :class => "vote_up" %>
+-->
+
+
+<div id=<%= place.id %> class="vote_up">Vote Up</div>
 
 <!-- sum of participants votes -->
-  <div class="vote_count">
+  <div id=<%= place.id %> class="vote_count">
     <% if place.votes.empty? %>
     <%= 0 %>
     <% else %>
@@ -13,9 +27,10 @@
     <% end %>
   </div>
 
-  <div class="vote_down" style="cursor: pointer;">
+  <div id=<%= place.id %> class="vote_down">
     Vote_down
   </div>
+
 
 
 </div>
