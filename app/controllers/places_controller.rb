@@ -20,6 +20,7 @@ class PlacesController < ApplicationController
     
     @place = @event.places.create(:name => params[:place][:name], 
                                   :description => params[:place][:description])
+
     # @place = @event
     # @place = Place.create(params[:place])
 
@@ -28,8 +29,12 @@ class PlacesController < ApplicationController
       flash[:success] = "Place created."
       redirect_to event_path(@event)
     else
-      render :new, :event_id => @event
-      #render event_path(@event.id)
+      flash[:error] = "Oops, there was an error"
+      #render :new, :event_id => @event 
+      #will have to make some place to show errors (i.e. like render :new does)
+      redirect_to event_path(@event.id)
+      
+
     end
       
   end
