@@ -6,7 +6,17 @@
 
 
 $(document).ready(function() {
+
+    $("#sign_up_btn").button();
     
+    $("#user_submit").button();
+    
+    $("#event_submit").button();
+
+    $("#place_submit").button();
+
+    $(".vote_up").arrow()
+
     $(".vote_up").click(function(e) { 
 	e_id = $(".event").attr("id");
 	p_id = $(this).parent().attr("id");

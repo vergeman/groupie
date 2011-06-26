@@ -1,13 +1,11 @@
-<h2>Events#show (places)</h2>
-
 <% if signed_in? %>
 <%= render 'participants' %>
 <% end %>
 
 <!-- event summary -->
 
-<p><%= @event.title %>
-<p><%= @event.description %>
+<h2><%= @event.title %></h2>
+<h3><%= @event.description %></h3>
 
 <!-- add place form -->
 <% if user_signed_in? %>
@@ -18,25 +16,31 @@
 
 
 <!-- event detail - places -->
-
+<br />
 <ul id=<%= @event.id %> class="event">
 
   <% @places.each do |place| %>
 
-  <div class = "place">
-    <li>
 
+  <li>
+    <div class = "element span-11">
+
+    <div class = "place span-10">
       <%= link_to place.name, 
 	  event_place_path(params[:id], place.id) %><br />
 
       Description: <br />
       <p><%= place.description %>
-	
-      <p><%= render :partial => 'shared/vote', :locals => { :place => place } %>
+    </div>
 
-	<br />
-    </li>
-  </div>
+    <div class="vote span-1 last">
+      <%= render :partial => 'shared/vote', :locals => { :place => place } %>
+    </div>
+
+    <br />
+    </div>
+  </li>
+
   
   <% end %>
 
