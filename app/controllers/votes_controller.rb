@@ -22,7 +22,7 @@ class VotesController < ApplicationController
           @vote = @participant.votes.create(:place_id => params[:place_id], 
                                             :vote => params[:vote])
         end
-        # @vote.save!
+
         render :json => @vote.vote
       }
       format.html { render :nothing => true }
@@ -31,11 +31,16 @@ class VotesController < ApplicationController
     
   end
   
+
+
   def update
+
     @vote = Vote.find(params[:id])
-    #referencing by primary key so we are just changing vote (REST id admits
-    #other info
     @vote.update_attributes(:vote => params[:vote])
+
+    respond_to do |format|
+      format.html { render :nothing => true }
+    end
   end
 
 

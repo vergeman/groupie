@@ -15,11 +15,12 @@
 <%= button_to "vote up", :action => "create", :controller => "votes", :participant_id => "11", :place_id => "5", :vote => "10", :class => "vote_up" %>
 -->
 
+<div id=<%= place.id %>>
 
-<div id=<%= place.id %> class="vote_up">Vote Up</div>
+<div class="vote_up" >Vote Up</div>
 
 <!-- sum of participants votes -->
-  <div id=<%= place.id %> class="vote_count">
+  <div class="vote_count">
     <% if place.votes.empty? %>
     <%= 0 %>
     <% else %>
@@ -27,10 +28,10 @@
     <% end %>
   </div>
 
-  <div id=<%= place.id %> class="vote_down">
+  <div class="vote_down">
     Vote_down
   </div>
-
+</div>
 
 
 </div>
