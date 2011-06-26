@@ -24,7 +24,7 @@
     <% if place.votes.empty? %>
     <%= 0 %>
     <% else %>
-    <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote]} %>
+    <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
     <% end %>
   </div>
 
