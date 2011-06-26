@@ -21,7 +21,7 @@
    private
    
    def add_cookie_event
-     if (user_signed_in? && cookies.signed[:event].nil?)  #was set to present - may need to revert
+     if (user_signed_in? && cookies.signed[:event].nil? && cookies.signed[:event].present?)  #was set to present - may need to revert
        # logger.debug "COOKIE IS #{cookies.signed[:event]}"     
        event = cookies.signed[:event]
        Participant.create(:user_id => current_user.id,

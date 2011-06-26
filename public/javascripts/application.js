@@ -48,7 +48,7 @@ function vote(e_id, p_id, v) {
 	    },
 	    success: function(data, textStatus) {
 		var obj = $.parseJSON(data);
-		console.log(obj);		
+		//console.log(obj);		
 	    },
 	    complete: function(xhr) {
 
