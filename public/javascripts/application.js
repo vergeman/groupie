@@ -1,10 +1,6 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
-
-//jQuery active? test
-
-
 $(document).ready(function() {
 
     $("#sign_up_btn").button();
@@ -17,26 +13,25 @@ $(document).ready(function() {
 
 
     $(".vote_up").click(function(e) { 
-	var e_id = $(".event").attr("id");
-	var p_id = $(this).parent().attr("id");
+	var e_id = $(".event").data("event");
+	var p_id = $(this).data("place");
 
 	//need sign in check
-	$('#' + p_id + ' .vote_count').html(
-	    parseInt($('#' + p_id + ' .vote_count').text()  ) + 1 );
+
+	$(this).next('.vote_count').html(
+	    parseInt( $(this).next('.vote_count').html() ) + 1 );
 
 	vote(e_id, p_id, 1);
 	
     })
 
     $(".vote_down").click(function() { 
-	var e_id = $(".event").attr("id");
-	var p_id = $(this).parent().attr("id");
+	var e_id = $(".event").data("event");
+	var p_id = $(this).data("place");
 
-	$('#' + p_id + ' .vote_count').html(
-	    parseInt($('#' + p_id + ' .vote_count').text()  ) - 1 );
-	//error on the javascript here somewhere doing both
+	$(this).prev('.vote_count').html(
+	    parseInt( $(this).prev('.vote_count').html() ) - 1 );
 
-	//$('#' + p_id + ' .vote_count').html(
 	vote(e_id, p_id, -1);
     })
 

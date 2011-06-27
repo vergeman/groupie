@@ -17,21 +17,10 @@ body {
     margin-right: auto;
     margin-top: 10px;
     margin-bottom: 20px;
-    /*
-    width: 940px;
-    
-    border-color: #d2ebf9;
-    border-style: solid;
-    border-width: 2px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    */
 
     padding: 10px;
     font-size: 120%;
 }
-
-
 
 #home #sign_up_btn {
     margin-left: 410px;
@@ -79,12 +68,6 @@ ul .event_title {
 
 /*header styling*/
 header {
-
-    /*
-    border-style: solid; 
-    border-width: 1px;
-    */
-
 }
 
 header h1 {
@@ -103,15 +86,11 @@ header nav {
 }
 
 
-
-
-
 /*section tag*/
 section {
 
 }
 .vote {
-//float: right;
 
 }
 
@@ -162,7 +141,7 @@ text-indent: -9999em moves the text off the page
 }
 
 
-.element {
+.place_container {
     padding-left: 0;
     border-color: #d2ebf9;
     border-style: solid;
