@@ -15,27 +15,28 @@ $(document).ready(function() {
 
     $("#place_submit").button();
 
-    $(".vote_up").arrow()
 
     $(".vote_up").click(function(e) { 
-	e_id = $(".event").attr("id");
-	p_id = $(this).parent().attr("id");
+	var e_id = $(".event").attr("id");
+	var p_id = $(this).parent().attr("id");
 
 	//need sign in check
 	$('#' + p_id + ' .vote_count').html(
-	    parseInt($('#' + p_id + ' .vote_count').html()  ) + 1 )
-	
+	    parseInt($('#' + p_id + ' .vote_count').text()  ) + 1 );
+
 	vote(e_id, p_id, 1);
 	
     })
 
     $(".vote_down").click(function() { 
-	e_id = $(".event").attr("id");
-	p_id = $(this).parent().attr("id");
+	var e_id = $(".event").attr("id");
+	var p_id = $(this).parent().attr("id");
 
 	$('#' + p_id + ' .vote_count').html(
-	    parseInt($('#' + p_id + ' .vote_count').html()  ) - 1 )
+	    parseInt($('#' + p_id + ' .vote_count').text()  ) - 1 );
+	//error on the javascript here somewhere doing both
 
+	//$('#' + p_id + ' .vote_count').html(
 	vote(e_id, p_id, -1);
     })
 
