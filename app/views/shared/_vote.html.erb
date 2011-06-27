@@ -1,37 +1,21 @@
 
-
-<!--
-   <div class="vote_up" style="cursor: pointer;">
-    Vote up
-  </div>
-<a class="vote_up" href="/events/62">vote up</a>
--->
-<!--
-<%= link_to "vote up", votes_path(:participant_id => "12", :place_id => "4", :vote => "10"), :class => "vote_up", :remote => "true",
-:method => "post", :action => "create" %>
--->
-
-<!--
-<%= button_to "vote up", :action => "create", :controller => "votes", :participant_id => "11", :place_id => "5", :vote => "10", :class => "vote_up" %>
--->
-
-<div id=<%= place.id %>>
-
-  <div class="vote_up" >Vote Up</div>
-
-  <!-- sum of participants votes -->
-  <div class="vote_count">
-    <% if place.votes.empty? %>
-    <%= 0 %>
-    <% else %>
-    <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
-    <% end %>
-  </div>
-
-  <div class="vote_down">
-    Vote_down
-  </div>
+<div class="vote_up" data-place=<%= place.id %> >
+Vote Up
 </div>
+
+<!-- sum of participants votes -->
+<div class="vote_count">
+  <% if place.votes.empty? %>
+  <%= 0 %>
+  <% else %>
+  <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
+  <% end %>
+</div>
+
+<div class="vote_down" data-place=<%= place.id %>>
+  Vote_down
+</div>
+
 
 
 

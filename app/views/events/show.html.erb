@@ -17,28 +17,30 @@
 
 <!-- event detail - places -->
 <br />
-<ul id=<%= @event.id %> class="event">
+<ul class="event" data-event=<%= @event.id %>>
 
   <% @places.each do |place| %>
 
 
   <li>
-    <div class = "element span-11">
 
-    <div class = "place span-10">
-      <%= link_to place.name, 
-	  event_place_path(params[:id], place.id) %><br />
+    <div class="place_container span-11">
 
-      Description: <br />
-      <p><%= place.description %>
+      <div class="place_detail span-10">
+	<%= link_to place.name, 
+	    event_place_path(params[:id], place.id) %><br />
+
+	<p><%= place.description %>
+      </div>
+
+      <div class="vote span-1 last">
+	<%= render :partial => 'shared/vote', :locals => { :place => place } %>
+      </div>
+
+      <br />
+
     </div>
 
-    <div class="vote span-1 last">
-      <%= render :partial => 'shared/vote', :locals => { :place => place } %>
-    </div>
-
-    <br />
-    </div>
   </li>
 
   
