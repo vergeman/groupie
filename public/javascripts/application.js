@@ -15,24 +15,36 @@ $(document).ready(function() {
     $(".vote_up").click(function(e) { 
 	var e_id = $(".event").data("event");
 	var p_id = $(this).data("place");
+	var votes_remaining = $("#votes_remaining").html();
 
-	//need sign in check
+	//need sign in check?
+	if (votes_remaining > 0) {
+	    $(this).next('.vote_count').html(
+		parseInt( $(this).next('.vote_count').html() ) + 1 );
 
-	$(this).next('.vote_count').html(
-	    parseInt( $(this).next('.vote_count').html() ) + 1 );
+	    vote(e_id, p_id, 1);
+	    $("#votes_remaining").html( --votes_remaining);
+	}
+	else {
 
-	vote(e_id, p_id, 1);
-	
+	}
     })
 
     $(".vote_down").click(function() { 
 	var e_id = $(".event").data("event");
 	var p_id = $(this).data("place");
+	var votes_remaining = $("#votes_remaining").html();
 
-	$(this).prev('.vote_count').html(
-	    parseInt( $(this).prev('.vote_count').html() ) - 1 );
-
-	vote(e_id, p_id, -1);
+	if (votes_remaining > 0) {
+	    $(this).prev('.vote_count').html(
+		parseInt( $(this).prev('.vote_count').html() ) - 1 );
+	    
+	    vote(e_id, p_id, -1);
+	    $("#votes_remaining").html( --votes_remaining);
+	}
+	else {
+		//error
+	}
     })
 
 

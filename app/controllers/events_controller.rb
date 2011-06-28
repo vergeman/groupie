@@ -14,11 +14,14 @@ end
 
 
 def create
-  # @event = current_user.events.build(params[:event])
+  #hardcoding starting_votes
+  start_votes = 5
+
   @user = User.find(current_user.id)
   @events = @user.events
-
-  @event = @user.events.create(params[:event].merge(:admin_id => @user.id, :event_key => create_event_key(@user.id) ))
+  
+  @event = @user.events.create(params[:event].merge(:admin_id => @user.id, 
+:event_key => create_event_key(@user.id), :starting_votes => start_votes))
 
   if @event.save
     flash[:success] = "Event created."
@@ -42,7 +45,10 @@ def show
   @event = Event.find(params[:id])
   @places = @event.places
 
+
+
   if signed_in?
+
 
     #if signed in, we can take the GET param and add the event accordingly (no cookies needed)  #we need match key for auth - migrate db
     if params[:invite] 
@@ -60,6 +66,14 @@ def show
     @events = @user.events
 
     @participants = @event.participants
+    @participant = @participants.find_by_user_id(current_user)
+
+    #set if there are nil starting votes - case: user adds an event
+    if @participant.votes_remaining.nil?
+      @participant.update_attributes(:votes_remaining => @event.starting_votes)
+    end
+
+
     # @event = @user.events.find(params[:id])
     # @places = @events.find(params[:id]).places
   end

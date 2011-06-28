@@ -8,6 +8,7 @@ class VotesController < ApplicationController
   def create
 
     respond_to do |format|
+
       format.js {
         #TODO: check if vote for item by participant already exists, redirect to update
         @event = Event.find(params[:event_id])
@@ -17,7 +18,16 @@ class VotesController < ApplicationController
         @participant = @event.participants.find_by_user_id(current_user)
 
         if (@vote = @participant.votes.find_by_place_id(@place))
-          @vote.update_attributes(:vote => @vote.vote += submit_vote.to_i)
+
+          if @participant.votes_remaining > 0
+
+            #udpate vote record
+            @vote.update_attributes(:vote => @vote.vote += submit_vote.to_i)
+
+            #update participant record - deduct his/her total vote for the event
+            @participant.update_attributes(:votes_remaining => @participant.votes_remaining -= submit_vote.to_i)
+          end
+
         else
           @vote = @participant.votes.create(:place_id => params[:place_id], 
                                             :vote => params[:vote])
@@ -25,6 +35,7 @@ class VotesController < ApplicationController
 
         render :json => @vote.vote
       }
+
       format.html { render :nothing => true }
 
     end

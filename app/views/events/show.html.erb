@@ -10,7 +10,10 @@
 <!-- add place form -->
 <% if user_signed_in? %>
 <%= render 'shared/places' %>
-
+Votes Remaining: 
+<div id="votes_remaining">
+  <%= @participant.votes_remaining %>
+</div>
 <% end %>
 
 
