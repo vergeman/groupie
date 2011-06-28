@@ -6,15 +6,23 @@
 
 <h2><%= @event.title %></h2>
 <h3><%= @event.description %></h3>
-
 <!-- add place form -->
 <% if user_signed_in? %>
 <%= render 'shared/places' %>
-Votes Remaining: 
-<div id="votes_remaining">
-  <%= @participant.votes_remaining %>
+<hr>
+<div id="vote-info" class="span-11">
+  <div id="vote-info-lbl" class="span-5">Votes Remaining:</div>
+  <span id="votes_remaining" class="span-1 last">
+    <%= @participant.votes_remaining %>    
+  </span>
 </div>
+<br/>
+<!--
+  <div id="votes_remaining span-3 last"><%= @participant.votes_remaining %></div>
+-->
+
 <% end %>
+
 
 
 
