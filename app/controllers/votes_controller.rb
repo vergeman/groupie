@@ -19,13 +19,20 @@ class VotesController < ApplicationController
 
         if (@vote = @participant.votes.find_by_place_id(@place))
 
-          if @participant.votes_remaining > 0
+          if valid_vote(@vote.vote, submit_vote) || 
+              @participant.votes_remaining - 1 >= 0
 
-            #udpate vote record
+
+            #udpate vote record for individual place
             @vote.update_attributes(:vote => @vote.vote += submit_vote.to_i)
 
-            #update participant record - deduct his/her total vote for the event
-            @participant.update_attributes(:votes_remaining => @participant.votes_remaining -= submit_vote.to_i)
+            #update total votes by user
+            votes = 0
+            @participant.votes.each do |p|
+              votes += p.vote.abs
+            end
+            
+            @participant.update_attributes(:votes_remaining => @event.starting_votes - votes)
           end
 
         else
@@ -59,6 +66,18 @@ class VotesController < ApplicationController
   end
 
 
-  
+  private
+  def valid_vote(orig_vote, vote)
+
+    valid = orig_vote.to_i + vote.to_i
+
+    if valid.abs < orig_vote.abs
+      return true
+    else
+      return false
+    end
+
+  end
+
 
 end

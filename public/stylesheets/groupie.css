@@ -90,6 +90,24 @@ header nav {
 section {
 
 }
+
+.place_title {
+    height: 30px
+
+}
+
+.place_total_votes {
+    float: right;
+    height: 30px
+}
+
+.place_total_votes_lbl {
+    font-size: 16px;
+}
+
+.place_total_votes_count {
+    
+}
 .vote {
 
 }

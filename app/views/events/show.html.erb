@@ -29,15 +29,45 @@ Votes Remaining:
 
     <div class="place_container span-11">
 
-      <div class="place_detail span-10">
-	<%= link_to place.name, 
-	    event_place_path(params[:id], place.id) %><br />
+      <div class="place_header span-11">
 
-	<p><%= place.description %>
+	<div class="place_title span-7">
+	
+	  <h3><%= link_to place.name, 
+		  event_place_path(params[:id], place.id) %>
+	    <h3>
+	</div>
+
+
+	<div class="place_total_votes span-4 last">
+	    <div class="place_total_votes_lbl span-3">
+	      Total Votes:
+	    </div>
+	    <div class="place_total_votes_count span-1 last">
+	      <h3>
+	      <% if place.votes.empty? %>
+	      <%= 0 %>
+	      <% else %>
+	      <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
+	      <% end %>
+	      </h3>
+	    </div>
+
+
+	</div>
+      </div>
+
+      <hr>
+
+      <div class="place_detail span-10">
+	<p><%= place.description %>	  
       </div>
 
       <div class="vote span-1 last">
-	<%= render :partial => 'shared/vote', :locals => { :place => place } %>
+
+	<%= render :partial => 'shared/vote', 
+	:locals => { :place => place, :participant => @participant } %>
+
       </div>
 
       <br />

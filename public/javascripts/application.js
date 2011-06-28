@@ -12,43 +12,78 @@ $(document).ready(function() {
     $("#place_submit").button();
 
 
+//client side voting update
+
     $(".vote_up").click(function(e) { 
 	var e_id = $(".event").data("event");
 	var p_id = $(this).data("place");
-	var votes_remaining = $("#votes_remaining").html();
+	var votes_remaining = parseInt( $("#votes_remaining").text() );
+	var votes = _abs_sum_vote();
+	var total = votes + votes_remaining;
+
+	var orig_vote = parseInt( $(this).next('.vote_count').text() );
 
 	//need sign in check?
-	if (votes_remaining > 0) {
-	    $(this).next('.vote_count').html(
-		parseInt( $(this).next('.vote_count').html() ) + 1 );
+
+
+	if ( ( Math.abs(orig_vote + 1) < Math.abs(orig_vote) )  || votes_remaining -1 >= 0) {
+	    $(this).next('.vote_count').html( orig_vote + 1 );
 
 	    vote(e_id, p_id, 1);
-	    $("#votes_remaining").html( --votes_remaining);
+
+	    //update votes remaining
+	    $("#votes_remaining").html( total - _abs_sum_vote() );
 	}
 	else {
-
+	    //error
 	}
     })
+
 
     $(".vote_down").click(function() { 
 	var e_id = $(".event").data("event");
 	var p_id = $(this).data("place");
-	var votes_remaining = $("#votes_remaining").html();
+	var votes_remaining = parseInt( $("#votes_remaining").text() );
+	var votes = _abs_sum_vote();
+	var total = votes + votes_remaining;
 
-	if (votes_remaining > 0) {
-	    $(this).prev('.vote_count').html(
-		parseInt( $(this).prev('.vote_count').html() ) - 1 );
+	var orig_vote =	parseInt( $(this).prev('.vote_count').text() );
+
+
+	if ( ( Math.abs(orig_vote - 1) < Math.abs(orig_vote) ) || votes_remaining -1 >= 0) {
+
+	    $(this).prev('.vote_count').html(orig_vote - 1 );
 	    
 	    vote(e_id, p_id, -1);
-	    $("#votes_remaining").html( --votes_remaining);
+
+	    //update votes remaining
+	    $("#votes_remaining").html( total - _abs_sum_vote() );
 	}
 	else {
 		//error
 	}
     })
 
-
+    
 })
+
+function _valid_vote(vote, votes) {
+    
+}
+
+
+function _abs_sum_vote() {
+    var count = 0;
+
+    $('.vote_count').each( function()  {
+	count += Math.abs(parseInt($(this).text() ) );
+	//console.log(this.innerHTML);
+    });
+
+
+    return count;
+}
+
 
 
 function vote(e_id, p_id, v) {

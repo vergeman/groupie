@@ -5,11 +5,22 @@ Vote Up
 
 <!-- sum of participants votes -->
 <div class="vote_count">
+<!--
   <% if place.votes.empty? %>
   <%= 0 %>
   <% else %>
   <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
   <% end %>
+-->
+
+  <% if place.votes.empty? %>
+  <%= 0 %>
+  <% else %>
+  <% v = place.votes.find_by_participant_id(participant) %>
+  <%= v.nil? ? 0 : v.vote %>
+  <% end %>
+
+
 </div>
 
 <div class="vote_down" data-place=<%= place.id %>>
