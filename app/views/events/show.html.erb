@@ -43,16 +43,15 @@ Votes Remaining:
 	    <div class="place_total_votes_lbl span-3">
 	      Total Votes:
 	    </div>
+	    <h3>
 	    <div class="place_total_votes_count span-1 last">
-	      <h3>
 	      <% if place.votes.empty? %>
 	      <%= 0 %>
 	      <% else %>
 	      <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
 	      <% end %>
-	      </h3>
 	    </div>
-
+	    </h3>
 
 	</div>
       </div>

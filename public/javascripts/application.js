@@ -33,6 +33,11 @@ $(document).ready(function() {
 
 	    //update votes remaining
 	    $("#votes_remaining").html( total - _abs_sum_vote() );
+
+	    //total vote update
+ 	    total_vote = parseInt($(this).parents().find('.place_total_votes_count').first().text());
+	    $(this).parents().find('.place_total_votes_count').first().text(total_vote + 1);
+
 	}
 	else {
 	    //error
@@ -58,9 +63,14 @@ $(document).ready(function() {
 
 	    //update votes remaining
 	    $("#votes_remaining").html( total - _abs_sum_vote() );
+
+	    //total vote update
+ 	    total_vote = parseInt($(this).parents().find('.place_total_votes_count').first().text());
+	    $(this).parents().find('.place_total_votes_count').first().text(total_vote -  1);
+
 	}
 	else {
-		//error
+	    //error
 	}
     })
 
