@@ -12,6 +12,10 @@ $(document).ready(function() {
     $("#place_submit").button();
 
 
+    $("#event_event_date").datepicker();
+    $("#event_event_date").datepicker("show");
+    
+    
 //client side voting update
 
     $(".vote_up").click(function(e) { 

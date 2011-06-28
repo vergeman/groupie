@@ -5,9 +5,9 @@
   <div class = "event">
       <li>
 	<%= link_to event.title, event_path(event.id) %><br />
-	<%= event.description %><br />
-	<%= event.event_date %><br />
-	<%= event.starting_votes %><br />	
+	<%= event.description %><br />	
+	<%= event.event_date.nil? ? "" : 
+	    event.event_date.strftime("%I:%M %p, %A, %b. %d") %><br />
       <li>
     
     </div>
