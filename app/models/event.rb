@@ -30,6 +30,6 @@ class Event < ActiveRecord::Base
 #will probbaly need an association w/ admin_id as foreign_key for users
 
   #ordering of event by date
-  default_scope :order => 'events.event_date DESC'
+  default_scope :order => 'events.event_date ASC'
 
 end

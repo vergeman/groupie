@@ -1,5 +1,6 @@
 class EventsController < ApplicationController
   require 'digest'
+  #require 'date'
 
   before_filter :authenticate_user!, :except => [:show]
   helper_method :cookies
@@ -20,8 +21,7 @@ def create
   @user = User.find(current_user.id)
   @events = @user.events
   
-  @event = @user.events.create(params[:event].merge(:admin_id => @user.id, 
-:event_key => create_event_key(@user.id), :starting_votes => start_votes))
+  @event = @user.events.create(params[:event].merge(:admin_id => @user.id, :event_key => create_event_key(@user.id), :starting_votes => start_votes, :event_date => Date.strptime(params[:event][:event_date], "%m/%d/%Y").to_s ))
 
   if @event.save
     flash[:success] = "Event created."

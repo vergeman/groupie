@@ -11,8 +11,8 @@ $(document).ready(function() {
 
     $("#place_submit").button();
 
-
     $("#event_event_date").datepicker();
+    //$("#event_event_date").datepicker({ dateFormat: 'dd-mm-yy' });
     $("#event_event_date").datepicker("show");
     
     

@@ -1,1 +1,8 @@
-You created <%= @event_title %> at <%= @project_name %>
+Hi!
+
+<p>You've been invited to <%= @event.title %> 
+	<%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %I:%M %p") %> by <%= @user.email %>.
+
+	But your help is needed to decide where to eat! 
+
+	<%= link_to "Suggest a restaurant and help decide where to go!", url_for(:host => @host, :controller => "events", :action => "show", :id => @event.id, :invite => @event.event_key) %> 

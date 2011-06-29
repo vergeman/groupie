@@ -1,12 +1,19 @@
 <!DOCTYPE html>
 <html>
   <body>
-    <h2>You created <%= @event.title %> at <%= @project_name %></h2>
 
-    <p>Forward to invite your friends to this event!
+    <p>*We've made it simple for you! Just delete the sentences between asterisks, then forward this email on to your friends to invite them to your event. They will then be able to suggest and vote on where to eat!*
 
-    <p><%= link_to @event.title, url_for(:host => @host, :controller => "events", 
-      :action => "show", :id => @event.id, :invite => @event.event_key) %>
+      <p>Hi!
+
+      <p>You've been invited to <%= @event.title %> 
+	<%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %I:%M %p") %> by <%= @user.email %>. 
+
+	But your help is needed to decide where to eat! 
+	
+	<p><%= link_to "Suggest a restaurant and help decide where to go!", 
+	    url_for(:host => @host, :controller => "events", :action => "show", :id => @event.id, :invite => @event.event_key) %> 
+
 
   </body>
 
