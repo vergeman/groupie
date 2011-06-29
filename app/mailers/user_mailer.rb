@@ -1,13 +1,15 @@
 class UserMailer < ActionMailer::Base
   include ApplicationHelper
 
-  def welcome_email(user)
+  def welcome_email(user, host)
     @project_name = get_project_name
     @user = user.username
+    @host = host
+
 
     mail( :to => user.email,
           :from => "no-reply@" + @project_name.gsub(/\s+/,"") + ".com",
-          :subject => "Welcome to " + @project_name)
+          :subject => "Welcome to " + @project_name + "!")
 
   end
 

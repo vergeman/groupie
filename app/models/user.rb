@@ -33,13 +33,14 @@ class User < ActiveRecord::Base
   has_many :events, :through => :participants
 
   validates :username, :presence => true, :uniqueness => true
+  #validates :email, :presence => true, :uniqueness => true
 
-  #mailer hook
-  after_create :send_welcome_email
+  #mailer hook - moved to controller more apprpriate
+  #after_create :send_welcome_email
 
-  private
-  def send_welcome_email
-    UserMailer.welcome_email(self).deliver
-  end
+  #private
+  #def send_welcome_email
+  #  UserMailer.welcome_email(self, @host).deliver
+  #end
 
 end
