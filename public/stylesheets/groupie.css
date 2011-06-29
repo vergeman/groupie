@@ -130,6 +130,8 @@ text-indent: -9999em moves the text off the page
 */
 }
 
+
+
 #vote-info {
     font-size: 20px;
     padding-left: 30px;
@@ -148,6 +150,12 @@ text-indent: -9999em moves the text off the page
     rotation: 180deg;
     -webkit-transform: rotate(180deg);
     -moz-transform: rotate(180deg);
+}
+
+.vote_down {
+    rotation: 0deg;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
 }
 
 .vote_count {

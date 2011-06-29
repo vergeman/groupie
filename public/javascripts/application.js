@@ -14,11 +14,13 @@ $(document).ready(function() {
     $("#event_event_date").datepicker();
     //$("#event_event_date").datepicker({ dateFormat: 'dd-mm-yy' });
     $("#event_event_date").datepicker("show");
+
     
     
 //client side voting update
 
     $(".vote_up").click(function(e) { 
+	//$(this).select();
 	var e_id = $(".event").data("event");
 	var p_id = $(this).data("place");
 	var votes_remaining = parseInt( $("#votes_remaining").text() );
@@ -50,6 +52,7 @@ $(document).ready(function() {
 
 
     $(".vote_down").click(function() { 
+	//$(this).select();
 	var e_id = $(".event").data("event");
 	var p_id = $(this).data("place");
 	var votes_remaining = parseInt( $("#votes_remaining").text() );
