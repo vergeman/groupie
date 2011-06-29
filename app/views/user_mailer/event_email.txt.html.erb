@@ -1,8 +1,19 @@
 Hi!
 
-<p>You've been invited to <%= @event.title %> 
-	<%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %I:%M %p") %> by <%= @user.email %>.
+You've been invited to <%= @event.title %> 
+<%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %I:%M %p") %> by <%= @user.email %>.
 
-	But your help is needed to decide where to eat! 
+But your help is needed to decide where to eat! 
 
-	<%= link_to "Suggest a restaurant and help decide where to go!", url_for(:host => @host, :controller => "events", :action => "show", :id => @event.id, :invite => @event.event_key) %> 
+<%= link_to "Suggest a restaurant and help decide where to go!", url_for(:host => @host, :controller => "events", :action => "show", :id => @event.id, :invite => @event.event_key) %> 
+
+Current Event Details
+
+What: <%= @event.title %>
+When: <%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %I:%M %p") %>
+<%= @event.places.empty? ? "" : "Where:" + @user.username + "suggested" + @event.places.map{|p| p.name }.to_sentence() %>
+
+Do you want to suggest a venue? Do you like one of these places better than the other? Then get voting and voice your opinion before the polls close!
+
+Go in peace,
+The Get Together Team.
