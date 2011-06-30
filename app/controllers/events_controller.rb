@@ -18,7 +18,7 @@ def new
 
   i=0
   while i < 48 do
-    t1 = (time + i * 30.minutes).strftime("%I:%M %p")
+    t1 = (time + i * 30.minutes).strftime("%l:%M %p")
     @times.push( [t1, t1] )
     i+=1
   end
