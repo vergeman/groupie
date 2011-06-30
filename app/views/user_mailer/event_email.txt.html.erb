@@ -1,7 +1,7 @@
 Hi!
 
 You've been invited to <%= @event.title %> 
-<%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %I:%M %p") %> by <%= @user.email %>.
+<%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %l:%M %p") %> by <%= @user.email %>.
 
 But your help is needed to decide where to eat! 
 
@@ -10,7 +10,7 @@ But your help is needed to decide where to eat!
 Current Event Details
 
 What: <%= @event.title %>
-When: <%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %I:%M %p") %>
+When: <%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %l:%M %p") %>
 <%= @event.places.empty? ? "" : "Where:" + @user.username + "suggested" + @event.places.map{|p| p.name }.to_sentence() %>
 
 Do you want to suggest a venue? Do you like one of these places better than the other? Then get voting and voice your opinion before the polls close!

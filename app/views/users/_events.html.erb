@@ -7,7 +7,7 @@
 	<%= link_to event.title, event_path(event.id) %><br />
 	<%= event.description %><br />	
 	<%= event.event_date.nil? ? "" : 
-	    event.event_date.strftime("%I:%M %p, %A, %b. #{event.event_date.day.ordinalize}") %><br />
+	    event.event_date.strftime("%l:%M %p, %A, %b. #{event.event_date.day.ordinalize}") %><br />
       <li>
     
     </div>
