@@ -1,0 +1,9 @@
+<h3>Current Event Details</h3>
+<p>
+  What: <%= @event.title %> <br />
+  When: <%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %l:%M %p") %> <br />
+  <%= @event.places.empty? ? "" : "Where:" + @user.username + "suggested" + @event.places.map{|p| "<u>" + p.name + "</u>"}.to_sentence() %>
+  <br />
+
+	<p>
+	  Do you want to suggest a venue? Do you like one of these places better than the other? Then get voting and voice your opinion before the polls close!

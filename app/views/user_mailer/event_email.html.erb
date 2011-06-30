@@ -2,33 +2,17 @@
 <html>
   <body>
 
-    <p>*We've made it simple for you! Just delete the sentences between asterisks, then forward this email on to your friends to invite them to your event. They will then be able to suggest and vote on where to eat!*
+      <p>Hi, <%= @user.username %>
 
-      <p>Hi!
+      <p>You've created a <%= @project_name %> for <%= @event.title %> 
+	<%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %l:%M %p.") %>
 
-      <p>You've been invited to <%= @event.title %> 
-	<%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %l:%M %p") %> by <%= @user.email %>. 
+      <p><b>Forward this email</b> to your friends.  They will then be able to suggest places to go and vote on their favorite spots.
 
-	But your help is needed to decide where to eat! 
-	
-	<p><%= link_to "Suggest a restaurant and help decide where to go!", 
-	    url_for(:host => @host, :controller => "events", :action => "show", :id => @event.id, :invite => @event.event_key) %> 
+      <p>The polls are open!  <%= link_to "Vote now.", url_for(:host => @host, :controller => "events", :action => "show", :id => @event.id, :invite => @event.event_key) %> 
 
-
-	  <h3>Current Event Details</h3>
-
-	<p>
-	  What: <%= @event.title %> <br />
-	  When: <%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %l:%M %p") %> <br />
-	  <%= @event.places.empty? ? "" : "Where:" + @user.username + "suggested" + @event.places.map{|p| "<u>" + p.name + "</u>"}.to_sentence() %>
-	  <br />
-
-	<p>
-	  Do you want to suggest a venue? Do you like one of these places better than the other? Then get voting and voice your opinion before the polls close!
-
-	<p>
-	  Go in peace,
-	  The Get Together Team.
+      <p>Best,<br />
+	The <%= @project_name %> Team.
 
 
   </body>

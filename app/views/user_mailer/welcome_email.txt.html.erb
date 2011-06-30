@@ -1,11 +1,13 @@
 Welcome to <%= get_project_name %>!
 ===================================
 
-Hi <%= @user %>,
+Hi <%= @user.username %>,
 
-     Welcome to Get Together! By using Get Together to plan dinner with your friends, you'll be able to solicit their input on where to get dinner and then use our simple voting system to make a decision on where to eat.
+     Welcome to Get Together! 
 
-     Ready to give it a spin? Go forth and <%= link_to "create a Get Together", 		       url_for(:host => @host, :controller => "events", :action => :new) %>
+     Decide where your friends will eat dinner, get Happy Hour drinks and more.  Invite them to suggest a location, then vote on where you will meet.
+
+     Now go forth and <%= link_to "create a Get Together", url_for(:host => @host, :controller => "events", :action => :new) %>
 
 Sincerely,
 The <%= get_project_name %> Team.
