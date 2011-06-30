@@ -14,9 +14,9 @@
     <ul class = "event_title">
 
       <% @events.each do |event| %>
-
+      
       <li><%= link_to event.title, event_path(event.id) %></li>
-
+      
       <% end %>
       
     </ul>

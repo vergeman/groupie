@@ -7,7 +7,8 @@
 <h2><%= @event.title %></h2>
 <h3><%= @event.description %></h3>
 <!-- add place form -->
-<% if user_signed_in? %>
+<!--events set to public visibiility for now.-->
+<% if user_signed_in? && @participant %>
 <%= render 'shared/places' %>
 <hr>
 <div id="vote-info" class="span-11">
@@ -17,9 +18,7 @@
   </span>
 </div>
 <br/>
-<!--
-  <div id="votes_remaining span-3 last"><%= @participant.votes_remaining %></div>
--->
+
 
 <% end %>
 

@@ -11,6 +11,19 @@ def new
 
   @title = "Create Event"
   @event = Event.new
+
+  #time for form in 30 min increments
+  time = Time.utc(2011,1,1,0,0)
+  @times = Array.new
+
+  i=0
+  while i < 48 do
+    t1 = (time + i * 30.minutes).strftime("%I:%M %p")
+    @times.push( [t1, t1] )
+    i+=1
+  end
+
+  
 end
 
 
@@ -21,7 +34,16 @@ def create
   @user = User.find(current_user.id)
   @events = @user.events
   
-  @event = @user.events.create(params[:event].merge(:admin_id => @user.id, :event_key => create_event_key(@user.id), :starting_votes => start_votes, :event_date => Date.strptime(params[:event][:event_date], "%m/%d/%Y").to_s ))
+  time = Time.parse(params[:event_time]);
+  date = Date.strptime(params[:event][:event_date], "%m/%d/%Y")
+
+  @date = (date.to_time + time.hour.hours + time.min.minutes) - 4.hours
+
+  # @event = @user.events.create(params[:event].merge(:admin_id => @user.id, :event_key => create_event_key(@user.id), :starting_votes => start_votes, 
+  #                                                  :event_date => Date.strptime(params[:event][:event_date], "%m/%d/%Y").to_s ))
+
+  @event = @user.events.create(params[:event].merge(:admin_id => @user.id, :event_key => create_event_key(@user.id), :starting_votes => start_votes, 
+                                                    :event_date => @date ))
 
   if @event.save
     flash[:success] = "Event created."
@@ -33,7 +55,9 @@ def create
     redirect_to(new_event_place_path(@event))
 
   else
-    render 'events/new'
+    flash[:error] = "oops, looks like you forgot some info"
+
+    redirect_to(new_event_path)
   end
 
 end
@@ -69,7 +93,8 @@ def show
     @participant = @participants.find_by_user_id(current_user)
 
     #set if there are nil starting votes - case: user adds an event
-    if @participant.votes_remaining.nil?
+
+    if (not @participant.nil?) && @participant.votes_remaining.nil?
       @participant.update_attributes(:votes_remaining => @event.starting_votes)
     end
 

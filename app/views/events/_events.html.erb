@@ -2,28 +2,39 @@
 <%= form_for(@event) do |e| %>
 
 <%= render 'shared/error_messages', :object => e.object %>
-<div class = "field">
+<div class="field">
   <%= e.label :title %> <br />
   <%= e.text_field :title %>
 </div>
 
-<div class = "field">
+<div class="field">
   <%= e.label :description %> <br />
   <%= e.text_field :description %> <br />
 </div>
 
-<div class ="field">
+
+<div class="field">
+
   <%= e.label :date %> <br />
-  <%= e.text_field :event_date %>
+
+  <div id="datepicker"></div>
+ 
+  <%= e.hidden_field :event_date %>
+     
 </div>
 
+<br />
+<div class="field">
+<%= select_tag "event_time", options_for_select(@times, "07:00 PM") %>
+</div>
 <!--
 <div class ="field">
   <%= e.label :starting_votes, "Initial Votes" %> <br />
   <%= e.text_field :starting_votes %>
 </div>
 -->
-<div class = "actions">
+
+<br /><div class = "actions">
   <%= e.submit "Create Event" %>
 </div>
 

@@ -25,8 +25,8 @@ class Event < ActiveRecord::Base
   has_many :schedules
   has_many :places, :through => :schedules
 
-  validates :admin_id, :presence => true;
   validates :title, :presence => true;
+  validates :admin_id, :presence => true;
 #will probbaly need an association w/ admin_id as foreign_key for users
 
   #ordering of event by date

@@ -7,7 +7,7 @@
       <p>Hi!
 
       <p>You've been invited to <%= @event.title %> 
-	<%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %I:%M %p") %> by <%= @user.email %>. 
+	<%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %l:%M %p") %> by <%= @user.email %>. 
 
 	But your help is needed to decide where to eat! 
 	
@@ -19,7 +19,7 @@
 
 	<p>
 	  What: <%= @event.title %> <br />
-	  When: <%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %I:%M %p") %> <br />
+	  When: <%= @event.event_date.nil? ? "" : " on " + @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %l:%M %p") %> <br />
 	  <%= @event.places.empty? ? "" : "Where:" + @user.username + "suggested" + @event.places.map{|p| "<u>" + p.name + "</u>"}.to_sentence() %>
 	  <br />
 
