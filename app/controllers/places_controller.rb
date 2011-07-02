@@ -7,40 +7,46 @@ class PlacesController < ApplicationController
   require 'json'
 
   def search
+    start_time = Time.now
+
     key = 'AIzaSyDfKgIyvLi4KzXAAzZELPO0tWIpwW9fN-Y'
     lat = '40.718902'
     long = '-73.992249'
-
-    @result;
+    max_results = 5
 
     respond_to do |format|
       @search_text = params[:search_text]
 
       base_place_uri = URI.encode("https://maps.googleapis.com/maps/api/place/search/json?location=#{lat},#{long}&radius=15&types=bar|restaurant&name=#{@search_text}&sensor=false&key=#{key}")
 
-      place_uri = URI.parse(base_place_uri)
+      @result = URI_request(base_place_uri)
+      logger.debug(@result)
 
+      res_count = 0
+      @result["results"].each do |res|
+        break if res_count > max_results - 1
 
-      http = Net::HTTP.new(place_uri.host, place_uri.port)
+        @name = res["name"]
+        @reference = res["reference"]
+        @vicinity = res["vicinity"]
+        @id = res["id"] #unique id but not to be used for searching (internal ref)
 
-      http.use_ssl = true if place_uri.scheme == "https"  # enable SSL/TLS
-      http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+        search_detail = URI.encode("https://maps.googleapis.com/maps/api/place/details/json?reference=#{@reference}&sensor=false&key=#{key}")
 
-      http.start {
-        http.request_get(place_uri.path + "?" + place_uri.query) {|res|
-          @result = res.body
-        }
-      }
-      @result = ActiveSupport::JSON.decode(@result)
-      
-      #array of results
-      #logger.debug(@result["results"][0])
-      @name = @result["results"][0]["name"]
-      @reference = @result["results"][0]["reference"]
+        @details = URI_request(search_detail)
 
+        @rating = @details["result"]["rating"]
+        # logger.debug(@details["result"])
+        logger.debug(@details["result"]["url"])
+        logger.debug("rating #{@rating}")
+        # logger.debug(@reference)
+
+        res_count += 1
+      end
 
       format.js {
-        render :json => @result["results"]
+        logger.debug("search requests took " + (Time.now - start_time).to_s)
+        render :json => @details # @result["results"]
       }
 
 
@@ -48,6 +54,9 @@ class PlacesController < ApplicationController
 
 
   end
+
+
+#==canonical actions
 
 
   def new
@@ -103,5 +112,31 @@ class PlacesController < ApplicationController
 
   def destroy
   end
+
+
+
+private
+  #returns json decoded resutls
+  def URI_request(uri)
+    @result;
+
+    uri = URI.parse(uri)
+
+    http = Net::HTTP.new(uri.host, uri.port)
+
+    http.use_ssl = true if uri.scheme == "https"  # enable SSL/TLS
+
+    http.verify_mode = OpenSSL::SSL::VERIFY_NONE
+
+    http.start {
+      http.request_get(uri.path + "?" + uri.query) {|res|
+        @result = res.body
+      }
+    }
+    @result = ActiveSupport::JSON.decode(@result)
+    #array of results - we'll need to loop through each one 
+    #logger.debug(@result["results"][0])
+  end
+
 
 end
