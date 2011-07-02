@@ -34,6 +34,7 @@ Groupie::Application.routes.draw do
   match '/about', :to => 'pages#about'
   match '/contact', :to => 'pages#contact'
   match '/howitworks', :to => 'pages#how'
+  match '/places/search', :to => 'places#search'
 
   root :to => 'pages#home'
 

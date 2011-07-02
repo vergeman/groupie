@@ -67,6 +67,8 @@ ul .event_title {
 
 
 /*header styling*/
+
+
 header {
 }
 
@@ -91,10 +93,16 @@ section {
 
 }
 
+#tabs.ui-tabs {
+    background: transparent;
+    border-width: 0px 0px 0px 0px;
+}
+
 .place_title {
     height: 30px
 
 }
+
 
 .place_total_votes {
     float: right;

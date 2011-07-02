@@ -1,93 +1,118 @@
-<% if signed_in? %>
-<%= render 'participants' %>
-<% end %>
+
 
 <!-- event summary -->
 
 <h2><%= @event.title %></h2>
 <h3><%= @event.description %></h3>
 <!-- add place form -->
-<!--events set to public visibiility for now.-->
-<% if user_signed_in? && @participant %>
-<%= render 'shared/places' %>
-<hr>
-<div id="vote-info" class="span-11">
-  <div id="vote-info-lbl" class="span-5">Votes Remaining:</div>
-  <span id="votes_remaining" class="span-1 last">
-    <%= @participant.votes_remaining %>    
-  </span>
-</div>
-<br/>
 
 
-<% end %>
+<div id="tabs">
+
+  <ul>
+    <li><a href="#voting">Vote</a></li>
+    <li><a href="#places">Browse</a></li>
+  </ul>
 
 
+<!--form input to search for places -->
+  <div id="places">
+    
+    <% if user_signed_in? && @participant %>
+    
+    <%= render 'shared/search' %>
+
+    <%= render 'shared/places' %>
+    
+  </div>
 
 
-<!-- event detail - places -->
-<br />
-<ul class="event" data-event=<%= @event.id %>>
+  <!--events set to public visibiility for now.-->
 
-  <% @places.each do |place| %>
-
-
-  <li>
-
-    <div class="place_container span-11">
-
-      <div class="place_header span-11">
-
-	<div class="place_title span-7">
-	
-	  <h3><%= link_to place.name, 
-		  event_place_path(params[:id], place.id) %>
-	    <h3>
-	</div>
-
-
-	<div class="place_total_votes span-4 last">
-	    <div class="place_total_votes_lbl span-3">
-	      Total Votes:
-	    </div>
-	    <h3>
-	    <div class="place_total_votes_count span-1 last">
-	      <% if place.votes.empty? %>
-	      <%= 0 %>
-	      <% else %>
-	      <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
-	      <% end %>
-	    </div>
-	    </h3>
-
-	</div>
-      </div>
-
-      <hr>
-
-      <div class="place_detail span-10">
-	<p><%= place.description %>	  
-      </div>
-
-      <div class="vote span-1 last">
-
-	<%= render :partial => 'shared/vote', 
-	:locals => { :place => place, :participant => @participant } %>
-
-      </div>
-
-      <br />
-
+  <!-- votes remaining -->
+  <div id="voting">
+    <% if signed_in? %>
+    <%= render 'participants' %>
+    <% end %>
+    <div id="vote-info" class="span-11">
+      <div id="vote-info-lbl" class="span-5">Votes Remaining:</div>
+      <span id="votes_remaining" class="span-1 last">
+	<%= @participant.votes_remaining %>    
+      </span>
     </div>
+    <br/>
+    
 
-  </li>
-
-  
-  <% end %>
-
-</ul>
+    <% end %><!-- end user sign in -->
 
 
+
+    <!-- event detail - places -->
+    <br />
+    <ul class="event" data-event=<%= @event.id %>>
+      
+      <% @places.each do |place| %>
+      
+
+      <li>
+
+	<div class="place_container span-11">
+	  
+	  <div class="place_header span-11">
+	    
+	    <div class="place_title span-7">
+	      
+	      <h3><%= link_to place.name, 
+		  event_place_path(params[:id], place.id) %>
+		<h3>
+	    </div>
+	    
+
+	    <div class="place_total_votes span-4 last">
+	      <div class="place_total_votes_lbl span-3">
+		Total Votes:
+	      </div>
+	      <h3>
+		<div class="place_total_votes_count span-1 last">
+		  <% if place.votes.empty? %>
+		  <%= 0 %>
+		  <% else %>
+		  <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
+		  <% end %>
+		</div>
+	      </h3>
+	      
+	    </div>
+	  </div>
+	  
+	  <hr>
+
+	  <div class="place_detail span-10">
+	    <p><%= place.description %>	  
+	  </div>
+	  
+	  <div class="vote span-1 last">
+
+	    <%= render :partial => 'shared/vote', 
+	    :locals => { :place => place, :participant => @participant } %>
+	    
+	  </div>
+	  
+	  <br />
+	  
+	</div>
+	
+      </li>
+      
+      <% end %>
+      
+    </ul>
+
+
+  </div>
+
+
+</div>
 
 
 

@@ -1,6 +1,25 @@
 class PlacesController < ApplicationController
   before_filter :authenticate_user! #, :except => [:show]
 
+  def search
+    # @search = "hello";
+
+    respond_to do |format|
+      @search_text = params[:search_text]
+      
+
+
+      format.js {
+        render :json => @search_text
+      }
+
+
+    end
+
+
+  end
+
+
   def new
     @title = "Add Places"
     @user = User.find(current_user.id)

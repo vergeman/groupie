@@ -3,6 +3,8 @@
 
 $(document).ready(function() {
 
+    $("#tabs").tabs();
+
     $("#sign_up_btn").button();
     
     $("#user_submit").button();
@@ -11,11 +13,18 @@ $(document).ready(function() {
 
     $("#place_submit").button();
 
+
 /*date picka */
 
     $('#datepicker').datepicker({inline: true, altField: "#event_event_date"});
 	//$('#event_event_date').val(selectedDate.asString());
 
+
+    $(".search_form").submit(function(e) {	
+	e.preventDefault();
+	//alert( $('#search_place').val() )
+	search( $("#search_place").val() );
+    });
     
    
 
@@ -130,5 +139,32 @@ function vote(e_id, p_id, v) {
 	});
 
 
+
+}
+
+
+
+function search(search_text) {
+    var auth = $("meta[name=csrf-token]").attr("content")
+    
+
+	$.ajax({
+	    type: "POST",
+	    url: "/places/search/",
+	    dataType: "text",
+	    data: $.param({authenticity_token: auth, search_text: search_text}),
+	    error: {
+
+	    },
+	    success: function(data, textStatus) {
+		//var obj = $.parseJSON(data);
+		//console.log(data);		
+
+	    },
+	    complete: function(data, xhr) {
+		//var obj2 = $.parseJSON(data);
+		console.log(data.responseText);
+	    }
+	});
 
 }
