@@ -152,6 +152,7 @@ function search(search_text) {
 	    type: "POST",
 	    url: "/places/search/",
 	    dataType: "text",
+	    //dataType: "json",
 	    data: $.param({authenticity_token: auth, search_text: search_text}),
 	    error: {
 
