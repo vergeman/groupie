@@ -16,6 +16,8 @@ gem 'devise'
 #https://github.com/rails/jquery-ujs
 gem 'jquery-rails', '>= 1.0.3'
 
+gem 'nokogiri'
+
 group :development do
   gem 'rspec-rails'
 #  gem 'rspec-rails', '2.0.1'

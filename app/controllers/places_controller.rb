@@ -6,6 +6,9 @@ class PlacesController < ApplicationController
   require 'net/https'
   require 'json'
 
+  require 'nokogiri'
+  require 'open-uri'
+
   def search
     start_time = Time.now
 
@@ -29,17 +32,30 @@ class PlacesController < ApplicationController
         @name = res["name"]
         @reference = res["reference"]
         @vicinity = res["vicinity"]
-        @id = res["id"] #unique id but not to be used for searching (internal ref)
+        @id = res["id"] #unique id but not to be used for searching (internal ref we can use for caching)
 
         search_detail = URI.encode("https://maps.googleapis.com/maps/api/place/details/json?reference=#{@reference}&sensor=false&key=#{key}")
 
+        #probably spawn threads here 
         @details = URI_request(search_detail)
 
         @rating = @details["result"]["rating"]
+        @url = @details["result"]["url"]
         # logger.debug(@details["result"])
         logger.debug(@details["result"]["url"])
-        logger.debug("rating #{@rating}")
+        # logger.debug("rating #{@rating}")
         # logger.debug(@reference)
+
+        doc = Nokogiri::HTML(open(@url))
+        doc.css('.fr-snip').each do |link|
+          logger.debug(link.content)
+        end
+        #page_url = URI.encode(@url)
+        #logger.debug(page_url)
+
+        #place_page = URI_request(page_url)
+        #logger.debug(place_page)
+
 
         res_count += 1
       end
@@ -47,6 +63,7 @@ class PlacesController < ApplicationController
       format.js {
         logger.debug("search requests took " + (Time.now - start_time).to_s)
         render :json => @details # @result["results"]
+        # render :text => place_page
       }
 
 
@@ -133,8 +150,12 @@ private
         @result = res.body
       }
     }
-    @result = ActiveSupport::JSON.decode(@result)
-    #array of results - we'll need to loop through each one 
+
+    if @result[0..0] == '{'
+      @result = ActiveSupport::JSON.decode(@result)
+    else
+      @result
+    end
     #logger.debug(@result["results"][0])
   end
 
