@@ -22,7 +22,10 @@ class Place < ActiveRecord::Base
 
   attr_accessible :name, :description, :cid, :address, :neighborhood, :rating, :price, :comments, :external_links, :image_links
 
-  serialize :comments, :external_links, :image_links #YAML hash for 'objects' - expected a list of links
+  #YAML hash for 'objects' - expected a list of links
+  serialize :comments
+  serialize :external_links
+  serialize :image_links
 
 
   has_many :votes
