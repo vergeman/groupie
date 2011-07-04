@@ -10,6 +10,8 @@ class PlacesController < ApplicationController
   require 'nokogiri'
   require 'open-uri'
 
+  require 'thread'
+
   def search
     start_time = Time.now
 
@@ -19,7 +21,8 @@ class PlacesController < ApplicationController
     max_results = 5
 
     @query_results = Array.new
-
+    @mutex = Mutex.new
+    
     respond_to do |format|
       @search_text = params[:search_text]
 
@@ -29,21 +32,26 @@ class PlacesController < ApplicationController
       # logger.debug(@result)
 
       res_count = 0
+      # logger.debug("starting threads")
+
+
       @result["results"].each do |res|
 
         #cache check
         if @place = Place.find_by_cid(res["id"])
-          @query_results.push(@place)
-          res_count += 1
+          # @mutex.synchronize {
+              @query_results.push(@place)
+              res_count += 1
+          #  }
           next
         end
 
         #max result early terminate
         break if res_count > max_results - 1
 
-       
-
+      
         #==place search==
+        logger.debug("place search")
         @place = Place.new(:cid => res["id"], :name => res["name"], :reference => res["reference"], :neighborhood => res["vicinity"])
 
         reference = res["reference"]
@@ -53,17 +61,20 @@ class PlacesController < ApplicationController
         #probably spawn threads here 
 
         #==detail place search==
+        logger.debug("URI search request")
         @details = URI_request(search_detail)
 
         @place.rating = @details["result"]["rating"]
         @place.url = @details["result"]["url"]
         @place.address = @details["result"]["formatted_address"].to_s.gsub(", United States", "")
+        @place.address = @place.address.to_s.gsub("/5", "")
 
         #logger.debug(@place.address)
         #logger.debug(@details["result"]["url"])
 
 
         #==parse actual place page==
+        logger.debug("nokogiri")
         doc = Nokogiri::HTML(open(@place.url))
         
         #price
@@ -91,10 +102,17 @@ class PlacesController < ApplicationController
           #logger.debug(link.content)
         end
 
-        @place.save!
-        @query_results.push(@place)
+          logger.debug("save and push query results")
+         # @mutex.synchronize {
+            @place.save!
+            @query_results.push(@place)
 
-        res_count += 1
+            res_count += 1
+        #}
+
+      
+      #logger.debug("end thread")
+      
       end
 
 
@@ -102,7 +120,7 @@ class PlacesController < ApplicationController
 
       format.js {
         logger.debug("search requests took " + (Time.now - start_time).to_s)
-        render :json => @details # @result["results"]
+        render :text => build_result_html(@query_results) # @query_results # @details # @result["results"]
         # render :text => place_page
       }
 
@@ -173,6 +191,35 @@ class PlacesController < ApplicationController
 
 
 private
+
+  def build_result_html(query_string) 
+    result = ""
+
+    query_string.each do |place|
+
+      result += "<div class=\"search_result\">"
+      result += "#{place.name} <br />"
+      result += "#{place.address} <br />"
+      result += "#{place.neighborhood} <br />"
+      result += "Rating: #{place.rating} <br />"
+      result += place.price.nil? ? "" : "Price: #{place.price}"
+      result += "</div>"
+
+    end
+
+    return result
+
+  end
+
+
+
+
+
+
+
+
+
+
   #returns json decoded resutls
   def URI_request(uri)
     @result;

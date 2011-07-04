@@ -164,7 +164,8 @@ function search(search_text) {
 	    },
 	    complete: function(data, xhr) {
 		//var obj2 = $.parseJSON(data);
-		console.log(data.responseText);
+		//console.log(data.responseText);
+		$('#search_results').html(data.responseText);
 	    }
 	});
 
