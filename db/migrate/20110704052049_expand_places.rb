@@ -1,7 +1,7 @@
 class ExpandPlaces < ActiveRecord::Migration
   def self.up
     #name & descprition exist prior
-    add_column :places, :cid, :integer 
+    add_column :places, :cid, :string
     add_column :places, :address, :string
     add_column :places, :neighborhood, :string
     add_column :places, :rating, :string
@@ -11,10 +11,15 @@ class ExpandPlaces < ActiveRecord::Migration
     add_column :places, :comments, :text
     add_column :places, :external_links, :text #expect serialized hash
     add_column :places, :image_links, :text #expect serialized hash
+
+    add_index :places, :cid
   end
 
   def self.down
-    remove_column :places, :cid, :integer 
+
+    remove_index :places, :cid
+
+    remove_column :places, :cid, :string
     remove_column :places, :address, :string
     remove_column :places, :neighborhood, :string
     remove_column :places, :rating, :string

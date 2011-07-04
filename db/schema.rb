@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(:version => 20110704052049) do
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "cid"
+    t.string   "cid"
     t.string   "address"
     t.string   "neighborhood"
     t.string   "rating"
@@ -52,6 +52,8 @@ ActiveRecord::Schema.define(:version => 20110704052049) do
     t.text     "external_links"
     t.text     "image_links"
   end
+
+  add_index "places", ["cid"], :name => "index_places_on_cid"
 
   create_table "schedules", :force => true do |t|
     t.integer  "event_id"

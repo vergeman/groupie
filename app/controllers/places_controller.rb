@@ -18,17 +18,30 @@ class PlacesController < ApplicationController
     long = '-73.992249'
     max_results = 5
 
+    @query_results = Array.new
+
     respond_to do |format|
       @search_text = params[:search_text]
 
       base_place_uri = URI.encode("https://maps.googleapis.com/maps/api/place/search/json?location=#{lat},#{long}&radius=15&types=bar|restaurant&name=#{@search_text}&sensor=false&key=#{key}")
 
       @result = URI_request(base_place_uri)
-      logger.debug(@result)
+      # logger.debug(@result)
 
       res_count = 0
       @result["results"].each do |res|
+
+        #cache check
+        if @place = Place.find_by_cid(res["id"])
+          @query_results.push(@place)
+          res_count += 1
+          next
+        end
+
+        #max result early terminate
         break if res_count > max_results - 1
+
+       
 
         #==place search==
         @place = Place.new(:cid => res["id"], :name => res["name"], :reference => res["reference"], :neighborhood => res["vicinity"])
@@ -66,7 +79,11 @@ class PlacesController < ApplicationController
         end
 
         #images
-
+        @place.image_links = Array.new
+        doc.css('.pp-linked-photo').each do |link|
+          @place.image_links.push(link['src'])
+        end
+        # logger.debug(@place.image_links)
 
         #link comments
         doc.css('.fr-snip').each do |link|
@@ -74,10 +91,14 @@ class PlacesController < ApplicationController
           #logger.debug(link.content)
         end
 
-
+        @place.save!
+        @query_results.push(@place)
 
         res_count += 1
       end
+
+
+      #logger.debug(@query_results)
 
       format.js {
         logger.debug("search requests took " + (Time.now - start_time).to_s)
