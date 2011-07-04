@@ -46,6 +46,7 @@ class PlacesController < ApplicationController
         # logger.debug("rating #{@rating}")
         # logger.debug(@reference)
 
+        #parse place page
         doc = Nokogiri::HTML(open(@url))
         doc.css('.fr-snip').each do |link|
           logger.debug(link.content)
