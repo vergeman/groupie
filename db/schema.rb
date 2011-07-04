@@ -46,6 +46,8 @@ ActiveRecord::Schema.define(:version => 20110704052049) do
     t.string   "neighborhood"
     t.string   "rating"
     t.string   "price"
+    t.string   "reference"
+    t.string   "url"
     t.text     "comments"
     t.text     "external_links"
     t.text     "image_links"

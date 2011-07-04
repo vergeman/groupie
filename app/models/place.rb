@@ -13,6 +13,8 @@
 #  neighborhood   :string(255)
 #  rating         :string(255)
 #  price          :string(255)
+#  reference      :string(255)
+#  url            :string(255)
 #  comments       :text
 #  external_links :text
 #  image_links    :text
@@ -20,7 +22,7 @@
 
 class Place < ActiveRecord::Base
 
-  attr_accessible :name, :description, :cid, :address, :neighborhood, :rating, :price, :comments, :external_links, :image_links
+  attr_accessible :name, :description, :cid, :address, :neighborhood, :rating, :price, :reference, :url, :comments, :external_links, :image_links
 
   #YAML hash for 'objects' - expected a list of links
   serialize :comments

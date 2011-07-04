@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 class PlacesController < ApplicationController
   before_filter :authenticate_user!
 
@@ -29,33 +30,50 @@ class PlacesController < ApplicationController
       @result["results"].each do |res|
         break if res_count > max_results - 1
 
-        @name = res["name"]
-        @reference = res["reference"]
-        @vicinity = res["vicinity"]
-        @id = res["id"] #unique id but not to be used for searching (internal ref we can use for caching)
+        #==place search==
+        @place = Place.new(:cid => res["id"], :name => res["name"], :reference => res["reference"], :neighborhood => res["vicinity"])
 
-        search_detail = URI.encode("https://maps.googleapis.com/maps/api/place/details/json?reference=#{@reference}&sensor=false&key=#{key}")
+        reference = res["reference"]
+
+        search_detail = URI.encode("https://maps.googleapis.com/maps/api/place/details/json?reference=#{reference}&sensor=false&key=#{key}")
 
         #probably spawn threads here 
+
+        #==detail place search==
         @details = URI_request(search_detail)
 
-        @rating = @details["result"]["rating"]
-        @url = @details["result"]["url"]
-        # logger.debug(@details["result"])
-        logger.debug(@details["result"]["url"])
-        # logger.debug("rating #{@rating}")
-        # logger.debug(@reference)
+        @place.rating = @details["result"]["rating"]
+        @place.url = @details["result"]["url"]
+        @place.address = @details["result"]["formatted_address"].to_s.gsub(", United States", "")
 
-        #parse place page
-        doc = Nokogiri::HTML(open(@url))
-        doc.css('.fr-snip').each do |link|
-          logger.debug(link.content)
+        #logger.debug(@place.address)
+        #logger.debug(@details["result"]["url"])
+
+
+        #==parse actual place page==
+        doc = Nokogiri::HTML(open(@place.url))
+        
+        #price
+        doc.css('.pp-headline-item .pp-headline-attribute').each do |link|
+          @place.price = link.content
         end
-        #page_url = URI.encode(@url)
-        #logger.debug(page_url)
 
-        #place_page = URI_request(page_url)
-        #logger.debug(place_page)
+        #reivew links
+        @place.external_links = Hash.new        
+        doc.css('.pp-awards-text a').each do |link|
+          @place.external_links[ link.content.to_s.gsub(/[^a-zA-Z\.+\s+]/, "") ] = link['href'] 
+          #logger.debug(@place.external_links)
+        end
+
+        #images
+
+
+        #link comments
+        doc.css('.fr-snip').each do |link|
+          @place.comments = link.content
+          #logger.debug(link.content)
+        end
+
 
 
         res_count += 1
