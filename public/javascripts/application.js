@@ -14,6 +14,7 @@ $(document).ready(function() {
     $("#place_submit").button();
 
 
+    console.log('test');
 /*date picka */
 
     $('#datepicker').datepicker({inline: true, altField: "#event_event_date"});
@@ -25,9 +26,6 @@ $(document).ready(function() {
 	//alert( $('#search_place').val() )
 	search( $("#search_place").val() );
     });
-    
-   
-
     
     
 //client side voting update
@@ -166,7 +164,46 @@ function search(search_text) {
 		//var obj2 = $.parseJSON(data);
 		//console.log(data.responseText);
 		$('#search_results').html(data.responseText);
+
+		$(".add_form").submit(function(e) {	
+		    e.preventDefault();
+		    //console.log($(this) );
+		    //console.log($(this).find("#place_cid").val() );
+		    add_place( $(this), $(this).find("#place_cid").val() );
+		});		
+
+
 	    }
 	});
+
+}
+
+
+function add_place(button, place_id) {
+    var auth = $("meta[name=csrf-token]").attr("content")
+    var event_id = $(".event").data("event");
+
+    $.ajax({
+        type: "POST",
+        url: "/events/" + event_id + "/places",
+        dataType: "text",
+        //dataType: "json",
+        data: $.param({authenticity_token: auth, place: {cid: place_id} }),
+        error: {
+
+        },
+        success: function(data, textStatus) {
+            //var obj = $.parseJSON(data);
+            //console.log(data);
+
+        },
+        complete: function(data, xhr) {
+            //var obj2 = $.parseJSON(data);
+            //console.log(data.responseText);
+            //$('#search_results').html(data.responseText);
+	    //button.hide();
+        }
+    });
+
 
 }

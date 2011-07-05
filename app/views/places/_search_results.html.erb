@@ -31,7 +31,7 @@
     <!-- #add to event -->
     <div class="add_place_btn">
 
-      <%= form_tag(event_places_path(event_id) ) do %>
+      <%= form_tag(event_places_path(event_id), :class => "add_form" ) do %>
       <%= hidden_field_tag("place[cid]", place.cid) %>
       <%= submit_tag("Add") %>
       <% end %>
