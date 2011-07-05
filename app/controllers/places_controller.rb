@@ -129,8 +129,8 @@ class PlacesController < ApplicationController
 
       format.js {
         logger.debug("search requests took " + (Time.now - start_time).to_s)
-        render :text => build_result_html(@query_results) # @query_results # @details # @result["results"]
-        # render :text => place_page
+        # render :text => build_result_html(@query_results) # @query_results # @details # @result["results"]
+        render :partial => 'places/search_results', :layout => false, :locals => { :query_results => @query_results }
       }
 
 
@@ -200,64 +200,6 @@ class PlacesController < ApplicationController
 
 
 private
-
-  def build_result_html(query_string) 
-    result = ""
-
-    query_string.each do |place|
-
-      result += "<div id=#{place.cid} class=\"search_result\">"
-      result += "#{place.name} <br />"
-      result += "#{place.address} <br />"
-      result += "#{place.neighborhood} <br />"
-      result += "Rating: #{place.rating} <br />"
-      result += place.price.nil? ? "" : "Price: #{place.price} <br />"
-      
-      #snippet comments
-      place.comments.each do |comment|
-        result += "#{comment} <br />"
-      end
-
-
-      #external links
-      result += "<div class=\"review_links\">"
-      place.external_links.each do |review, link|
-        result += "<a href=\"#{link}\" target=\"_blank\">#{review}</a>"
-        result += "<br />"
-        #logger.debug(review)
-        #logger.debug(link)
-      end
-      result +="</div>"
-
-      #images
-      result += "<div class=\"images\">"
-      place.image_links.each do |image|
-        result += "<img src=\"#{image}\">"
-        result += "<br />"
-        break #set to one image for now
-      end
-      result +="</div>"
-
-      #add to event
-      
-
-      result += "</div>"  #end each place
-
-
-    end
-
-    return result
-
-  end
-
-
-
-
-
-
-
-
-
 
   #returns json decoded resutls
   def URI_request(uri)
