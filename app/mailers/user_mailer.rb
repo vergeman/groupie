@@ -3,7 +3,7 @@ class UserMailer < ActionMailer::Base
 
   def welcome_email(user, host)
     @project_name = get_project_name
-    @user = user.username
+    @user = user
     @host = host
 
 
