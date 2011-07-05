@@ -146,14 +146,14 @@ function vote(e_id, p_id, v) {
 
 function search(search_text) {
     var auth = $("meta[name=csrf-token]").attr("content")
-    
+    var event_id = $(".event").data("event");
 
 	$.ajax({
 	    type: "POST",
 	    url: "/places/search/",
 	    dataType: "text",
 	    //dataType: "json",
-	    data: $.param({authenticity_token: auth, search_text: search_text}),
+	    data: $.param({authenticity_token: auth, search_text: search_text, event_id: event_id}),
 	    error: {
 
 	    },

@@ -1,6 +1,6 @@
   <% query_results.each do |place| %>
 
-  <div id="<%= place.cid %>" class=\"search_result\">"
+  <div id="<%= place.cid %>" class="search_result">
     <%= place.name %> <br />
     <%= place.address %> <br />
     <%= place.neighborhood %> <br />
@@ -29,7 +29,14 @@
     </div>
 
     <!-- #add to event -->
-    <div class="add_place_btn"></div>
+    <div class="add_place_btn">
+
+      <%= form_tag(event_places_path(event_id) ) do %>
+      <%= hidden_field_tag("place[cid]", place.cid) %>
+      <%= submit_tag("Add") %>
+      <% end %>
+      
+    </div>
     
     
     <!--#end each place-->

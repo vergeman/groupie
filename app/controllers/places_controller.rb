@@ -20,6 +20,7 @@ class PlacesController < ApplicationController
     long = '-73.992249'
     max_results = 5
 
+    @event_id = params[:event_id]
     @query_results = Array.new
     @mutex = Mutex.new
     
@@ -130,7 +131,7 @@ class PlacesController < ApplicationController
       format.js {
         logger.debug("search requests took " + (Time.now - start_time).to_s)
         # render :text => build_result_html(@query_results) # @query_results # @details # @result["results"]
-        render :partial => 'places/search_results', :layout => false, :locals => { :query_results => @query_results }
+        render :partial => 'places/search_results', :layout => false, :locals => { :query_results => @query_results, :event_id => @event_id }
       }
 
 
@@ -159,15 +160,22 @@ class PlacesController < ApplicationController
     @events = @user.events
 
     @event = Event.find(params[:event_id])
-    
-    @place = @event.places.create(:name => params[:place][:name], 
-                                  :description => params[:place][:description])
-
-    # @place = @event
-    # @place = Place.create(params[:place])
 
 
-    if @place.save
+    if params[:place][:cid]
+      #added from search
+      @place = Place.find_by_cid(params[:place][:cid])
+      @schedule = Schedule.create(:event_id => @event.id, :place_id => @place.id)
+
+    else
+      #added manually
+      @place = @event.places.create(:name => params[:place][:name], 
+                                    :description => params[:place][:description])
+    end
+
+
+
+    if @schedule.save || @place.save
       flash[:success] = "Place created."
       redirect_to event_path(@event)
     else
