@@ -76,6 +76,14 @@ class PlacesController < ApplicationController
         #==parse actual place page==
         logger.debug("nokogiri")
         doc = Nokogiri::HTML(open(@place.url))
+
+        #neighborhood
+        doc.css('.pp-label').each do |link|
+          if link.content == "Neighborhood"
+            @place.neighborhood = link.next_element.content
+            #logger.debug(link.next_element.content)
+          end
+        end
         
         #price
         doc.css('.pp-headline-item .pp-headline-attribute').each do |link|
@@ -97,8 +105,9 @@ class PlacesController < ApplicationController
         # logger.debug(@place.image_links)
 
         #link comments
+        @place.comments = Array.new
         doc.css('.fr-snip').each do |link|
-          @place.comments = link.content
+          @place.comments.push(link.content.to_s.gsub(" ...", ""))
           #logger.debug(link.content)
         end
 
@@ -197,13 +206,43 @@ private
 
     query_string.each do |place|
 
-      result += "<div class=\"search_result\">"
+      result += "<div id=#{place.cid} class=\"search_result\">"
       result += "#{place.name} <br />"
       result += "#{place.address} <br />"
       result += "#{place.neighborhood} <br />"
       result += "Rating: #{place.rating} <br />"
-      result += place.price.nil? ? "" : "Price: #{place.price}"
-      result += "</div>"
+      result += place.price.nil? ? "" : "Price: #{place.price} <br />"
+      
+      #snippet comments
+      place.comments.each do |comment|
+        result += "#{comment} <br />"
+      end
+
+
+      #external links
+      result += "<div class=\"review_links\">"
+      place.external_links.each do |review, link|
+        result += "<a href=\"#{link}\" target=\"_blank\">#{review}</a>"
+        result += "<br />"
+        #logger.debug(review)
+        #logger.debug(link)
+      end
+      result +="</div>"
+
+      #images
+      result += "<div class=\"images\">"
+      place.image_links.each do |image|
+        result += "<img src=\"#{image}\">"
+        result += "<br />"
+        break #set to one image for now
+      end
+      result +="</div>"
+
+      #add to event
+      
+
+      result += "</div>"  #end each place
+
 
     end
 
