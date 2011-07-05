@@ -79,7 +79,7 @@
 		  <% if place.votes.empty? %>
 		  <%= 0 %>
 		  <% else %>
-		  <%= place.votes.inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
+		  <%= place.votes.where(:participant_id => @event.participants).inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
 		  <% end %>
 		</div>
 	      </h3>

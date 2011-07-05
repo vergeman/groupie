@@ -39,4 +39,5 @@ class Place < ActiveRecord::Base
   validates :name, :presence => true
 
   default_scope :order => 'places.created_at DESC'
+
 end
