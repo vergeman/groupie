@@ -2,31 +2,57 @@
 <%= form_for(@event) do |e| %>
 
 <%= render 'shared/error_messages', :object => e.object %>
-<div class="field">
-  <%= e.label :title %> <br />
-  <%= e.text_field :title %>
-</div>
 
-<div class="field">
-  <%= e.label :description %> <br />
-  <%= e.text_field :description %> <br />
-</div>
+<div id="create_event">
+
+  <div id="event_inputs">
+
+    <div id="create_event_title_header">
+      What?
+    </div>
+
+    <div id="create_event_title" class="field">
+      <%= e.label :"Name your Get Together" %> <br />
+      <%= e.text_field :title %>
+    </div>
+  
+    <div id="create_event_description" class="field">
+      <%= e.label :"Leave a note" %> <br />
+      <%= e.text_field :description %> <br />
+    </div>
+
+  </div>
 
 
-<div class="field">
+  <div id="event_dates">
+    <div id="event_dates_header">
+      When?
+    </div>
 
-  <%= e.label :date %> <br />
-
-  <div id="datepicker"></div>
+    <div id="create_event_date" class="field">
+      <%= e.label :"" %>
+      
+      <div id="datepicker">
+      </div> 
+      <%= e.hidden_field :event_date %>
+    </div>
  
-  <%= e.hidden_field :event_date %>
-     
-</div>
+    <div id="create_event_time" class="field">
+      <%= select_tag "event_time", options_for_select(@times, " 7:00 PM") %>
+    </div>
+    
+  </div>
 
-<br />
-<div class="field">
-<%= select_tag "event_time", options_for_select(@times, " 7:00 PM") %>
-</div>
+  <div id="create_event_submit" class="actions">
+    <div id="create_event_submit_header">
+      Create!
+    </div>
+    <div id="create_event_submit_button">
+      <%= e.submit "Create Event" %>
+    </div>
+  </div>
+
+</div> 
 <!--
 <div class ="field">
   <%= e.label :starting_votes, "Initial Votes" %> <br />
@@ -34,8 +60,9 @@
 </div>
 -->
 
-<br /><div class = "actions">
-  <%= e.submit "Create Event" %>
-</div>
+<br />
+
+
+
 
 <% end %>

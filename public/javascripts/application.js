@@ -165,13 +165,14 @@ function search(search_text) {
 		//console.log(data.responseText);
 		$('#search_results').html(data.responseText);
 
+		/*
 		$(".add_form").submit(function(e) {	
 		    e.preventDefault();
 		    //console.log($(this) );
 		    //console.log($(this).find("#place_cid").val() );
 		    add_place( $(this), $(this).find("#place_cid").val() );
 		});		
-
+*/
 
 	    }
 	});

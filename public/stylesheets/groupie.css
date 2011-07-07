@@ -7,8 +7,7 @@
 
 /*body tag */
 body {
-    background-image: url("/images/bk-gradiant.PNG");
-    background-repeat: repeat-x;
+    background-image: url("/images/background_shade.gif");
 }
 
 
@@ -44,13 +43,21 @@ body {
 
 nav ul {
     margin: 0 0 0 0;
+
 }
 
+
+
 nav ul li {
-    
+ 
     display: inline;
     list-style: none;
     word-wrap: break-word;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #222222
 }
 
 .groups ul {
@@ -59,6 +66,7 @@ nav ul li {
 .groups ul li {
     margin-bottom: 5px;
 }
+
 
 ul .event_title {
     font-size: 80%;
@@ -82,16 +90,108 @@ header h1 {
     color: black;
 }
 
-
 header nav {
     text-align: right;
 }
 
 
+/*event creation*/
+#create_event {
+    background-color: #FFFFFF;
+    border-color: #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 3px #B4AAA0;
+    //padding: 30px;
+    //width: 677px;
+    //margin-top: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+
+#create_event_title_header, #event_dates_header, #create_event_submit_header {
+    background-color: #E33100;
+    color: #FFFFFF;
+    font-size: 18px;
+    margin-bottom: 20px;
+    margin-left: -10px;
+    margin-top: -3px;
+    padding: 5px 5px 5px 10px;
+
+}
+
+#event_inputs {
+    //margin-left: 30px;
+/*
+    background-color: #FFFFFF;
+    border-color: #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 3px #B4AAA0;
+    height: 100%;
+    padding: 30px;
+    width: 260px;
+    float: left;
+*/
+}
+
+#create_event_title, #create_event_description, #create_event_submit_button {
+   margin-top: -20px;
+   padding: 20px;
+}
+
+
+
+#event_dates {
+//    padding: 20px;
+/*
+    float: left;
+    background-color: #FFFFFF;
+    border-color: #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 3px #B4AAA0;
+    padding: 30px;
+    width: 300px;
+    margin-top: 20px;
+*/
+}
+
+#create_event_date, #create_event_time {
+    margin-top: -20px;
+    padding: 20px;
+}
+
+#create_event_submit {
+
+}
+
+.ui-datepicker {
+    font-size: 14px;
+    height: 240px;
+}
+
 /*section tag*/
 section {
 
 }
+
+#event_create_header, #event_header {
+    background: none repeat scroll 0 0 #444444;
+
+
+}
+
+#datepicker thead th {
+    background: none repeat scroll 0 0 #FFFFFF;
+}
+
+#event_create_header h2, #event_header h2 {
+    color: white;
+    margin-left: 5px;
+    font-size: 24px;
+}
+
 
 #tabs.ui-tabs {
     background: transparent;
@@ -99,14 +199,13 @@ section {
 }
 
 .place_title {
-    height: 30px
-
+    height: 30px;
 }
 
 
 .place_total_votes {
     float: right;
-    height: 30px
+    height: 30px;
 }
 
 .place_total_votes_lbl {
@@ -145,15 +244,7 @@ text-indent: -9999em moves the text off the page
     padding-left: 30px;
 
 }
-/*
-.vote-info-lbl {
 
-}
-
-.votes_remaining {
-
-}
-*/
 .vote_up {
     rotation: 180deg;
     -webkit-transform: rotate(180deg);
@@ -174,9 +265,11 @@ text-indent: -9999em moves the text off the page
 
 .event_list {
     padding-left: 0;
+    
 }
 
 .event_list .event {
+    /*
     border-color: #d2ebf9;
     border-style: solid;
     border-width: 2px;
@@ -186,6 +279,44 @@ text-indent: -9999em moves the text off the page
     font-size: 20px;
     padding: 10px;
     margin-left: 0;
+*/
+
+    background: none repeat scroll 0 0 white;
+    border-color: #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 3px #B4AAA0;
+    padding: 10px;
+    margin: 10px 2.5px 2.5px;
+    height:
+}
+
+
+.event_name, .event_name a {
+    float: left;
+    width: 450px;
+    font-size: 21px;
+    text-decoration: none;
+
+}
+
+.event_date, .event_time {
+    font-size: 16px;
+    margin-left: 585px;
+
+}
+
+.event_date {
+    
+}
+
+.event_participant_count {
+font-size: 14px;
+}
+.event_description {
+margin-top: 6px;
+font-size: 16px;
+font-style: helvetica;
 }
 
 

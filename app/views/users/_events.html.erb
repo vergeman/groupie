@@ -1,13 +1,39 @@
-<ul class = "event_list">
+<ul class="event_list">
 
   <% @events.each do |event| %>
 
-  <div class = "event">
+  <div class="event">
       <li>
-	<%= link_to event.title, event_path(event.id) %><br />
-	<%= event.description %><br />	
-	<%= event.event_date.nil? ? "" : 
-	    event.event_date.strftime("%l:%M %p, %A, %b. #{event.event_date.day.ordinalize}") %><br />
+
+	<div class = "event_header">
+
+	  <div class="event_name">
+	    <%= link_to event.title, event_path(event.id) %>
+	  </div>
+
+	  <div class="event_date">
+	    <%= event.event_date.nil? ? "" : 
+		event.event_date.strftime("%a, %b. #{event.event_date.day.ordinalize}.") %>
+	  </div>
+
+	  <div class="event_time">
+	    <%= event.event_date.nil? ? "" : 
+		event.event_date.strftime("%l:%M %P") %>
+	  </div>
+
+	</div>
+
+	<div class="event_participant_count">
+	  <%= event.participants.count == 1 ?
+	      "Invite some friends!" : 
+	      pluralize(event.participants.count.to_s, "people invited") %>
+	      
+	</div>
+
+	<div class="event_description">
+	  <%= event.description %>
+	</div>
+
       <li>
     
     </div>

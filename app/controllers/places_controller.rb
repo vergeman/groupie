@@ -175,33 +175,33 @@ class PlacesController < ApplicationController
 
 
     #need to refactor as overrides above
-    respond_to do |format|
+    #respond_to do |format|
 
-      format.js {
-        if @schedule.save || @place.save
+      #format.js {
+      #  if @schedule.save || @place.save
           #flash[:success] = "Place created."
           #redirect_to event_path(@event)
           
-        else
+     #   else
           #flash[:error] = "Oops, there was an error"
           # redirect_to event_path(@event.id)
-        end
-        render :nothing => true
-      }
+     #   end
+     #   render :nothing => true
+     # }
 
       #manual addition
-      format.html {
+     # format.html {
 
         if @place.save
-          flash[:success] = "Place created."
+          #flash[:success] = "Place created."
           redirect_to event_path(@event)
         else
           flash[:error] = "Oops, there was an error"
           redirect_to event_path(@event.id)
         end
 
-      }
-    end      
+      #}
+    #end      
 
   end
 
