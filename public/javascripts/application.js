@@ -165,6 +165,8 @@ function search(search_text) {
 		//console.log(data.responseText);
 		$('#search_results').html(data.responseText);
 
+		$('.place_add_button').button();
+
 		/*
 		$(".add_form").submit(function(e) {	
 		    e.preventDefault();

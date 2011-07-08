@@ -176,8 +176,8 @@ section {
 
 }
 
-#event_create_header, #event_header {
-    background: none repeat scroll 0 0 #444444;
+#event_create_header, #event_header, ._header {
+    background: none repeat scroll 0 0 #222222;
 
 
 }
@@ -186,11 +186,24 @@ section {
     background: none repeat scroll 0 0 #FFFFFF;
 }
 
-#event_create_header h2, #event_header h2 {
+/*top header bar */
+#event_create_header h2, #event_header h2, ._header h2 {
     color: white;
     margin-left: 5px;
     font-size: 24px;
 }
+
+._header h3 {
+    color: white;
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+#main {
+    width: 750px;
+
+}
+
 
 
 #tabs.ui-tabs {
@@ -199,7 +212,7 @@ section {
 }
 
 .place_title {
-    height: 30px;
+    //height: 30px;
 }
 
 
@@ -218,6 +231,12 @@ section {
 .vote {
 
 }
+
+#voting {
+    padding-left: 0;
+    width: 750px;
+}
+
 
 .vote_up, .vote_down {
     width: 30px;
@@ -241,7 +260,6 @@ text-indent: -9999em moves the text off the page
 
 #vote-info {
     font-size: 20px;
-    padding-left: 30px;
 
 }
 
@@ -291,6 +309,11 @@ text-indent: -9999em moves the text off the page
     height:
 }
 
+#voting .event {
+    margin: 0;
+    padding-left: 0;
+
+}
 
 .event_name, .event_name a {
     float: left;
@@ -311,16 +334,20 @@ text-indent: -9999em moves the text off the page
 }
 
 .event_participant_count {
-font-size: 14px;
+    font-size: 14px;
 }
+
 .event_description {
-margin-top: 6px;
-font-size: 16px;
-font-style: helvetica;
+    margin-top: 6px;
+    font-size: 16px;
+    font-style: helvetica;
 }
 
 
-.place_container {
+
+
+.place_container, .search_result, .place_info_detail {
+/*
     padding-left: 0;
     border-color: #d2ebf9;
     border-style: solid;
@@ -331,15 +358,57 @@ font-style: helvetica;
     font-size: 16px;
     padding: 10px;
     margin-left: 0;
-
+*/
+    background: none repeat scroll 0 0 white;
+    border-color: #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 3px #B4AAA0;
+    margin: 10px 2.5px 2.5px;
+    padding: 10px;
 }
+
 
 section ul li {
     list-style-type: none;
     display: block;
+}
+
+/* search result */
+.place_info_name {
+    font-size: 26px;
+}
+
+.place_info_neighborhood {
+    font-size: 18px;
+}
+
+.place_info_address {
+    font-size: 14px;
+}
+
+.place_info_rating, .place_info_price {
+    font-size: 16px;
+}
+
+.place_info_images {
+    float: right;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+}
+.place_info_images img {
+    margin-bottom: -5px;
+}
+
+.place_info_add_place_btn {
+    text-align: right;
 
 }
 
+.place_info_review_header {
+    font-style: italic;
+}
 
 
 

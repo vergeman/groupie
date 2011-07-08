@@ -1,0 +1,9 @@
+<!-- #add to event -->
+<div class="place_info_add_place_btn">
+
+  <%= form_tag(event_places_path(event_id), :class => "add_form" ) do %>
+  <%= hidden_field_tag("place[cid]", place.cid) %>
+  <%= submit_tag("Add", :class => "place_add_button") %>
+  <% end %>
+
+</div>

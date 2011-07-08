@@ -1,6 +1,16 @@
-<h2> <%= @place.name %> <h2>
-<h3>Description: <%= @place.description %></h3>
 
-we'll have some content here on the specific place...
+<!--render  singular place -->
+  <div id="<%= @place.cid %>" class="place_info_detail">
+
+    <%= render :partial => 'places/place_info', :layout => false,
+    :locals => { :place => @place } %>
+
+  </div>
+
+<!--#end each place-->
+
+
+
+
 
 

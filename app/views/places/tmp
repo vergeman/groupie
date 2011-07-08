@@ -1,0 +1,73 @@
+<!--render  singular place -->
+
+  <div id="<%= place.cid %>" class="search_result">
+
+    <!-- images -->
+    <div class="place_info_images">
+      <% place.image_links.each do |image| %>
+      <%= image_tag image %>
+      <!--break #set to one image for now -->
+      <% break %>
+      <% end %>
+    </div>
+
+    <div class="place_info_name">
+      <%= place.name %>
+    </div>
+
+    <div class="place_info_neighborhood">
+      <%= place.neighborhood %>
+    </div>
+
+    <div class="place_info_address">
+      <%= place.address %>
+    </div>
+
+<!--
+    <div class="place_info_rating">
+      <br />
+      <%= place.rating.nil? ? "" : "Rating: #{place.rating} " %>
+    </div>
+-->
+    <div class="place_info_price">
+      <%= place.price.nil? ? "" : "Price: #{place.price} "%>
+      <br />
+    </div>
+
+    <!-- snippet comments -->
+    <% place.comments.each do |comment| %>
+    <%= comment %> <br />
+    <% end %>
+    
+    <!-- external links -->
+    <div class="place_info_review_links">
+      <% place.external_links.blank? ? "" : %>
+      <br />
+      <span class="place_info_review_header">Reviews</span>
+      <br />
+      <% place.external_links.each do |review, link| %>
+      <%= link_to review, link, :target => "_blank" %> <br />
+
+
+      <% end %>
+    </div>
+
+    <!-- #add to event -->
+    <div class="place_info_add_place_btn">
+
+      <%= form_tag(event_places_path(event_id), :class => "add_form" ) do %>
+      <%= hidden_field_tag("place[cid]", place.cid) %>
+      <%= submit_tag("Add", :class => "place_add_button") %>
+      <% end %>
+      
+    </div>
+    
+    
+    <!--#end each place-->
+  </div>
+
+
+
+
+
+

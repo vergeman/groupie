@@ -1,47 +1,26 @@
+<% if query_results.empty? %>
+
+<div class="search_result">
+    <%= ". . . shucks, we couldn't find anything." %>
+</div>
+
+<% else %>
+
   <% query_results.each do |place| %>
 
   <div id="<%= place.cid %>" class="search_result">
-    <%= place.name %> <br />
-    <%= place.address %> <br />
-    <%= place.neighborhood %> <br />
-    Rating: <%= place.rating %> <br />
-    <%= place.price.nil? ? "" : "Price: #{place.price} "%> <br />
-    
-    <!-- snippet comments -->
-    <% place.comments.each do |comment| %>
-    <%= comment %> <br />
-    <% end %>
-    
-    <!-- external links -->
-    <div class="review_links">
-      <% place.external_links.each do |review, link| %>
-      <%= link_to review, link, :target => "_blank" %> <br />
-      <% end %>
-    </div>
 
-    <!-- images -->
-    <div class="images">
-      <% place.image_links.each do |image| %>
-      <%= image_tag image %> <br />
-      <!--break #set to one image for now -->
-      <% break %>
-      <% end %>
-    </div>
-
-    <!-- #add to event -->
-    <div class="add_place_btn">
-
-      <%= form_tag(event_places_path(event_id), :class => "add_form" ) do %>
-      <%= hidden_field_tag("place[cid]", place.cid) %>
-      <%= submit_tag("Add") %>
-      <% end %>
-      
-    </div>
+    <%= render :partial => 'places/place_info', :layout => false, 
+    :locals => { :place => place } %>
     
-    
-    <!--#end each place-->
+    <%= render :partial => 'places/search_result_form_add', :layout => false, 
+    :locals => { :event_id => event_id, :place => place } %>
+
   </div>
+
   <% end %>
+<% end %>
+
 
 
 
