@@ -11,7 +11,7 @@
 <%= event.title %>
 <% end %>
 -->
-<%= form_tag(event_places_path(event_id), :class => "add_form" ) do %>
+<%= form_tag(event_places_path(events.first.id), :class => "add_form" ) do %>
 
 <!--hook to chang in javascript: search()-->
 <%= select_tag("event_id", options_from_collection_for_select(events, :id, :title), 

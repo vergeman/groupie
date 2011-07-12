@@ -24,9 +24,9 @@
     <hr>
 
     <section>
-
+      <% if user_signed_in? %>
       <%= render 'shared/search_header' %>
-
+      <% end %>
       <div id="navbar" class="span-5">
 	<%= render 'shared/nav_bar' %>
       </div>

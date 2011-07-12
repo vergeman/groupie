@@ -8,6 +8,7 @@
     # @user = User.find(params[:id])
      @user = User.find(current_user.id)
      @events = @user.events
+
      
      add_cookie_event
      # @participants = @user.participants

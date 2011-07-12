@@ -14,6 +14,8 @@ $(document).ready(function() {
 
     $("#place_submit").button();
 
+    $("#search_header_btn").button();
+
     var event_date = new Date( $('#timer').text() );
 
     date_countdown(event_date);
@@ -228,7 +230,7 @@ function search(search_text) {
 		//hook
 		$('.place_add_btn').change( function() {
 		    $(this).parent('.add_form').attr("action", "/events/" + $(this).val() + "/places");
-		    $(this).submit();
+		    
 		});
 		//$('.place_add_button').button();
 		

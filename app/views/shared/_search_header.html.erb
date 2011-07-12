@@ -1,8 +1,8 @@
 <%= form_tag( {:controller => "/places", :action => "search"}, :method => "get", :class => "search_form") do %>
 
-<%= label_tag(:search_place, "Search for a place to add:") %>
+<%= label_tag(:search_place, "Find a place: ") %>
 <%= text_field_tag(:search_place) %>
-<%= submit_tag("Search") %>
+<%= submit_tag("Search", :id => "search_header_btn") %>
 <% end %>
 
 

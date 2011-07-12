@@ -11,6 +11,9 @@
 	    <%= link_to event.title, event_path(event.id) %>
 	  </div>
 
+
+
+
 	  <div class="event_date">
 	    <%= event.event_date.nil? ? "" : 
 		event.event_date.strftime("%a, %b. #{event.event_date.day.ordinalize}.") %>
@@ -23,15 +26,44 @@
 
 	</div>
 
+	<div class="event_organizer">
+	  <%= "Organized by #{User.find(event.admin_id).username}" %>
+	</div>
+
+	<% if event.description.blank? %>
+	<% else %>
+	<div class="event_description">
+	  <%= event.description %>
+	</div>
+	<% end %>
+
+	<br />
+
+	<div class="event_place_thumbnails">
+	  <% unless event.places.empty? %>
+	     <% event.places.each do |place| %>
+	         <% unless place.image_links.nil? %>
+	           <% place.image_links.each do |image| %>
+		      <div class="thumbnail">
+			<%= link_to (image_tag image), event_place_path(:event_id => event.id, :id => place.id) %>
+		      </div>
+		      <% break %>
+	              <% end %>
+		   <% end %>
+	     <% end %>
+	  <% end %>
+	</div>
+
+
 	<div class="event_participant_count">
 	  <%= event.participants.count == 1 ?
 	      "Invite some friends!" : 
 	      pluralize(event.participants.count.to_s, "people invited") %>
-	      
 	</div>
 
-	<div class="event_description">
-	  <%= event.description %>
+
+	<div class="event_votes_remaining">
+	  <%= pluralize(event.participants.find_by_user_id(current_user).votes_remaining, "vote") + " left." %>
 	</div>
 
       <li>
