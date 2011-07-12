@@ -1,6 +1,7 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
+
 $(document).ready(function() {
 
     $("#tabs").tabs();
@@ -13,8 +14,11 @@ $(document).ready(function() {
 
     $("#place_submit").button();
 
+    var event_date = new Date( $('#timer').text() );
 
-    console.log('test');
+    date_countdown(event_date);
+
+
 /*date picka */
 
     $('#datepicker').datepicker({inline: true, altField: "#event_event_date"});
@@ -95,6 +99,62 @@ $(document).ready(function() {
     
 })
 
+
+function date_countdown(event_date) {
+    var currentTime = new Date();
+    console.log(event_date.toString() );
+
+    var days = ( (event_date - currentTime) / 1000 / 60 / 60 / 24);
+    var hours = ( (event_date - currentTime) / 1000 / 60 / 60 );
+    var minutes = ( (event_date - currentTime) / 1000 / 60 );
+
+    var countdown_format ="dhms";
+    var tick_interval = "60"
+/*
+    //days: mina
+    if (days > 0) {
+	countdown_format = 'dh';
+
+    }
+    //hours: min
+    else if (hours >= 0) {
+	countdown_format = 'HM'
+
+    }
+    //min:sec
+    else {
+	countdown_format = 'MS'
+    }
+*/
+    //Expiry
+    if (event_date - currentTime < 0) {
+	$('#vote-info-lbl').html("Voting is complete");
+	$('#votes_remaining').html("");	
+	$('#timer').html("");
+    }else {
+
+
+	$('#timer').countdown({until: event_date, 
+			       compact: true,
+			       format: countdown_format, description: '' 
+			      });			       
+	//onTick: _highlightlast5m( {tickInterval: 1}) });
+
+	
+    }
+
+}
+
+
+function _highlightlast5m(periods) {
+    console.log("tick");
+    if (periods[4] == 0 && periods[5] <= 10) {
+	$('.countdown_row').css('color', 'red');
+    }
+    
+}
+
+
 function _valid_vote(vote, votes) {
     
 }
@@ -165,7 +225,13 @@ function search(search_text) {
 		//console.log(data.responseText);
 		$('#search_results').html(data.responseText);
 
-		$('.place_add_button').button();
+		//hook
+		$('.place_add_btn').change( function() {
+		    $(this).parent('.add_form').attr("action", "/events/" + $(this).val() + "/places");
+		    $(this).submit();
+		});
+		//$('.place_add_button').button();
+		
 
 		/*
 		$(".add_form").submit(function(e) {	

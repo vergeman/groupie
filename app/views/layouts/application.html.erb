@@ -10,6 +10,9 @@
 
   <%= javascript_include_tag 'jquery-ui-1.8.14.custom.min.js' %>
 
+  <%= javascript_include_tag 'jquery.countdown.pack.js' %>
+
+
 
   <%= csrf_meta_tag %>
 </head>
@@ -22,6 +25,8 @@
 
     <section>
 
+      <%= render 'shared/search_header' %>
+
       <div id="navbar" class="span-5">
 	<%= render 'shared/nav_bar' %>
       </div>
@@ -30,9 +35,12 @@
 	<% flash.each do |key, message| %>
 	<%= content_tag(:div, message, :class => "flash #{key}") %>
 	<% end %>
-      
-	<%= yield %>
+
+	<div id="search_results">
+	  <%= yield %>
+	</div>
       </div>
+
 
     </section>
 

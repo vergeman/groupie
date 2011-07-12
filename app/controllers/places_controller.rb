@@ -20,6 +20,9 @@ class PlacesController < ApplicationController
     long = '-73.992249'
     max_results = 5
 
+    @user = User.find(current_user.id)
+    @events = @user.events
+
     @event_id = params[:event_id]
     @query_results = Array.new
     @mutex = Mutex.new
@@ -131,7 +134,7 @@ class PlacesController < ApplicationController
       format.js {
         logger.debug("search requests took " + (Time.now - start_time).to_s)
         # render :text => build_result_html(@query_results) # @query_results # @details # @result["results"]
-        render :partial => 'places/search_results', :layout => false, :locals => { :query_results => @query_results, :event_id => @event_id }
+        render :partial => 'places/search_results', :layout => false, :locals => { :query_results => @query_results, :events => @events, :event_id => @event_id }
       }
 
 

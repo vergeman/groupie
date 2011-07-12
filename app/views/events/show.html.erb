@@ -9,26 +9,29 @@
 
 <!-- add place form -->
 
-
+<!--
 <div id="tabs">
 
   <ul>
     <li><a href="#voting">Vote</a></li>
     <li><a href="#places">Browse</a></li>
   </ul>
-
+-->
 
 <!--form input to search for places -->
   <div id="places">
     
     <% if user_signed_in? && @participant %>
     
-    <%= render 'shared/search' %>
+    <!-- moved search to header -->
+    <% #  render 'shared/search' %>
+    <% #  render 'shared/places' %> 
 
-    <%= render 'shared/places' %>
-
-    <div id="search_results"></div>
-    
+<!--
+   ajax return here
+    <div id="search_results">
+    </div> 
+-->
   </div>
 
 
@@ -45,13 +48,22 @@
 	Votes Remaining:
       </div>
       
-      <span id="votes_remaining" class="span-1 last">
+      <div id="votes_remaining" class="span-1 last">
 	<%= @participant.votes_remaining %>    
-      </span>
-
+      </div>
+    
     </div>
 
-    <% end %><!-- end user sign in -->
+    <!-- timer -->
+    <div id="timer" class="span-7">
+      <%= @event.event_date.strftime("%B %d, %Y %H:%M:%S") %>
+    </div>
+
+    
+
+
+    <% end %>
+    <!-- end user sign in -->
 
 
 
@@ -123,7 +135,7 @@
   </div>
 
 
-</div>
+
 
 
 
