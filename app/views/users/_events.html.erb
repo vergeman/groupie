@@ -44,13 +44,19 @@
 	     <% event.places.each do |place| %>
 	         <% unless place.image_links.nil? %>
 	           <% place.image_links.each do |image| %>
+
 		      <div class="thumbnail">
-			<%= link_to (image_tag image), event_place_path(:event_id => event.id, :id => place.id) %>
+			<%= link_to (image_tag image, :width => "75px", :height => "75px"), event_place_path(:event_id => event.id, :id => place.id) %>
 		      </div>
+
 		      <% break %>
 	              <% end %>
 		   <% end %>
 	     <% end %>
+	  <% end %>
+
+	  <% if event.places.empty? %>
+	  <%= "Find some places!" %>
 	  <% end %>
 	</div>
 

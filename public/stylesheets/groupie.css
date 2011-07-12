@@ -192,10 +192,6 @@ header nav {
 
 }
 
-.event_organizer {
-    margin-top: -15px;
-}
-
 .ui-datepicker {
     font-size: 14px;
     height: 240px;
@@ -365,7 +361,19 @@ text-indent: -9999em moves the text off the page
 .event_date {
 
 }
+.event_organizer {
+    margin-top: -15px;
+}
 
+.event_place_thumbnails {
+    width: 550px;
+    font-size: 16px;
+}
+.thumbnail {
+    display: inline;
+    width: 75px;
+    height: 75px;
+}
 .event_participant_count {
     font-size: 14px;
 }
