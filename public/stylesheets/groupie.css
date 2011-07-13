@@ -208,7 +208,7 @@ section {
 
 }
 
-#event_create_header, #event_header, ._header {
+#event_create_header, #event_header {
     background: none repeat scroll 0 0;
 
 
@@ -219,14 +219,28 @@ section {
 }
 
 /*top header bar */
-#event_create_header h2, #event_header h2, ._header h2 {
+#event_create_header h2, #event_header h2 {
     font-size: 24px;
     margin-bottom: 0;
 }
+/*events/:id*/
+._header {
+    background: none repeat scroll 0 0 white;
+    border-color: #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+    box-shadow: 1px 1px 3px #B4AAA0;
+    padding: 10px;
+    margin: 10px 2.5px 2.5px;
+    min-height: 200px;
+    font-size: 34px;
+}
 
-._header h3 {
-
-    font-size: 20px;
+._header_title, ._header_description {
+    width: 500px;
+}
+._header_organizer {
+    font-size: 14px;
 }
 
 #main {
@@ -237,14 +251,14 @@ section {
 .hasCountdown {
     border: none;
 }
-
-#tabs.ui-tabs {
-    background: transparent;
-    border-width: 0px 0px 0px 0px;
+/*counter*/
+.countdown_amount {
+    font-size: 16px;
 }
 
+
 .place_title {
-    //height: 30px;
+
 }
 
 
@@ -269,11 +283,6 @@ section {
     width: 750px;
 }
 
-#timer {
-
-}
-
-
 .vote_up, .vote_down {
     width: 30px;
     height: 30px;
@@ -293,10 +302,13 @@ text-indent: -9999em moves the text off the page
 }
 
 
-
 #vote-info {
     font-size: 20px;
+    margin-top: -80px;
+}
 
+#vote-info-lbl {
+    width: 300px;
 }
 
 .vote_up {
@@ -342,7 +354,7 @@ text-indent: -9999em moves the text off the page
     box-shadow: 1px 1px 3px #B4AAA0;
     padding: 10px;
     margin: 10px 2.5px 2.5px;
-    height:
+
 }
 
 #voting .event {
@@ -360,7 +372,7 @@ text-indent: -9999em moves the text off the page
 
 }
 
-.event_date {
+.event_date, .event_date_main {
     margin-top: -173px;
     margin-left: 580px;
     margin-right: 20px;
@@ -377,9 +389,15 @@ text-indent: -9999em moves the text off the page
     box-shadow: 1px 1px 3px #B4AAA0;
 }
 
+.event_date_main {
+    margin-top: -60px;
+
+}
+
 .event_month {
     margin: 5px;
-
+    color: white;
+    background-color: #CC0000;
 }
 
 .event_date_num {
@@ -458,7 +476,11 @@ text-indent: -9999em moves the text off the page
 
 section ul li {
     list-style-type: none;
-    display: block;
+    display: block;    
+}
+
+.event {
+    padding: 0;
 }
 
 /* search result */

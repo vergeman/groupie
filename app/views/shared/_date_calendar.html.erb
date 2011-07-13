@@ -1,6 +1,4 @@
 <!-- calendar partial -->
-<div class="event_date">
-
   <div class="event_month">
     <%= event.event_date.nil? ? "" :
         event.event_date.strftime("%b") %>
@@ -20,5 +18,3 @@
     <%= event.event_date.nil? ? "" :
         event.event_date.strftime("%l:%M %P") %>
   </div>
-
-</div>

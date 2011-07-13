@@ -67,10 +67,10 @@
 	  <% end %>
 	</div>
 
-	
-	<%= render :partial => 'shared/date_calendar', :layout => false,
-	:locals => {:event => event } %>
-	  
+	<div class="event_date">
+	  <%= render :partial => 'shared/date_calendar', :layout => false,
+	  :locals => {:event => event } %>
+	</div>
 
 
 	<div class="event_participant_count">
