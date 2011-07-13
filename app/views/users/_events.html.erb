@@ -10,25 +10,23 @@
 	  <div class="event_name">
 	    <%= link_to event.title, event_path(event.id) %>
 	  </div>
-
-
-
-
+<!--
 	  <div class="event_date">
 	    <%= event.event_date.nil? ? "" : 
 		event.event_date.strftime("%a, %b. #{event.event_date.day.ordinalize}.") %>
 	  </div>
+-->
 
-	  <div class="event_time">
-	    <%= event.event_date.nil? ? "" : 
-		event.event_date.strftime("%l:%M %P") %>
-	  </div>
+
 
 	</div>
 
 	<div class="event_organizer">
 	  <%= "Organized by #{User.find(event.admin_id).username}" %>
 	</div>
+
+
+
 
 	<% if event.description.blank? %>
 	<% else %>
@@ -37,18 +35,21 @@
 	</div>
 	<% end %>
 
+
 	<br />
 
 	<div class="event_place_thumbnails">
 	  <% unless event.places.empty? %>
+	  <% count = 0 %>
 	     <% event.places.each do |place| %>
 	         <% unless place.image_links.nil? %>
 	           <% place.image_links.each do |image| %>
 
+		      <% break if count > 6 %>
 		      <div class="thumbnail">
 			<%= link_to (image_tag image, :width => "75px", :height => "75px"), event_place_path(:event_id => event.id, :id => place.id) %>
 		      </div>
-
+		      <% count += 1 %>
 		      <% break %>
 	              <% end %>
 		   <% end %>
@@ -56,20 +57,38 @@
 	  <% end %>
 
 	  <% if event.places.empty? %>
-	  <%= "Find some places!" %>
+	  <div class="empty_thumbnails">
+	      Find some places!
+	      <p>
+	      <span style="font-size:16px;">
+		Search for restaurants or bars, and add them to your Get Together.
+	      </span>
+	  </div>
 	  <% end %>
 	</div>
 
+	
+	<%= render :partial => 'shared/date_calendar', :layout => false,
+	:locals => {:event => event } %>
+	  
+
 
 	<div class="event_participant_count">
-	  <%= event.participants.count == 1 ?
-	      "Invite some friends!" : 
-	      pluralize(event.participants.count.to_s, "people invited") %>
+	  <% if event.participants.count == 1 %>
+	  Invite some friends!
+	  <p> 
+	    <span style="font-size:16px;">
+	      Forward your Get Together email so your friends can vote.
+	    </span>
+
+	    <% else %>
+	    <%= pluralize(event.participants.count.to_s, "people invited") %>
+	    <% end %>
 	</div>
 
 
 	<div class="event_votes_remaining">
-	  <%= pluralize(event.participants.find_by_user_id(current_user).votes_remaining, "vote") + " left." %>
+	  <%= pluralize(event.participants.find_by_user_id(current_user).votes_remaining, "Vote") + " Left!" %>
 	</div>
 
       <li>

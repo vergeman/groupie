@@ -1,0 +1,24 @@
+<!-- calendar partial -->
+<div class="event_date">
+
+  <div class="event_month">
+    <%= event.event_date.nil? ? "" :
+        event.event_date.strftime("%b") %>
+  </div>
+
+  <div class="event_date_num">
+    <%= event.event_date.nil? ? "" :
+        event.event_date.day %>
+  </div>
+  
+  <div class="event_day">
+    <%= event.event_date.nil? ? "" :
+        event.event_date.strftime("%a") %>
+  </div>
+
+  <div class="event_time">
+    <%= event.event_date.nil? ? "" :
+        event.event_date.strftime("%l:%M %P") %>
+  </div>
+
+</div>

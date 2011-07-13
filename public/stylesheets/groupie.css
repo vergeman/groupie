@@ -1,3 +1,9 @@
+
+
+
+
+
+
 .container {
 
 
@@ -345,28 +351,57 @@ text-indent: -9999em moves the text off the page
 
 }
 
+
 .event_name, .event_name a {
-    float: left;
-    width: 450px;
-    font-size: 26px;
+
+    width: 700px;
+    font-size: 30px;
     text-decoration: none;
 
 }
 
-.event_date, .event_time {
-    font-size: 18px;
-    margin-left: 550px;
-}
-
 .event_date {
+    margin-top: -173px;
+    margin-left: 580px;
+    margin-right: 20px;
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Limelight', serif;
+    font-weight: 400;
+    font-style: normal;
+    border-width: 1px;
+    border-style: solid;
+    border-color: black;
+    color: rgb(18, 30, 52);
+    padding: 2px;
+    box-shadow: 1px 1px 3px #B4AAA0;
+}
+
+.event_month {
+    margin: 5px;
 
 }
+
+.event_date_num {
+    font-size: 28px;
+}
+
+.event_day {
+    margin: 5px;
+}
+
+.event_time {
+
+}
+
+
 .event_organizer {
-    margin-top: -15px;
+
 }
 
 .event_place_thumbnails {
     width: 550px;
+    height: 100px;
     font-size: 16px;
 }
 .thumbnail {
@@ -374,8 +409,14 @@ text-indent: -9999em moves the text off the page
     width: 75px;
     height: 75px;
 }
+.empty_thumbnails {
+    font-size: 20px;
+
+}
+
 .event_participant_count {
-    font-size: 14px;
+    margin-top: 10px;
+    font-size: 20px;
 }
 
 .event_description {
@@ -385,7 +426,10 @@ text-indent: -9999em moves the text off the page
 }
 
 .event_votes_remaining {
-    font-size: 16px;
+    font-size: 20px;
+    text-align: right;
+    margin-right: 15px;
+    margin-top: -60px;
 }
 
 
