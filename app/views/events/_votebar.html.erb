@@ -1,0 +1,40 @@
+<!-- fixed css vote bar partial -->
+
+<% if user_signed_in? && @participant %>
+
+<!-- votebar -->
+<div id="votebar">
+
+  <!-- timer -->
+  <div id="timer">
+
+    <div id="timer-info">
+      
+      <div id="timer-info-lbl">
+	Time Remaining
+      </div>
+      
+      <div id="time_remaining">
+	<%= @event.event_date.strftime("%B %d, %Y %H:%M:%S") %>
+      </div>
+  
+    </div>
+
+  </div>
+
+<!-- votes remaining -->
+  <div id="vote-info">
+
+    <div id="vote-info-lbl">
+      Votes Left
+    </div>
+
+    <div id="votes_remaining">
+      <%= @participant.votes_remaining %>
+    </div>
+
+  </div>
+
+
+</div>
+<% end %><!-- end user sign in -->

@@ -16,7 +16,7 @@ $(document).ready(function() {
 
     $("#search_header_btn").button();
 
-    var event_date = new Date( $('#timer').text() );
+    var event_date = new Date( $('#time_remaining').text() );
 
     date_countdown(event_date);
 
@@ -110,35 +110,21 @@ function date_countdown(event_date) {
     var hours = ( (event_date - currentTime) / 1000 / 60 / 60 );
     var minutes = ( (event_date - currentTime) / 1000 / 60 );
 
-    var countdown_format ="dhms";
-    var tick_interval = "60"
-/*
-    //days: mina
-    if (days > 0) {
-	countdown_format = 'dh';
-
-    }
-    //hours: min
-    else if (hours >= 0) {
-	countdown_format = 'HM'
-
-    }
-    //min:sec
-    else {
-	countdown_format = 'MS'
-    }
-*/
     //Expiry
     if (event_date - currentTime < 0) {
+	$('#votebar').hide();
+	$('._header_timeout').html("Voting is complete");
+	/*
 	$('#vote-info-lbl').html("Voting is complete");
 	$('#votes_remaining').html("");	
-	$('#timer').html("");
+	$('#time_remaining').html("");
+*/
     }else {
 
 
-	$('#timer').countdown({until: event_date, 
-			       compact: true,
-			       format: countdown_format, description: '' 
+	$('#time_remaining').countdown({until: event_date, 
+			       format: 'dhms', description: '',
+			       layout: '{dn} {dl} {hn}:{mnn}:{snn}'
 			      });			       
 	//onTick: _highlightlast5m( {tickInterval: 1}) });
 

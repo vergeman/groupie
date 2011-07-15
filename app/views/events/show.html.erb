@@ -3,55 +3,15 @@
 <!-- event summary -->
 <div class="_header">
 
-  <div class="_header_title">
-    <%= @event.title %>
-  </div>
-  <div class="_header_organizer">
-    <%= "Organized by #{User.find(@event.admin_id).username}" %>
-  </div>
+  <%= render :partial => 'header', :layout => false,
+  :locals => {:@event => @event} %>
 
-  <div class="_header_description">
-    <%= @event.description %>
-  </div>
+</div>
 
+<!--events set to public visibiility for now.-->
 
-  <div class="event_date_main">
-    <%= render :partial => 'shared/date_calendar', :layout => false, 
-    :locals => {:event => @event } %>
-  </div>
-
-  <!--events set to public visibiility for now.-->
-
-  <!-- votes remaining -->
-  <% if user_signed_in? && @participant %>
-
-  <div id="voting">
-
-    <div id="vote-info">
-    
-      <div id="vote-info-lbl">
-	Votes Remaining:
-      </div>
-      
-      <div id="votes_remaining">
-	<%= @participant.votes_remaining %>    
-      </div>
-    
-    </div>
-
-    <!-- timer -->
-    <div id="timer">
-      <%= @event.event_date.strftime("%B %d, %Y %H:%M:%S") %>
-    </div>
-  
-  </div>
-  <% end %><!-- end user sign in -->
-
-
-
-
-</div><!--end event summary -->
-
+<%= render :partial => 'votebar', :layout => false,
+:locals => {:@event => @event, :@participant => @participant} %>
 
 
 <!-- participants -->

@@ -1,9 +1,5 @@
 
 
-
-
-
-
 .container {
 
 
@@ -223,6 +219,7 @@ section {
     font-size: 24px;
     margin-bottom: 0;
 }
+
 /*events/:id*/
 ._header {
     background: none repeat scroll 0 0 white;
@@ -232,15 +229,27 @@ section {
     box-shadow: 1px 1px 3px #B4AAA0;
     padding: 10px;
     margin: 10px 2.5px 2.5px;
-    min-height: 200px;
+    overflow: hidden;
     font-size: 34px;
 }
 
-._header_title, ._header_description {
+._header_title, ._header_description, ._header_organizer, ._header_timeout {
     width: 500px;
+    
+}
+
+._header_description {
+    font-size: 16px;
 }
 ._header_organizer {
     font-size: 14px;
+}
+._header_stats {
+    font-size: 16px;
+    margin-left: 5px;
+}
+._header_timeout {
+    font-size: 18px;
 }
 
 #main {
@@ -251,16 +260,10 @@ section {
 .hasCountdown {
     border: none;
 }
-/*counter*/
-.countdown_amount {
-    font-size: 16px;
-}
-
 
 .place_title {
 
 }
-
 
 .place_total_votes {
     float: right;
@@ -278,11 +281,69 @@ section {
 
 }
 
-#voting {
-    padding-left: 0;
-    width: 750px;
+/*counter*/
+#votebar {
+    width: 270px;
+    margin-left: 175px;
+
+
+    position: fixed;
+    bottom: 0px;
+    padding: 5px;
+    display: block;
+
+    background-color: white;
+    box-shadow: 1px 1px 3px #B4AAA0;
+    overflow: hidden;
+
+    border-color: #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+
 }
 
+
+#vote-info {
+    width: 70px;
+    border-color: black;
+    border-style: solid;
+    border-width: 0px 2px 0px 0px;
+    padding-right: 10px;
+}
+
+#timer-info {
+
+    width: 180px;
+    border: none;
+
+}
+#vote-info-lbl, #timer-info-lbl {
+    font-size: 14px;
+    text-align: center;
+}
+
+#votes_remaining {
+    font-size: 30px;
+    text-align: center;
+}
+
+#timer {
+    float: right;
+    font-size: 20px;
+    text-align: center;
+}
+
+#time_remaining {
+    margin-top: 10px;
+    font-size: 20px;
+
+}
+
+.countdown_amount {
+}
+
+
+/*place box voting*/
 .vote_up, .vote_down {
     width: 30px;
     height: 30px;
@@ -295,20 +356,6 @@ section {
     font-size: 1px;
     text-indent: -9999em;
     cursor: pointer;
-/*
-display: block renders the actual bacgkround according to diensiosn why
-text-indent: -9999em moves the text off the page
-*/
-}
-
-
-#vote-info {
-    font-size: 20px;
-    margin-top: -80px;
-}
-
-#vote-info-lbl {
-    width: 300px;
 }
 
 .vote_up {
@@ -390,22 +437,25 @@ text-indent: -9999em moves the text off the page
 }
 
 .event_date_main {
-    margin-top: -60px;
+    float: right;
+    margin: 0;
+    font-size: 14px;
+    padding: 5px;
 
 }
 
 .event_month {
-    margin: 5px;
+    margin: 2px;
     color: white;
     background-color: #CC0000;
 }
 
 .event_date_num {
-    font-size: 28px;
+    font-size: 24px;
 }
 
 .event_day {
-    margin: 5px;
+    margin: 2px;
 }
 
 .event_time {
@@ -449,6 +499,7 @@ text-indent: -9999em moves the text off the page
     margin-right: 15px;
     margin-top: -60px;
 }
+
 
 
 .place_container, .search_result, .place_info_detail {

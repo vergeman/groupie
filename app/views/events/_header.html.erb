@@ -1,0 +1,33 @@
+<!--header partial-->
+
+  <div class="event_date_main">
+    <%= render :partial => 'shared/date_calendar', :layout => false, 
+    :locals => {:event => @event } %>
+  </div>
+
+  <div class="_header_title">
+    <%= @event.title %>
+  </div>
+
+  <div class="_header_organizer">
+    <%= "Organized by #{User.find(@event.admin_id).username}" %>
+  </div>
+
+  <div class="_header_stats">
+    <!-- does anyone care?
+    <%= pluralize(@event.places.count, "place") %>
+    -->
+  </div>
+
+  <div class="_header_stats">
+    <!-- does anyone care?
+    <%= pluralize(@event.participants.count, "participant") %>
+    -->
+  </div>
+
+  <div class="_header_description">
+    <%= @event.description %>
+  </div>
+
+  <div class="_header_timeout">
+  </div>
