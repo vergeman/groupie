@@ -6,26 +6,22 @@
       <li>
 
 	<div class = "event_header">
+	  
+	  <div class="event_date">
+	    <%= render :partial => 'shared/date_calendar', :layout => false,
+	    :locals => {:event => event } %>
+	  </div>
 
 	  <div class="event_name">
 	    <%= link_to event.title, event_path(event.id) %>
 	  </div>
-<!--
-	  <div class="event_date">
-	    <%= event.event_date.nil? ? "" : 
-		event.event_date.strftime("%a, %b. #{event.event_date.day.ordinalize}.") %>
-	  </div>
--->
-
-
-
+	  
 	</div>
+	
 
 	<div class="event_organizer">
 	  <%= "Organized by #{User.find(event.admin_id).username}" %>
 	</div>
-
-
 
 
 	<% if event.description.blank? %>
@@ -67,10 +63,8 @@
 	  <% end %>
 	</div>
 
-	<div class="event_date">
-	  <%= render :partial => 'shared/date_calendar', :layout => false,
-	  :locals => {:event => event } %>
-	</div>
+
+
 
 
 	<div class="event_participant_count">
