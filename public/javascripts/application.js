@@ -1,8 +1,11 @@
 // Place your application-specific JavaScript functions and classes here
 // This file is automatically included by javascript_include_tag :defaults
 
+var is_event_expired = false;
 
 $(document).ready(function() {
+
+
 
     $("#tabs").tabs();
 
@@ -37,7 +40,11 @@ $(document).ready(function() {
 //client side voting update
 
     $(".vote_up").click(function(e) { 
-	//$(this).select();
+
+	if (is_event_expired) {
+	    return;
+	}
+
 	var e_id = $(".event").data("event");
 	var p_id = $(this).data("place");
 	var votes_remaining = parseInt( $("#votes_remaining").text() );
@@ -69,7 +76,11 @@ $(document).ready(function() {
 
 
     $(".vote_down").click(function() { 
-	//$(this).select();
+
+	if (is_event_expired) {
+	    return;
+	}
+
 	var e_id = $(".event").data("event");
 	var p_id = $(this).data("place");
 	var votes_remaining = parseInt( $("#votes_remaining").text() );
@@ -114,6 +125,10 @@ function date_countdown(event_date) {
     if (event_date - currentTime < 0) {
 	$('#votebar').hide();
 	$('._header_timeout').html("Voting is complete");
+
+	is_event_expired = true;
+	/*set to no action on event expiry*/
+
 	/*
 	$('#vote-info-lbl').html("Voting is complete");
 	$('#votes_remaining').html("");	

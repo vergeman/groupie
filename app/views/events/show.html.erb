@@ -26,55 +26,106 @@
 
   <li>
     
-    <div class="place_container span-15">
-      
-      <div class="place_header span-15">
-	
-	<div class="place_title span-11">
-	  
-	  <h3><%= link_to place.name, 
-		  event_place_path(params[:id], place.id) %>
-	  </h3>
-	</div>
-	
-	
-	<div class="place_total_votes span-4 last">
-	  
-	  <div class="place_total_votes_lbl span-3">
-	    Total Votes:
-	  </div>
-	  
-	  <div class="place_total_votes_count span-1 last">
-	    <h3>
-	      <% if place.votes.empty? %>
-	      <%= 0 %>
-	      <% else %>
-	      <%= place.votes.where(:participant_id => 
-	      @event.participants).inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
-	      <% end %>
-	    </h3>
-	  </div>
-	  
-	</div>
-      </div>
-      
-      <hr>
+    <div class="place_container">
 
-      <!-- le voting bouton -->
-      <div class="place_detail span-14">
-	<p><%= place.description %>	  
-      </div>
-      
-      <div class="vote span-1 last">
-	
+      <!--voting button -->
+      <div class="vote">
 	<%= render :partial => 'shared/vote', 
 	:locals => { :place => place, :participant => @participant } %>
+      </div>      
+
+
+      <div class="place_header">
+	
+	<div class="place_total_votes">
+
+          <div class="place_total_votes_count">
+
+              <% if place.votes.empty? %>
+              <%= 0 %>
+              <% else %>
+              <%= place.votes.where(:participant_id =>
+              @event.participants).inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
+              <% end %>
+	      
+          </div>
+
+	  <div class="place_total_votes_lbl">
+            Total Votes
+          </div>
+	  
+	</div> <!-- end place_total_votes-->
+	
+
+        <div class="place_info_name">
+          <%= link_to place.name,
+                  event_place_path(params[:id], place.id) %>          
+        </div>
+
+      </div>
+
+      <div class="place_detail">
+
+	<div class="place_vote_image">
+	  <% count_image = 0 %>
+	  <% place.image_links.each do |image| %>
+	  <% break if count_image > 2 %>
+	  <%= link_to (image_tag image, :width => "75px", :height => "75px"), event_place_path(:event_id => params[:id], :id => place.id) %>
+	  <!--break #set to one image for now -->
+	  <% count_image += 1 %>
+	  <% end %>
+	</div>
+	
+	<div class="place_top_voters">
+
+	  <% count = 0 %>
+	  <% vote_list = Array.new %>
+	  <% top_votes = 
+	     place.votes.where(:participant_id => @event.participants).order("ABS(vote) DESC") %>
+
+	  <% top_votes.each do |voter| %>	     
+	    <% break if count > 2 %>
+
+	    <% unless (voter.vote == 0  || voter.participant.user.username == current_user.username) %>
+	      <% vote_list.push("#{voter.participant.user.username} (#{voter.vote})") %>
+	    <% end %>
+
+	    <% count += 1 %>
+
+	  <% end %>
+
+	  <% unless vote_list.empty? %>
+	  <span class="top_voters">Top Voters: </span>
+	  <%= vote_list.to_sentence %>
+	  <% end %>
+	</div>
+
+	<div class="place_info_price">
+	  <%= place.price.nil? ? " " : "Price: #{place.price} "%>
+	</div>
+
+
+
+      
+      <!-- external links -->
+      <div class="place_info_review_links">
+	<div class="place_info_review_links">
+
+	  <% place.external_links.blank? ? "" : %>
+	    <br />
+	    <span class="place_info_review_header">Reviews</span>
+	    <br />
+	    <% place.external_links.each do |review, link| %>
+	      <%= link_to review, link, :target => "_blank" %>
+ 	    <% end %>
+	</div>
+
+	<div class="place_detail">
+	  <p><%= place.description %>	  
+	</div>
 	
       </div>
-      
-      
-    </div>
-    
+      </div>    
   </li>
   
   <% end %>

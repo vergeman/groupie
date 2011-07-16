@@ -261,24 +261,42 @@ section {
     border: none;
 }
 
-.place_title {
 
-}
-
+/*place voting stuff*/
 .place_total_votes {
     float: right;
-    height: 30px;
-}
-
-.place_total_votes_lbl {
-    font-size: 16px;
+    margin: 0;
+    text-align: center;
+    margin-top: -8px;
 }
 
 .place_total_votes_count {
-    //font-size: 120%;
+    font-size: 36px;
 }
-.vote {
 
+.place_total_votes_lbl {
+    font-size: 10px;
+    margin-top: -10px;
+}
+
+/*place info details*/
+.place_detail {
+    margin-left: 46px;
+}
+
+.place_info_name a {
+    margin-left: -1px;
+    text-decoration: none;
+}
+
+.place_top_voters {
+    width: 500px;
+}
+.top_voters {
+    font-size: 16px;
+}
+.place_vote_image {
+    float: right;
 }
 
 /*counter*/
@@ -344,33 +362,33 @@ section {
 
 
 /*place box voting*/
-.vote_up, .vote_down {
-    width: 30px;
-    height: 30px;
-    background-image: 
-    url("http://www.freeclipartnow.com/d/40241-4/arrow-bold-down.jpg");
-    background-size: 100%;
+/*we should make buttonlike w/ :hover and shiet but...i am lazy*/
+.vote {
+    width: 31px;
+    float: left;
+    margin-top: 8px;
+    margin-right: 15px;
+}
+
+.vote_up, .vote_down, .vote_count {
+    width: 31px;
+    height: 31px;
     background-repeat: no-repeat;
     overflow: hidden;
     display: block;  
-    font-size: 1px;
-    text-indent: -9999em;
     cursor: pointer;
+}
+.vote_down {
+    background-image: url("/images/vote_down.png")
 }
 
 .vote_up {
-    rotation: 180deg;
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
+    background-image: url("/images/vote_up.png")
 }
 
-.vote_down {
-    rotation: 0deg;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-}
-
-.vote_count {
+.vote_count {    
+    font-size: 20px;
+    margin-top: 2px;
     text-align: center;
 }
 
@@ -500,21 +518,14 @@ section {
     margin-top: -60px;
 }
 
+.place_container, .place_header {
+    width: 590px;
+}
 
-
+.place_header {
+    min-height: 60px;
+}
 .place_container, .search_result, .place_info_detail {
-/*
-    padding-left: 0;
-    border-color: #d2ebf9;
-    border-style: solid;
-    border-width: 2px;
-    -moz-border-radius: 15px;
-    border-radius: 15px;
-    margin-bottom: 10px;
-    font-size: 16px;
-    padding: 10px;
-    margin-left: 0;
-*/
     background: none repeat scroll 0 0 white;
     border-color: #AAAAAA;
     border-style: solid;
@@ -549,6 +560,7 @@ section ul li {
 
 .place_info_rating, .place_info_price {
     font-size: 16px;
+
 }
 
 .place_info_images {
@@ -570,6 +582,9 @@ section ul li {
     font-style: italic;
 }
 
+.place_info_review_links a { 
+    text-decoration: none;
+}
 
 
 /*participants*/
