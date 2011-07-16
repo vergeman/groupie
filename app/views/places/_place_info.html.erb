@@ -5,7 +5,7 @@
     <div class="place_info_images">
       <% place.image_links.each do |image| %>
       <%= image_tag image %>
-      <!--break #set to one image for now -->
+      <!--break #set to one image header for now -->
       <% break %>
       <% end %>
     </div>
@@ -22,26 +22,33 @@
       <%= place.address %>
     </div>
 
-<!--
-    <div class="place_info_rating">
-      <br />
-      <%= place.rating.nil? ? "" : "Rating: #{place.rating} " %>
-    </div>
--->
+
     <div class="place_info_price">
       <%= place.price.nil? ? "" : "Price: #{place.price} "%>
-      <br />
     </div>
 
-    <!-- snippet comments -->
-    <% place.comments.each do |comment| %>
-    <%= comment %> <br />
-    <% end %>
-    
+    <!-- rating -->
+    <div class="place_info_rating">
+
+      <% unless place.rating.nil? %>
+        <% count = 0 %>
+        <% for count in 0...place.rating.to_f.round %>
+        <div class="rsw-starred"></div>
+        <% end %>
+      
+	<% for count in count...4 %>
+	<div class="rsw-unstarred"></div>
+	<% end %>
+      <% end %>
+
+    </div>
+
+
     <!-- external links -->
+    <br />    
+    <br />
     <div class="place_info_review_links">
       <% place.external_links.blank? ? "" : %>
-      <br />
       <span class="place_info_review_header">Reviews</span>
       <br />
       <% place.external_links.each do |review, link| %>
@@ -49,9 +56,36 @@
       <% end %>
     </div>
 
+
+    <!-- snippet comments -->
+    <br />
+    <div class="place_info_comments">
+
+      <div class="place_info_comments_title">
+        Comments<br />
+      </div>
+
+      <% place.comments.each do |comment| %>
+      <%= comment %><br />
+      <% end %>
+    </div>
+
+
+    <!-- all photos -->
+    <br />
+    <div class="place_info_all_photos_title">
+      Photos<br />
+    </div>    
+
+    <div class="place_info_all_photos_title">
+      <% place.image_links.each do |image| %>
+      <%= image_tag image %>
+      <% end %>
+    </div>
     
     <!--#end each place-->
-
+    <%= render :partial => 'places/search_result_form_add', :layout => false, 
+    :locals => { :events => @events, :event_id => params[:event_id], :place => place } %>
 
 
 

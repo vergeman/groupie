@@ -490,7 +490,7 @@ section {
 
 .event_place_thumbnails {
     width: 575px;
-    height: 100px;
+    //height: 100px;
     font-size: 16px;
 }
 .thumbnail {
@@ -564,12 +564,24 @@ section ul li {
     font-size: 16px;
 
 }
+.place_info_comments_title, .place_info_all_photos_title {
+    font-size: 12px;
+    font-style: italic;
+}
+.place_info_comments {
+    font-size: 12px;
+}
 
 .place_info_images {
     float: right;
     border-color: black;
     border-style: solid;
     border-width: 1px;
+}
+
+.place_info_all_photos {
+    padding: 20px;
+    vertical-align: middle;
 }
 .place_info_images img {
     margin-bottom: -5px;
@@ -586,8 +598,26 @@ section ul li {
 
 .place_info_review_links a { 
     text-decoration: none;
+    padding-right: 8px;
 }
 
+/*stars thanks google */
+.rsw-starred {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    background: no-repeat url(http://maps.gstatic.com/mapfiles/reviews/widget2.png) -26px 0;
+    width: 13px;
+    height: 13px;
+}
+.rsw-unstarred {
+    float: left;
+    position: relative;
+    overflow: hidden;
+    background: no-repeat url(http://maps.gstatic.com/mapfiles/reviews/widget2.png) 0 0;
+    width: 13px;
+    height: 13px;
+}
 
 /*participants*/
 #participants {
