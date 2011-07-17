@@ -2,6 +2,10 @@
 
 <%= label_tag(:search_text, "Find a place: ") %>
 <%= text_field_tag(:search_text) %>
+
+<%= label_tag(:search_neighborhood, "Neighborhood: ") %>
+<%= select_tag("search_neighborhood", options_for_select(get_neighborhoods, params[:search_neighborhood] ||= "Brooklyn Heights"), :class=>"search_neighborhood") %>
+
 <%= submit_tag("Search", :id => "search_header_btn") %>
 <% end %>
 

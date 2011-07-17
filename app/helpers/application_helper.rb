@@ -19,5 +19,36 @@ module ApplicationHelper
 
   end
 
+#neighborhooods
+  def get_neighborhoods
+    neighborhoods = ["Brooklyn Heights", 
+                     "Bushwick",
+                     "Chelsea",
+                     "Chinatown", 
+                     "Dumbo",
+                     "East Village",
+                     "Financial District",
+                     "Flatiron",
+                     "Gramercy",
+                     "Greenpoint",
+                     "Greenwich Village",
+                     "Harlem",
+                     "Little Italy",
+                     "Lower East Side",
+                     "Midtown East",
+                     "Midtown West",
+                     "Morningside Heights",
+                     "Murray Hill",
+                     "Nolita",
+                     "Park Slope",
+                     "SoHo",
+                     "Times Square",
+                     "Tribeca",
+                     "Upper East Side",
+                     "Upper West Side",
+                     "West Village",
+                     "Williamsburg"]                     
+    
+  end
 
 end

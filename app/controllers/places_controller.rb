@@ -14,14 +14,23 @@ class PlacesController < ApplicationController
   require 'thread'
 
 
+
+
   def search
     start_time = Time.now
+
+    geocode = geolocate()
 
     #key = 'AIzaSyDfKgIyvLi4KzXAAzZELPO0tWIpwW9fN-Y'
     key = 'AIzaSyABm4PzReSNyCARZYz0HgbD4CSAB-0v5Z8'
 
-    lat = '40.718902'
-    long = '-73.992249'
+    #lat = '40.718902'
+    #long = '-73.992249'
+    lat = geocode['lat'].to_s
+    long = geocode['lng'].to_s
+    logger.debug("lat: #{geocode['lat']}")
+    logger.debug("long: #{geocode['lng']}")
+
     max_results = 5
 
     @user = User.find(current_user.id)
@@ -30,6 +39,7 @@ class PlacesController < ApplicationController
     @event_id = params[:event_id]
     @query_results = Array.new
     @cached_results = Hash.new
+
 
  #   respond_to do |format|
       @search_text = params[:search_text]
@@ -210,6 +220,15 @@ class PlacesController < ApplicationController
 
 
   private
+
+  def geolocate
+    neighborhood = params[:search_neighborhood]
+    location_uri = URI.encode("http://maps.googleapis.com/maps/api/geocode/json?address=#{neighborhood},NY&sensor=false")
+    geocode = URI_request(location_uri)
+
+    geocode['results'].first['geometry']['location']
+
+  end
 
   #parses google api results, updates passed place obj
   def update_place_details(place, details)
