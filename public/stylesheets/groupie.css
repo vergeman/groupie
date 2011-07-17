@@ -260,6 +260,13 @@ section {
     font-size: 18px;
 }
 
+._header_leader {
+    font-size: 18px;
+}
+._header_leader a {
+    text-decoration: none;
+}
+
 #main {
     width: 750px;
 
@@ -588,6 +595,8 @@ section ul li {
     border-style: solid;
     border-width: 1px;
     margin-left: 15px;
+    overflow:hidden;
+    max-height: 200px;  /*not sure bout this*/
 }
 
 .place_info_all_photos {
@@ -636,9 +645,6 @@ section ul li {
     float: right;
     margin-top: 8px;
     padding: 5px;
-
-    border-radius: 4px;
-    -moz-border-radius: 4px;
 
     background: none repeat scroll 0 0 white;
     border-color: #AAAAAA;

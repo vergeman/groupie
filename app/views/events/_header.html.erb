@@ -29,5 +29,16 @@
     <%= @event.description %>
   </div>
 
+  <div class="_header_leader">
+  <% if @event.places.count > 0 %>
+  <%= "Leading Candidate: "%>
+
+  <% lead_place = Place.find( 
+     Vote.where(:participant_id => @event.participants).group("place_id").sum("vote").sort_by{|k,v| v}.last[0]) %>
+
+  <%= link_to lead_place.name, event_place_path(params[:id], lead_place.id) %>
+  <% end %>
+  </div>
+
   <div class="_header_timeout">
   </div>
