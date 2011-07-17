@@ -1,0 +1,11 @@
+<!--all photos partial -->
+<br />
+<div class="place_info_all_photos_title">
+  Photos<br />
+</div>    
+
+<div class="place_info_all_photos_title">
+  <% place.image_links.each do |image| %>
+  <%= image_tag image %>
+  <% end %>
+</div>

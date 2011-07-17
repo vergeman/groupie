@@ -1,91 +1,55 @@
 <!--render singular place -->
 
+<!-- images -->
+<div class="place_info_images">
+  <% place.image_links.each do |image| %>
+  <%= image_tag image %>
+  <!--break #set to one image header for now -->
+  <% break %>
+  <% end %>
+</div>
 
-    <!-- images -->
-    <div class="place_info_images">
-      <% place.image_links.each do |image| %>
-      <%= image_tag image %>
-      <!--break #set to one image header for now -->
-      <% break %>
-      <% end %>
-    </div>
+<!-- title is not included for link purposes -->
+<div class="place_info_name">
+  <% if params[:controller] == "places" && params[:action] == "show" %>
+  <%= place.name %>
+  <% else %>
+  <%= link_to place.name, event_place_path(:event_id => '_', :id => place.id) %>
+  <% end %>
+</div>
 
-    <div class="place_info_name">
-      <%= place.name %>
-    </div>
+<div class="place_info_neighborhood">
+  <%= place.neighborhood %>
+</div>
 
-    <div class="place_info_neighborhood">
-      <%= place.neighborhood %>
-    </div>
-
-    <div class="place_info_address">
-      <%= place.address %>
-    </div>
-
-
-    <div class="place_info_price">
-      <%= place.price.nil? ? "" : "Price: #{place.price} "%>
-    </div>
-
-    <!-- rating -->
-    <div class="place_info_rating">
-
-      <% unless place.rating.nil? %>
-        <% count = 0 %>
-        <% for count in 0...place.rating.to_f.round %>
-        <div class="rsw-starred"></div>
-        <% end %>
-      
-	<% for count in count...4 %>
-	<div class="rsw-unstarred"></div>
-	<% end %>
-      <% end %>
-
-    </div>
+<div class="place_info_address">
+  <%= place.address %>
+</div>
 
 
-    <!-- external links -->
-    <br />    
-    <br />
-    <div class="place_info_review_links">
-      <% place.external_links.blank? ? "" : %>
-      <span class="place_info_review_header">Reviews</span>
-      <br />
-      <% place.external_links.each do |review, link| %>
-      <%= link_to review, link, :target => "_blank" %> <br />
-      <% end %>
-    </div>
+<div class="place_info_price">
+  <%= place.price.nil? ? "" : "Price: #{place.price} "%>
+</div>
+
+<!-- rating -->
+<div class="place_info_rating">
+
+  <% unless place.rating.nil? %>
+  <% count = 0 %>
+  <% for count in 0...place.rating.to_f.round %>
+  <div class="rsw-starred"></div>
+  <% end %>
+  
+  <% for count in count...4 %>
+  <div class="rsw-unstarred"></div>
+  <% end %>
+  <% end %>
+
+</div>
 
 
-    <!-- snippet comments -->
-    <br />
-    <div class="place_info_comments">
+<!--#end each place-->
 
-      <div class="place_info_comments_title">
-        Comments<br />
-      </div>
-
-      <% place.comments.each do |comment| %>
-      <%= comment %><br />
-      <% end %>
-    </div>
-
-
-    <!-- all photos -->
-    <br />
-    <div class="place_info_all_photos_title">
-      Photos<br />
-    </div>    
-
-    <div class="place_info_all_photos_title">
-      <% place.image_links.each do |image| %>
-      <%= image_tag image %>
-      <% end %>
-    </div>
-    
-    <!--#end each place-->
-    <%= render :partial => 'places/search_result_form_add', :layout => false, 
-    :locals => { :events => @events, :event_id => params[:event_id], :place => place } %>
 
 
 

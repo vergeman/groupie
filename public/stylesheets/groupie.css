@@ -577,6 +577,7 @@ section ul li {
     border-color: black;
     border-style: solid;
     border-width: 1px;
+    margin-left: 15px;
 }
 
 .place_info_all_photos {
@@ -589,7 +590,7 @@ section ul li {
 
 .place_info_add_place_btn {
     text-align: right;
-
+    margin-top: 5px;
 }
 
 .place_info_review_header {

@@ -5,6 +5,24 @@
     <%= render :partial => 'places/place_info', :layout => false,
     :locals => { :place => @place } %>
 
+    <!-- external review links -->
+    <%= render :partial => 'places/place_review.html.erb', :layout => false,
+    :locals => { :place => @place } %>
+
+
+    <!-- snippet comments -->
+    <%= render :partial => 'places/place_comment.html.erb', :layout => false,
+    :locals => { :place => @place } %>
+
+    <!-- all photos -->
+    <%= render :partial => 'places/place_photos.html.erb', :layout => false,
+    :locals => { :place => @place } %>
+
+    <!--add to event -->
+    <%= render :partial => 'places/search_result_form_add', :layout => false,
+    :locals => { :events => @events, :event_id => params[:event_id], :place => @place } %>
+
+
   </div>
 
 <!--#end each place-->
