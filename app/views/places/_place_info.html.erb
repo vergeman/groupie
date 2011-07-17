@@ -11,11 +11,14 @@
 
 <!-- title is not included for link purposes -->
 <div class="place_info_name">
+
   <% if params[:controller] == "places" && params[:action] == "show" %>
-  <%= place.name %>
+  <%=  place.name %>
   <% else %>
+  <!-- search -->
   <%= link_to place.name, event_place_path(:event_id => '_', :id => place.id) %>
   <% end %>
+
 </div>
 
 <div class="place_info_neighborhood">

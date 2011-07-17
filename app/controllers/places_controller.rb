@@ -98,6 +98,13 @@ class PlacesController < ApplicationController
       end      
 
 
+    logger.debug("save and push query results")
+    @query_results.each do |p|
+      if !@cached_results[p.cid]
+        p.save!
+      end
+    end
+
       logger.debug("return results format.js")
 
       format.js {
@@ -112,12 +119,8 @@ class PlacesController < ApplicationController
 
     #==save the saved to db for caching==
     #can this be moved after rendering?
-    logger.debug("save and push query results")
-    @query_results.each do |p|
-      if !@cached_results[p.cid]
-        p.save!
-      end
-    end
+
+
 
   end
 

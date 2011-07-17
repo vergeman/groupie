@@ -11,6 +11,13 @@
 <%= event.title %>
 <% end %>
 -->
+<% if events.empty? %>
+
+<span class="no_events" style="font-size:18px; ">
+  <%= link_to "Create an Event!", new_event_path, :style=> "text-decoration: none;" %>
+<span>
+
+<% else %>
 <%= form_tag(event_places_path(events.first.id), :class => "add_form" ) do %>
 
 <!--hook to chang in javascript: search()-->
@@ -22,5 +29,5 @@
 <%= submit_tag("Add", :class => "place_add_button") %>
 
 <% end %>
-
+<% end %>
 </div>
