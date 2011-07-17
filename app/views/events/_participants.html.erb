@@ -2,8 +2,13 @@
 
 <div id = "participants"> 
 
-  <h3>Participants (<%= @participants.count %>)</h3> 
+  <div class="participants_header">
+  Participants
+<!-- (<%= @participants.count %>) 
+-->
+  </div>
 
+<p>
   <ul class = "participant_list">
 
     <% @participants.each do |participant| %>
