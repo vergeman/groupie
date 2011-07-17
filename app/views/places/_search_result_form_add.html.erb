@@ -1,17 +1,7 @@
 <!-- #add to event -->
 <div class="place_info_add_place_btn">
-<!--
-  <%= form_tag(event_places_path(event_id), :class => "add_form" ) do %>
-  <%= hidden_field_tag("place[cid]", place.cid) %>
-  <%= submit_tag("Add", :class => "place_add_button") %>
-  <% end %>
--->
-<!-- if no events, create, else -->
-<!--<% events.each do |event| %>
-<%= event.title %>
-<% end %>
--->
-<% if events.empty? %>
+
+<% if events.empty?  %>
 
 <span class="no_events" style="font-size:18px; ">
   <%= link_to "Create an Event!", new_event_path, :style=> "text-decoration: none;" %>

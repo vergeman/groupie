@@ -31,7 +31,7 @@ class PlacesController < ApplicationController
     @query_results = Array.new
     @cached_results = Hash.new
 
-    respond_to do |format|
+ #   respond_to do |format|
       @search_text = params[:search_text]
 
       #base query google api
@@ -105,15 +105,16 @@ class PlacesController < ApplicationController
       end
     end
 
-      logger.debug("return results format.js")
 
-      format.js {
-        logger.debug("search requests took " + (Time.now - start_time).to_s)
+#      format.html {
+#        logger.debug("search requests took " + (Time.now - start_time).to_s)
 
-        render :partial => 'places/search_results', :layout => false, :locals => { :query_results => @query_results, :events => @events, :event_id => @event_id }
-      }
+#        redirect_to :partial => 'places/search_results', :layout => true, :locals => { :query_results => @query_results, :events => @events, :event_id => @event_id }
 
-    end
+#        render :partial => 'places/search_results', :layout => true, :locals => { :query_results => @query_results, :events => @events, :event_id => @event_id }
+#      }
+
+#    end
 
 
 

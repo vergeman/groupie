@@ -30,11 +30,11 @@ $(document).ready(function() {
 	//$('#event_event_date').val(selectedDate.asString());
 
 
-    $(".search_form").submit(function(e) {	
-	e.preventDefault();
+    //$(".search_form").submit(function(e) {	
+	//e.preventDefault();
 	//alert( $('#search_place').val() )
-	search( $("#search_place").val() );
-    });
+	//search( $("#search_place").val() );
+//});
     
     
 //client side voting update
@@ -204,13 +204,14 @@ function vote(e_id, p_id, v) {
 }
 
 
-
+/*
 function search(search_text) {
     var auth = $("meta[name=csrf-token]").attr("content")
     var event_id = $(".event").data("event");
 
 	$.ajax({
-	    type: "POST",
+	    //type: "POST",
+	    type: "GET",
 	    url: "/places/search/",
 	    dataType: "text",
 	    //dataType: "json",
@@ -244,12 +245,12 @@ function search(search_text) {
 		    add_place( $(this), $(this).find("#place_cid").val() );
 		});		
 */
-
+/*
 	    }
 	});
 
 }
-
+*/
 
 function add_place(button, place_id) {
     var auth = $("meta[name=csrf-token]").attr("content")

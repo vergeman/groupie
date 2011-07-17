@@ -1,0 +1,33 @@
+<% if @query_results.empty? %>
+
+<div class="search_result">
+    <%= ". . . shucks, we couldn't find anything." %>
+</div>
+
+<% else %>
+
+  <% @query_results.each do |place| %>
+
+  <div id="<%= place.cid %>" class="search_result">
+
+    <%= render :partial => 'places/place_info', :layout => false, 
+    :locals => { :place => place } %>
+
+    <!-- snippet comments -->
+    <%= render :partial => 'places/place_comment.html.erb', :layout => false,
+    :locals => { :place => place } %>
+
+    <!-- add to event -->
+    <%= render :partial => 'places/search_result_form_add', :layout => false, 
+    :locals => { :events => @events, :event_id => params[:event_id], :place => place } %>    
+
+  </div>
+
+  <% end %>
+<% end %>
+
+
+
+
+
+
