@@ -1,0 +1,5 @@
+#! /bin/sh
+
+#stick in cron job /etc/cron.whenever desired
+cd $groupie
+bundle exec rake event_expiry_email
