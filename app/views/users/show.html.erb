@@ -3,4 +3,11 @@
 <h2>Your Get Togethers</h2>
 -->
 </div>
+<% if @events.empty? %>
+
+<%= render :file => 'pages/how.html' %>
+
+<% else %>
+
 <%= render 'users/events.html' %>
+<% end %>

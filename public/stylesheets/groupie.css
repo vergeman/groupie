@@ -33,6 +33,21 @@ body {
 }
 
 
+/*statics*/
+#how ol {
+    font-size: 22px;
+}
+
+.how_text {
+    font-size: 14px;
+}
+
+.about_text, .contact_text {
+    font-size: 16px;
+}
+
+
+
 /*sign up */
 #sign_up, #sign_in {
     margin-left: 410px;
@@ -414,7 +429,7 @@ section {
     
 }
 
-.event_list .event {
+.event_list .event, .no_events, #how, #about, #contact {
     /*
     border-color: #d2ebf9;
     border-style: solid;
@@ -675,6 +690,10 @@ footer nav {
 
 }
 
+footer nav ul li a {
+    margin-left: 20px;
+    font-size: 16px;
+}
 
 
 /*error & flash */
