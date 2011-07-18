@@ -15,9 +15,10 @@
       </div>
       
       <div id="time_remaining">
-	<%= @event.event_date.strftime("%B %d, %Y %H:%M:%S") %>
+	<%= (@event.event_date - get_expiry_hours(@event) ).strftime("%B %d, %Y %H:%M:%S") %>
       </div>
-  
+
+
     </div>
 
   </div>
