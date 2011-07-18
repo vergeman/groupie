@@ -36,7 +36,6 @@ class Event < ActiveRecord::Base
 
 
 private
-
   def default_values
     self.sent_expiry_email = false
   end

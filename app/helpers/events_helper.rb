@@ -15,3 +15,8 @@ def get_expiry_hours(event)
   return 12.hours
 
 end
+
+
+def unexpired_events
+  Event.where(:sent_expiry_email => false)    
+end

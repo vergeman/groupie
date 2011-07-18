@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+
+    <p> Hi, <%= @user.username %>
+
+    <p> You and your friends have spoken.  
+      You will <%= @project_name %> for <b><%= @event.title %></b> on 
+ 
+      <b><%= @event.event_date.strftime("%A, %b. #{@event.event_date.day.ordinalize} at %l:%M %p.") %></b>
+
+      at <b><%= @lead_place %></b>.
+
+    <p><b>Forward this email</b> to your friends because they have not received an email directly from us!
+
+<p>Enjoy,<br />
+The <%= @project_name %> Team
+
+</body>
+
+</html>
+
+
+
+

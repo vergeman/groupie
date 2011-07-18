@@ -30,7 +30,7 @@
   </div>
 
   <div class="_header_leader">
-  <% if @event.places.count > 0 %>
+  <% if @event.places.count > 0 && ! Vote.where(:participant_id => @event.participants).empty? %>
   <%= "Leading Candidate: "%>
 
   <% lead_place = Place.find( 

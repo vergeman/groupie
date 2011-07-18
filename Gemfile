@@ -3,6 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.0.1'
 
 gem 'rake', '0.8.7' #fix rake exrror w/ 1.9.2 and rake 0.9.0 - use 'bundle exec rake db:migrate'
+#gem 'rake', '0.9.2'
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
@@ -17,6 +18,12 @@ gem 'devise'
 gem 'jquery-rails', '>= 1.0.3'
 
 gem 'nokogiri'
+
+#couldn't get backgroundrb running - problems with rake and this rvm grah
+#gem 'packet'
+#gem 'chronic'
+
+gem 'rufus-scheduler'
 
 group :development do
   gem 'rspec-rails'
