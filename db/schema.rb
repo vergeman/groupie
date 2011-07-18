@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110704052049) do
+ActiveRecord::Schema.define(:version => 20110718005434) do
 
   create_table "events", :force => true do |t|
     t.integer  "admin_id"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20110704052049) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "event_key"
+    t.boolean  "sent_expiry_email"
   end
 
   add_index "events", ["admin_id"], :name => "index_events_on_admin_id"

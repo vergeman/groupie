@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110704052049
+# Schema version: 20110718005434
 #
 # Table name: places
 #
@@ -8,7 +8,7 @@
 #  description    :string(255)
 #  created_at     :datetime
 #  updated_at     :datetime
-#  cid            :integer
+#  cid            :string(255)
 #  address        :string(255)
 #  neighborhood   :string(255)
 #  rating         :string(255)
