@@ -30,16 +30,20 @@
       <div id="navbar" class="span-5">
 	<%= render 'shared/nav_bar' %>
       </div>
+
       <% end %>
 
       <div id="main" class="span-19 last">
+	<!--
 	<% flash.each do |key, message| %>
 	<%= content_tag(:div, message, :class => "flash #{key}") %>
 	<% end %>
+	-->
 
 	<div id="search_results">
 	  <%= yield %>
 	</div>
+
       </div>
 
 

@@ -21,7 +21,7 @@
 
 <!-- event detail - places -->
 <ul class="event" data-event=<%= @event.id %>>
-      
+  
   <% @places.each do |place| %>
 
   <li>
@@ -41,13 +41,13 @@
 
           <div class="place_total_votes_count">
 
-              <% if place.votes.empty? %>
-              <%= 0 %>
-              <% else %>
-              <%= place.votes.where(:participant_id =>
-              @event.participants).inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
-              <% end %>
-	      
+            <% if place.votes.empty? %>
+            <%= 0 %>
+            <% else %>
+            <%= place.votes.where(:participant_id =>
+            @event.participants).inject(0) {|sum, hash| sum + hash[:vote].to_i} %>
+            <% end %>
+	    
           </div>
 
 	  <div class="place_total_votes_lbl">
@@ -59,7 +59,7 @@
 
         <div class="place_info_name">
           <%= link_to place.name,
-                  event_place_path(params[:id], place.id) %>          
+              event_place_path(params[:id], place.id) %>          
         </div>
 
       </div>
@@ -84,13 +84,13 @@
 	     place.votes.where(:participant_id => @event.participants).order("ABS(vote) DESC") %>
 
 	  <% top_votes.each do |voter| %>	     
-	    <% break if count > 2 %>
+	  <% break if count > 2 %>
 
-	    <% unless (voter.vote == 0  || voter.participant.user.username == current_user.username) %>
-	      <% vote_list.push("#{voter.participant.user.username} (#{voter.vote})") %>
-	    <% end %>
+	  <% unless (voter.vote == 0  || voter.participant.user.username == current_user.username) %>
+	  <% vote_list.push("#{voter.participant.user.username} (#{voter.vote})") %>
+	  <% end %>
 
-	    <% count += 1 %>
+	  <% count += 1 %>
 
 	  <% end %>
 
@@ -106,25 +106,26 @@
 
 
 
-      
-      <!-- external links -->
-      <div class="place_info_review_links">
+	
+	<!-- external links -->
 	<div class="place_info_review_links">
+	  <div class="place_info_review_links">
 
-	  <% place.external_links.blank? ? "" : %>
+	    <% place.external_links.blank? ? "" : %>
 	    <br />
 	    <span class="place_info_review_header">Reviews</span>
 	    <br />
 	    <% place.external_links.each do |review, link| %>
-	      <%= link_to review, link, :target => "_blank" %>
+	    <%= link_to review, link, :target => "_blank" %>
  	    <% end %>
+	  </div>
+
+	  <div class="place_detail">
+	    <p><%= place.description %>	  
+	  </div>
+	  
 	</div>
 
-	<div class="place_detail">
-	  <p><%= place.description %>	  
-	</div>
-	
-      </div>
       </div>    
   </li>
   

@@ -224,6 +224,8 @@ header nav {
 
 /*section tag*/
 section {
+    min-height: 600px;
+    //width: 950px;
 
 }
 
@@ -429,7 +431,7 @@ section {
     
 }
 
-.event_list .event, .no_events, #how, #about, #contact {
+.event_list .event, .no_events, #how, #about, #contact, #home {
     /*
     border-color: #d2ebf9;
     border-style: solid;
@@ -677,11 +679,7 @@ section ul li {
 
 footer {
     text-align: center;
-
-    /*
-    border-style: solid; 
-    border-width: 1px;
-    */
+    margin-top: 30px;
 
 }
 

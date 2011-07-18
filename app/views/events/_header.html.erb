@@ -1,35 +1,35 @@
 <!--header partial-->
 
-  <div class="event_date_main">
-    <%= render :partial => 'shared/date_calendar', :layout => false, 
-    :locals => {:event => @event } %>
-  </div>
+<div class="event_date_main">
+  <%= render :partial => 'shared/date_calendar', :layout => false, 
+  :locals => {:event => @event } %>
+</div>
 
-  <div class="_header_title">
-    <%= @event.title %>
-  </div>
+<div class="_header_title">
+  <%= @event.title %>
+</div>
 
-  <div class="_header_organizer">
-    <%= "Organized by #{User.find(@event.admin_id).username}" %>
-  </div>
+<div class="_header_organizer">
+  <%= "Organized by #{User.find(@event.admin_id).username}" %>
+</div>
 
-  <div class="_header_stats">
-    <!-- does anyone care?
-    <%= pluralize(@event.places.count, "place") %>
-    -->
-  </div>
+<div class="_header_stats">
+  <!-- does anyone care?
+       <%= pluralize(@event.places.count, "place") %>
+       -->
+</div>
 
-  <div class="_header_stats">
-    <!-- does anyone care?
-    <%= pluralize(@event.participants.count, "participant") %>
-    -->
-  </div>
+<div class="_header_stats">
+  <!-- does anyone care?
+       <%= pluralize(@event.participants.count, "participant") %>
+       -->
+</div>
 
-  <div class="_header_description">
-    <%= @event.description %>
-  </div>
+<div class="_header_description">
+  <%= @event.description %>
+</div>
 
-  <div class="_header_leader">
+<div class="_header_leader">
   <% if @event.places.count > 0 && ! Vote.where(:participant_id => @event.participants).empty? %>
   <%= "Leading Candidate: "%>
 
@@ -38,7 +38,31 @@
 
   <%= link_to lead_place.name, event_place_path(params[:id], lead_place.id) %>
   <% end %>
-  </div>
+</div>
 
-  <div class="_header_timeout">
-  </div>
+<div class="_header_timeout"></div>
+
+<!--empty notifications -->
+<% if @event.places.empty? %>
+<br />
+<div class="empty_thumbnails">
+  Find some places!
+  <p>
+    <span style="font-size:16px;">
+      Search for restaurants or bars, and add them to your Get Together.
+    </span>
+</div>
+<% end %>
+
+
+<% if @event.participants.count == 1 %>
+<br />
+<div class="event_participant_count">
+  Invite some friends!
+  <p>
+    <span style="font-size:16px;">
+      Forward your Get Together email so your friends can vote.
+    </span>
+
+</div>
+<% end %>

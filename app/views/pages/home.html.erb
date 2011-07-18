@@ -4,12 +4,16 @@
 
   <div id="home_text">
     <p> Get Together helps manage preferences when making social plans with your friends.
+
     <p> Easily add bars and restaurants, vote on where you want to meet, and avoid the confusion of email chains!
+
   </div>
 
+<!--show sign in button -->
   <% unless user_signed_in? %>
   <%= link_to "Sign Up", new_user_registration_path, :id => "sign_up_btn" %>
+  <% end %>
 
 </div>
 
-<% end %>
+
