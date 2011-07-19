@@ -1,60 +1,71 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title><%= title %></title>
-  <%= render 'layouts/stylesheets' %>
 
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js", "application" %>
+  <head>
+    <title><%= title %></title>
+    <%= render 'layouts/stylesheets' %>
 
-  <%= javascript_include_tag 'jquery_ujs' %>
+    <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js", "application" %>
 
-  <%= javascript_include_tag 'jquery-ui-1.8.14.custom.min.js' %>
+    <%= javascript_include_tag 'jquery_ujs' %>
 
-  <%= javascript_include_tag 'jquery.countdown.pack.js' %>
+    <%= javascript_include_tag 'jquery-ui-1.8.14.custom.min.js' %>
+
+    <%= javascript_include_tag 'jquery.countdown.pack.js' %>
+
+    <%= csrf_meta_tag %>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <%= render 'layouts/header' %>
+      <hr>
 
 
+      <section>
 
-  <%= csrf_meta_tag %>
-</head>
-<body>
+	<div id="content">
 
-  <div class="container">
+	  <% if user_signed_in? %>
 
-    <%= render 'layouts/header' %>
-    <hr>
+	  <div id="navbar" class="span-5">
+	    <%= render 'shared/nav_bar' %>
+	  </div>
 
-    <section>
-      <% if user_signed_in? %>
-      <%= render 'shared/search_header' %>
+	  <% end %>
 
-      <div id="navbar" class="span-5">
-	<%= render 'shared/nav_bar' %>
-      </div>
+	  <div id="main" class="span-19 last">
+	    <!--
+	       <% flash.each do |key, message| %>
+	       <%= content_tag(:div, message, :class => "flash #{key}") %>
+	    <% end %>
+	    -->
 
-      <% end %>
+	    <div id="search_results">
+	      <%= yield %>
+	    </div>
 
-      <div id="main" class="span-19 last">
-	<!--
-	<% flash.each do |key, message| %>
-	<%= content_tag(:div, message, :class => "flash #{key}") %>
-	<% end %>
-	-->
+	  </div>
 
-	<div id="search_results">
-	  <%= yield %>
 	</div>
 
-      </div>
+
+      </section>
+
+      <hr>
+
+      <!--footer-->
+      <footer>
+	<%= render 'layouts/footer' %>
+      </footer>
 
 
-    </section>
+    </div>
 
-    <hr>
-    <%= render 'layouts/footer' %>
+  </body>
 
+  <%= debug(params)  if Rails.env.development? %>
 
-
-  </div>
-
-</body>
 </html>

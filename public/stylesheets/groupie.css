@@ -1,18 +1,14 @@
 
 
 .container {
-
-
+    margin: 0;
+    width: 100%;
 }
 
 /*body tag */
 body {
-    margin-left: auto;
-    margin-right: auto;
-    width: 960px; /*span-24*/
-    margin-top: 10px;
-
-    background-image: url("/images/background-offwhite.png");
+    //background-image: url("/images/background-offwhite.png");
+    background-color: #FCF6D6
 }
 
 
@@ -132,18 +128,33 @@ header {
 
 header h1 {
     font-family: rockwell, arial, helvetica;
+}
 
+#header_wrap {
+    background: none repeat scroll 0 0 lightBlue;
+    width: 100%;
+}
+
+#header_content {
+    margin: 0 auto;
+    width: 960px;
+}
+
+#search_wrap {
+    background-color: #121E34;
+    margin: 0 auto;
 }
 
 .search_form {
-    border: 1px solid;
-    font-size: 22px;
-    padding-left: 30px;
-    background-color: rgb(110, 139, 153);
-    border-color: rgb(18, 30, 52);
+    background-color: #6E8B99;
+    border: 1px solid #121E34;
     color: white;
-    margin-bottom: 10px;
+    font-size: 22px;
+    margin: 0 auto;
+    padding-left: 30px;
+    width: 960px;
 }
+
 #search_text {
     font-size: 22px;
 }
@@ -156,17 +167,31 @@ hr {
     margin: 0;
     background: none repeat scroll 0 0 transparent;
 }
+#banner {
+    width: 500px;
+}
 
 #banner a {
     text-decoration: none;
     color: black;
 }
 
+
 header nav {
     text-align: right;
     margin-top: 25px;
 }
 
+#content {
+    margin: 0 auto;
+    width: 960px;
+
+}
+
+#footer_wrap {
+    margin: 0 auto;
+    background-color: blue;
+}
 
 /*event creation*/
 #create_event {

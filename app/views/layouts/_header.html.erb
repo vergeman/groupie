@@ -1,39 +1,51 @@
 <header>
 
-<!-- banner -->
-<div id="banner" class="span-18">
-<!--
-  <h1><%= link_to get_project_name, root_path %></h1>
--->
-<%= link_to (image_tag "header1.png"), home_path %>
-</div>
-
-<div id="account" class="span-6 last">
-  <nav class="account">
-    <% if user_signed_in? %>
-    Hi, <%= current_user.username %>
-    <% end %>
-    <ul>
-      <!--
-      <li><%= link_to "Home", home_path%></li>
-      -->
-      <% unless user_signed_in? %>
-      <br />
-      <li><%= link_to "Login", new_user_session_path %></li>
-      <% end %>
-
-      <% if user_signed_in? %>
-
-      <li><%= link_to "Edit Account", edit_user_registration_path %></li>
-      <li><%= link_to "Logout", destroy_user_session_path %></li>
-      <% end %>
-    </ul>
-
-  </nav>
-</div>
 
 
+  <div id="header_wrap">
+
+    <div id="header_content">
+
+      <!-- banner -->
+      <div id="banner">
+	<%= link_to (image_tag "header1.png"), home_path %>
+      </div>
+
+      <!--account login/logout-->
+      <div id="account">
+
+	<nav class="nav_account">
+
+	  <% if user_signed_in? %>
+	  Hi, <%= current_user.username %>
+	  <% end %>
+
+	  <ul>
+
+	    <% unless user_signed_in? %>
+	    <br />
+	    <li><%= link_to "Login", new_user_session_path %></li>
+	    <% end %>
+
+	    <% if user_signed_in? %>
+
+	    <li><%= link_to "Edit Account", edit_user_registration_path %></li>
+	    <li><%= link_to "Logout", destroy_user_session_path %></li>
+	    <% end %>
+	  </ul>
+
+	</nav>
+      </div>
 
 
+    </div>
+  </div>
+
+  <!-- search bar -->
+  <div id="search_wrap">
+    
+    <%= render 'shared/search_header' %>
+
+  </div>
 
 </header>
