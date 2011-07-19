@@ -25,6 +25,8 @@ gem 'nokogiri'
 
 gem 'rufus-scheduler'
 
+gem 'thin' #server
+
 group :development do
   gem 'rspec-rails'
 #  gem 'rspec-rails', '2.0.1'

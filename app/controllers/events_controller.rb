@@ -46,14 +46,14 @@ def create
                                                     :event_date => @date ))
 
   if @event.save
-    flash[:success] = "Event created."
+    #flash[:success] = "Event created."
 
     @host = request.env["HTTP_HOST"]
 
     UserMailer.event_email(@user, @event, @host).deliver
 
-    redirect_to(new_event_place_path(@event))
-
+    #redirect_to(new_event_place_path(@event))
+    redirect_to(@user)
   else
     flash[:error] = "oops, looks like you forgot some info"
 

@@ -61,9 +61,10 @@ body {
     position: bottom;
 }
 
+
+
 nav ul {
     margin: 0 0 0 0;
-
 }
 
 
@@ -73,31 +74,52 @@ nav ul li {
     display: inline;
     list-style: none;
     word-wrap: break-word;
+    padding-left: 10px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #222222
+    //color: #222222;
+
 }
 
-.groups ul {
-    font-size: 140%;
+.groups {
+    padding-left: 0;
+    margin-right: 20px;
+}
+
+.groups li {
+    font-size: 16px;
+    font-weight: bold;
+
     margin-top: 10px;
-    background-color: #FFFFFF;
+    padding: 8px;
+
+    background-color: #FFFBF2;
     border-color: #AAAAAA;
     border-style: solid;
     border-width: 1px;
-    //box-shadow: 1px 1px 3px #B4AAA0;
-}
-.groups ul li {
-    margin-bottom: 5px;
 
+    //box-shadow: 1px 1px 2px #B4AAA0;
 }
 
 
 ul .event_title {
-    font-size: 80%;
+    padding-left:0;
+    border-color: #AAAAAA;
+    border-style: solid;
+    border-width: 1px;
+    border-top: none;
+}
+
+ul .event_title li {
+
+    background-color: #FEF9ED;
+    font-size: 14px;
     border:none;
+    margin:0;
+    font-weight: normal;
+    padding-left: 30px;
 }
 
 
@@ -428,7 +450,7 @@ section {
 
 .event_list {
     padding-left: 0;
-    
+    margin: 0;
 }
 
 .event_list .event, .no_events, #how, #about, #contact, #home {
@@ -487,6 +509,7 @@ section {
     color: rgb(18, 30, 52);
     padding: 2px;
     box-shadow: 1px 1px 3px #B4AAA0;
+    min-width: 90px;
 }
 
 .event_date_main {
@@ -494,7 +517,7 @@ section {
     margin: 0;
     font-size: 14px;
     padding: 5px;
-
+    min-width: 75px;
 }
 
 .event_month {
