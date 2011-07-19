@@ -44,26 +44,22 @@ body {
 
 
 
-/*sign up */
+/*sign up 
 #sign_up, #sign_in {
     margin-left: 410px;
     margin-right: auto;
     margin-bottom: 20px;
 }
-
+*/
 /*navigation tag */
 .account {
     font-size: 120%;
     position: bottom;
 }
 
-
-
 nav ul {
     margin: 0 0 0 0;
 }
-
-
 
 nav ul li {
  
@@ -188,10 +184,22 @@ header nav {
 
 }
 
+#navbar {
+    float:left;
+    width: 200px;
+}
+
+#main {
+    float: right;
+    width: 760px;
+}
+
 #footer_wrap {
     margin: 0 auto;
     background-color: blue;
 }
+
+
 
 /*event creation*/
 #create_event {
@@ -331,10 +339,7 @@ section {
     text-decoration: none;
 }
 
-#main {
-    width: 750px;
 
-}
 
 .hasCountdown {
     border: none;
@@ -478,7 +483,11 @@ section {
     margin: 0;
 }
 
-.event_list .event, .no_events, #how, #about, #contact, #home {
+#sign_in, #sign_up, #edit_user {
+    margin: 0 auto;
+    width: 220px;
+}
+.event_list .event, .no_events, #how, #about, #contact, #home, #sign_up_wrap, #sign_in_wrap, #edit_user_wrap  {
     /*
     border-color: #d2ebf9;
     border-style: solid;

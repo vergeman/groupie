@@ -1,15 +1,14 @@
 <!-- nav bar partial -->
-
 <nav class = "nav_groups">
+
   <ul class = "groups">
 
-    <% if user_signed_in? && (params[:controller] != 'devise/registrations' && params[:action] != 'edit') %> 
-
-    <li><%= link_to "Create", new_event_path %></li>
-
-    <% unless @user.events.empty? %>
+    <li><%= link_to "Create", user_signed_in? ? new_event_path : new_user_session_path %></li>
     
-    <li> <%= link_to "Get Togethers", user_path(current_user.id) %> </li>
+    <li> <%= link_to "Get Togethers", user_signed_in? ? user_path(current_user.id) : new_user_session_path %> </li>
+
+
+    <% if user_signed_in? %>
 
     <ul class = "event_title">
 
@@ -23,11 +22,7 @@
 
     <% end %>
 
-    <% end %>
 
   </ul>
 
 </nav>
-
-
-

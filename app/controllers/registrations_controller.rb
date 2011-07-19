@@ -7,6 +7,12 @@ def new
 
 end
 
+def edit
+  @user = current_user
+  @events = @user.events
+
+end
+
 
 def create
   #event_add
