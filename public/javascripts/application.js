@@ -24,18 +24,20 @@ $(document).ready(function() {
     date_countdown(event_date);
 
 
+/*manual place addition */
+
+    $('#manual_wrap').hide();
+
+    $('#search_no_find').click(function(e) {
+	e.preventDefault();
+	$('#manual_wrap').toggle('slow')
+    });
+
+
 /*date picka */
 
     $('#datepicker').datepicker({inline: true, altField: "#event_event_date"});
 	//$('#event_event_date').val(selectedDate.asString());
-
-
-    //$(".search_form").submit(function(e) {	
-	//e.preventDefault();
-	//alert( $('#search_place').val() )
-	//search( $("#search_place").val() );
-//});
-    
     
 //client side voting update
 

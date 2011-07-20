@@ -110,7 +110,10 @@ def show
   #email invite (cookie) - match to generated code
   #if params[:invite] match databse generated event key
   if params[:invite] == @event.event_key
+    logger.debug("event key matched")
     cookies.signed[:event] = {:value => @event.id}
+  else
+    logger.debug("event key did not match -error")
   end
 
   

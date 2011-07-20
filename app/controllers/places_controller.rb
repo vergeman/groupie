@@ -154,9 +154,11 @@ class PlacesController < ApplicationController
   def create
     @user = User.find(current_user.id)
     @events = @user.events
+    #pseudo id from post request as we don't 
+    #necessarily know the url before the form is posted
+    @event = Event.find(params[:event])
 
-    @event = Event.find(params[:event_id])
-
+    logger.debug @event.title
 
     if params[:place][:cid]
       #added from search
@@ -167,6 +169,10 @@ class PlacesController < ApplicationController
       #added manually
       @place = @event.places.create(:name => params[:place][:name], 
                                     :description => params[:place][:description])
+      @place.external_links = Hash.new
+      @place.image_links = Array.new
+      @place.comments = Array.new
+      @schedule = Schedule.create(:event_id => @event.id, :place_id => @place.id)
     end
 
 
@@ -193,6 +199,7 @@ class PlacesController < ApplicationController
       redirect_to event_path(@event)
     else
       flash[:error] = "Oops, there was an error"
+      logger.debug("Error on place creation")
       redirect_to event_path(@event.id)
     end
 

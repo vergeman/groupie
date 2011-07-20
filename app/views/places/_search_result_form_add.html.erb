@@ -5,13 +5,13 @@
 
 <span class="no_events" style="font-size:18px; ">
   <%= link_to "Create an Event!", new_event_path, :style=> "text-decoration: none;" %>
-<span>
+</span>
 
 <% else %>
 <%= form_tag(event_places_path(events.first.id), :class => "add_form" ) do %>
 
 <!--hook to chang in javascript: search()-->
-<%= select_tag("event_id", options_from_collection_for_select(events, :id, :title), 
+<%= select_tag("event", options_from_collection_for_select(events, :id, :title), 
     :class=>"place_add_btn") %>
 
 <%= hidden_field_tag("place[cid]", place.cid) %>

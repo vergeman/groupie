@@ -16,6 +16,9 @@ def get_expiry_hours(event)
 
 end
 
+def current_user_events 
+  User.find(current_user).events
+end
 
 def unexpired_events
   Event.where(:sent_expiry_email => false)    

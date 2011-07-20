@@ -22,10 +22,12 @@ body {
     font-size: 120%;
 }
 
-#home #sign_up_btn {
-    margin-left: 410px;
-    font-size: 20px;
-    text-align: center;
+
+#home .sign_up_btn {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    width: 100px;
 }
 
 
@@ -44,17 +46,14 @@ body {
 
 
 
-/*sign up 
-#sign_up, #sign_in {
-    margin-left: 410px;
-    margin-right: auto;
-    margin-bottom: 20px;
-}
-*/
+
+
+
 /*navigation tag */
-.account {
+#account {
+    float: right;
     font-size: 120%;
-    position: bottom;
+    //position: bottom;
 }
 
 nav ul {
@@ -151,6 +150,14 @@ header h1 {
     width: 960px;
 }
 
+#search_no_find {
+    font-size: 14px;
+
+}
+#search_no_find a {
+    color: white;
+}
+
 #search_text {
     font-size: 22px;
 }
@@ -159,12 +166,22 @@ header h1 {
     font-size: 22px;
 }
 
+
+#manual_wrap {
+    margin: 0 auto;
+}
+
+#new_place, #manual_place_add_error {
+    width: 960px;
+    margin: 0 auto;
+}
+
 hr {
     margin: 0;
     background: none repeat scroll 0 0 transparent;
 }
 #banner {
-    width: 500px;
+
 }
 
 #banner a {

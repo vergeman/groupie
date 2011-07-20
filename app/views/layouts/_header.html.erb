@@ -1,15 +1,9 @@
 <header>
 
 
-
   <div id="header_wrap">
 
     <div id="header_content">
-
-      <!-- banner -->
-      <div id="banner">
-	<%= link_to (image_tag "header1.png"), home_path %>
-      </div>
 
       <!--account login/logout-->
       <div id="account">
@@ -38,14 +32,35 @@
       </div>
 
 
+      <!-- banner -->
+      <div id="banner">
+        <%= link_to (image_tag "header1.png"), home_path %>
+      </div>
+
+
     </div>
   </div>
 
   <!-- search bar -->
   <div id="search_wrap">
-    
-    <%= render 'shared/search_header' %>
 
+
+      <%= render 'shared/search_header' %>
+
+
+  </div>
+
+  <!-- manual place bar -->
+  <!--rmemeber require sign in for click link-->
+  <div id="manual_wrap">
+    
+    <div id="manual_place_add_error">
+      <% flash.each do |key, message| %>
+      <%= content_tag(:div, message, :class => "flash #{key}") %>
+      <% end %>
+    </div>
+
+    <%= render 'shared/add_places' %>
   </div>
 
 </header>
