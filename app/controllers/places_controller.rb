@@ -198,7 +198,7 @@ class PlacesController < ApplicationController
       #flash[:success] = "Place created."
       redirect_to event_path(@event)
     else
-      flash[:error] = "Oops, there was an error"
+      flash[:add_place_error] = "Oops, looks like you forgot information about the venue."
       logger.debug("Error on place creation")
       redirect_to event_path(@event.id)
     end
