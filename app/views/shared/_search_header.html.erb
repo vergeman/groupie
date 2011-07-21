@@ -1,19 +1,25 @@
 <%= form_tag( {:controller => "/places", :action => "search"}, :method => "get", :class => "search_form") do %>
 
-<!--
-<%= label_tag(:search_text, "Find a place: ") %>
--->
-<%= text_field_tag(:search_text, "Find a place") %>
+<p id="search_place_container">
+  <%= label_tag(:search_text, "Find a place", :id => "search_text_label") %>
+  <%= text_field_tag(:search_text) %>
+</p>
 
-<%= label_tag(:search_neighborhood, "Neighborhood: ") %>
-<%= select_tag("search_neighborhood", options_for_select(get_neighborhoods, params[:search_neighborhood] ||= "Brooklyn Heights"), :class=>"search_neighborhood") %>
+<p id="search_neighborhood_container">
+  <%= label_tag(:search_neighborhood, "Choose a neighborhood", :id => "search_neighborhood_label") %>
+  <%= select_tag("search_neighborhood", options_for_select(get_neighborhoods, params[:search_neighborhood] ||= "Brooklyn Heights"), :class=>"search_neighborhood") %>
+</p>
 
-<%= submit_tag("Search", :id => "search_header_btn") %>
+<p id="search_btn_container">
+  <%= submit_tag("Search", :id => "search_header_btn") %>
+</p>
 
 <% if user_signed_in? %>
-<span id="search_no_find">
-  <%= link_to "Can't find it?", "#" %>
-</span>
+<p id="search_no_find_container">
+  <span id="search_no_find">
+    <%= link_to "Can't find it?", "#" %>
+  </span>
+</p>
 <% end %>
 <% end %>
 

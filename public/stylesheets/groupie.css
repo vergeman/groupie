@@ -175,26 +175,76 @@ header h1 {
       border: 1px solid #121E34;
     */
     color: white;
-    font-size: 22px;
     margin: 0 auto;
-    padding-left: 30px;
+    //padding-left: 30px;
     width: 960px;
+    overflow: hidden;
 }
 
 #search_no_find {
+    float: left;
+    width: 100px;
+    margin-top: 26px;
     font-size: 14px;
-
+    
 }
+#search_no_find a:hover {
+    color: yellow;
+    background: none;
+}
+
 #search_no_find a {
     color: white;
+    background: none;
+    text-decoration: none;
 }
 
-#search_text {
+#search_text, #search_neighborhood {
     font-size: 22px;
+    margin-top: 0;
+    font-family: consolas, arial;
 }
 
-.search_form #input submit {
+#search_header_btn {
+    margin-top: 21px;
+    margin-left: 50px;
+
     font-size: 22px;
+    //background-color: black;
+    background: none;
+    color: white;
+    cursor: pointer;
+    border: none;
+}
+
+#search_header_btn:hover {
+    color: yellow;
+    background: none;
+}
+
+p#search_place_container {
+    float: left;
+    //margin: 0 0 0 189px;
+    width: 250px;
+}
+
+p#search_neighborhood_container {
+    float: left;
+    width: 230px;
+    margin: 0;
+    margin-left: 20px;
+}
+
+
+p#search_btn_container, p#search_no_find_container {
+    float: left;
+    width: 150px;
+}
+
+#search_text_label, #search_neighborhood_label {
+    font-size: 14px;
+    background-color: black;
+    display: block;
 }
 
 
@@ -214,16 +264,27 @@ header h1 {
 #new_place, #manual_place_add_error {
     width: 960px;
     margin: 0 auto;
+    background-color: black;
 }
 
 #new_place label {
     font-size: 16px;
     padding-left: 15px;
     padding-right: 2px;
-    
+
 }
+
+
 #new_place #place_submit {
+    font-size: 18px;
     margin-left: 50px;
+    background-color: black;
+    color: white;
+    border: none;
+}
+
+#new_place #place_submit:hover {
+    color: yellow;
 }
 
 hr {
@@ -276,7 +337,7 @@ header nav {
     border-color: #AAAAAA;
     border-style: solid;
     border-width: 1px;
-    box-shadow: 1px 1px 3px #B4AAA0;
+    //box-shadow: 1px 1px 3px #B4AAA0;
     //padding: 30px;
     //width: 677px;
     //margin-top: 20px;
@@ -375,7 +436,7 @@ section {
     border-color: #AAAAAA;
     border-style: solid;
     border-width: 1px;
-    box-shadow: 1px 1px 3px #B4AAA0;
+    //box-shadow: 1px 1px 3px #B4AAA0;
     padding: 10px;
     margin: 10px 2.5px 2.5px;
     overflow: hidden;
@@ -464,7 +525,7 @@ section {
     display: block;
 
     background-color: white;
-    box-shadow: 1px 1px 3px #B4AAA0;
+    //box-shadow: 1px 1px 3px #B4AAA0;
     overflow: hidden;
 
     border-color: #AAAAAA;
@@ -573,7 +634,7 @@ section {
     border-color: #AAAAAA;
     border-style: solid;
     border-width: 1px;
-    box-shadow: 1px 1px 3px #B4AAA0;
+    //box-shadow: 1px 1px 3px #B4AAA0;
     padding: 10px;
     margin: 10px 2.5px 2.5px;
 
@@ -690,7 +751,7 @@ section {
     border-color: #AAAAAA;
     border-style: solid;
     border-width: 1px;
-    box-shadow: 1px 1px 3px #B4AAA0;
+    //box-shadow: 1px 1px 3px #B4AAA0;
     margin: 10px 2.5px 2.5px;
     padding: 10px;
     overflow: hidden;

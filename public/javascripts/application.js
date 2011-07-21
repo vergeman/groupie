@@ -5,7 +5,7 @@ var is_event_expired = false;
 
 $(document).ready(function() {
 
-
+/*
     $("#tabs").tabs();
 
     $("#sign_up_btn").button();
@@ -17,6 +17,7 @@ $(document).ready(function() {
     $("#place_submit").button();
 
     $("#search_header_btn").button();
+*/
 
     var event_date = new Date( $('#time_remaining').text() );
 
