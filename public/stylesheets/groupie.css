@@ -259,7 +259,9 @@ p#search_btn_container, p#search_no_find_container {
 */
     padding: 5px;
 }
-
+.manual_place_add_btn {
+    width: 150px;
+}
 #new_place, #manual_place_add_error {
     width: 960px;
     margin: 0 auto;
@@ -818,10 +820,9 @@ section ul li {
 }
 
 .add_form {
-    background-color: black;
+    background-color: #333333;
     border-radius: 6px 6px 6px 6px;
     -moz-border-radius: 6px 6px 6px 6px;
-
     margin-left: 515px;
 }
 
@@ -831,7 +832,7 @@ section ul li {
 }
 
 .place_add_button {
-    background-color: black;
+    background-color: #333333;
     border: medium none;
     color: white;
     cursor: pointer;
