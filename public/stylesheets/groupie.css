@@ -243,7 +243,6 @@ p#search_btn_container, p#search_no_find_container {
 
 #search_text_label, #search_neighborhood_label {
     font-size: 14px;
-    background-color: black;
     display: block;
 }
 
@@ -811,10 +810,35 @@ section ul li {
     margin-bottom: -5px;
 }
 
+
 .place_info_add_place_btn {
     text-align: right;
     margin-top: 5px;
     bottom: auto;
+}
+
+.add_form {
+    background-color: black;
+    border-radius: 6px 6px 6px 6px;
+    -moz-border-radius: 6px 6px 6px 6px;
+
+    margin-left: 515px;
+}
+
+.place_add_btn {
+    width: 150px;
+    font-size: 19px;
+}
+
+.place_add_button {
+    background-color: black;
+    border: medium none;
+    color: white;
+    cursor: pointer;
+    font-size: 19px;
+}
+.place_add_button:hover {
+    color: yellow;
 }
 
 .place_info_review_header {
