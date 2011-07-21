@@ -1,7 +1,9 @@
 <%= form_tag( {:controller => "/places", :action => "search"}, :method => "get", :class => "search_form") do %>
 
+<!--
 <%= label_tag(:search_text, "Find a place: ") %>
-<%= text_field_tag(:search_text) %>
+-->
+<%= text_field_tag(:search_text, "Find a place") %>
 
 <%= label_tag(:search_neighborhood, "Neighborhood: ") %>
 <%= select_tag("search_neighborhood", options_for_select(get_neighborhoods, params[:search_neighborhood] ||= "Brooklyn Heights"), :class=>"search_neighborhood") %>

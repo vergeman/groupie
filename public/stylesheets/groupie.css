@@ -8,8 +8,29 @@
 /*body tag */
 body {
     //background-image: url("/images/background-offwhite.png");
-    background-color: #FCF6D6
+    //background-color: #FCF6D6
 }
+
+
+img.bg {
+        /* Set rules to fill background */
+        min-height: 100%;
+        min-width: 1024px;
+
+        /* Set up proportionate scaling */
+        width: 100%;
+        height: auto;
+
+        /* Set up positioning */
+        position: fixed;
+        top: 0;
+        left: 0;
+
+	z-index: -1;
+}
+
+
+
 
 
 #home {
@@ -70,6 +91,7 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
+    color: white;
     //color: #222222;
 
 }
@@ -85,27 +107,31 @@ nav ul li a {
 
     margin-top: 10px;
     padding: 8px;
-
+    background-color: black;
+/*
     background-color: #FFFBF2;
     border-color: #AAAAAA;
     border-style: solid;
     border-width: 1px;
 
     //box-shadow: 1px 1px 2px #B4AAA0;
+*/
 }
 
 
 ul .event_title {
     padding-left:0;
+/*
     border-color: #AAAAAA;
     border-style: solid;
     border-width: 1px;
     border-top: none;
+*/
 }
 
 ul .event_title li {
-
-    background-color: #FEF9ED;
+    background-color: black;
+    //background-color: #FEF9ED;
     font-size: 14px;
     border:none;
     margin:0;
@@ -126,7 +152,10 @@ header h1 {
 }
 
 #header_wrap {
-    background: none repeat scroll 0 0 lightBlue;
+    /*
+      background: none repeat scroll 0 0 lightBlue;
+      */
+    color: white;
     width: 100%;
 }
 
@@ -136,13 +165,15 @@ header h1 {
 }
 
 #search_wrap {
-    background-color: #121E34;
+    //background-color: #121E34;
     margin: 0 auto;
 }
 
 .search_form {
-    background-color: #6E8B99;
-    border: 1px solid #121E34;
+    /*
+      background-color: #6E8B99;
+      border: 1px solid #121E34;
+    */
     color: white;
     font-size: 22px;
     margin: 0 auto;
@@ -168,17 +199,21 @@ header h1 {
 
 
 #manual_wrap {
+    //background-color: #121E34;
+    color: white;
+
     margin: 0 auto;
+/*
     border-width: 0 0 1px;
     border-color: #AAAAAA;
     border-style: solid;
+*/
     padding: 5px;
 }
 
 #new_place, #manual_place_add_error {
     width: 960px;
     margin: 0 auto;
-
 }
 
 #new_place label {
@@ -201,7 +236,9 @@ hr {
 
 #banner a {
     text-decoration: none;
-    color: black;
+    color: white;
+    font-family: rockwell;
+    font-size: 60px;
 }
 
 
@@ -228,7 +265,7 @@ header nav {
 
 #footer_wrap {
     margin: 0 auto;
-    background-color: blue;
+    background-color: black;
 }
 
 
