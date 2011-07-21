@@ -21,7 +21,8 @@ module ApplicationHelper
 
 #neighborhooods
   def get_neighborhoods
-    neighborhoods = ["Brooklyn Heights", 
+    neighborhoods = ["New York City",
+                     "Brooklyn Heights", 
                      "Bushwick",
                      "Chelsea",
                      "Chinatown", 
