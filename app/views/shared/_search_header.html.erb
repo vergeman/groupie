@@ -8,10 +8,11 @@
 
 <%= submit_tag("Search", :id => "search_header_btn") %>
 
+<% if user_signed_in? %>
 <span id="search_no_find">
   <%= link_to "Can't find it?", "#" %>
 </span>
-
+<% end %>
 <% end %>
 
 

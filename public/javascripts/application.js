@@ -6,7 +6,6 @@ var is_event_expired = false;
 $(document).ready(function() {
 
 
-
     $("#tabs").tabs();
 
     $("#sign_up_btn").button();
@@ -25,8 +24,11 @@ $(document).ready(function() {
 
 
 /*manual place addition */
-
-    $('#manual_wrap').hide();
+    
+    if ( $("#manual_place_add_error").length == 0) {
+	//if there is an error we want user to see the error div
+	$('#manual_wrap').hide();
+    }
 
     $('#search_no_find').click(function(e) {
 	e.preventDefault();

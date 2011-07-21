@@ -169,11 +169,26 @@ header h1 {
 
 #manual_wrap {
     margin: 0 auto;
+    border-width: 0 0 1px;
+    border-color: #AAAAAA;
+    border-style: solid;
+    padding: 5px;
 }
 
 #new_place, #manual_place_add_error {
     width: 960px;
     margin: 0 auto;
+
+}
+
+#new_place label {
+    font-size: 16px;
+    padding-left: 15px;
+    padding-right: 2px;
+    
+}
+#new_place #place_submit {
+    margin-left: 50px;
 }
 
 hr {

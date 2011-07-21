@@ -1,23 +1,26 @@
 <!-- places partial -->
+<% if user_signed_in? %>
 <% @place = Place.new %>
 
 <%= form_for(@place, :url => event_places_path(1), :class => "manual_add_place_for", :method => "POST") do |p| %>
 
 <%= render 'shared/error_messages', :object => p.object %>
 
-  <%= p.label("Venue") %>
+  <%= p.label("Venue:") %>
   <%= p.text_field(:name) %>
 
 
-  <%= p.label("Description") %>
+  <%= p.label("Description:") %>
   <%= p.text_field(:description) %>
 
-  <%= p.label("Event") %>
+  <%= p.label("Event:") %>
   <%= select_tag("event", options_from_collection_for_select(current_user_events, :id, :title), 
       :class=>"manual_place_add_btn") %>
 
   <%= p.submit("Add", :class => "manual_place_submit_btn") %>
 
 
+
+<% end %>
 
 <% end %>

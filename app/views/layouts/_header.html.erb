@@ -53,13 +53,15 @@
   <!-- manual place bar -->
   <!--rmemeber require sign in for click link-->
   <div id="manual_wrap">
-    
-    <div id="manual_place_add_error">
-      <% flash.each do |key, message| %>
-      <%= content_tag(:div, message, :class => "flash #{key}") %>
-      <% end %>
-    </div>
 
+    <% if flash[:add_place_error] %>
+
+      <div id="manual_place_add_error">
+	<%= content_tag(:div, flash[:add_place_error], :class => "flash error") %>
+      </div>
+
+    <% end %>
+    
     <%= render 'shared/add_places' %>
   </div>
 
