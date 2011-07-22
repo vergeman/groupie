@@ -60,10 +60,9 @@ Groupie::Application.configure do
   ActionMailer::Base.smtp_settings = {
     :address => "smtp.gmail.com",
     :port => 587,
-    :user_name => "testourapp@gmail.com"
+    :user_name => "testourapp@gmail.com",
     :password => "gettogether",
-    :authentiation => :login    
-
+    :authentiation => :login
   }
   
 end

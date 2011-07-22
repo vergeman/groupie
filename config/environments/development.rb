@@ -36,7 +36,7 @@ Groupie::Application.configure do
     :address => 'localhost',
     :port => 25,
     #:enable_starttls_auto => false
-    :user_name => "testourapp@gmail.com"
+    :user_name => "testourapp@gmail.com",
     :password => "gettogether",
     :authentiation => :login    
    }
