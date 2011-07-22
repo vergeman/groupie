@@ -3,7 +3,9 @@
 <div class="place_info_comments">
 
   <div class="place_info_comments_title">
+    <% unless place.comments.empty? %>
     Comments<br />
+    <% end %>
   </div>
 
   <% place.comments.each do |comment| %>

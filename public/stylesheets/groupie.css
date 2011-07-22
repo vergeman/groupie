@@ -248,15 +248,8 @@ p#search_btn_container, p#search_no_find_container {
 
 
 #manual_wrap {
-    //background-color: #121E34;
     color: white;
-
     margin: 0 auto;
-/*
-    border-width: 0 0 1px;
-    border-color: #AAAAAA;
-    border-style: solid;
-*/
     padding: 5px;
 }
 .manual_place_add_btn {
@@ -266,6 +259,7 @@ p#search_btn_container, p#search_no_find_container {
     width: 960px;
     margin: 0 auto;
     background-color: black;
+    display:none;
 }
 
 #new_place label {

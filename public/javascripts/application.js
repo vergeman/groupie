@@ -25,14 +25,19 @@ $(document).ready(function() {
 
 
 /*manual place addition */
-    
+    //not pe but meh
     if ( $("#manual_place_add_error").length == 0) {
 	//if there is an error we want user to see the error div
 	$('#manual_wrap').hide();
     }
 
+
+    $('#new_place').css('display', 'block');
+    $('#manual_place_add_error').css('display', 'block');
+
+
     $('#search_no_find').click(function(e) {
-	e.preventDefault();
+	e.preventDefault();	
 	$('#manual_wrap').toggle('slow')
     });
 
