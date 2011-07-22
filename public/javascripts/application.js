@@ -128,7 +128,7 @@ $(document).ready(function() {
 
 function date_countdown(event_date) {
     var currentTime = new Date();
-    console.log(event_date.toString() );
+    //console.log(event_date.toString() );
 
     var days = ( (event_date - currentTime) / 1000 / 60 / 60 / 24);
     var hours = ( (event_date - currentTime) / 1000 / 60 / 60 );
@@ -163,7 +163,7 @@ function date_countdown(event_date) {
 
 
 function _highlightlast5m(periods) {
-    console.log("tick");
+    //console.log("tick");
     if (periods[4] == 0 && periods[5] <= 10) {
 	$('.countdown_row').css('color', 'red');
     }

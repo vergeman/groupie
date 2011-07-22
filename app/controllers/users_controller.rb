@@ -1,7 +1,8 @@
  class UsersController < ApplicationController
+   include ApplicationHelper
 #class UsersController < Devise::RegistrationsController
   before_filter :authenticate_user!
-
+   
    def show
      @title = 'Home'
 
@@ -18,22 +19,5 @@
 
 
 
-
-   private
-   
-   def add_cookie_event
-     if (user_signed_in? && cookies.signed[:event].nil? && cookies.signed[:event].present?)  #was set to present - may need to revert
-       # logger.debug "COOKIE IS #{cookies.signed[:event]}"     
-       event = cookies.signed[:event]
-       Participant.create(:user_id => current_user.id,
-                          :event_id => cookies.signed[:event],
-                          :votes_remaining => 
-                          Event.find(cookies.signed[:event]).starting_votes)
-       
-       cookies.delete :event
-
-       redirect_to event_path(event)
-     end
-
-   end
+  
 end

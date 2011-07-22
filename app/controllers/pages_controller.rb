@@ -1,4 +1,5 @@
 class PagesController < ApplicationController
+helper_method :cookies
 
   def home
     @title = 'Home'

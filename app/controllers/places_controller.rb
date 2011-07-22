@@ -31,7 +31,7 @@ class PlacesController < ApplicationController
     logger.debug("lat: #{geocode['lat']}")
     logger.debug("long: #{geocode['lng']}")
 
-    max_results = 5
+    max_results = 10
 
     @user = User.find(current_user.id)
     @events = @user.events
