@@ -1,5 +1,8 @@
 <!-- participants -->
+<!-- we don't show unless there are events 
+for now because it loooks funky otherwise -->
 
+<% unless @places.empty? %>
 <div id = "participants"> 
 
   <div class="participants_header">
@@ -25,3 +28,5 @@
     <ul>
 
 </div>
+
+<% end %>

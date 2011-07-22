@@ -811,13 +811,17 @@ section ul li {
 #participants {
     float: right;
     margin-top: 8px;
+    margin-right: 2px;
     padding: 5px;
 
     background: none repeat scroll 0 0 white;
     border-color: #AAAAAA;
     border-style: solid;
     border-width: 1px;
-    //box-shadow: 1px 1px 3px #B4AAA0
+    text-align: center;
+    width: 120px;
+    overflow: hidden;
+
 }
 
 .participants_header {
