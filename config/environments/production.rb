@@ -49,6 +49,21 @@ Groupie::Application.configure do
 
 
   #alan: devise installation
-  #config.action_mailer.default_url_options = { :host => 'localhost:3000' }
+
+  #alan: action mailer stuff
+
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.raise_delivery_errors = true
+  
+  
+
+  ActionMailer::Base.smtp_settings = {
+    :address => "smtp.gmail.com",
+    :port => 587,
+    :user_name => "testourapp@gmail.com"
+    :password => "gettogether",
+    :authentiation => :login    
+
+  }
   
 end

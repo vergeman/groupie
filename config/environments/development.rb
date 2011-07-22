@@ -31,12 +31,14 @@ Groupie::Application.configure do
 
   #Alan: smtp
   config.action_mailer.delivery_method = :smtp
-  # Defaults to:
+
   config.action_mailer.smtp_settings = {
-    # :address => 'localhost',
-    # :port => 25,
-    :enable_starttls_auto => false
-    # :domain => 'locahost',
+    :address => 'localhost',
+    :port => 25,
+    #:enable_starttls_auto => false
+    :user_name => "testourapp@gmail.com"
+    :password => "gettogether",
+    :authentiation => :login    
    }
   config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
