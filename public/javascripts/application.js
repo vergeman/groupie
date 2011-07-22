@@ -36,9 +36,12 @@ $(document).ready(function() {
     $('#manual_place_add_error').css('display', 'block');
 
 
+
     $('#search_no_find').click(function(e) {
 	e.preventDefault();	
+
 	$('#manual_wrap').toggle('slow')
+	$('#manual_wrap').css('display', 'block');
     });
 
 

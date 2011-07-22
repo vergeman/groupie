@@ -251,6 +251,7 @@ p#search_btn_container, p#search_no_find_container {
     color: white;
     margin: 0 auto;
     padding: 5px;
+    display: none;
 }
 .manual_place_add_btn {
     width: 150px;
