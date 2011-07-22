@@ -1,64 +1,68 @@
 <!-- events partial -->
-<%= form_for(@event) do |e| %>
+<div id="create_event_wrap">
 
-<%= render 'shared/error_messages', :object => e.object %>
+  <div id="create_event">
+    <h1>Create a <%= get_project_name %></h1>
 
-<div id="create_event">
+    <%= form_for(@event) do |e| %>
 
-  <div id="event_inputs">
-
-    <div id="create_event_title_header">
-      What?
-    </div>
-
-    <div id="create_event_title" class="field">
-      <%= e.label :"Name your Get Together" %> <br />
-      <%= e.text_field :title %>
-    </div>
-  
-    <div id="create_event_description" class="field">
-      <%= e.label :"Leave a note" %> <br />
-      <%= e.text_field :description %> <br />
-    </div>
-
-  </div>
+    <%= render 'shared/error_messages', :object => e.object %>
 
 
-  <div id="event_dates">
-    <div id="event_dates_header">
-      When?
-    </div>
 
-    <div id="create_event_date" class="field">
-      <%= e.label :"" %>
+    <div id="event_inputs">
+
+
+      <div id="create_event_title" class="field">
+	<%= label_tag(:title, "Name your Get Together") %> <br />
+	<%= e.text_field :title %>
+      </div>
       
-      <div id="datepicker">
-      </div> 
-      <%= e.hidden_field :event_date %>
-    </div>
- 
-    <div id="create_event_time" class="field">
-      <%= select_tag "event_time", options_for_select(@times, " 7:00 PM") %>
-    </div>
-    
-  </div>
+      <div id="create_event_description" class="field">
+	<%= label_tag(:description, "Leave a note") %> <br />
+	<%= e.text_field :description %> <br />
+      </div>
 
-  <div id="create_event_submit" class="actions">
-    <div id="create_event_submit_header">
-      Create!
     </div>
-    <div id="create_event_submit_button">
-      <%= e.submit "Create Event" %>
-    </div>
-  </div>
 
+
+    <div id="event_dates">
+
+
+      <div id="create_event_date" class="field">
+	<%= label_tag(:event_date, "Event date") %>
+
+	<div id="datepicker">
+	  <%= e.text_field :event_date %>
+	</div>
+
+      </div>
+      
+
+
+      <div id="create_event_time" class="field">
+	<%= label_tag(:event_time, "Time") %> <br />
+	<%= select_tag "event_time", options_for_select(@times, " 7:00 PM") %>
+      </div>
+      
+    </div>
+
+    <div id="create_event_submit" class="actions">
+
+      <div id="create_event_submit_button">
+	<%= e.submit "Create Event" %>
+      </div>
+    </div>
+
+
+  </div>
 </div> 
 <!--
-<div class ="field">
-  <%= e.label :starting_votes, "Initial Votes" %> <br />
-  <%= e.text_field :starting_votes %>
-</div>
--->
+   <div class ="field">
+     <%= e.label :starting_votes, "Initial Votes" %> <br />
+     <%= e.text_field :starting_votes %>
+   </div>
+   -->
 
 <br />
 

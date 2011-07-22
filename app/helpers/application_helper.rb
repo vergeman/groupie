@@ -29,7 +29,7 @@ module ApplicationHelper
                      "Dumbo",
                      "East Village",
                      "Financial District",
-                     "Flatiron",
+                     "Flatiron District",
                      "Gramercy",
                      "Greenpoint",
                      "Greenwich Village",

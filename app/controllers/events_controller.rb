@@ -28,19 +28,21 @@ end
 
 
 def create
+
   #hardcoding starting_votes
   start_votes = 5
 
   @user = User.find(current_user.id)
   @events = @user.events
   
-  time = Time.parse(params[:event_time]);
-  date = Date.strptime(params[:event][:event_date], "%m/%d/%Y")
+  time = Time.parse(params[:event_time]);  
+  @date
 
-  @date = (date.to_time + time.hour.hours + time.min.minutes) - 4.hours
+  unless params[:event][:event_date].empty?
+    date = Date.strptime(params[:event][:event_date], "%m/%d/%Y")
+    @date = (date.to_time + time.hour.hours + time.min.minutes) - 4.hours
+  end
 
-  # @event = @user.events.create(params[:event].merge(:admin_id => @user.id, :event_key => create_event_key(@user.id), :starting_votes => start_votes, 
-  #                                                  :event_date => Date.strptime(params[:event][:event_date], "%m/%d/%Y").to_s ))
 
   @event = @user.events.create(params[:event].merge(:admin_id => @user.id, :event_key => create_event_key(@user.id), :starting_votes => start_votes, 
                                                     :event_date => @date ))

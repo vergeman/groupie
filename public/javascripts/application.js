@@ -38,8 +38,8 @@ $(document).ready(function() {
 
 
 /*date picka */
-
-    $('#datepicker').datepicker({inline: true, altField: "#event_event_date"});
+    
+    $('#event_event_date').datepicker({clickInput: true, inline: true, altField: "#event_event_date"});
 	//$('#event_event_date').val(selectedDate.asString());
     
 //client side voting update
