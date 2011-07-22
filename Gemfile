@@ -8,7 +8,10 @@ gem 'rake', '0.8.7' #fix rake exrror w/ 1.9.2 and rake 0.9.0 - use 'bundle exec 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'sqlite3-ruby', :require => 'sqlite3'
+#gem 'sqlite3-ruby', :require => 'sqlite3'
+
+#for heroku
+gem 'pg'
 
 gem 'will_paginate', '3.0.pre2'
 
