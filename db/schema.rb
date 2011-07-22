@@ -26,6 +26,17 @@ ActiveRecord::Schema.define(:version => 20110718005434) do
 
   add_index "events", ["admin_id"], :name => "index_events_on_admin_id"
 
+  create_table "groups", :force => true do |t|
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "user_id"
+    t.integer  "event_id"
+  end
+
+  add_index "groups", ["event_id"], :name => "index_groups_on_event_id"
+  add_index "groups", ["user_id", "event_id"], :name => "index_groups_on_user_id_and_event_id", :unique => true
+  add_index "groups", ["user_id"], :name => "index_groups_on_user_id"
+
   create_table "participants", :force => true do |t|
     t.integer  "user_id"
     t.integer  "event_id"
