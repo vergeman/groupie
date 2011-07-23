@@ -166,7 +166,7 @@ class PlacesController < ApplicationController
     if params[:place][:cid]
       #added from search
       @place = Place.find_by_cid(params[:place][:cid])
-      @schedule = Schedule.create(:event_id => @event.id, :place_id => @place.id)
+      @schedule = Schedule.create(:event_id => @event.id, :place_id => @place.id, :admin_id => @user.id)
 
     else
       #added manually
@@ -175,7 +175,7 @@ class PlacesController < ApplicationController
       @place.external_links = Hash.new
       @place.image_links = Array.new
       @place.comments = Array.new
-      @schedule = Schedule.create(:event_id => @event.id, :place_id => @place.id)
+      @schedule = Schedule.create(:event_id => @event.id, :place_id => @place.id, :admin_id => @user.id)
     end
 
 

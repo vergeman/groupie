@@ -1,5 +1,5 @@
 # == Schema Information
-# Schema version: 20110621173755
+# Schema version: 20110723054355
 #
 # Table name: schedules
 #
@@ -8,11 +8,12 @@
 #  place_id   :integer
 #  created_at :datetime
 #  updated_at :datetime
+#  admin_id   :integer
 #
 
 class Schedule < ActiveRecord::Base
 
-  attr_accessible :event_id, :place_id
+  attr_accessible :event_id, :place_id, :admin_id
 
   belongs_to :place
   belongs_to :event
