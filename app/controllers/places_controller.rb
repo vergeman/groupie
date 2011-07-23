@@ -42,8 +42,9 @@ class PlacesController < ApplicationController
 
 
  #   respond_to do |format|
-      @search_text = params[:search_text]
-
+    @search_text = params[:search_text]
+    @search_text = search_text_adjust(@search_text)
+    
       #base query google api
       base_place_uri = URI.encode("https://maps.googleapis.com/maps/api/place/search/json?location=#{lat},#{long}&radius=15&types=bar|restaurant&name=#{@search_text}&sensor=false&key=#{key}")
 
@@ -227,6 +228,17 @@ class PlacesController < ApplicationController
 
 
   private
+
+  #hack for now...
+  def search_text_adjust(search_text)
+
+    if search_text == "bars"
+      logger.debug("truncated search text")
+      return "bar"
+    end
+
+  end
+
 
   def geolocate
     neighborhood = params[:search_neighborhood]
