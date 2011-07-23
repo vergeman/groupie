@@ -27,7 +27,7 @@ class SchedulesController < ApplicationController
     @schedule = Schedule.find(params[:id])
     @event = @schedule.event
 
-    redirect_to @event unless current_user == @schedule.admin_id
+    redirect_to @event unless User.find(current_user).id == @schedule.admin_id
 
   end
 
