@@ -108,6 +108,8 @@ class PlacesController < ApplicationController
         t.join 
       end      
 
+    #sort so results w/ images are given priority
+    @query_results = @query_results.sort {|x,y| y.image_links.length <=> x.image_links.length }
 
     logger.debug("save and push query results")
     @query_results.each do |p|
@@ -237,6 +239,7 @@ class PlacesController < ApplicationController
       return "bar"
     end
 
+    search_text
   end
 
 
