@@ -4,7 +4,7 @@
 <% if events.empty?  %>
 
 <span class="no_events" style="font-size:18px; ">
-  <%= link_to "Create an Event!", new_event_path, :style=> "text-decoration: none;" %>
+  <%= link_to "Create an Event!", new_event_path(:place => place.cid), :style=> "text-decoration: none;" %>
 </span>
 
 <% else %>

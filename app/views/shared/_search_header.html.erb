@@ -14,7 +14,7 @@
   <%= submit_tag("Search", :id => "search_header_btn") %>
 </p>
 
-<% if user_signed_in? %>
+<% if user_signed_in? && !current_user.events.empty? %>
 <p id="search_no_find_container">
   <span id="search_no_find">
     <%= link_to "Can't find it?", "#" %>

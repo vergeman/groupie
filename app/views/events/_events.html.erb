@@ -11,7 +11,9 @@
 
 
     <div id="event_inputs">
-
+      <div id="create_event_place" class="field">
+	<%= hidden_field_tag("place[cid]", params[:place]) %>
+      </div>
 
       <div id="create_event_title" class="field">
 	<%= label_tag(:title, "Name your Get Together") %> <br />
