@@ -16,7 +16,8 @@ task :event_expiry_email => :environment do
 
       @user = User.find(e.admin_id)
       @event = e
-      @host = "http://67.244.91.42:3001"
+      # @host = "http://67.244.91.42:3001"
+      @host = ENV['HTTP_HOST']
       @time = Time.new        
       @lead_place = Place.find(Vote.where(:participant_id => e.participants).group("place_id").sum("vote").sort_by{|k,v| v}.last[0]).name
     

@@ -12,8 +12,10 @@
 #
 
 class Participant < ActiveRecord::Base
+  before_create :set_votes
+  
   attr_accessible :user_id, :event_id, :votes_remaining
-      #seems we need to keep foreign keys accessible for associations to work
+  #seems we need to keep foreign keys accessible for associations to work
 
   belongs_to :user
   belongs_to :event
@@ -26,5 +28,10 @@ class Participant < ActiveRecord::Base
 
   validates_uniqueness_of :user_id, :scope => :event_id, :message => "only have have one association with event"
   #validates :votes_remaining, :presence => true
+
+
+  def set_votes
+    self.votes_remaining = Event.find(self.event_id).starting_votes
+  end
 
 end

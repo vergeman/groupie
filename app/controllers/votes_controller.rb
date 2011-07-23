@@ -32,12 +32,14 @@ class VotesController < ApplicationController
               votes += p.vote.abs
             end
             
-            @participant.update_attributes(:votes_remaining => @event.starting_votes - votes)
+            @participant.update_attributes!(:votes_remaining => @event.starting_votes - votes)
           end
 
         else
           @vote = @participant.votes.create(:place_id => params[:place_id], 
                                             :vote => params[:vote])
+
+          @participant.update_attributes!(:votes_remaining => @participant.votes_remaining - 1)
         end
 
         render :json => @vote.vote
