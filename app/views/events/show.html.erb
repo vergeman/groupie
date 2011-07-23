@@ -65,7 +65,7 @@
 	<div class="place_info_remove">
 	  <%= link_to "remove from this " + get_project_name, 
 	      Schedule.where(:event_id => @event.id).find_by_place_id(place.id),
-	  :method => :delete, :confirm => "You sure?" %>
+	  :method => :delete, :confirm => "Are you sure you want to remove #{place.name} from #{@event.title}?" %>
 	</div>
 
       </div>
