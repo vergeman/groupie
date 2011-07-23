@@ -61,6 +61,12 @@
           <%= link_to place.name,
               event_place_path(params[:id], place.id) %>          
         </div>
+	<!-- remove link -->
+	<div class="place_info_remove">
+	  <%= link_to "remove from this " + get_project_name, 
+	      Schedule.where(:event_id => @event.id).find_by_place_id(place.id),
+	  :method => :delete, :confirm => "You sure?" %>
+	</div>
 
       </div>
 
@@ -108,7 +114,7 @@
 
 	
 	<!-- external links -->
-	<div class="place_info_review_links">
+
 	  <div class="place_info_review_links">
 
 	    <% place.external_links.blank? ? "" : %>
@@ -125,8 +131,10 @@
 	  </div>
 	  
 	</div>
+	
 
-      </div>    
+
+    </div>
   </li>
   
   <% end %>

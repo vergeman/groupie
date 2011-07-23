@@ -1,0 +1,35 @@
+class SchedulesController < ApplicationController
+  before_filter :authenticate_user!
+  before_filter :verify_user, :only => :destroy
+
+  def destroy
+    @place = @schedule.place
+
+    #recoup assocated votes
+    @event.participants.each do |p|
+      votes = p.votes.find_by_place_id(@place).vote
+      p.update_attributes(:votes_remaining => p.votes_remaining + votes)
+      
+      #remove vote record
+      @vote = p.votes.find_by_place_id(@place)
+      @vote.destroy
+    end
+
+    #destroy schedule record
+    @schedule.destroy
+
+    #redirect
+    redirect_to(@event)
+  end
+
+
+  def verify_user
+    @schedule = Schedule.find(params[:id])
+    @event = @schedule.event
+
+    redirect_to @event unless current_user == @schedule.admin_id
+
+  end
+
+end
+

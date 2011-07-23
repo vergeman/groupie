@@ -790,6 +790,10 @@ section ul li {
     padding-right: 8px;
 }
 
+.place_info_remove {
+    font-size: 10px;
+}
+
 /*stars thanks google */
 .rsw-starred {
     float: left;
