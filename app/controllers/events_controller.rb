@@ -38,11 +38,11 @@ def create
   time = Time.parse(params[:event_time]);  
   @date
 
-  #unless params[:event][:event_date].empty?
+  unless params[:event_date].empty?
     date = Date.strptime(params[:event][:event_date], "%m/%d/%Y")
     # @date = (date.to_time + time.hour.hours + time.min.minutes) - 4.hours
-    @date = (date.to_time + time.hour.hours + time.min.minutes)
-  #end
+    @date = (date.to_time + time.hour.hours + time.min.minutes) - 7.hours
+  end
 
 
   @event = @user.events.create(params[:event].merge(:admin_id => @user.id, :event_key => create_event_key(@user.id), :starting_votes => start_votes, 
