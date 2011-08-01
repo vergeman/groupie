@@ -580,6 +580,9 @@ section {
 
 }
 
+.event {
+    min-height: 220px;
+}
 #voting .event {
     margin: 0;
     padding-left: 0;
