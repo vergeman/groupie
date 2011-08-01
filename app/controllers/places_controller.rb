@@ -283,7 +283,8 @@ class PlacesController < ApplicationController
 
     #reivew links
     place.external_links = Hash.new
-    doc.css('.pp-awards-text a').each do |link|
+    #doc.css('.pp-awards-text a').each do |link|
+    doc.css('#pp-providers a').each do |link|
       place.external_links[ link.content.to_s.gsub(/[^a-zA-Z\.+\s+]/, "") ] = link['href']
       #logger.debug(@place.external_links)
     end
@@ -297,11 +298,13 @@ class PlacesController < ApplicationController
 
     #link comments
     place.comments = Array.new
-    doc.css('.fr-snip').each do |link|
-      place.comments.push(link.content.to_s.gsub(" ...", ""))
+    #doc.css('.fr-snip').each do |link|
+    #doc.css('.snippet').each do |link|
+    #doc.css('#pp-google-review-snippet').each do |link|
+    #  place.comments.push(link.content.to_s.gsub(" ...", ""))
 
       #logger.debug(link.content)
-    end
+    #end
 
   end
 
