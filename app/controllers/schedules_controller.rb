@@ -10,7 +10,7 @@ class SchedulesController < ApplicationController
     @event.participants.each do |p|
       if !p.votes.empty?
 
-        unless p.votes.find_by_place_id(@place.id).empty.nil?
+        unless p.votes.find_by_place_id(@place.id).nil?
           votes = p.votes.find_by_place_id(@place.id).vote
           p.update_attributes(:votes_remaining => p.votes_remaining + votes)
           
