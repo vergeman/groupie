@@ -55,8 +55,8 @@ def create
     UserMailer.event_email(@user, @event, @host).deliver
 
     #if we create an event via search, make sure to add it to event
-   if params[:place][:cid]
-     # logger.debug ("creating place #{params[:place][:cid]}")
+    if !params[:place][:cid].empty?
+      # logger.debug ("creating place #{params[:place][:cid]}")
      
       schedule = Schedule.create(:event_id => @event.id, 
                                  :place_id => Place.find_by_cid(params[:place][:cid]).id, 
