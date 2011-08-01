@@ -9,12 +9,16 @@ class SchedulesController < ApplicationController
     #recoup assocated votes (slow we can likely optimize ehre)
     @event.participants.each do |p|
       if !p.votes.empty?
-        votes = p.votes.find_by_place_id(@place.id).vote
-        p.update_attributes(:votes_remaining => p.votes_remaining + votes)
 
-        #remove vote record
-        @vote = p.votes.find_by_place_id(@place)
-        @vote.destroy
+        unless p.votes.find_by_place_id(@place.id).empty.nil?
+          votes = p.votes.find_by_place_id(@place.id).vote
+          p.update_attributes(:votes_remaining => p.votes_remaining + votes)
+          
+          #remove vote record
+          @vote = p.votes.find_by_place_id(@place)
+          @vote.destroy
+        end
+
       end
     end
 
