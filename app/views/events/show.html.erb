@@ -64,12 +64,13 @@
 	<!-- remove link -->
 	<div class="place_info_remove">
 	  <% if user_signed_in? %>
-	  <% if place.admin_id == current_user.id %>
+	  <% if @event.schedules.where(:place_id => place.id, :admin_id => current_user.id %>
 	  <%= link_to "remove from this " + get_project_name, 
 	      Schedule.where(:event_id => @event.id).find_by_place_id(place.id),
 	  :method => :delete, :confirm => "Are you sure you want to remove #{place.name} from #{@event.title}?" %>
 	  <% end %>
 	  <% end %>
+
 	</div>
 
       </div>
