@@ -3,12 +3,13 @@ class SchedulesController < ApplicationController
   before_filter :verify_user, :only => :destroy
 
   def destroy
+    @schedule = Schedule.find(params[:id])
     @place = @schedule.place
 
     #recoup assocated votes (slow we can likely optimize ehre)
     @event.participants.each do |p|
       if !p.votes.empty?
-        votes = p.votes.find_by_place_id(@place).vote
+        votes = p.votes.find_by_place_id(@place.id).vote
         p.update_attributes(:votes_remaining => p.votes_remaining + votes)
 
         #remove vote record
