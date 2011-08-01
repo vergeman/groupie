@@ -581,7 +581,7 @@ section {
 }
 
 .event {
-    min-height: 220px;
+    //min-height: 220px;
 }
 
 #voting .event {
