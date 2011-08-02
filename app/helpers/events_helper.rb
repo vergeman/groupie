@@ -7,7 +7,7 @@ def get_expiry_hours(event)
   hours_left =  (event.event_date - event.created_at) / 60 / 60
   
   if hours_left >= 36
-    return 24.hours
+    return (24.hours + 16.hours)
   elsif hours_left < 24
     return 5.hours
   end
