@@ -44,7 +44,7 @@ class UserMailer < ActionMailer::Base
 
     mail( :to => @user.email,
           :from => "no-reply@" + @project_name.gsub(/\s+/,"") + ".com",
-          :subject => "Let's #{@project_name} at #{@event.title}")
+          :subject => "Let's #{@project_name} at #{@lead_place.name}")
 
   end
   
