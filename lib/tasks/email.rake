@@ -28,6 +28,7 @@ task :event_expiry_email => :environment do
       UserMailer.event_expiry_email(@user, @event, @host, @lead_place).deliver
 
       #tag as sent
+
       e.update_attributes(:sent_expiry_email => true)
       e.save!
 
