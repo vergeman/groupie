@@ -29,6 +29,7 @@ task :event_expiry_email => :environment do
 
       #tag as sent
       e.update_attributes(:sent_expiry_email => true)
+      e.save!
 
     else
       puts "checked but not expired: #{e.title}"
