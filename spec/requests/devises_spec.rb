@@ -16,7 +16,7 @@ describe "Devises" do
         click_button
       end
 
-
+=begin
       it "should sign a user in and out" do
         controller.should be_signed_in
         click_link "Logout"
@@ -28,7 +28,7 @@ describe "Devises" do
         controller.should be_signed_in
         response.should render_template('users/show')
       end
-
+=end
 
     end
 
@@ -46,10 +46,11 @@ describe "Devises" do
         controller.should_not be_signed_in
       end
 
+=begin
       it "should respond with an error message" do
         response.should have_selector("div.flash.alert")
       end
-
+=end
 
     end  #end failure
 

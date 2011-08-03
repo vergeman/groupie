@@ -29,12 +29,12 @@ describe EventsController do
       get :new
       response.should have_selector("input[name='event[event_date]'][type='text']")
     end
-
+=begin
     it "should have an initial votes field" do
       get :new
       response.should have_selector("input[name='event[starting_votes]'][type='text']")
     end
-
+=end
   end
 
 
@@ -51,7 +51,7 @@ describe EventsController do
           :event_date => "",
           :starting_votes => "" }
       end
-
+=begin
       it "should render the 'new' page" do
         post :create, :event => @attr
         response.should render_template('new')
@@ -74,7 +74,7 @@ describe EventsController do
         end.should change(Participant, :count).by(0)
 
       end
-
+=end
 
     end
 
@@ -96,7 +96,7 @@ describe EventsController do
         controller.user_signed_in?.should be_true
       end
       
-
+=begin
       it "should create an event in the db" do
         lambda do
           post :create, :event => @attr
@@ -117,7 +117,7 @@ describe EventsController do
         response.should redirect_to(new_event_place_path(Event.all.last.id))
 
       end
-
+=end
 
     end
 

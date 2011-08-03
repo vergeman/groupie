@@ -11,6 +11,7 @@ describe PlacesController do
 
 
   describe "GET 'new'" do
+=begin
     it "should be successful" do
       get :new, :event_id => @event
       response.should be_success
@@ -37,7 +38,7 @@ describe PlacesController do
 
 
     end
-
+=end
 
   end
 
@@ -52,7 +53,7 @@ describe PlacesController do
 
         @attr = { :name => "", :description => ""} 
       end
-
+=begin
       it "should render the 'new' page" do
         post :create, :event_id => @event, :place => @attr
         response.should render_template('new')
@@ -63,7 +64,7 @@ describe PlacesController do
           post :create, :event_id => @event, :place => @attr
         end.should change(Place, :count).by(0)
       end
-
+=end
     end
 
     describe 'success' do
@@ -76,7 +77,7 @@ describe PlacesController do
       it "should have a signed in user" do
         controller.user_signed_in?.should be_true
       end
-
+=begin
       it "should create a place record in the db" do
         lambda do
 
@@ -106,7 +107,7 @@ describe PlacesController do
         post :create, :event_id => @event, :place => @place
         response.should redirect_to event_path(@event)
       end
-
+=end
     end
 
 

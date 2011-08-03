@@ -1,0 +1,1508 @@
+2011-08-03T04:33:47+00:00 app[web.1]: Redirected to http://deep-river-691.heroku.com/users/1
+2011-08-03T04:33:47+00:00 app[web.1]: Completed 302 Found in 2086ms
+2011-08-03T04:33:47+00:00 heroku[router]: POST deep-river-691.heroku.com/users/sign_in dyno=web.1 queue=0 wait=0ms service=2095ms status=302 bytes=106
+2011-08-03T04:33:47+00:00 app[web.1]: 
+2011-08-03T04:33:47+00:00 app[web.1]: 
+2011-08-03T04:33:47+00:00 app[web.1]: Started GET "/users/1" for 67.244.91.42 at 2011-08-02 21:33:47 -0700
+2011-08-03T04:33:47+00:00 app[web.1]:   Processing by UsersController#show as HTML
+2011-08-03T04:33:47+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2011-08-03T04:33:47+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (1.0ms)
+2011-08-03T04:33:47+00:00 app[web.1]: Rendered users/_events.html.erb (73.0ms)
+2011-08-03T04:33:47+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T04:33:47+00:00 app[web.1]: Rendered shared/_search_header.html.erb (1.9ms)
+2011-08-03T04:33:47+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.5ms)
+2011-08-03T04:33:47+00:00 app[web.1]: Rendered shared/_add_places.html.erb (7.0ms)
+2011-08-03T04:33:47+00:00 heroku[router]: GET deep-river-691.heroku.com/users/1 dyno=web.1 queue=0 wait=0ms service=114ms status=200 bytes=8689
+2011-08-03T04:33:47+00:00 app[web.1]: Rendered layouts/_header.html.erb (10.3ms)
+2011-08-03T04:33:47+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.0ms)
+2011-08-03T04:33:47+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T04:33:47+00:00 app[web.1]: Rendered users/show.html.erb within layouts/application (97.7ms)
+2011-08-03T04:33:47+00:00 app[web.1]: Completed 200 OK in 105ms (Views: 67.9ms | ActiveRecord: 36.3ms)
+2011-08-03T04:33:47+00:00 heroku[nginx]: POST /users/sign_in HTTP/1.1 | 67.244.91.42 | 952 | http | 302
+2011-08-03T04:33:49+00:00 app[web.1]: 
+2011-08-03T04:33:49+00:00 app[web.1]: 
+2011-08-03T04:33:49+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-02 21:33:49 -0700
+2011-08-03T04:33:49+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T04:33:49+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T04:33:54+00:00 heroku[nginx]: GET /events/3 HTTP/1.1 | 67.244.91.42 | 0 | http | 499
+2011-08-03T04:34:02+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.3ms)
+2011-08-03T04:34:10+00:00 app[web.1]: Rendered events/_header.html.erb (8537.4ms)
+2011-08-03T04:34:10+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.8ms)
+2011-08-03T04:34:10+00:00 app[web.1]: Rendered events/_participants.html.erb (47.8ms)
+2011-08-03T04:34:10+00:00 app[web.1]: Rendered shared/_vote.html.erb (9.8ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (8.2ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (6.2ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_search_header.html.erb (4.9ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered
+ shared/_error_messages.html.erb (0.0ms)
+2011-08-03T04:34:18+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=28747ms status=200 bytes=21117
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.3ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (16025.7ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Completed 200 OK in 28734ms (Views: 126.8ms | ActiveRecord: 28601.6ms)
+2011-08-03T04:34:18+00:00 app[web.1]: 
+2011-08-03T04:34:18+00:00 app[web.1]: 
+2011-08-03T04:34:18+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-02 21:34:18 -0700
+2011-08-03T04:34:18+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T04:34:18+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.3ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered events/_header.html.erb (20.1ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered events/_participants.html.erb (8.6ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.9ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.2ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.1ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.7ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (1.1ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_search_header.html.erb (4.0ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T04:34:18+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=132ms status=200 bytes=21117
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered shared/_add_places.html.erb (6.2ms)
+2011-08-03T04:34:18+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.3ms)
+2011-08-03T04:34:18+00:00 heroku[nginx]: GET /events/3 HTTP/1.1 | 67.244.91.42 | 6047 | http | 200
+2011-08-03T04:34:38+00:00 app[web.1]: 
+2011-08-03T04:34:38+00:00 app[web.1]: 
+2011-08-03T04:34:38+00:00 app[web.1]: Started GET "/places/search?utf8=%E2%9C%93&search_text=1020+amsterdam&search_neighborhood=New+York+City&commit=Search" for 67.244.91.42 at 2011-08-02 21:34:38 -0700
+2011-08-03T04:34:38+00:00 app[web.1]:   Processing by PlacesController#search as HTML
+2011-08-03T04:34:38+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "search_text"=>"1020 amsterdam", "search_neighborhood"=>"New York City", "commit"=>"Search"}
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered places/_place_info.html.erb (1.3ms)
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered places/_place_comment.html.erb (0.5ms)
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered places/_search_result_form_a
+dd.html.erb (11.5ms)
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.9ms)
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered shared/_search_header.html.erb (1.3ms)
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered shared/_add_places.html.erb (6.0ms)
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered layouts/_header.html.erb (8.3ms)
+2011-08-03T04:34:57+00:00 heroku[router]: GET deep-river-691.heroku.com/places/search dyno=web.1 queue=0 wait=0ms service=19296ms status=200 bytes=8615
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.0ms)
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T04:34:57+00:00 app[web.1]: Rendered places/search.html.erb within layouts/application (27.8ms)
+2011-08-03T04:34:57+00:00 app[web.1]: Completed 200 OK in 19289ms (Views: 25.1ms | ActiveRecord: 18665.1ms)
+2011-08-03T04:35:00+00:00 app[web.1]: 
+2011-08-03T04:35:00+00:00 app[web.1]: 
+2011-08-03T04:35:00+00:00 app[web.1]: Started POST "/events/3/places" for 67.244.91.42 at 2011-08-02 21:35:00 -0700
+2011-08-03T04:35:00+00:00 app[web.1]:   Processing by PlacesController#create as HTML
+2011-08-03T04:35:00+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI=", "event"=>"3", "place"=>{"cid"=>"c49bbd2371a39465aebd247b1b4d8d0f65d1f70b"}, "commit"=>"Add", "event_id"=>"3"}
+2011-08-03T04:35:02+00:00 app[web.1]: Redirected to http://deep-river-691.heroku.com/events/3
+2011-08-03T04:35:02+00:00 app[web.1]: Completed 302 Found in 2302ms
+2011-08-03T04:35:02+00:00 heroku[router]: POST deep-river-691.heroku.com/events/3/places dyno=web.1 queue=0 wait=0ms service=2310ms status=302 bytes=107
+2011-08-03T04:35:03+00:00 app[web.1]: 
+2011-08-03T04:35:03+00:00 app[web.1]: 
+2011-08-03T04:35:03+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-02 21:35:03 -0700
+2011-08-03T04:35:03+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T04:35:03+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.3ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered events/_header.html.erb (17.7ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered events/_votebar.html.erb (1.6ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered events/_participants.html.erb (7.2ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.8ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered shared/_vote.html.erb (38.1ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.7ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.4ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.6ms)
+2011-08-03T04:35:03+00:00 app[web.
+1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered shared/_search_header.html.erb (33.1ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered shared/_add_places.html.erb (8.4ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered layouts/_header.html.erb (42.6ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.4ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered layouts/_footer.html.erb (1.3ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (253.6ms)
+2011-08-03T04:35:03+00:00 app[web.1]: Completed 200 OK in 281ms (Views: 72.6ms | ActiveRecord: 2442.8ms)
+2011-08-03T04:36:39+00:00 app[web.1]: 
+2011-08-03T04:36:39+00:00 app[web.1]: 
+2011-08-03T04:36:39+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-02 21:36:39 -0700
+2011-08-03T04:36:39+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T04:36:39+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"1", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI="}
+2011-08-03T04:36:39+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=79ms status=200 bytes=2
+2011-08-03T04:36:39+00:00 app[web.1]: Completed 200 OK in 70ms (Views: 3.6ms | ActiveRecord: 53.0ms)
+2011-08-03T04:36:43+00:00 app[web.1]: 
+2011-08-03T04:36:43+00:00 app[web.1]: 
+2011-08-03T04:36:43+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-02 21:36:43 -0700
+2011-08-03T04:36:43+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T04:36:43+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"1", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI="}
+2011-08-03T04:36:43+00:00 app[web.1]: Completed 200 OK in 81ms (Views: 0.1ms | ActiveRecord: 73.1ms)
+2011-08-03T04:36:43+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=86ms status=200 bytes=1
+2011-08-03T04:36:45+00:00 app[web.1]: 
+2011-08-03T04:36:45+00:00 app[web.1]: 
+2011-08-03T04:36:45+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-02 21:36:45 -0700
+2011-08-03T04:36:45+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T04:36:45+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"147", "vote"=>"1", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI="}
+2011-08-03T04:36:47+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=2458ms status=200 bytes=1
+2011-08-03T04:36:47+00:00 app[web.1]: Completed 200 OK in 2456ms (Views: 0.2ms | ActiveRecord: 2448.9ms)
+2011-08-03T04:36:48+00:00 heroku[nginx]: POST /votes/ HTTP/1.1 | 67.244.91.42 | 764 | http | 200
+2011-08-03T04:36:50+00:00 app[web.1]: 
+2011-08-03T04:36:50+00:00 app[web.1]: 
+2011-08-03T04:36:50+00:00 app[web.1]: Started GET "/events/3/places/117" for 67.244.91.42 at 2011-08-02 21:36:50 -0700
+2011-08-03T04:36:50+00:00 app[web.1]:   Processing by PlacesController#show as HTML
+2011-08-03T04:36:50+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "id"=>"117"}
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered places/_place_info.html.erb (0.3ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered places/_place_review.html.erb (0.6ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered places/_place_comment.html.erb (0.1ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered places/_place_photos.html.erb (0.6ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered places/_search_result_form_add.html.erb (11.8ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (1.6ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered shared/_search_header.html.erb (1.7ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered shared/_add_places.html.erb (5.1ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered layouts/_header.html.erb (8.0ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (0.9ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Rendered places/show.html.erb within layouts/application (27.9ms)
+2011-08-03T04:36:50+00:00 app[web.1]: Completed 200 OK in 36ms (Views: 21.5ms | ActiveRecord: 12.7ms)
+2011-08-03T04:36:50+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3/places/117 dyno=web.1 queue=0 wait=0ms service=45ms status=200 bytes=11216
+2011-08-03T04:37:00+00:00 app[web.1]: 
+2011-08-03T04:37:00+00:00 app[web.1]: 
+2011-08-03T04:37:00+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-02 21:37:00 -0700
+2011-08-03T04:37:00+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T04:37:00+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"1", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI="}
+2011-08-03T04:37:00+00:00 app[web.1]: Completed 200 OK in 67ms (Views: 0.2ms | ActiveRecord: 60.0ms)
+2011-08-03T04:37:00+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=72ms status=200 bytes=2
+2011-08-03T04:37:00+00:00 app[web.1]: 
+2011-08-03T04:37:00+00:00 app[web.1]: 
+2011-08-03T04:37:00+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-02 21:37:00 -0700
+2011-08-03T04:37:00+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T04:37:00+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"1", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI="}
+2011-08-03T04:37:00+00:00 app[web.1]: Completed 200 OK in 33ms (Views: 0.2ms | ActiveRecord: 25.1ms)
+2011-08-03T04:37:00+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=45ms status=200 bytes=2
+2011-08-03T04:37:00+00:00 app[web.1]: 
+2011-08-03T04:37:00+00:00 app[web.1]: 
+2011-08-03T04:37:00+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-02 21:37:00 -0700
+2011-08-03T04:37:00+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T04:37:00+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"1", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI="}
+2011-08-03T04:37:00+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=38ms status=200 bytes=1
+2011-08-03T04:37:00+00:00 app[web.1]: Completed 200 OK in 31ms (Views: 0.1ms | ActiveRecord: 21.4ms)
+2011-08-03T04:37:05+00:00 app[web.1]: 
+2011-08-03T04:37:05+00:00 app[web.1]: 
+2011-08-03T04:37:05+00:00 app[web.1]: Started GET "/events/3/places/130" for 67.244.91.42 at 2011-08-02 21:37:05 -0700
+2011-08-03T04:37:05+00:00 app[web.1]:   Processing by PlacesController#show as HTML
+2011-08-03T04:37:05+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "id"=>"130"}
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered places/_place_info.html.erb (0.2ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered places/_place_review.html.erb (0.2ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered places/_place_comment.html.erb (0.1ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered places/_place_photos.html.erb (0.2ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered places/_search_result_form_add.html.erb (7.6ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered shared/_search_header.html.erb (1.3ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered shared/_add_places.html.erb (4.4ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered layouts/_header.html.erb (6.6ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (0.8ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Rendered places/show.html.erb within layouts/application (18.8ms)
+2011-08-03T04:37:05+00:00 app[web.1]: Completed 200 OK in 24ms (Views: 14.2ms | ActiveRecord: 8.3ms)
+2011-08-03T04:37:05+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3/places/130 dyno=web.1 queue=0 wait=0ms service=31ms status=200 bytes=11205
+2011-08-03T04:37:15+00:00 app[web.1]: 
+2011-08-03T04:37:15+00:00 app[web.1]: 
+2011-08-03T04:37:15+00:00 app[web.1]: Started GET "/events/3/places/117" for 67.244.91.42 at 2011-08-02 21:37:15 -0700
+2011-08-03T04:37:15+00:00 app[web.1]:   Processing by PlacesController#show as HTML
+2011-08-03T04:37:15+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "id"=>"117"}
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered places/_place_info.html.erb (0.2ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered places/_place_review.html.erb (0.2ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered places/_place_comment.html.erb (0.1ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered places/_place_photos.html.erb (0.2ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered places/_search_result_form_add.html.erb (14.4ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered shared/_search_header.html.erb (1.4ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered shared/_add_places.html.erb (44.3ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered layouts/_header.html.erb (46.8ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (0.9ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Rendered places/show.html.erb within layouts/application (65.8ms)
+2011-08-03T04:37:15+00:00 app[web.1]: Completed 200 OK in 71ms (Views: 54.5ms | ActiveRecord: 15.1ms)
+2011-08-03T04:37:15+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3/places/117 dyno=web.1 queue=0 wait=0ms service=75ms status=200 bytes=11216
+2011-08-03T04:37:16+00:00 heroku[nginx]: GET /events/3/places/117 HTTP/1.1 | 67.244.91.42 | 293 | http | 304
+2011-08-03T04:37:53+00:00 app[web.1]: 
+2011-08-03T04:37:53+00:00 app[web.1]: 
+2011-08-03T04:37:53+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-02 21:37:53 -0700
+2011-08-03T04:37:53+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T04:37:53+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered events/_header.html.erb (19.3ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.2ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered events/_participants.html.erb (5.7ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.0ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered shared/_vote.html.erb (2.9ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.6ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.7ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.8ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.1ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered shared/_add_places.html.erb (6.3ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered layouts/_header.html.erb (10.4ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.1ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (112.5ms)
+2011-08-03T04:37:53+00:00 app[web.1]: Completed 200 OK in 119ms (Views: 51.0ms | ActiveRecord: 66.4ms)
+2011-08-03T04:37:53+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=125ms status=200 bytes=24512
+2011-08-03T04:37:54+00:00 heroku[nginx]: GET /events/3 HTTP/1.1 | 67.244.91.42 | 6883 | http | 200
+2011-08-03T04:38:06+00:00 app[web.1]: 
+2011-08-03T04:38:06+00:00 app[web.1]: 
+2011-08-03T04:38:06+00:00 app[web.1]: Started GET "/events/3/places/130" for 67.244.91.42 at 2011-08-02 21:38:06 -0700
+2011-08-03T04:38:06+00:00 app[web.1]:   Processing by PlacesController#show as HTML
+2011-08-03T04:38:06+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "id"=>"130"}
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered places/_place_info.html.erb (0.2ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered places/_place_review.html.erb (0.2ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered places/_place_comment.html.erb (0.0ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered places/_place_photos.html.erb (0.2ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered places/_search_result_form_add.html.erb (7.1ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (1.0ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered shared/_search_header.html.erb (2.1ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered shared/_add_places.html.erb (10.8ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered layouts/_header.html.erb (14.8ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (0.9ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.3ms)
+2011-08-03T04:38:06+00:00 app[we
+b.1]: Rendered places/show.html.erb within layouts/application (28.9ms)
+2011-08-03T04:38:06+00:00 app[web.1]: Completed 200 OK in 34ms (Views: 25.1ms | ActiveRecord: 7.3ms)
+2011-08-03T04:38:06+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3/places/130 dyno=web.1 queue=0 wait=0ms service=39ms status=200 bytes=11205
+2011-08-03T04:38:07+00:00 heroku[nginx]: GET /events/3/places/130 HTTP/1.1 | 67.244.91.42 | 293 | http | 304
+2011-08-03T04:39:13+00:00 app[web.1]: 
+2011-08-03T04:39:13+00:00 app[web.1]: 
+2011-08-03T04:39:13+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-02 21:39:13 -0700
+2011-08-03T04:39:13+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T04:39:13+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"1", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI="}
+2011-08-03T04:39:13+00:00 app[web.1]: Completed 200 OK in 108ms (Views: 0.2ms | ActiveRecord: 99.7ms)
+2011-08-03T04:39:13+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=115ms status=200 bytes=1
+2011-08-03T04:39:14+00:00 app[web.1]: 
+2011-08-03T04:39:14+00:00 app[web.1]: 
+2011-08-03T04:39:14+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-02 21:39:14 -0700
+2011-08-03T04:39:14+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T04:39:14+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"1", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI="}
+2011-08-03T04:39:15+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=241ms status=200 bytes=1
+2011-08-03T04:39:15+00:00 app[web.1]: Completed 200 OK in 238ms (Views: 0.1ms | ActiveRecord: 231.6ms)
+2011-08-03T04:40:12+00:00 app[web.1]: 
+2011-08-03T04:40:12+00:00 app[web.1]: 
+2011-08-03T04:40:12+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-02 21:40:12 -0700
+2011-08-03T04:40:12+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T04:40:12+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"1", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI="}
+2011-08-03T04:40:12+00:00 app[web.1]: Completed 200 OK in 25ms (Views: 0.1ms | ActiveRecord: 17.3ms)
+2011-08-03T04:40:12+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=31ms status=200 bytes=1
+2011-08-03T04:40:17+00:00 app[web.1]: 
+2011-08-03T04:40:17+00:00 app[web.1]: 
+2011-08-03T04:40:17+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-02 21:40:17 -0700
+2011-08-03T04:40:17+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T04:40:17+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"1", "authenticity_token"=>"TDYLF/X0RqEvQCMdZ7tDlz8emfggqxpUCThM7YG8kkI="}
+2011-08-03T04:40:17+00:00 app[web.1]: Completed 200 OK in 115ms (Views: 0.2ms | ActiveRecord: 105.2ms)
+2011-08-03T04:40:17+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=123ms status=200 bytes=1
+2011-08-03T04:40:51+00:00 app[web.1]: 
+2011-08-03T04:40:51+00:00 app[web.1]: 
+2011-08-03T04:40:51+00:00 app[web.1]: Started GET "/home" for 67.244.91.42 at 2011-08-02 21:40:51 -0700
+2011-08-03T04:40:51+00:00 app[web.1]:   Processing by PagesController#home as HTML
+2011-08-03T04:40:51+00:00 app[web.1]: Redirected to http://deep-river-691.heroku.com/users/1
+2011-08-03T04:40:51+00:00 app[web.1]: Completed 302 Found in 3ms
+2011-08-03T04:40:51+00:00 heroku[router]: GET deep-river-691.heroku.com/home dyno=web.1 queue=0 wait=0ms service=9ms status=302 bytes=106
+2011-08-03T04:40:51+00:00 app[web.1]: 
+2011-08-03T04:40:51+00:00 app[web.1]: 
+2011-08-03T04:40:51+00:00 app[web.1]: Started GET "/users/1" for 67.244.91.42 at 2011-08-02 21:40:51 -0700
+2011-08-03T04:40:51+00:00 app[web.1]:   Processing by UsersController#show as HTML
+2011-08-03T04:40:51+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2011-08-03T04:40:51+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T04:40:51+00:00 app[web.1]: Rendered users/_events.html.erb (13.2ms)
+2011-08-03T04:40:51+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T04:40:51+00:00 app[web.1]: Rendered shared/_search_header.html.erb (1.4ms)
+2011-08-03T04:40:51+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T04:40:51+00:00 app[web.1]: Rendered shared/_add_places.html.erb (4.2ms)
+2011-08-03T04:40:51+00:00 app[web.1]: Rendered layouts/_header.html.erb (6.5ms)
+2011-08-03T04:40:51+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (0.8ms)
+2011-08-03T04:40:51+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T04:40:51+00:00 app[web.1]: Rendered users/show.html.erb within layouts/application (25.4ms)
+2011-08-03T04:40:51+00:00 app[web.1]: Completed 200 OK in 29ms (Views: 16.4ms | ActiveRecord: 12.9ms)
+2011-08-03T04:40:51+00:00 heroku[router]: GET deep-river-691.heroku.com/users/1 dyno=web.1 queue=0 wait=0ms service=35ms status=200 bytes=8929
+2011-08-03T04:40:52+00:00 heroku[nginx]: GET /home HTTP/1.1 | 67.244.91.42 | 837 | http | 302
+2011-08-03T04:40:52+00:00 heroku[nginx]: GET /users/1 HTTP/1.1 | 67.244.91.42 | 3672 | http | 200
+2011-08-03T04:40:57+00:00 app[web.1]: 
+2011-08-03T04:40:57+00:00 app[web.1]: 
+2011-08-03T04:40:57+00:00 app[web.1]: Started GET "/users/sign_out" for 67.244.91.42 at 2011-08-02 21:40:57 -0700
+2011-08-03T04:40:57+00:00 app[web.1]:   Processing by Devise::SessionsController#destroy as HTML
+2011-08-03T04:40:57+00:00 app[web.1]: Redirected to http://deep-river-691.heroku.com/
+2011-08-03T04:40:57+00:00 app[web.1]: Completed 302 Found in 75ms
+2011-08-03T04:40:57+00:00 heroku[router]: GET deep-river-691.heroku.com/users/sign_out dyno=web.1 queue=0 wait=0ms service=82ms status=302 bytes=99
+2011-08-03T04:40:57+00:00 app[web.1]: 
+2011-08-03T04:40:57+00:00 app[web.1]: 
+2011-08-03T04:40:57+00:00 app[web.1]: Started GET "/" for 67.244.91.42 at 2011-08-02 21:40:57 -0700
+2011-08-03T04:40:57+00:00 app[web.1]:   Processing by PagesController#home as HTML
+2011-08-03T04:40:57+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T04:40:57+00:00 app[web.1]: Rendered shared/_search_header.html.erb (0.8ms)
+2011-08-03T04:40:57+00:00 app[web.1]: Rendered shared/_add_places.html.erb (0.1ms)
+2011-08-03T04:40:57+00:00 app[web.1]: Rendered layouts/_header.html.erb (1.8ms)
+2011-08-03T04:40:57+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (0.8ms)
+2011-08-03T04:40:57+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T0
+4:40:57+00:00 app[web.1]: Rendered pages/home.html.erb within layouts/application (5.2ms)
+2011-08-03T04:40:57+00:00 app[web.1]: Completed 200 OK in 6ms (Views: 5.7ms | ActiveRecord: 63.7ms)
+2011-08-03T04:40:57+00:00 heroku[router]: GET deep-river-691.heroku.com/ dyno=web.1 queue=0 wait=0ms service=12ms status=200 bytes=5981
+2011-08-03T04:40:58+00:00 heroku[nginx]: GET /users/sign_out HTTP/1.1 | 67.244.91.42 | 854 | http | 302
+2011-08-03T04:40:58+00:00 heroku[nginx]: GET / HTTP/1.1 | 67.244.91.42 | 2785 | http | 200
+2011-08-03T05:41:59+00:00 heroku[web.1]: Idling
+2011-08-03T05:42:00+00:00 heroku[web.1]: State changed from up to down
+2011-08-03T05:42:01+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-08-03T05:42:01+00:00 app[web.1]: >> Stopping ...
+2011-08-03T05:42:01+00:00 heroku[web.1]: Process exited
+2011-08-03T07:44:40+00:00 heroku[rake.43]: State changed from created to starting
+2011-08-03T07:44:42+00:00 app[rake.43]: Awaiting client
+2011-08-03T07:44:42+00:00 app[rake.43]: Starting process with command `rake event_expiry_email`
+2011-08-03T07:44:43+00:00 heroku[rake.43]: State changed from starting to up
+2011-08-03T07:44:47+00:00 heroku[rake.43]: Process exited
+2011-08-03T07:44:47+00:00 heroku[rake.43]: State changed from up to complete
+2011-08-03T10:51:18+00:00 heroku[web.1]: Unidling
+2011-08-03T10:51:18+00:00 heroku[web.1]: State changed from down to created
+2011-08-03T10:51:18+00:00 heroku[web.1]: State changed from created to starting
+2011-08-03T10:51:20+00:00 heroku[web.1]: Starting process with command `thin -p 38688 -e production -R /home/heroku_rack/heroku.ru start`
+2011-08-03T10:51:25+00:00 app[web.1]: >> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+2011-08-03T10:51:25+00:00 app[web.1]: >> Maximum connections set to 1024
+2011-08-03T10:51:25+00:00 app[web.1]: >> Listening on 0.0.0.0:38688, CTRL+C to stop
+2011-08-03T10:51:25+00:00 heroku[web.1]: State changed from starting to up
+2011-08-03T10:51:25+00:00 app[web.1]: 
+2011-08-03T10:51:25+00:00 app[web.1]: 
+2011-08-03T10:51:25+00:00 app[web.1]: Started GET "/events/3?invite=078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537" for 64.131.181.45 at 2011-08-03 03:51:25 -0700
+2011-08-03T10:51:25+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T10:51:25+00:00 app[web.1]:   Parameters: {"invite"=>"078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537", "id"=>"3"}
+2011-08-03T10:51:27+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (3.4ms)
+2011-08-03T10:51:28+00:00 app[web.1]: Rendered events/_header.html.erb (1006.7ms)
+2011-08-03T10:51:28+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.6ms)
+2011-08-03T10:51:28+00:00 app[web.1]: Rendered shared/_vote.html.erb (9.4ms)
+2011-08-03T10:51:28+00:00 app[web.1]: Rendered shared/_vote.html.erb (6.7ms)
+2011-08-03T10:51:28+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.6ms)
+2011-08-03T10:51:29+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.7ms)
+2011-08-03T10:51:29+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.5ms)
+2011-08-03T10:51:29+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (1.2ms)
+2011-08-03T10:51:29+00:00 app[web.1]: Rendered shared/_search_header.html.erb (1.6ms)
+2011-08-03T10:51:29+00:00 app[web.1]: Rendered shared/_add_places.html.erb (0.7ms)
+2011-08-03T10:51:29+00:00 app[web.1]: Rendered layouts/_header.html.erb (5.0ms)
+2011-08-03T10:51:29+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.4ms)
+2011-08-03T10:51:29+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.7ms)
+2011-08-03T10:51:29+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (1141.1ms)
+2011-08-03T10:51:29+00:00 app[web.1]: Completed 200 OK in 3394ms (Views: 133.4ms | ActiveRecord: 3248.0ms)
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=3437ms status=200 bytes=21802
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=12336
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=14ms status=200 bytes=210246
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=33378
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=847
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/groupie.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=12808
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=12744
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=6544
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery.countdown.pack.js dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=9971
+2011-08-03T10:51:29+00:00 heroku[nginx]: GET /events/3?invite=078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537 HTTP/1.1 | 64.131.181.45 | 6101 | http | 200
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/images/city4.jpg dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=136525
+2011-08-03T10:51:29+00:00 heroku[nginx]: GET /stylesheets/blueprint/screen.css?1312255037 HTTP/1.1 | 64.131.181.45 | 236 | http | 304
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_up.png dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=6020
+2011-08-03T10:51:29+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_down.png dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=5999
+2011-08-03T10:51:30+00:00 heroku[nginx]: GET /javascripts/jquery-ui-1.8.14.custom.min.js?1312255037 HTTP/1.1 | 64.131.181.45 | 237 | http | 304
+2011-08-03T10:51:30+00:00 heroku[nginx]: GET /stylesheets/groupie.css?1312255037 HTTP/1.1 | 64.131.181.45 | 237 | http | 304
+2011-08-03T10:51:30+00:00 heroku[nginx]: GET /javascripts/jquery_ujs.js?1312255037 HTTP/1.1 | 64.131.181.45 | 237 | http | 304
+2011-08-03T10:51:30+00:00 heroku[nginx]: GET /javascripts/jquery.countdown.pack.js?1312255037 HTTP/1.1 | 64.131.181.45 | 237 | http | 304
+2011-08-03T10:51:30+00:00 heroku[nginx]: GET /images/vote_up.png HTTP/1.1 | 64.131.181.45 | 6302 | http | 200
+2011-08-03T11:52:47+00:00 heroku[web.1]: Idling
+2011-08-03T11:52:48+00:00 heroku[web.1]: State changed from up to down
+2011-08-03T11:52:48+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-08-03T11:52:49+00:00 app[web.1]: >> Stopping ...
+2011-08-03T11:52:49+00:00 heroku[web.1]: Process exited
+2011-08-03T15:03:34+00:00 heroku[web.1]: Unidling
+2011-08-03T15:03:34+00:00 heroku[web.1]: State changed from down to created
+2011-08-03T15:03:34+00:00 heroku[web.1]: State changed from created to starting
+2011-08-03T15:03:36+00:00 heroku[web.1]: Starting process with command `thin -p 12644 -e production -R /home/heroku_rack/heroku.ru start`
+2011-08-03T15:03:48+00:00 app[web.1]: >> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+2011-08-03T15:03:48+00:00 app[web.1]: >> Maximum connections set to 1024
+2011-08-03T15:03:48+00:00 app[web.1]: >> Listening on 0.0.0.0:12644, CTRL+C to stop
+2011-08-03T15:03:49+00:00 heroku[web.1]: State changed from starting to up
+2011-08-03T15:03:50+00:00 app[web.1]: 
+2011-08-03T15:03:50+00:00 app[web.1]: 
+2011-08-03T15:03:50+00:00 app[web.1]: Started GET "/events/3?invite=078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537" for 166.77.6.4 at 2011-08-03 08:03:50 -0700
+2011-08-03T15:03:50+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:03:50+00:00 app[web.1]:   Parameters: {"invite"=>"078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537", "id"=>"3"}
+2011-08-03T15:04:04+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.8ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered events/_header.html.erb (7651.9ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.9ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered events/_participants.html.erb (27.7ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered shared/_vote.html.erb (63.2ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.0ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.7ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.3ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.4ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (1.3ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered shared/_search_header.html.erb (9.1ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.6ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered shared/_add_places.html.erb (52.2ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered layouts/_header.html.erb (64.8ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (3.7ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.8ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (8007.7ms)
+2011-08-03T15:04:12+00:00 app[web.1]: Completed 200 OK in 21712ms (Views: 222.1ms | ActiveRecord: 27511.9ms)
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=21768ms status=200 bytes=24531
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/print.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=1286
+2011-08-03T15:04:12+00:00 heroku[router]:
+ GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=12336
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=33378
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=6544
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=847
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/groupie.css dyno=web.1 queue=1 wait=7ms service=9ms status=200 bytes=12808
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery.countdown.pack.js dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=9971
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=12744
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/images/city4.jpg dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=136525
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=16ms status=200 bytes=210246
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_up.png dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=6020
+2011-08-03T15:04:12+00:00 heroku[router]: GET deep-river-691.heroku.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=13ms status=200 bytes=0
+2011-08-03T15:04:13+00:00 heroku[nginx]: GET /stylesheets/groupie.css?1312255037 HTTP/1.1 | 166.77.6.4 | 237 | http | 304
+2011-08-03T15:04:13+00:00 heroku[nginx]: GET /favicon.ico HTTP/1.1 | 166.77.6.4 | 199 | http | 304
+2011-08-03T15:09:04+00:00 app[web.1]: 
+2011-08-03T15:09:04+00:00 app[web.1]: 
+2011-08-03T15:09:04+00:00 app[web.1]: Started POST "/votes/" for 166.77.6.4 at 2011-08-03 08:09:04 -0700
+2011-08-03T15:09:04+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:09:04+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"-1", "authenticity_token"=>"byzfHGsAgiHWokKqjdUXrYkB+pRic83vjyF6ykxLNK4="}
+2011-08-03T15:09:04+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=176ms status=200 bytes=1
+2011-08-03T15:09:04+00:00 app[web.1]: Completed 200 OK in 168ms (Views: 4.3ms | ActiveRecord: 145.3ms)
+2011-08-03T15:09:05+00:00 app[web.1]: 
+2011-08-03T15:09:05+00:00 app[web.1]: 
+2011-08-03T15:09:05+00:00 app[web.1]: Started POST "/votes/" for 166.77.6.4 at 2011-08-03 08:09:05 -0700
+2011-08-03T15:09:05+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:09:05+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"-1", "authenticity_token"=>"byzfHGsAgiHWokKqjdUXrYkB+pRic83vjyF6ykxLNK4="}
+2011-08-03T15:09:05+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=43ms status=200 bytes=1
+2011-08-03T15:09:05+00:00 app[web.1]: Completed 200 OK in 36ms (Views: 0.1ms | ActiveRecord: 23.6ms)
+2011-08-03T15:09:06+00:00 app[web.1]: 
+2011-08-03T15:09:06+00:00 app[web.1]: 
+2011-08-03T15:09:06+00:00 app[web.1]: Started POST "/votes/" for 166.77.6.4 at 2011-08-03 08:09:06 -0700
+2011-08-03T15:09:06+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:09:06+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"1", "authenticity_token"=>"byzfHGsAgiHWokKqjdUXrYkB+pRic83vjyF6ykxLNK4="}
+2011-08-03T15:09:06+00:00 app[web.1]: Completed 200 OK in 63ms (Views: 0.2ms | ActiveRecord: 49.3ms)
+2011-08-03T15:09:06+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=68ms status=200 bytes=1
+2011-08-03T15:09:06+00:00 app[web.1]: 
+2011-08-03T15:09:06+00:00 app[web.1]: 
+2011-08-03T15:09:06+00:00 app[web.1]: Started POST "/votes/" for 166.77.6.4 at 2011-08-03 08:09:06 -0700
+2011-08-03T15:09:06+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:09:06+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"1", "authenticity_token"=>"byzfHGsAgiHWokKqjdUXrYkB+pRic83vjyF6ykxLNK4="}
+2011-08-03T15:09:06+00:00 app[web.1]: Completed 200 OK in 197ms (Views: 0.2ms | ActiveRecord: 186.0ms)
+2011-08-03T15:09:06+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=219ms status=200 bytes=1
+2011-08-03T15:09:08+00:00 app[web.1]: 
+2011-08-03T15:09:08+00:00 app[web.1]: 
+2011-08-03T15:09:08+00:00 app[web.1]: Started GET "/events/3?invite=078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537" for 166.77.6.4 at 2011-08-03 08:09:08 -0700
+2011-08-03T15:09:08+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:09:08+00:00 app[web.1]:   Parameters: {"invite"=>"078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537", "id"=>"3"}
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered events/_header.html.erb (16.2ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered events/_participants.html.erb (91.1ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.1ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered shared/_vote.html.erb (19.7ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered shared/_vote.html.erb (28.0ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered shared/_vote.html.erb (7.2ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.2ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.9ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered shared/_add_places.html.erb (9.6ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered layouts/_header.html.erb (14.6ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.5ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.3ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (386.6ms)
+2011-08-03T15:09:08+00:00 app[web.1]: Completed 200 OK in 460ms (Views: 73.9ms | ActiveRecord: 381.4ms)
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=474ms status=200 bytes=24544
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=12336
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/print.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=1286
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=847
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=12744
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=6544
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=210246
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery.countdown.pack.js dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=9971
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_up.png dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=6020
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_down.png dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=5999
+2011-08-03T15:09:08+00:00 heroku[router]: GET deep-river-691.heroku.com/images/city4.jpg dyno=web.1 queue=0 wait=0ms service=21ms status=200 bytes=136525
+2011-08-03T15:09:09+00:00 heroku[nginx]: GET /events/3?invite=078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537 HTTP/1.1 | 166.77.6.4 | 6864 | http | 200
+2011-08-03T15:11:42+00:00 app[web.1]: 
+2011-08-03T15:11:42+00:00 app[web.1]: 
+2011-08-03T15:11:42+00:00 app[web.1]: Started GET "/events/3?invite=078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537" for 166.77.6.4 at 2011-08-03 08:11:42 -0700
+2011-08-03T15:11:42+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:11:42+00:00 app[web.1]:   Parameters: {"invite"=>"078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537", "id"=>"3"}
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.3ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered events/_header.html.erb (19.0ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered events/_participants.html.erb (9.0ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.2ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.5ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.6ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.4ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered shared/_vote.html.erb (47.0ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.8ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered shared/_add_places.html.erb (7.7ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered layouts/_header.html.erb (12.5ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.4ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.5ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (187.6ms)
+2011-08-03T15:11:42+00:00 app[web.1]: Completed 200 OK in 214ms (Views: 108.2ms | ActiveRecord: 99.4ms)
+2011-08-03T15:11:42+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=231ms status=200 bytes=24544
+2011-08-03T15:18:19+00:00 app[web.1]: 
+2011-08-03T15:18:19+00:00 app[web.1]: 
+2011-08-03T15:18:19+00:00 app[web.1]: Started POST "/votes/" for 166.77.6.4 at 2011-08-03 08:18:19 -0700
+2011-08-03T15:18:19+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:18:19+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"-1", "authenticity_token"=>"byzfHGsAgiHWokKqjdUXrYkB+pRic83vjyF6ykxLNK4="}
+2011-08-03T15:18:19+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=610ms status=200 bytes=1
+2011-08-03T15:18:19+00:00 app[web.1]: Completed 200 OK in 607ms (Views: 0.3ms | ActiveRecord: 596.7ms)
+2011-08-03T15:18:19+00:00 app[web.1]: 
+2011-08-03T15:18:19+00:00 app[web.1]: 
+2011-08-03T15:18:19+00:00 app[web.1]: Started POST "/votes/" for 166.77.6.4 at 2011-08-03 08:18:19 -0700
+2011-08-03T15:18:19+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:18:19+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"-1", "authenticity_token"=>"byzfHGsAgiHWokKqjdUXrYkB+pRic83vjyF6ykxLNK4="}
+2011-08-03T15:18:19+00:00 app[web.1]: Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 26.8ms)
+2011-08-03T15:18:19+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=429ms status=200 bytes=1
+2011-08-03T15:18:20+00:00 app[web.1]: 
+2011-08-03T15:18:20+00:00 app[web.1]: 
+2011-08-03T15:18:20+00:00 app[web.1]: Started POST "/votes/" for 166.77.6.4 at 2011-08-03 08:18:20 -0700
+2011-08-03T15:18:20+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:18:20+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"146", "vote"=>"-1", "authenticity_token"=>"byzfHGsAgiHWokKqjdUXrYkB+pRic83vjyF6ykxLNK4="}
+2011-08-03T15:18:20+00:00 heroku[nginx]: POST /votes/ HTTP/1.1 | 166.77.6.4 | 764 | http | 200
+2011-08-03T15:18:39+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=18706ms status=200 bytes=2
+2011-08-03T15:18:39+00:00 app[web.1]: Completed 200 OK in 18703ms (Views: 0.2ms | ActiveRecord: 18692.9ms)
+2011-08-03T15:18:39+00:00 app[web.1]: 
+2011-08-03T15:18:39+00:00 app[web.1]: 
+2011-08-03T15:18:39+00:00 app[web.1]: Started POST "/votes/" for 166.77.6.251 at 2011-08-03 08:18:39 -0700
+2011-08-03T15:18:39+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:18:39+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"147", "vote"=>"-1", "authenticity_token"=>"byzfHGsAgiHWokKqjdUXrYkB+pRic83vjyF6ykxLNK4="}
+2011-08-03T15:18:39+00:00 app[web.1]: Completed 200 OK in 42ms (Views: 0.1ms | ActiveRecord: 33.6ms)
+2011-08-03T15:18:39+00:00 app[web.1]: 
+2011-08-03T15:18:39+00:00 app[web.1]: 
+2011-08-03T15:18:39+00:00 app[web.1]: Started POST "/votes/" for 166.77.6.4 at 2011-08-03 08:18:39 -0700
+2011-08-03T15:18:39+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:18:39+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"147", "vote"=>"1", "authenticity_token"=>"byzfHGsAgiHWokKqjdUXrYkB+pRic83vjyF6ykxLNK4="}
+2011-08-03T15:18:39+00:00 app[web.1]: Completed 200 OK in 49ms (Views: 0.2ms | ActiveRecord: 27.3ms)
+2011-08-03T15:18:39+00:00 app[web.1]: 
+2011-08-03T15:18:39+00:00 app[web.1]: 
+2011-08-03T15:18:39+00:00 app[web.1]: Started POST "/votes/" for 166.77.6.4 at 2011-08-03 08:18:39 -0700
+2011-08-03T15:18:39+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:18:39+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"146", "vote"=>"1", "authenticity_token"=>"byzfHGsAgiHWokKqjdUXrYkB+pRic83vjyF6ykxLNK4="}
+2011-08-03T15:18:39+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=2551ms status=200 bytes=1
+2011-08-03T15:18:39+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=12749ms status=200 bytes=2
+2011-08-03T15:18:39+00:00 app[web.1]: Completed 200 OK in 160ms (Views: 0.2ms | ActiveRecord: 151.9ms)
+2011-08-03T15:18:40+00:00 heroku[nginx]: POST /votes/ HTTP/1.1 | 166.77.6.4 | 764 | http | 200
+2011-08-03T15:21:46+00:00 app[web.1]: 
+2011-08-03T15:21:46+00:00 app[web.1]: 
+2011-08-03T15:21:46+00:00 app[web.1]: Started GET "/events/3?invite=078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537" for 166.77.6.4 at 2011-08-03 08:21:46 -0700
+2011-08-03T15:21:46+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:21:46+00:00 app[web.1]:   Parameters: {"invite"=>"078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537", "id"=>"3"}
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.3ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered events/_header.html.erb (18.9ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered events/_participants.html.erb (8.6ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.3ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered shared/_vote.html.erb (7.6ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.4ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.4ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.3ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (1.6ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered shared/_search_header.html.erb (5.8ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=233ms status=200 bytes=24550
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered shared/_add_places.html.erb (7.2ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered layouts/_header.html.erb (14.1ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.5ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (204.7ms)
+2011-08-03T15:21:46+00:00 app[web.1]: Completed 200 OK in 225ms (Views: 77.6ms | ActiveRecord: 138.7ms)
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=6544
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/groupie.css dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=12808
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=33378
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=847
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=12744
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=12336
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery.countdown.pack.js dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=9971
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=11ms status=200 bytes=210246
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/images/city4.jpg dyno=web.1 queue=0 wait=0ms service=12ms status=200 bytes=136525
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_up.png dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=6020
+2011-08-03T15:21:46+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_down.png dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=5999
+2011-08-03T15:21:47+00:00 heroku[nginx]: GET /javascripts/jquery_ujs.js?1312255037 HTTP/1.1 | 166.77.6.4 | 236 | http | 304
+2011-08-03T15:21:47+00:00 heroku[nginx]: GET /images/city4.jpg HTTP/1.1 | 166.77.6.4 | 237 | http | 304
+2011-08-03T15:21:47+00:00 heroku[nginx]: GET /images/vote_up.png HTTP/1.1 | 166.77.6.4 | 236 | http | 304
+2011-08-03T15:23:48+00:00 app[web.1]: 
+2011-08-03T15:23:48+00:00 app[web.1]: 
+2011-08-03T15:23:48+00:00 app[web.1]: Started GET "/" for 67.244.91.42 at 2011-08-03 08:23:48 -0700
+2011-08-03T15:23:48+00:00 app[web.1]:   Processing by PagesController#home as HTML
+2011-08-03T15:23:48+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T15:23:48+00:00 app[web.1]: Rendered shared/_search_header.html.erb (0.8ms)
+2011-08-03T15:23:48+00:00 app[web.1]: Rendered shared/_add_places.html.erb (0.1ms)
+2011-08-03T15:23:48+00:00 app[web.1]: Rendered layouts/_header.html.erb (1.9ms)
+2011-08-03T15:23:48+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (0.8ms)
+2011-08-03T15:23:48+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:23:48+00:00 app[web.1]: Rendered pages/home.html.erb within layouts/application (6.1ms)
+2011-08-03T15:23:48+00:00 app[web.1]: Completed 200 OK in 11ms (Views: 10.7ms | ActiveRecord: 0.0ms)
+2011-08-03T15:23:48+00:00 heroku[router]: GET deep-river-691.heroku.com/ dyno=web.1 queue=0 wait=0ms service=22ms status=200 bytes=5916
+2011-08-03T15:23:49+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=33378
+2011-08-03T15:23:49+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=847
+2011-08-03T15:23:49+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/groupie.css dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=12808
+2011-08-03T15:23:49+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=12744
+2011-08-03T15:23:49+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=14ms status=200 bytes=210246
+2011-08-03T15:23:49+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery.countdown.pack.js dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=9971
+2011-08-03T15:23:49+00:00 heroku[router]: GET deep-river-691.heroku.com/images/city4.jpg dyno=web.1 queue=0 wait=0ms service=12ms status=200 bytes=136525
+2011-08-03T15:23:49+00:00 heroku[nginx]: GET /stylesheets/jquery-ui-1.8.14.custom.css?1312255037 HTTP/1.1 | 67.244.91.42 | 236 | http | 304
+2011-08-03T15:23:49+00:00 heroku[nginx]: GET /javascripts/jquery.countdown.pack.js?1312255037 HTTP/1.1 | 67.244.91.42 | 236 | http | 304
+2011-08-03T15:23:50+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/print.css dyno=web.1 queue=0 wait=1ms service=6ms status=200 bytes=1286
+2011-08-03T15:23:50+00:00 heroku[router]: GET deep-river-691.heroku.com/favicon.ico dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=0
+2011-08-03T15:23:50+00:00 heroku[nginx]: GET /stylesheets/blueprint/print.css?1312255037 HTTP/1.1 | 67.244.91.42 | 996 | http | 200
+2011-08-03T15:23:51+00:00 app[web.1]: 
+2011-08-03T15:23:51+00:00 app[web.1]: 
+2011-08-03T15:23:51+00:00 app[web.1]: Started GET "/users/sign_in" for 67.244.91.42 at 2011-08-03 08:23:51 -0700
+2011-08-03T15:23:51+00:00 app[web.1]:   Processing by Devise::SessionsController#new as HTML
+2011-08-03T15:23:51+00:00 app[web.1]: Rendered devise/shared/_links.erb (1.4ms)
+2011-08-03T15:23:51+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T15:23:51+00:00 app[web.1]: Rendered shared/_search_header.html.erb (0.8ms)
+2011-08-03T15:23:51+00:00 app[web.1]: Rendered shared/_add_places.html.erb (0.1ms)
+2011-08-03T15:23:51+00:00 heroku[router]: GET deep-river-691.heroku.com/users/sign_in dyno=web.1 queue=0 wait=0ms service=62ms status=200 bytes=6587
+2011-08-03T15:23:51+00:00 app[web.1]: Rendered layouts/_header.html.erb (2.1ms)
+2011-08-03T15:23:51+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (0.9ms)
+2011-08-03T15:23:51+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:23:51+00:00 app[web.1]: Rendered devise/sessions/new.html.erb within layouts/application (50.8ms)
+2011-08-03T15:23:51+00:00 app[web.1]: Completed 200 OK in 56ms (Views: 54.9ms | ActiveRecord: 0.0ms)
+2011-08-03T15:23:52+00:00 heroku[nginx]: GET /users/sign_in HTTP/1.1 | 67.244.91.42 | 2670 | http | 200
+2011-08-03T15:23:56+00:00 app[web.1]: 
+2011-08-03T15:23:56+00:00 app[web.1]: 
+2011-08-03T15:23:56+00:00 app[web.1]: Started POST "/users/sign_in" for 67.244.91.42 at 2011-08-03 08:23:56 -0700
+2011-08-03T15:23:56+00:00 app[web.1]:   Processing by Devise::SessionsController#create as HTML
+2011-08-03T15:23:56+00:00 app[web.1]:   Parameters: {"utf8"=>"✓", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A=", "user"=>{"username"=>"vergeman", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Sign in"}
+2011-08-03T15:23:57+00:00 app[web.1]: Redirected to http://deep-river-691.heroku.com/users/1
+2011-08-03T15:23:57+00:00 app[web.1]: Completed 302 Found in 561ms
+2011-08-03T15:23:57+00:00 heroku[router]: POST deep-river-691.heroku.com/users/sign_in dyno=web.1 queue=0 wait=0ms service=573ms status=302 bytes=106
+2011-08-03T15:23:57+00:00 app[web.1]: 
+2011-08-03T15:23:57+00:00 app[web.1]: 
+2011-08-03T15:23:57+00:00 app[web.1]: Started GET "/users/1" for 67.244.91.42 at 2011-08-03 08:23:57 -0700
+2011-08-03T15:23:57+00:00 app[web.1]:   Processing by UsersController#show as HTML
+2011-08-03T15:23:57+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2011-08-03T15:23:57+00:00 app[web.1]: Rendered users/_events.html.erb (23.5ms)
+2011-08-03T15:23:57+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T15:23:57+00:00 app[web.1]: Rendered shared/_search_header.html.erb (1.7ms)
+2011-08-03T15:23:57+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:23:57+00:00 app[web.1]: Rendered shared/_add_places.html.erb (4.8ms)
+2011-08-03T15:23:57+00:00 app[web.1]: Rendered layouts/_header.html.erb (7.5ms)
+2011-08-03T15:23:57+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (0.9ms)
+2011-08-03T15:23:57+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:23:57+00:00 app[web.1]: Rendered users/show.html.erb within layouts/application (39.0ms)
+2011-08-03T15:23:57+00:00 app[web.1]: Completed 200 OK in 47ms (Views: 30.7ms | ActiveRecord: 14.6ms)
+2011-08-03T15:23:57+00:00 heroku[router]: GET deep-river-691.heroku.com/users/1 dyno=web.1 queue=0 wait=0ms service=55ms status=200 bytes=8993
+2011-08-03T15:23:58+00:00 heroku[nginx]: GET /users/1 HTTP/1.1 | 67.244.91.42 | 3860 | http | 200
+2011-08-03T15:24:00+00:00 app[web.1]: 
+2011-08-03T15:24:00+00:00 app[web.1]: 
+2011-08-03T15:24:00+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:24:00 -0700
+2011-08-03T15:24:00+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:24:00+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.3ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered events/_header.html.erb (21.4ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered events/_participants.html.erb (8.6ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered shared/_vote.html.erb (12.1ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.4ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered shared/_vote.html.erb (6.2ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered shared/_vote.html.erb (6.6ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered shared/_vote.html.erb (9.2ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.3ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:24:00+00:00 app[web.1]: Completed 200 OK in 473ms (Views: 88.4ms | ActiveRecord: 381.9ms)
+2011-08-03T15:24:00+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=479ms status=200 bytes=24505
+2011-08-03T15:24:01+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_up.png dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=6020
+2011-08-03T15:24:01+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_down.png dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=5999
+2011-08-03T15:24:01+00:00 heroku[nginx]: GET /events/3 HTTP/1.1 | 67.244.91.42 | 6815 | http | 200
+2011-08-03T15:28:28+00:00 app[web.1]: 
+2011-08-03T15:28:28+00:00 app[web.1]: 
+2011-08-03T15:28:28+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:28:28 -0700
+2011-08-03T15:28:28+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:28:28+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.3ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered events/_header.html.erb (24.8ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered events/_participants.html.erb (10.7ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.4ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.9ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered shared/_vote.html.erb (12.5ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.4ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.5ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.8ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered shared/_add_places.html.erb (10.1ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered layouts/_header.html.erb (14.8ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.3ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.3ms)
+2011-08-03T15:28:28+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (169.6ms)
+2011-08-03T15:28:28+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=184ms status=304 bytes=0
+2011-08-03T15:28:28+00:00 app[web.1]: Completed 200 OK in 177ms (Views: 82.9ms | ActiveRecord: 92.0ms)
+2011-08-03T15:28:28+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=33378
+2011-08-03T15:28:28+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/groupie.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=12808
+2011-08-03T15:28:28+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=6544
+2011-08-03T15:28:28+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=12744
+2011-08-03T15:28:28+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_up.png dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=6020
+2011-08-03T15:28:28+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_down.png dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=5999
+2011-08-03T15:28:28+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/print.css dyno=web.1 queue=0 wait=0ms service=53ms status=200 bytes=1286
+2011-08-03T15:28:28+00:00 heroku[nginx]: GET /stylesheets/jquery-ui-1.8.14.custom.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:28:28+00:00 heroku[nginx]: GET /stylesheets/jquery.countdown.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:28:28+00:00 heroku[nginx]: GET /javascripts/jquery_ujs.js?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:28:29+00:00 heroku[nginx]: GET /images/vote_down.png HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:28:42+00:00 app[web.1]: 
+2011-08-03T15:28:42+00:00 app[web.1]: 
+2011-08-03T15:28:42+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:28:42 -0700
+2011-08-03T15:28:42+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:28:42+00:00 app[web.1]:   Pa
+rameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"-1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:28:42+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=41ms status=200 bytes=1
+2011-08-03T15:28:42+00:00 app[web.1]: Completed 200 OK in 34ms (Views: 0.2ms | ActiveRecord: 24.5ms)
+2011-08-03T15:28:43+00:00 app[web.1]: 
+2011-08-03T15:28:43+00:00 app[web.1]: 
+2011-08-03T15:28:43+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:28:43 -0700
+2011-08-03T15:28:43+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:28:43+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"-1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:28:43+00:00 app[web.1]: Completed 200 OK in 35ms (Views: 0.1ms | ActiveRecord: 25.2ms)
+2011-08-03T15:28:43+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=40ms status=200 bytes=1
+2011-08-03T15:28:43+00:00 app[web.1]: 
+2011-08-03T15:28:43+00:00 app[web.1]: 
+2011-08-03T15:28:43+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:28:43 -0700
+2011-08-03T15:28:43+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:28:43+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"-1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:28:43+00:00 app[web.1]: Completed 200 OK in 38ms (Views: 0.1ms | ActiveRecord: 30.6ms)
+2011-08-03T15:28:43+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=42ms status=200 bytes=1
+2011-08-03T15:28:44+00:00 heroku[nginx]: POST /votes/ HTTP/1.1 | 67.244.91.42 | 764 | http | 200
+2011-08-03T15:28:49+00:00 app[web.1]: 
+2011-08-03T15:28:49+00:00 app[web.1]: 
+2011-08-03T15:28:49+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:28:49 -0700
+2011-08-03T15:28:49+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:28:49+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:28:49+00:00 app[web.1]: Completed 200 OK in 79ms (Views: 0.2ms | ActiveRecord: 69.2ms)
+2011-08-03T15:28:49+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=85ms status=200 bytes=1
+2011-08-03T15:28:49+00:00 app[web.1]: 
+2011-08-03T15:28:49+00:00 app[web.1]: 
+2011-08-03T15:28:49+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:28:49 -0700
+2011-08-03T15:28:49+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:28:49+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:28:51+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=1820ms status=200 bytes=1
+2011-08-03T15:28:51+00:00 app[web.1]: Completed 200 OK in 1815ms (Views: 0.2ms | ActiveRecord: 1806.2ms)
+2011-08-03T15:28:54+00:00 app[web.1]: 
+2011-08-03T15:28:54+00:00 app[web.1]: 
+2011-08-03T15:28:54+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:28:54 -0700
+2011-08-03T15:28:54+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:28:54+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"117", "vote"=>"1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:28:54+00:00 app[web.1]: Completed 200 OK in 67ms (Views: 0.2ms | ActiveRecord: 59.4ms)
+2011-08-03T15:28:54+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=73ms status=200 bytes=1
+2011-08-03T15:29:01+00:00 app[web.1]: 
+2011-08-03T15:29:01+00:00 app[web.1]: 
+2011-08-03T15:29:01+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:29:01 -0700
+2011-08-03T15:29:01+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:29:01+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"-1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:29:01+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=47ms status=200 bytes=1
+2011-08-03T15:29:01+00:00 app[web.1]: Completed 200 OK in 39ms (Views: 0.1ms | ActiveRecord: 28.8ms)
+2011-08-03T15:29:02+00:00 app[web.1]: 
+2011-08-03T15:29:02+00:00 app[web.1]: 
+2011-08-03T15:29:02+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:29:02 -0700
+2011-08-03T15:29:02+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:29:02+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"-1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:29:02+00:00 app[web.1]: Completed 200 OK in 100ms (Views: 0.2ms | ActiveRecord: 92.2ms)
+2011-08-03T15:29:02+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=104ms status=200 bytes=2
+2011-08-03T15:29:02+00:00 heroku[nginx]: POST /votes/ HTTP/1.1 | 67.244.91.42 | 764 | http | 200
+2011-08-03T15:29:04+00:00 app[web.1]: 
+2011-08-03T15:29:04+00:00 app[web.1]: 
+2011-08-03T15:29:04+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:29:04 -0700
+2011-08-03T15:29:04+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:29:04+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.4ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered events/_header.html.erb (24.4ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.6ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered events/_participants.html.erb (8.6ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.1ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.9ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.0ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered shared/_vote.html.erb (62.1ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered shared/_vote.html.erb (7.5ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (1.6ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered shared/_search_header.html.erb (8.0ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.1ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered shared/_add_places.html.erb (21.5ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered layouts/_header.html.erb (31.9ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (3.7ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.9ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (253.7ms)
+2011-08-03T15:29:04+00:00 app[web.1]: Completed 200 OK in 271ms (Views: 96.2ms | ActiveRecord: 164.1ms)
+2011-08-03T15:29:04+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=281ms status=200 bytes=24506
+2011-08-03T15:29:04+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=12336
+2011-08-03T15:29:04+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=33378
+2011-08-03T15:29:04+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=210246
+2011-08-03T15:29:04+00:00 heroku[router]: GET deep-river-691.heroku.com/images/city4.jpg dyno=web.1 queue=0 wait=0ms service=12ms status=200 bytes=136525
+2011-08-03T15:29:04+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_up.png dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=6020
+2011-08-03T15:29:04+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_down.png dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=5999
+2011-08-03T15:29:04+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/print.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=1286
+2011-08-03T15:29:05+00:00 heroku[nginx]: GET /stylesheets/jquery-ui-1.8.14.custom.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:29:05+00:00 heroku[nginx]: GET /javascripts/jquery-ui-1.8.14.custom.min.js?1312255037 HTTP/1.1 | 67.244.91.42 | 236 | http | 304
+2011-08-03T15:29:05+00:00 heroku[nginx]: GET /images/vote_up.png HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:29:05+00:00 heroku[nginx]: GET /images/vote_down.png HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:29:09+00:00 app[web.1]: 
+2011-08-03T15:29:09+00:00 app[web.1]: 
+2011-08-03T15:29:09+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:29:09 -0700
+2011-08-03T15:29:09+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:29:09+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"147", "vote"=>"-1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:29:09+00:00 app[web.1]: Completed 200 OK in 38ms (Views: 0.2ms | ActiveRecord: 28.8ms)
+2011-08-03T15:29:09+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=44ms status=200 bytes=1
+2011-08-03T15:29:10+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=36ms status=200 bytes=2
+2011-08-03T15:29:10+00:00 app[web.1]: 
+2011-08-03T15:29:10+00:00 app[web.1]: 
+2011-08-03T15:29:10+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:29:10 -0700
+2011-08-03T15:29:10+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:29:10+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:29:10+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T15:29:10+00:00 app[web.1]: Rendered events/_header.html.erb (46.7ms)
+2011-08-03T15:29:10+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.4ms)
+2011-08-03T15:29:10+00:00 app[web.1]: Rendered events/_participants.html.erb (13.0ms)
+2011-08-03T15:29:10+00:00 app[web.1]: Rendered shared/_vote.html.erb (30.1ms)
+2011-08-03T15:29:10+00:00 app[web.1]: Rendered shared/_vote.html.erb (18.6ms)
+2011-08-03T15:29:10+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.9ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Rendered shared/_vote.html.erb (15.1ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Rendered shared/_vote.html.erb (42.1ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.8ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Rendered shared/_add_places.html.erb (12.3ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Rendered layouts/_header.html.erb (21.5ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (5.8ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (487.0ms)
+2011-08-03T15:29:11+00:00 app[web.1]: Completed 200 OK in 498ms (Views: 147.9ms | ActiveRecord: 345.9ms)
+2011-08-03T15:29:11+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=519ms status=200 bytes=24492
+2011-08-03T15:29:11+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=33378
+2011-08-03T15:29:11+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=847
+2011-08-03T15:29:11+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=11ms status=200 bytes=12744
+2011-08-03T15:29:11+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=14ms status=200 bytes=210246
+2011-08-03T15:29:11+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery.countdown.pack.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=9971
+2011-08-03T15:29:11+00:00 heroku[nginx]: GET /events/3 HTTP/1.1 | 67.244.91.42 | 6865 | http | 200
+2011-08-03T15:29:12+00:00 heroku[nginx]: GET /javascripts/jquery-ui-1.8.14.custom.min.js?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:29:12+00:00 heroku[nginx]: GET /images/city4.jpg HTTP/1.1 | 67.244.91.42 | 236 | http | 304
+2011-08-03T15:29:12+00:00 heroku[nginx]: GET /stylesheets/blueprint/print.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:29:20+00:00 app[web.1]: 
+2011-08-03T15:29:20+00:00 app[web.1]: 
+2011-08-03T15:29:20+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:29:20 -0700
+2011-08-03T15:29:20+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:29:20+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:29:20+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.4ms)
+2011-08-03T15:29:20+00:00 app[web.1]: Rendered events/_header.html.erb (24.6ms)
+2011-08-03T15:29:20+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:29:20+00:00 app[web.1]: Rendered events/_participants.html.erb (9.4ms)
+2011-08-03T15:29:20+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.2ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.2ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.0ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.2ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.0ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.4ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:29:21+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=182ms status=304 bytes=0
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered shared/_add_places.html.erb (6.6ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered layouts/_header.html.erb (11.1ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (2.0ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (147.9ms)
+2011-08-03T15:29:21+00:00 app[web.1]: Completed 200 OK in 177ms (Views: 70.8ms | ActiveRecord: 102.1ms)
+2011-08-03T15:29:21+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=12336
+2011-08-03T15:29:21+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=847
+2011-08-03T15:29:21+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/groupie.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=12808
+2011-08-03T15:29:21+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=6544
+2011-08-03T15:29:21+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=15ms status=200 bytes=210246
+2011-08-03T15:29:21+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery.countdown.pack.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=9971
+2011-08-03T15:29:21+00:00 heroku[router]: GET deep-river-691.heroku.com/images/city4.jpg dyno=web.1 queue=0 wait=0ms service=21ms status=200 bytes=136525
+2011-08-03T15:29:44+00:00 app[web.1]: 
+2011-08-03T15:29:44+00:00 app[web.1]: 
+2011-08-03T15:29:44+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:29:44 -0700
+2011-08-03T15:29:44+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:29:44+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered events/_header.html.erb (15.8ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.2ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered events/_participants.html.erb (7.0ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.0ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered shared/_vote.html.erb (6.4ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.8ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.7ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.6ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.1ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered shared/_add_places.html.erb (6.0ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered layouts/_header.html.erb (9.9ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.1ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.3ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (116.6ms)
+2011-08-03T15:29:44+00:00 app[web.1]: Completed 200 OK in 124ms (Views: 41.3ms | ActiveRecord: 80.5ms)
+2011-08-03T15:29:44+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=129ms status=200 bytes=24492
+2011-08-03T15:29:44+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=12336
+2011-08-03T15:29:44+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=847
+2011-08-03T15:29:44+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/groupie.css dyno=web.1 queue=0 wait=0ms service=4ms status=200 bytes=12808
+2011-08-03T15:29:44+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=6544
+2011-08-03T15:29:44+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery.countdown.pack.js dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=9971
+2011-08-03T15:29:45+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_down.png dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=5999
+2011-08-03T15:29:45+00:00 heroku[nginx]: GET /stylesheets/blueprint/screen.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:29:45+00:00 heroku[nginx]: GET /stylesheets/groupie.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:29:45+00:00 heroku[nginx]: GET /javascripts/jquery_ujs.js?1312255037 HTTP/1.1 | 67.244.91.42 | 236 | http | 304
+2011-08-03T15:29:50+00:00 app[web.1]: 
+2011-08-03T15:29:50+00:00 app[web.1]: 
+2011-08-03T15:29:50+00:00 app[web.1]: Started GET "/events/3?invite=078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537" for 166.77.6.4 at 2011-08-03 08:29:50 -0700
+2011-08-03T15:29:50+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:29:50+00:00 app[web.1]:   Parameters: {"invite"=>"078571f0f4c73771a93a33a79cd0e75b10833715dd3acc8a8c1c27932653a537", "id"=>"3"}
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.6ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered events/_header.html.erb (17.0ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.2ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered events/_participants.html.erb (9.8ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.8ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered shared/_vote.html.erb (43.9ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.2ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.7ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered shared/_vote.html.erb (6.0ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (1.3ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered shared/_search_header.html.erb (4.5ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered shared/_add_places.html.erb (8.9ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered layouts/_header.html.erb (14.8ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.4ms)
+2011-08-03T15:29:50+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=201ms status=200 bytes=24488
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (178.7ms)
+2011-08-03T15:29:50+00:00 app[web.1]: Completed 200 OK in 195ms (Views: 101.2ms | ActiveRecord: 87.8ms)
+2011-08-03T15:29:55+00:00 app[web.1]: 
+2011-08-03T15:29:55+00:00 app[web.1]: 
+2011-08-03T15:29:55+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:29:55 -0700
+2011-08-03T15:29:55+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:29:55+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:29:55+00:00 app[web.1]: Completed 200 OK in 31ms (Views: 0.2ms | ActiveRecord: 22.8ms)
+2011-08-03T15:29:55+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=37ms status=200 bytes=2
+2011-08-03T15:29:55+00:00 app[web.1]: 
+2011-08-03T15:29:55+00:00 app[web.1]: 
+2011-08-03T15:29:55+00:00 app[web.1]: Started POST "/votes/" for 67.244.91.42 at 2011-08-03 08:29:55 -0700
+2011-08-03T15:29:55+00:00 app[web.1]:   Processing by VotesController#create as JSON
+2011-08-03T15:29:55+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "place_id"=>"130", "vote"=>"1", "authenticity_token"=>"raZ0jF64ZlWcw0qPWDdnxasfIllRxGOfYb0HwzOjE3A="}
+2011-08-03T15:29:55+00:00 app[web.1]: Completed 200 OK in 30ms (Views: 0.2ms | ActiveRecord: 22.5ms)
+2011-08-03T15:29:55+00:00 heroku[router]: POST deep-river-691.heroku.com/votes/ dyno=web.1 queue=0 wait=0ms service=32ms status=200 bytes=1
+2011-08-03T15:29:55+00:00 heroku[nginx]: POST /votes/ HTTP/1.1 | 67.244.91.42 | 765 | http | 200
+2011-08-03T15:29:55+00:00 heroku[nginx]: POST /votes/ HTTP/1.1 | 67.244.91.42 | 764 | http | 200
+2011-08-03T15:29:58+00:00 app[web.1]: 
+2011-08-03T15:29:58+00:00 app[web.1]: 
+2011-08-03T15:29:58+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:29:58 -0700
+2011-08-03T15:29:58+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:29:58+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered events/_header.html.erb (20.0ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.2ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered events/_participants.html.erb (7.5ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.8ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered shared/_vote.html.erb (31.0ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.1ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.9ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered shared/_vote.html.erb (63.1ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.9ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered shared/_add_places.html.erb (6.4ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered layouts/_header.html.erb (11.2ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.2ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.3ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (603.1ms)
+2011-08-03T15:29:58+00:00 app[web.1]: Completed 200 OK in 613ms (Views: 47.9ms | ActiveRecord: 563.4ms)
+2011-08-03T15:29:59+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=622ms status=200 bytes=24505
+2011-08-03T15:29:59+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=12336
+2011-08-03T15:29:59+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/groupie.css dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=12808
+2011-08-03T15:29:59+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=12744
+2011-08-03T15:29:59+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/print.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=1286
+2011-08-03T15:29:59+00:00 heroku[nginx]: GET /stylesheets/blueprint/screen.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:29:59+00:00 heroku[nginx]: GET /javascripts/application.js?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:29:59+00:00 heroku[nginx]: GET /javascripts/jquery_ujs.js?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:30:00+00:00 heroku[nginx]: GET /images/vote_up.png HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:30:14+00:00 app[web.1]: 
+2011-08-03T15:30:14+00:00 app[web.1]: 
+2011-08-03T15:30:14+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:30:14 -0700
+2011-08-03T15:30:14+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:30:14+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered events/_header.html.erb (23.2ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered events/_participants.html.erb (10.6ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered shared/_vote.html.erb (46.9ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.8ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered shared/_vote.html.erb (10.5ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.8ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.5ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.7ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered layouts/_header.html.erb (15.7ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered shared/_add_places.html.erb (10.7ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.5ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (249.8ms)
+2011-08-03T15:30:14+00:00 app[web.1]: Completed 200 OK in 273ms (Views: 64.1ms | ActiveRecord: 201.5ms)
+2011-08-03T15:30:14+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=289ms status=200 bytes=24505
+2011-08-03T15:30:15+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=33378
+2011-08-03T15:30:15+00:00 heroku[nginx]: GET /stylesheets/jquery.countdown.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:30:15+00:00 heroku[nginx]: GET /stylesheets/groupie.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:30:17+00:00 app[web.1]: 
+2011-08-03T15:30:17+00:00 app[web.1]: 
+2011-08-03T15:30:17+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:30:17 -0700
+2011-08-03T15:30:17+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:30:17+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered events/_header.html.erb (77.3ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.4ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered events/_participants.html.erb (12.3ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.3ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (41.0ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (6.1ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.7ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered shared/_vote.html.erb (7.6ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.4ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered shared/_add_places.html.erb (11.0ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered layouts/_header.html.erb (15.4ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.3ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (269.7ms)
+2011-08-03T15:30:18+00:00 app[web.1]: Completed 200 OK in 343ms (Views: 120.8ms | ActiveRecord: 217.0ms)
+2011-08-03T15:30:18+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=347ms status=304 bytes=0
+2011-08-03T15:30:18+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=210246
+2011-08-03T15:30:18+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_down.png dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=5999
+2011-08-03T15:30:18+00:00 heroku[nginx]: GET /javascripts/application.js?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:30:19+00:00 heroku[nginx]: GET /images/vote_down.png HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:30:38+00:00 app[web.1]: 
+2011-08-03T15:30:38+00:00 app[web.1]: 
+2011-08-03T15:30:38+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:30:38 -0700
+2011-08-03T15:30:38+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:30:38+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered events/_header.html.erb (134.3ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered events/_participants.html.erb (6.9ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.8ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.1ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered shared/_vote.html.erb (64.4ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.8ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered shared/_add_places.html.erb (10.3ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered layouts/_header.html.erb (14.7ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.2ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (379.1ms)
+2011-08-03T15:30:38+00:00 app[web.1]: Completed 200 OK in 543ms (Views: 56.6ms | ActiveRecord: 483.8ms)
+2011-08-03T15:30:38+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=550ms status=200 bytes=24505
+2011-08-03T15:30:38+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=12336
+2011-08-03T15:30:38+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=847
+2011-08-03T15:30:38+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=1ms status=200 bytes=12744
+2011-08-03T15:30:39+00:00 heroku[router]: GET deep-river-691.heroku.com/images/city4.jpg dyno=web.1 queue=0 wait=0ms service=11ms status=200 bytes=136525
+2011-08-03T15:30:39+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_up.png dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=6020
+2011-08-03T15:30:39+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/print.css dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=1286
+2011-08-03T15:30:39+00:00 heroku[nginx]: GET /events/3 HTTP/1.1 | 67.244.91.42 | 6845 | http | 200
+2011-08-03T15:30:39+00:00 heroku[nginx]: GET /stylesheets/blueprint/screen.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:30:39+00:00 heroku[nginx]: GET /stylesheets/jquery-ui-1.8.14.custom.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:30:39+00:00 heroku[nginx]: GET /stylesheets/jquery.countdown.css?1312255037 HTTP/1.1 | 67.244.91.42 | 236 | http | 304
+2011-08-03T15:30:39+00:00 heroku[nginx]: GET /images/city4.jpg HTTP/1.1 | 67.244.91.42 | 236 | http | 304
+2011-08-03T15:30:39+00:00 heroku[nginx]: GET /stylesheets/blueprint/print.css?1312255037 HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:31:11+00:00 heroku[rake.44]: State changed from created to starting
+2011-08-03T15:31:13+00:00 app[rake.44]: Awaiting client
+2011-08-03T15:31:13+00:00 app[rake.44]: Starting process with command `rake event_expiry_email`
+2011-08-03T15:31:14+00:00 heroku[rake.44]: State changed from starting to up
+2011-08-03T15:31:27+00:00 heroku[rake.44]: Process exited
+2011-08-03T15:31:28+00:00 heroku[rake.44]: State changed from up to complete
+2011-08-03T15:32:32+00:00 app[web.1]: 
+2011-08-03T15:32:32+00:00 app[web.1]: 
+2011-08-03T15:32:32+00:00 app[web.1]: Started GET "/events/3" for 67.244.91.42 at 2011-08-03 08:32:32 -0700
+2011-08-03T15:32:32+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:32:32+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered events/_header.html.erb (20.3ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered events/_participants.html.erb (12.9ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.0ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered shared/_vote.html.erb (34.7ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered shared/_vote.html.erb (5.1ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.7ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.8ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered shared/_add_places.html.erb (9.1ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered layouts/_header.html.erb (17.1ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (5.6ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (322.2ms)
+2011-08-03T15:32:32+00:00 app[web.1]: Completed 200 OK in 330ms (Views: 88.1ms | ActiveRecord: 239.8ms)
+2011-08-03T15:32:32+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=339ms status=200 bytes=24505
+2011-08-03T15:32:33+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=33378
+2011-08-03T15:32:33+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=210246
+2011-08-03T15:32:33+00:00 heroku[router]: GET deep-river-691.heroku.com/images/vote_up.png dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=6020
+2011-08-03T15:32:33+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/print.css dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=1286
+2011-08-03T15:32:34+00:00 heroku[nginx]: GET /images/city4.jpg HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:32:34+00:00 heroku[nginx]: GET /images/vote_down.png HTTP/1.1 | 67.244.91.42 | 237 | http | 304
+2011-08-03T15:32:39+00:00 app[web.1]: 
+2011-08-03T15:32:39+00:00 app[web.1]: 
+2011-08-03T15:32:39+00:00 app[web.1]: Started GET "/events/3" for 166.77.6.4 at 2011-08-03 08:32:39 -0700
+2011-08-03T15:32:39+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:32:39+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.3ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered events/_header.html.erb (247.9ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered events/_participants.html.erb (10.8ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.8ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered shared/_vote.html.erb (6.1ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered shared/_vote.html.erb (7.2ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.9ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered shared/_vote.html.erb (7.6ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.8ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.5ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered shared/_add_places.html.erb (7.8ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered layouts/_header.html.erb (12.4ms)
+2011-08-03T15:32:39+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (2.1ms)
+2011-08-03T15:32:39+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=605ms status=200 bytes=24486
+2011-08-03T15:32:48+00:00 app[web.1]: 
+2011-08-03T15:32:48+00:00 app[web.1]: 
+2011-08-03T15:32:48+00:00 app[web.1]: Started GET "/events/3" for 166.77.6.4 at 2011-08-03 08:32:48 -0700
+2011-08-03T15:32:48+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:32:48+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered events/_header.html.erb (27.1ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.3ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered events/_participants.html.erb (13.5ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered shared/_vote.html.erb (55.8ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered shared/_vote.html.erb (10.5ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered shared/_vote.html.erb (13.4ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.0ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.2ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (2.2ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered shared/_search_header.html.erb (5.6ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:32:48+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=583ms status=304 bytes=0
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered shared/_add_places.html.erb (7.5ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered layouts/_header.html.erb (14.1ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.4ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.3ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (525.0ms)
+2011-08-03T15:32:48+00:00 app[web.1]: Completed 200 OK in 577ms (Views: 76.5ms | ActiveRecord: 497.8ms)
+2011-08-03T15:33:10+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:33:10+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (0.2ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered events/_header.html.erb (76.3ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered events/_votebar.html.erb (0.2ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered events/_participants.html.erb (8.3ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered shared/_vote.html.erb (3.7ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered shared/_vote.html.erb (31.5ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered shared/_vote.html.erb (10.7ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered shared/_vote.html.erb (40.1ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.3ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (2.1ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered shared/_search_header.html.erb (7.3ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered shared/_add_places.html.erb (10.0ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered layouts/_header.html.erb (18.4ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.5ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (421.5ms)
+2011-08-03T15:33:10+00:00 app[web.1]: Completed 200 OK in 434ms (Views: 60.6ms | ActiveRecord: 371.5ms)
+2011-08-03T15:33:10+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=442ms status=304 bytes=0
+2011-08-03T15:33:13+00:00 heroku[rake.45]: State changed from created to starting
+2011-08-03T15:33:17+00:00 heroku[rake.45]: State changed from starting to up
+2011-08-03T15:33:34+00:00 heroku[rake.45]: State changed from up to complete
+2011-08-03T15:35:42+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=849ms status=200 bytes=19
+2011-08-03T15:37:46+00:00 heroku[rake.46]: State changed from created to starting
+2011-08-03T15:37:49+00:00 app[rake.46]: Awaiting client
+2011-08-03T15:37:49+00:00 app[rake.46]: Starting process with command `rake event_expiry_email`
+2011-08-03T15:37:49+00:00 heroku[rake.46]: State changed from starting to up
+2011-08-03T15:37:55+00:00 heroku[rake.46]: Process exited
+2011-08-03T15:37:56+00:00 heroku[rake.46]: State changed from up to complete
+2011-08-03T15:38:15+00:00 heroku[slugc]: Slug compilation started
+2011-08-03T15:38:18+00:00 app[web.1]: 
+2011-08-03T15:38:18+00:00 app[web.1]: 
+2011-08-03T15:38:18+00:00 app[web.1]: Started GET "/events/3/places/130" for 166.77.6.251 at 2011-08-03 08:38:18 -0700
+2011-08-03T15:38:19+00:00 app[web.1]:   Processing by PlacesController#show as HTML
+2011-08-03T15:38:19+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "id"=>"130"}
+2011-08-03T15:38:19+00:00 app[web.1]: Rendered places/_place_info.html.erb (1.1ms)
+2011-08-03T15:38:19+00:00 app[web.1]: Rendered places/_place_review.html.erb (0.6ms)
+2011-08-03T15:38:19+00:00 app[web.1]: Rendered places/_place_comment.html.erb (0.4ms)
+2011-08-03T15:38:19+00:00 app[web.1]: Rendered places/_place_photos.html.erb (0.5ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered places/_search_result_form_add.html.erb (595.7ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.9ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered shared/_search_header.html.erb (3.2ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.1ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered shared/_add_places.html.erb (9.7ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered layouts/_header.html.erb (14.8ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.0ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered places/show.html.erb within layouts/application (629.3ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Completed 200 OK in 1124ms (Views: 50.8ms | ActiveRecord: 1071.8ms)
+2011-08-03T15:38:20+00:00 app[web.1]: 
+2011-08-03T15:38:20+00:00 app[web.1]: 
+2011-08-03T15:38:20+00:00 app[web.1]: Started GET "/events/3/places/130" for 166.77.6.4 at 2011-08-03 08:38:20 -0700
+2011-08-03T15:38:20+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3/places/130 dyno=web.1 queue=0 wait=0ms service=1194ms status=200 bytes=11203
+2011-08-03T15:38:20+00:00 app[web.1]:   Processing by PlacesController#show as HTML
+2011-08-03T15:38:20+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "id"=>"130"}
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered places/_place_info.html.erb (0.5ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered places/_place_review.html.erb (0.2ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered places/_place_comment.html.erb (0.0ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered places/_place_photos.html.erb (0.2ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered places/_search_result_form_add.html.erb (564.2ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.7ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered shared/_search_header.html.erb (1.5ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered shared/_add_places.html.erb (5.0ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered layouts/_header.html.erb (7.6ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (0.8ms)
+2011-08-03T15:38:20+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T15:38:20+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3/places/130 dyno=web.1 queue=0 wait=0ms service=1550ms status=200 bytes=11203
+2011-08-03T15:38:37+00:00 heroku[api]: Deploy 23e1e75 by alan.verga@gmail.com
+2011-08-03T15:38:37+00:00 heroku[api]: Release v42 created by alan.verga@gmail.com
+2011-08-03T15:38:38+00:00 heroku[web.1]: State changed from up to bouncing
+2011-08-03T15:38:38+00:00 heroku[web.1]: State changed from bouncing to created
+2011-08-03T15:38:38+00:00 heroku[web.1]: State changed from created to starting
+2011-08-03T15:38:38+00:00 heroku[slugc]: Slug compilation finished
+2011-08-03T15:38:40+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-08-03T15:38:40+00:00 app[web.1]: >> Stopping ...
+2011-08-03T15:38:40+00:00 heroku[web.1]: Process exited
+2011-08-03T15:38:40+00:00 heroku[web.1]: Starting process with command `thin -p 54933 -e production -R /home/heroku_rack/heroku.ru start`
+2011-08-03T15:38:45+00:00 app[web.1]: >> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+2011-08-03T15:38:45+00:00 app[web.1]: >> Maximum connections set to 1024
+2011-08-03T15:38:45+00:00 app[web.1]: >> Listening on 0.0.0.0:54933, CTRL+C to stop
+2011-08-03T15:38:46+00:00 heroku[web.1]: State changed from starting to up
+2011-08-03T15:39:06+00:00 heroku[rake.47]: State changed from created to starting
+2011-08-03T15:39:09+00:00 app[rake.47]: Awaiting client
+2011-08-03T15:39:09+00:00 app[rake.47]: Starting process with command `rake event_expiry_email`
+2011-08-03T15:39:09+00:00 heroku[rake.47]: State changed from starting to up
+2011-08-03T15:39:15+00:00 heroku[rake.47]: Process exited
+2011-08-03T15:39:16+00:00 heroku[rake.47]: State changed from up to complete
+2011-08-03T15:39:43+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=29ms status=200 bytes=344
+2011-08-03T15:39:43+00:00 heroku[nginx]: POST /_heroku/console? HTTP/1.1 | 50.19.151.40 | 493 | http | 200
+2011-08-03T15:40:45+00:00 heroku[rake.48]: State changed from created to starting
+2011-08-03T15:40:48+00:00 app[rake.48]: Awaiting client
+2011-08-03T15:40:48+00:00 app[rake.48]: Starting process with command `rake event_expiry_email`
+2011-08-03T15:40:49+00:00 heroku[rake.48]: State changed from starting to up
+2011-08-03T15:40:53+00:00 heroku[rake.48]: Process exited
+2011-08-03T15:40:53+00:00 heroku[rake.48]: State changed from up to complete
+2011-08-03T15:41:21+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=108ms status=200 bytes=344
+2011-08-03T15:41:51+00:00 heroku[rake.49]: State changed from created to starting
+2011-08-03T15:41:54+00:00 app[rake.49]: Awaiting client
+2011-08-03T15:41:54+00:00 app[rake.49]: Starting process with command `rake event_expiry_email`
+2011-08-03T15:41:54+00:00 heroku[rake.49]: State changed from starting to up
+2011-08-03T15:42:00+00:00 heroku[rake.49]: Process exited
+2011-08-03T15:42:01+00:00 heroku[rake.49]: State changed from up to complete
+2011-08-03T15:42:15+00:00 heroku[slugc]: Slug compilation started
+2011-08-03T15:42:23+00:00 heroku[api]: Deploy a3aa41b by alan.verga@gmail.com
+2011-08-03T15:42:24+00:00 heroku[api]: Release v43 created by alan.verga@gmail.com
+2011-08-03T15:42:27+00:00 heroku[web.1]: State changed from up to bouncing
+2011-08-03T15:42:27+00:00 heroku[web.1]: State changed from bouncing to created
+2011-08-03T15:42:27+00:00 heroku[web.1]: State changed from created to starting
+2011-08-03T15:42:27+00:00 heroku[slugc]: Slug compilation finished
+2011-08-03T15:42:28+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-08-03T15:42:28+00:00 app[web.1]: >> Stopping ...
+2011-08-03T15:42:28+00:00 heroku[web.1]: Process exited
+2011-08-03T15:42:30+00:00 heroku[web.1]: Starting process with command `thin -p 43376 -e production -R /home/heroku_rack/heroku.ru start`
+2011-08-03T15:42:35+00:00 app[web.1]: >> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+2011-08-03T15:42:35+00:00 app[web.1]: >> Maximum connections set to 1024
+2011-08-03T15:42:35+00:00 app[web.1]: >> Listening on 0.0.0.0:43376, CTRL+C to stop
+2011-08-03T15:42:36+00:00 heroku[web.1]: State changed from starting to up
+2011-08-03T15:48:14+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=39ms status=200 bytes=28
+2011-08-03T15:49:12+00:00 heroku[rake.50]: State changed from created to starting
+2011-08-03T15:49:17+00:00 app[rake.50]: Awaiting client
+2011-08-03T15:49:18+00:00 app[rake.50]: Starting process with command `rake event_expiry_email`
+2011-08-03T15:49:18+00:00 heroku[rake.50]: State changed from starting to up
+2011-08-03T15:49:23+00:00 heroku[rake.50]: Process exited
+2011-08-03T15:49:23+00:00 heroku[rake.50]: State changed from up to complete
+2011-08-03T15:49:34+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=14ms status=200 bytes=344
+2011-08-03T15:50:44+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=13ms status=200 bytes=344
+2011-08-03T15:51:11+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=2071ms status=200 bytes=18
+2011-08-03T15:53:42+00:00 heroku[slugc]: Slug compilation started
+2011-08-03T15:53:51+00:00 heroku[api]: Deploy 30015fe by alan.verga@gmail.com
+2011-08-03T15:53:51+00:00 heroku[api]: Release v44 created by alan.verga@gmail.com
+2011-08-03T15:53:56+00:00 heroku[web.1]: State changed from up to bouncing
+2011-08-03T15:53:56+00:00 heroku[web.1]: State changed from bouncing to created
+2011-08-03T15:53:56+00:00 heroku[web.1]: State changed from created to starting
+2011-08-03T15:53:56+00:00 heroku[slugc]: Slug compilation finished
+2011-08-03T15:53:58+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-08-03T15:53:58+00:00 app[web.1]: >> Stopping ...
+2011-08-03T15:53:58+00:00 heroku[web.1]: Process exited
+2011-08-03T15:53:59+00:00 heroku[web.1]: Starting process with command `thin -p 37259 -e production -R /home/heroku_rack/heroku.ru start`
+2011-08-03T15:54:06+00:00 app[web.1]: >> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+2011-08-03T15:54:06+00:00 app[web.1]: >> Maximum connections set to 1024
+2011-08-03T15:54:06+00:00 app[web.1]: >> Listening on 0.0.0.0:37259, CTRL+C to stop
+2011-08-03T15:54:07+00:00 heroku[web.1]: State changed from starting to up
+2011-08-03T15:54:50+00:00 heroku[rake.51]: State changed from created to starting
+2011-08-03T15:54:53+00:00 app[rake.51]: Awaiting client
+2011-08-03T15:54:53+00:00 app[rake.51]: Starting process with command `rake event_expiry_email`
+2011-08-03T15:54:53+00:00 heroku[rake.51]: State changed from starting to up
+2011-08-03T15:54:57+00:00 heroku[rake.51]: Process exited
+2011-08-03T15:54:58+00:00 heroku[rake.51]: State changed from up to complete
+2011-08-03T15:56:11+00:00 app[web.1]: 
+2011-08-03T15:56:11+00:00 app[web.1]: 
+2011-08-03T15:56:11+00:00 app[web.1]: Started GET "/home" for 166.77.6.4 at 2011-08-03 08:56:11 -0700
+2011-08-03T15:56:11+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=2468ms status=200 bytes=20
+2011-08-03T15:56:11+00:00 app[web.1]:   Processing by PagesController#home as HTML
+2011-08-03T15:56:11+00:00 app[web.1]: Redirected to http://deep-river-691.heroku.com/users/2
+2011-08-03T15:56:11+00:00 app[web.1]: Completed 302 Found in 53ms
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/home dyno=web.1 queue=0 wait=0ms service=1713ms status=302 bytes=106
+2011-08-03T15:56:11+00:00 app[web.1]: 
+2011-08-03T15:56:11+00:00 app[web.1]: 
+2011-08-03T15:56:11+00:00 app[web.1]: Started GET "/users/2" for 166.77.6.4 at 2011-08-03 08:56:11 -0700
+2011-08-03T15:56:11+00:00 app[web.1]:   Processing by UsersController#show as HTML
+2011-08-03T15:56:11+00:00 app[web.1]:   Parameters: {"id"=>"2"}
+2011-08-03T15:56:11+00:00 app[web.1]: Redirected to http://deep-river-691.heroku.com/events/3
+2011-08-03T15:56:11+00:00 app[web.1]: Completed 302 Found in 105ms
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/users/2 dyno=web.1 queue=0 wait=0ms service=113ms status=302 bytes=107
+2011-08-03T15:56:11+00:00 app[web.1]: 
+2011-08-03T15:56:11+00:00 app[web.1]: 
+2011-08-03T15:56:11+00:00 app[web.1]: Started GET "/events/3" for 166.77.6.4 at 2011-08-03 08:56:11 -0700
+2011-08-03T15:56:11+00:00 app[web.1]:   Processing by EventsController#show as HTML
+2011-08-03T15:56:11+00:00 app[web.1]:   Parameters: {"id"=>"3"}
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (3.6ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered events/_header.html.erb (57.7ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered events/_votebar.html.erb (1.2ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered events/_participants.html.erb (14.4ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered shared/_vote.html.erb (19.0ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered shared/_vote.html.erb (4.2ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered shared/_vote.html.erb (6.1ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (1.2ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered shared/_search_header.html.erb (8.2ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.4ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered shared/_add_places.html.erb (50.0ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered layouts/_header.html.erb (61.3ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (2.5ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.9ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Rendered events/show.html.erb within layouts/application (291.4ms)
+2011-08-03T15:56:11+00:00 app[web.1]: Completed 200 OK in 358ms (Views: 196.2ms | ActiveRecord: 186.3ms)
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3 dyno=web.1 queue=0 wait=0ms service=365ms status=200 bytes=24486
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=33378
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=847
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/print.css dyno=web.1 queue=0 wait=0ms service=5ms status=200 bytes=1286
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=1 wait=5ms service=3ms status=200 bytes=12336
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/groupie.css dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=12808
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=6544
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=12744
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=7ms status=200 bytes=210246
+2011-08-03T15:56:11+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery.countdown.pack.js dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=9971
+2011-08-03T15:56:12+00:00 heroku[nginx]: GET /events/3 HTTP/1.1 | 166.77.6.4 | 6754 | http | 200
+2011-08-03T15:56:12+00:00 heroku[nginx]: GET /javascripts/application.js?1312386822 HTTP/1.1 | 166.77.6.4 | 2401 | http | 200
+2011-08-03T15:57:33+00:00 heroku[slugc]: Slug compilation started
+2011-08-03T15:57:41+00:00 heroku[api]: Deploy ff4fc15 by alan.verga@gmail.com
+2011-08-03T15:57:42+00:00 heroku[api]: Release v45 created by alan.verga@gmail.com
+2011-08-03T15:57:42+00:00 heroku[web.1]: State changed from up to bouncing
+2011-08-03T15:57:42+00:00 heroku[web.1]: State changed from bouncing to created
+2011-08-03T15:57:42+00:00 heroku[web.1]: State changed from created to starting
+2011-08-03T15:57:43+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-08-03T15:57:43+00:00 app[web.1]: >> Stopping ...
+2011-08-03T15:57:44+00:00 heroku[web.1]: Process exited
+2011-08-03T15:57:44+00:00 heroku[web.1]: Starting process with command `thin -p 52834 -e production -R /home/heroku_rack/heroku.ru start`
+2011-08-03T15:57:50+00:00 app[web.1]: >> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+2011-08-03T15:57:50+00:00 app[web.1]: >> Maximum connections set to 1024
+2011-08-03T15:57:50+00:00 app[web.1]: >> Listening on 0.0.0.0:52834, CTRL+C to stop
+2011-08-03T15:57:52+00:00 heroku[web.1]: State changed from starting to up
+2011-08-03T15:58:26+00:00 heroku[rake.52]: State changed from created to starting
+2011-08-03T15:58:29+00:00 app[rake.52]: Awaiting client
+2011-08-03T15:58:29+00:00 app[rake.52]: Starting process with command `rake event_expiry_email`
+2011-08-03T15:58:29+00:00 heroku[rake.52]: State changed from starting to up
+2011-08-03T15:58:42+00:00 heroku[rake.52]: Process exited
+2011-08-03T15:58:43+00:00 heroku[rake.52]: State changed from up to complete
+2011-08-03T15:59:08+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=26ms status=200 bytes=344
+2011-08-03T16:01:05+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=5501ms status=200 bytes=19
+2011-08-03T16:01:06+00:00 heroku[nginx]: POST /_heroku/console?session_id=1042552&session_action=create HTTP/1.1 | 50.19.47.9 | 167 | http | 200
+2011-08-03T16:13:43+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=142ms status=200 bytes=19
+2011-08-03T16:13:44+00:00 heroku[nginx]: POST /_heroku/console?session_id=1042585&session_action=create HTTP/1.1 | 184.73.120.251 | 167 | http | 200
+2011-08-03T16:17:56+00:00 heroku[slugc]: Slug compilation started
+2011-08-03T16:18:04+00:00 heroku[api]: Deploy 1113806 by alan.verga@gmail.com
+2011-08-03T16:18:04+00:00 heroku[api]: Release v46 created by alan.verga@gmail.com
+2011-08-03T16:18:05+00:00 heroku[web.1]: State changed from up to bouncing
+2011-08-03T16:18:05+00:00 heroku[web.1]: State changed from bouncing to created
+2011-08-03T16:18:05+00:00 heroku[web.1]: State changed from created to starting
+2011-08-03T16:18:06+00:00 heroku[slugc]: Slug compilation finished
+2011-08-03T16:18:07+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-08-03T16:18:07+00:00 app[web.1]: >> Stopping ...
+2011-08-03T16:18:07+00:00 heroku[web.1]: Process exited
+2011-08-03T16:18:12+00:00 heroku[web.1]: Starting process with command `thin -p 34998 -e production -R /home/heroku_rack/heroku.ru start`
+2011-08-03T16:18:17+00:00 app[web.1]: >> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+2011-08-03T16:18:17+00:00 app[web.1]: >> Maximum connections set to 1024
+2011-08-03T16:18:17+00:00 app[web.1]: >> Listening on 0.0.0.0:34998, CTRL+C to stop
+2011-08-03T16:18:18+00:00 heroku[web.1]: State changed from starting to up
+2011-08-03T16:18:27+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=2834ms status=200 bytes=19
+2011-08-03T16:18:28+00:00 heroku[nginx]: POST /_heroku/console?session_id=1042593&session_action=create HTTP/1.1 | 50.19.151.40 | 167 | http | 200
+2011-08-03T16:23:07+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=343
+2011-08-03T16:23:07+00:00 heroku[nginx]: POST /_heroku/console? HTTP/1.1 | 50.19.47.9 | 492 | http | 200
+2011-08-03T16:23:49+00:00 heroku[slugc]: Slug compilation started
+2011-08-03T16:23:57+00:00 heroku[api]: Deploy d357668 by alan.verga@gmail.com
+2011-08-03T16:23:57+00:00 heroku[api]: Release v47 created by alan.verga@gmail.com
+2011-08-03T16:23:57+00:00 heroku[web.1]: State changed from up to bouncing
+2011-08-03T16:23:57+00:00 heroku[web.1]: State changed from bouncing to created
+2011-08-03T16:23:58+00:00 heroku[web.1]: State changed from created to starting
+2011-08-03T16:23:58+00:00 heroku[slugc]: Slug compilation finished
+2011-08-03T16:23:59+00:00 heroku[web.1]: Stopping process with SIGTERM
+2011-08-03T16:23:59+00:00 app[web.1]: >> Stopping ...
+2011-08-03T16:23:59+00:00 heroku[web.1]: Process exited
+2011-08-03T16:24:01+00:00 heroku[web.1]: Starting process with command `thin -p 44465 -e production -R /home/heroku_rack/heroku.ru start`
+2011-08-03T16:24:08+00:00 app[web.1]: >> Thin web server (v1.2.11 codename Bat-Shit Crazy)
+2011-08-03T16:24:08+00:00 app[web.1]: >> Maximum connections set to 1024
+2011-08-03T16:24:08+00:00 app[web.1]: >> Listening on 0.0.0.0:44465, CTRL+C to stop
+2011-08-03T16:24:08+00:00 heroku[web.1]: State changed from starting to up
+2011-08-03T16:27:57+00:00 heroku[rake.53]: State changed from created to starting
+2011-08-03T16:27:59+00:00 app[rake.53]: Awaiting client
+2011-08-03T16:28:00+00:00 app[rake.53]: Starting process with command `rake event_expiry_email`
+2011-08-03T16:28:01+00:00 heroku[rake.53]: State changed from starting to up
+2011-08-03T16:28:04+00:00 heroku[rake.53]: Process exited
+2011-08-03T16:28:05+00:00 heroku[rake.53]: State changed from up to complete
+2011-08-03T16:49:01+00:00 app[web.1]: 
+2011-08-03T16:49:01+00:00 app[web.1]: 
+2011-08-03T16:49:01+00:00 app[web.1]: Started GET "/events/3/places/130" for 67.244.91.42 at 2011-08-03 09:49:01 -0700
+2011-08-03T16:49:01+00:00 app[web.1]:   Processing by PlacesController#show as HTML
+2011-08-03T16:49:01+00:00 app[web.1]:   Parameters: {"event_id"=>"3", "id"=>"130"}
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered places/_place_info.html.erb (1.4ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered places/_place_review.html.erb (0.6ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered places/_place_comment.html.erb (0.5ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered places/_place_photos.html.erb (0.5ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered places/_search_result_form_add.html.erb (35.6ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (1.2ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered shared/_search_header.html.erb (2.6ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.5ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered shared/_add_places.html.erb (20.6ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered layouts/_header.html.erb (26.7ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered shared/_nav_bar.html.erb (1.6ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.7ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Rendered places/show.html.erb within layouts/application (149.2ms)
+2011-08-03T16:49:01+00:00 app[web.1]: Completed 200 OK in 246ms (Views: 153.2ms | ActiveRecord: 100.3ms)
+2011-08-03T16:49:01+00:00 heroku[router]: GET deep-river-691.heroku.com/events/3/places/130 dyno=web.1 queue=0 wait=1ms service=314ms status=200 bytes=11205
+2011-08-03T16:49:01+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/screen.css dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=12336
+2011-08-03T16:49:01+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery.countdown.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=847
+2011-08-03T16:49:01+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/jquery-ui-1.8.14.custom.css dyno=web.1 queue=0 wait=0ms service=11ms status=200 bytes=33378
+2011-08-03T16:49:01+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/groupie.css dyno=web.1 queue=0 wait=0ms service=9ms status=200 bytes=12808
+2011-08-03T16:49:01+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/application.js dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=6544
+2011-08-03T16:49:02+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery_ujs.js dyno=web.1 queue=0 wait=0ms service=6ms status=200 bytes=12744
+2011-08-03T16:49:02+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery-ui-1.8.14.custom.min.js dyno=web.1 queue=0 wait=0ms service=8ms status=200 bytes=210246
+2011-08-03T16:49:02+00:00 heroku[router]: GET deep-river-691.heroku.com/javascripts/jquery.countdown.pack.js dyno=web.1 queue=0 wait=0ms service=3ms status=200 bytes=9971
+2011-08-03T16:49:02+00:00 heroku[router]: GET deep-river-691.heroku.com/stylesheets/blueprint/print.css dyno=web.1 queue=0 wait=0ms service=2ms status=200 bytes=1286
+2011-08-03T16:49:02+00:00 heroku[nginx]: GET /javascripts/jquery.countdown.pack.js?1312388630 HTTP/1.1 | 67.244.91.42 | 5221 | http | 200
+2011-08-03T16:49:03+00:00 heroku[nginx]: GET /stylesheets/blueprint/print.css?1312388630 HTTP/1.1 | 67.244.91.42 | 997 | http | 200
+2011-08-03T16:50:59+00:00 app[web.1]: 
+2011-08-03T16:50:59+00:00 app[web.1]: 
+2011-08-03T16:50:59+00:00 app[web.1]: Started GET "/home" for 67.244.91.42 at 2011-08-03 09:50:59 -0700
+2011-08-03T16:50:59+00:00 app[web.1]:   Processing by PagesController#home as HTML
+2011-08-03T16:51:00+00:00 app[web.1]: Redirected to http://deep-river-691.heroku.com/users/1
+2011-08-03T16:51:00+00:00 app[web.1]: Completed 302 Found in 4ms
+2011-08-03T16:51:00+00:00 heroku[router]: GET deep-river-691.heroku.com/home dyno=web.1 queue=0 wait=0ms service=10ms status=302 bytes=106
+2011-08-03T16:51:00+00:00 app[web.1]: 
+2011-08-03T16:51:00+00:00 app[web.1]: 
+2011-08-03T16:51:00+00:00 app[web.1]: Started GET "/users/1" for 67.244.91.42 at 2011-08-03 09:51:00 -0700
+2011-08-03T16:51:00+00:00 app[web.1]:   Processing by UsersController#show as HTML
+2011-08-03T16:51:00+00:00 app[web.1]:   Parameters: {"id"=>"1"}
+2011-08-03T16:51:00+00:00 app[web.1]: Rendered shared/_date_calendar.html.erb (4.4ms)
+2011-08-03T16:51:00+00:00 app[web.1]: Rendered users/_events.html.erb (55.1ms)
+2011-08-03T16:51:00+00:00 app[web.1]: Rendered layouts/_stylesheets.html.erb (0.9ms)
+2011-08-03T16:51:00+00:00 app[web.1]: Rendered shared/_search_header.html.erb (1.9ms)
+2011-08-03T16:51:00+00:00 app[web.1]: Rendered shared/_error_messages.html.erb (0.0ms)
+2011-08-03T16:51:00+00:00 app[web.1]: Rendered shared/_add_places.html.erb (5.1ms)
+2011-08-03T16:51:00+00:00 app[web.1]: Rendered layouts/_header.html.erb (8.4ms)
+2011-08-03T16:51:00+00:00 heroku[router]: GET deep-river-691.heroku.com/users/1 dyno=web.1 queue=0 wait=0ms service=87ms status=200 bytes=8929
+2011-08-03T16:51:00+00:00 app[web.1]: Rendered layouts/_footer.html.erb (0.4ms)
+2011-08-03T16:51:00+00:00 app[web.1]: Rendered users/show.html.erb within layouts/application (73.1ms)
+2011-08-03T16:51:00+00:00 app[web.1]: Completed 200 OK in 81ms (Views: 51.8ms | ActiveRecord: 29.5ms)
+2011-08-03T16:51:00+00:00 heroku[nginx]: GET /users/1 HTTP/1.1 | 67.244.91.42 | 3651 | http | 200
+2011-08-03T17:08:47+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=12ms status=200 bytes=2355
+2011-08-03T17:08:48+00:00 heroku[nginx]: POST /_heroku/console? HTTP/1.1 | 50.16.169.169 | 945 | http | 200
+2011-08-03T17:09:04+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=5ms status=422 bytes=331
+2011-08-03T17:09:25+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=595ms status=200 bytes=19
+2011-08-03T17:09:25+00:00 heroku[nginx]: POST /_heroku/console?session_id=1042761&session_action=create HTTP/1.1 | 50.17.38.178 | 167 | http | 200
+2011-08-03T17:22:15+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=4ms status=422 bytes=409
+2011-08-03T17:22:28+00:00 heroku[router]: POST deep-river-691.heroku.com/_heroku/console dyno=web.1 queue=0 wait=0ms service=6ms status=422 bytes=409
+2011-08-03T17:22:45+00:00 heroku[nginx]: POST /_heroku/console?session_id=1042787&session_action=create HTTP/1.1 | 50.19.141.19 | 167 | http | 200

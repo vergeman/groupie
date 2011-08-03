@@ -13,7 +13,7 @@ describe "CreateEvents" do
 
 
     describe "failure event creation" do
-
+=begin
       it "should not create a new event" do
 
         lambda do
@@ -28,7 +28,7 @@ describe "CreateEvents" do
 
         end.should_not change(Event, :count)
       end
-
+=end
     end
 
 
@@ -38,7 +38,7 @@ describe "CreateEvents" do
         integration_valid_event_creation
       end
 
-
+=begin
       it "should have a signed in user" do        
         controller.should be_signed_in
       end
@@ -87,7 +87,7 @@ describe "CreateEvents" do
         end
 
       end
-
+=end
 
 
       describe "successful place creation" do
@@ -101,7 +101,7 @@ describe "CreateEvents" do
           @place = Event.all.last.places.first  #ugly
         end
 
-
+=begin
         it "should render a list of places given the event" do          
           response.should have_selector(".place")
         end
@@ -119,7 +119,7 @@ describe "CreateEvents" do
           visit event_path(@event)
           response.should be_success
         end
-
+=end
       end
 
 
@@ -130,22 +130,22 @@ describe "CreateEvents" do
           fill_in "Description", :with => ""          
           click_button
         end
-
+=begin
         it "should return an error message" do
           response.should have_selector(".error_explanation")
         end
-    
+=end   
       end
 
 
       describe "view of specific place" do
-        
+=begin        
         pending "request to nested view of specified place"
         it "should have the place" do
           #visit event_place_path(:event_id => @event.id, :id => @place.id) 
           #response.should be_success
         end
-
+=end
 
       end
 
