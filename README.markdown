@@ -6,3 +6,5 @@ planning for a group of friends so they can vote on where to have a night out on
 
 Search for restaurants or bars, add them to your event, forward your invite out to your friends,
 and let the group vote to reach a consensus and democratize the decision process.
+
+*Currently Defunct - what a failure!*
