@@ -215,6 +215,7 @@ header h1 {
     font-size: 14px;
     margin-left: 10px;
 }
+
 #search_no_find a:hover {
     color: yellow;
     background: none;
@@ -291,7 +292,7 @@ p#search_place_container {
 p#search_neighborhood_container {
     float: left;
     width: 190px;
-    margin: 0 0 5px;
+
 }
 
 
@@ -312,7 +313,7 @@ p#search_btn_container, p#search_no_find_container {
 #manual_wrap {
     color: white;
     margin: 0 auto;
-    padding: 5px;
+    padding-top: 15px;
     display: none;
     background-color: #172D56;
 }
@@ -395,6 +396,23 @@ p#manual_submit_container {
 #new_place #place_submit:active {
     position:relative;
     top:1px;
+}
+
+p#manual_back_container {
+    float:left;
+    width: 20px;
+    margin-top: 38px;
+    margin-left: 60px;
+}
+
+#back_no_find {
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
+    font-size: 14px;
+
+}
+#back_no_find a {
+    text-decoration: none;
+    color: white;
 }
 
 hr {

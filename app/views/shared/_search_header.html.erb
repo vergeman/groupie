@@ -1,17 +1,17 @@
 <%= form_tag( {:controller => "/places", :action => "search"}, :method => "get", :class => "search_form") do %>
 
 <p id="search_place_container">
-  <%= label_tag(:search_text, "Find a place", :id => "search_text_label") %>
+  <%= label_tag(:search_text, "Lookup a place", :id => "search_text_label") %>
   <%= text_field_tag(:search_text) %>
 </p>
 
 <p id="search_neighborhood_container">
-  <%= label_tag(:search_neighborhood, "Choose a neighborhood", :id => "search_neighborhood_label") %>
+  <%= label_tag(:search_neighborhood, "Know the neighborhood?", :id => "search_neighborhood_label") %>
   <%= select_tag("search_neighborhood", options_for_select(get_neighborhoods, params[:search_neighborhood] ||= "New York City"), :class=>"search_neighborhood") %>
 </p>
 
 <p id="search_btn_container">
-  <%= submit_tag("Search", :id => "search_header_btn") %>
+  <%= submit_tag("Find it!", :id => "search_header_btn") %>
 </p>
 
 <% if user_signed_in? && !current_user.events.empty? %>

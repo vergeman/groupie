@@ -46,10 +46,25 @@ $(document).ready(function() {
     $('#search_no_find').click(function(e) {
 	e.preventDefault();	
 
-	$('#manual_wrap').toggle('slow')
+	$('#search_wrap').slideToggle('slow')
+	$('#manual_wrap').slideToggle('slow')
 	$('#manual_wrap').css('display', 'block');
+
+
     });
 
+
+    $('#back_no_find').click(function(e) {
+	e.preventDefault();
+
+	$('#manual_wrap').slideToggle('slow');
+	$('#search_wrap').slideToggle('slow')
+
+
+	//$(this).show();
+	//$(this).hide();
+
+    });
 
 /*date picka */
     
