@@ -6,19 +6,25 @@
 
 <%= render 'shared/error_messages', :object => p.object %>
 
-  <%= p.label("Venue:") %>
-  <%= p.text_field(:name) %>
+<p id="venue_container">
+  <%= p.label("Enter Venue") %>
+  <%= p.text_field(:name, :size => 0) %>
+</p>
 
+<p id="description_container">
+  <%= p.label("Description") %>
+  <%= p.text_field(:description, :size => 0) %>
+</p>
 
-  <%= p.label("Description:") %>
-  <%= p.text_field(:description) %>
-
-  <%= p.label("Event:") %>
+<p id="event_container">
+  <%= p.label("Add to Event") %>
   <%= select_tag("event", options_from_collection_for_select(current_user_events, :id, :title), 
       :class=>"manual_place_add_btn") %>
+</p>
 
+<p id="manual_submit_container">
   <%= p.submit("Add", :class => "manual_place_submit_btn") %>
-
+</p>
 
 
 <% end %>

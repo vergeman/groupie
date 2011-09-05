@@ -3,9 +3,9 @@
 
   <ul class = "groups">
 
-    <li><%= link_to "Create", user_signed_in? ? new_event_path : new_user_session_path %></li>
+    <li class="nav_button"><%= link_to "Create", user_signed_in? ? new_event_path : new_user_session_path %></li>
     
-    <li> <%= link_to "Get Togethers", user_signed_in? ? user_path(current_user.id) : new_user_session_path %> </li>
+    <li class="nav_button"> <%= link_to "Get Togethers", user_signed_in? ? user_path(current_user.id) : new_user_session_path %> 
 
 
     <% if user_signed_in? %>
@@ -22,11 +22,13 @@
 
     <% end %>
 
-    <li><%= link_to "How It Works", howitworks_path %></li>
-    
-    <li><%= link_to "About", about_path %></li>
+    </li>
 
-    <li><%= link_to "Contact", contact_path %></li>
+    <li class="nav_button"><%= link_to "How It Works", howitworks_path %></li>
+    
+    <li class="nav_button"><%= link_to "About", about_path %></li>
+
+    <li class="nav_button"><%= link_to "Contact", contact_path %></li>
 
 
 

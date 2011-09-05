@@ -5,6 +5,19 @@
 
     <div id="header_content">
 
+      <!-- banner -->
+      <div id="banner">
+	   <%= link_to "Get Together", home_path %>
+      </div>
+
+      <!--navbar-->
+      <div id="nav_wrap">
+	<div class="arrow"></div>
+
+	<div id="navbar">
+	  <%= render 'shared/nav_bar' %>
+	</div>
+      </div>
       <!--account login/logout-->
       <div id="account">
 
@@ -32,26 +45,10 @@
       </div>
 
 
-      <!-- banner -->
-      <div id="banner">
-        <!--
-	   <%= link_to (image_tag "header1.png"), home_path %>
-	   -->
-	<%= link_to "Get Together", home_path %>
-	PROTOTYPE
-      </div>
-
-
     </div>
-  </div>
 
-  <!-- search bar -->
   <div id="search_wrap">
-
-
       <%= render 'shared/search_header' %>
-
-
   </div>
 
   <!-- manual place bar -->

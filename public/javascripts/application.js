@@ -5,6 +5,12 @@ var is_event_expired = false;
 
 $(document).ready(function() {
 
+/* Drop-down menus on hover */
+    $('.groups li').hover(
+	function() { $(this).find('ul.event_title').show(); },
+	function() { $(this).find('ul.event_title').hide(); }
+    );
+
 /*
     $("#tabs").tabs();
 
