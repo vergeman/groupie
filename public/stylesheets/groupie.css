@@ -85,7 +85,9 @@ img.bg {
     margin-left: 31px;
 }
 
-#home .sign_up_btn, #create_event input[type=submit] {
+#home .sign_up_btn, #create_event input[type=submit], #sign_up input[type=submit],
+#sign_in input[type=submit] {
+
     float: left;
     margin-left: 410px;
     margin-top: 30px;
@@ -113,7 +115,8 @@ img.bg {
     background:#ACE768;
     color: #06C;
 }
-#home .sign_up_btn:active, #create_event input[type=submit]:active {
+
+#home .sign_up_btn:active, #create_event input[type=submit]:active, #sign_up input[type=submit]:active, #sign_in input[type=submit]:active {
     position:relative;
     top:1px;
 }
@@ -148,6 +151,7 @@ img.bg {
 .welcome_caption {
     font-family: 'Rosario', Arial, Helvetica, sans-serif;
     font-size: 18px;
+
     text-align:center;
 }
 
@@ -303,7 +307,7 @@ header h1 {
 #search_wrap {
     background-color: #172d56;
     margin: 0 auto;
-    border-top: 4px solid #DF1F2C;
+    //border-top: 4px solid #DF1F2C;
     border-bottom: 2px solid #AAA;
 }
 
@@ -439,7 +443,7 @@ p#search_btn_container, p#search_no_find_container {
     margin: 0 auto;
     display: none;
     background-color: #172D56;
-    border-top: 4px solid #DF1F2C;
+    //border-top: 4px solid #DF1F2C;
     border-bottom: 2px solid #AAA;
 }
 
@@ -684,7 +688,8 @@ header nav {
 }
 
 
-#create_event_title, #create_event_description, #create_event_submit_button {
+#create_event_title, #create_event_description, #create_event_submit_button, 
+#create_event_date, #create_event_time {
    margin-top: -20px;
    padding: 20px;
 }
@@ -707,10 +712,7 @@ thead th {
     color: #0099FF;
 }
 
-#create_event_date, #create_event_time {
-    margin-top: -20px;
-    padding: 20px;
-}
+
 
 /*form font, button*/
 
@@ -733,12 +735,18 @@ thead th {
 }
 
 /*overwrite sign_up_btn stuff*/
-#create_event input[type=submit] {
+#create_event input[type=submit], #sign_up input[type=submit], #sign_in input[type=submit] {
     float: none;
     width: 100px;
     padding: 5px 15px;
     margin:0px 0px 0px 220px;
     color:white;
+    border: 0px;
+}
+
+#sign_up input[type=submit]:hover, #sign_in input[type=submit]:hover {
+    background:#ACE768;
+    color: #06C;
 }
 
 
@@ -943,12 +951,34 @@ section {
     margin: 0;
 }
 
+/*devise auth styling */
+
 #sign_in, #sign_up, #edit_user {
     margin: 0 auto;
-    width: 220px;
+    width: 360px;
+    background: #F4F4F4;
 }
 
-#create_event {
+#sign_up #user_new, #sign_in #user_new, #sign_in #user_edit {
+    margin-top: -20px;
+    padding: 20px;
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+
+}
+#sign_up #user_new label, #sign_in #user_new label, #sign_in #user_edit label {
+    font-weight: 400;
+}
+
+#sign_up input, #sign_in input {
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+
+
+
+#create_event, #sign_in {
     margin: 0 auto;
     width: 360px;
     background: #F4F4F4;

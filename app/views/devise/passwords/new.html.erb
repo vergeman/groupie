@@ -1,13 +1,22 @@
-<h2>Forgot your password?</h2>
+<div id="sign_in_wrap">
 
+<div class="header_wrap">
+  <h2 class="header_text">Password Reminder</h2>
+</div>
+
+<div class="left_flap"></div>
+<div class="right_flap"></div>
+
+<div id="sign_in">
 <%= form_for(resource, :as => resource_name, :url => password_path(resource_name), :html => { :method => :post }) do |f| %>
   <%= devise_error_messages! %>
 
   <p><%= f.label :email %><br />
   <%= f.email_field :email %></p>
 
-  <p><%= f.submit "Send me reset password instructions" %></p>
+  <p><%= f.submit "Send" %></p>
 <% end %>
 
 <%= render :partial => "devise/shared/links" %>
-
+</div>
+</div>
