@@ -11,7 +11,25 @@ $(document).ready(function() {
 	function() { $(this).find('ul.event_title').hide(); }
     );
 
+    //error handle empty submission for venue information 
+    //(others empty is ok)
+    $('.manual_place_submit_btn').click( function (e) {
+	if ( $('#place_name').val().length == 0 ) {
+	    e.preventDefault();
+	    alert("oops you forgot venue information");
+	}
+    });
+
 /*
+toggle
+    $('input[type="text"]').bind('focus', function() {
+	$(this).toggleClass('p input[type=text]:focus');
+
+    });
+	
+  
+
+
     $("#tabs").tabs();
 
     $("#sign_up_btn").button();

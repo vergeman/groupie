@@ -29,25 +29,134 @@ img.bg {
 }
 */
 
+.left_flap {
+    left: -22px;
+    top: -71px;
 
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid #a61822;
+    border-left: 6px solid transparent;
+    border-right: 6px solid #a61822;
+    position: relative;
+    
+}
+
+.right_flap {
+    right: -944px;
+    top: -83px;
+    width:0;
+    height:0;
+
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid #a61822;
+    border-right: 6px solid transparent;
+    border-left: 6px solid #a61822;
+    position: relative;
+}
+
+.header_text {
+    font-family: 'Cuprum', sans-serif;
+    font-size: 40px;
+    color: white;
+    margin: 0;
+    margin: 0px -22px 0 -22px;
+    padding: 0;
+
+
+    display: block;
+    position: relative;
+    text-align: center;
+    background: #DF1F2C;
+
+    -moz-box-shadow: 0px 2px 4px #aaa;
+    -webkit-box-shadow: 0px 2px 4px #aaa;
+    box-shadow: 0px 2px 4px #aaa;
+
+}
 
 #home {
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 10px;
-    margin-bottom: 20px;
+    height: 500px;
+    margin: 10px auto 20px auto;    
+    font-size: 120%;    
+}
+#home_text {
+    margin-left: 31px;
+}
 
+#home .sign_up_btn, #create_event input[type=submit] {
+    float: left;
+    margin-left: 410px;
+    margin-top: 30px;
+
+    width: 120px;
+
+
+    text-align:center;
+
+    cursor:pointer;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 28px;
+
+    background: #6FCF00;
+    -moz-border-radius:3px;
+    -webkit-border-radius:3px;
+    border-radius:3px;
+
+    -moz-box-shadow: 2px 2px 4px #aaa;
+    -webkit-box-shadow: 2px 2px 4px #aaa;
+    box-shadow: 2px 2px 4px #aaa;
+}
+
+#home .sign_up_btn:hover, #home .sign_up_btn:hover a {
+    background:#ACE768;
+    color: #06C;
+}
+#home .sign_up_btn:active, #create_event input[type=submit]:active {
+    position:relative;
+    top:1px;
+}
+
+#home .sign_up_btn a {
+    color:white;
+    text-decoration: none;
+}
+
+
+.welcome {
+    float:left;
+    width: 370px;
+    height:270px;
+
+    border: 2px solid #aaa;
+    padding: 15px;
+    margin:15px;
+
+    text-align:center;
+
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+
+    -moz-box-shadow: 1px 2px 3px #ccc;
+    -webkit-box-shadow: 1px 2px 3px #ccc;
+    box-shadow: 1px 2px 3px #ccc;
+
+}
+
+.welcome_caption {
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    text-align:center;
+}
+
+.welcome_border {
     padding: 10px;
-    font-size: 120%;
+
+    text-align:center;
 }
 
-
-#home .sign_up_btn {
-    display: block;
-    float: none;
-    margin: 0 auto;
-    width: 100px;
-}
 
 
 /*statics*/
@@ -60,7 +169,8 @@ img.bg {
 }
 
 .about_text, .contact_text {
-    font-size: 16px;
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
+    font-size: 18px;
 }
 
 
@@ -193,19 +303,18 @@ header h1 {
 #search_wrap {
     background-color: #172d56;
     margin: 0 auto;
-    padding-top: 15px;
+    border-top: 4px solid #DF1F2C;
+    border-bottom: 2px solid #AAA;
 }
 
-.search_form {
-    /*
-      background-color: #6E8B99;
-      border: 1px solid #121E34;
-    */
+.search_form {    
+    /*toggle off arrow thing */
+    //background-color: #667eab;
     color: white;
     margin: 0 auto;
-    //padding-left: 30px;
     width: 960px;
     overflow: hidden;
+    padding: 0px 15px;
 }
 
 #search_no_find {
@@ -228,9 +337,22 @@ header h1 {
     text-decoration: none;
 }
 
+/*toggle
+p input[type=text]:focus  {
+    border:solid 2px black;
+    //background:#EFF5FF;
+    background: white;
+    color:#000;
+}
+
+p input[type=text] { 
+    background: grey;
+}
+*/
 #search_text, #search_neighborhood {
     font-size: 16px;
-    /*
+    
+/*
     color: #333;
     border-top: 1px solid #C3C3C3;
     border-left: none;
@@ -240,9 +362,7 @@ header h1 {
     */
 }
 
-#search_text :selection {
-    background: white;
-}
+
 
 #search_header_btn {
     margin-top: 30px;
@@ -283,6 +403,10 @@ header h1 {
     top:1px;
 }
 
+.search_form p {
+    margin: 0;
+}
+
 p#search_place_container {
     float: left;
     width: 200px;
@@ -313,9 +437,10 @@ p#search_btn_container, p#search_no_find_container {
 #manual_wrap {
     color: white;
     margin: 0 auto;
-    padding-top: 15px;
     display: none;
     background-color: #172D56;
+    border-top: 4px solid #DF1F2C;
+    border-bottom: 2px solid #AAA;
 }
 
 
@@ -350,11 +475,17 @@ p#manual_submit_container {
     width: 150px;
     font-size: 16px;
 }
+.new_place p {
+    margin: 0;
+}
 #new_place, #manual_place_add_error {
     width: 960px;
     margin: 0 auto;
     display:none;
     overflow:hidden;
+    padding: 0px 15px;
+    /*toggle off arrow*/
+    //background-color: #667EAB;
 }
 
 #new_place label {
@@ -366,8 +497,9 @@ p#manual_submit_container {
 
 
 #new_place #place_submit {
-    margin-left: 25px;
+    margin-left: 43px;
     margin-top: 29px;
+
     cursor: pointer;
     -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
     -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -379,6 +511,7 @@ p#manual_submit_container {
     border: 1px solid gainsboro;
     display: inline-block;
     color: black;
+
     font-family: 'Rosario', Arial, Helvetica, sans-serif;
     font-size: 14px;
     padding: 3px 12px;
@@ -402,7 +535,7 @@ p#manual_back_container {
     float:left;
     width: 20px;
     margin-top: 38px;
-    margin-left: 60px;
+    margin-left: 76px;
 }
 
 #back_no_find {
@@ -425,6 +558,7 @@ hr {
     */
     float:left;
     width: 251px;
+    margin-top: -5px;
 }
 
 @font-face {
@@ -456,17 +590,41 @@ header nav {
     float: left;
     background: #DF1F2C;
     margin-left: 10px;
+    box-shadow: 5px 3px #a61822;
+    -moz-box-shadow: 5px 3px #a61822;
+    -webkit-box-shadow: 5px 3px #a61822;
+
     //border-bottom: 1px solid #172D56;
     //border-radius: 0px 15px 15px 0px;
 }
 
 .arrow {
-    width: 00px;
-    height: 0;
     border-top: 25px solid transparent;
     border-bottom: 25px solid transparent;
     border-left: 30px solid #F9EED2;
     float: left;
+}
+
+.search_form p, #new_place p {
+    padding: 10px 0px;
+}
+
+
+
+.arrow_left {
+    border-top: 42px solid transparent;
+    border-bottom: 41px solid transparent;
+    border-left: 60px solid #172D56;
+    float:left;
+    margin-left: -15px;
+}
+
+.arrow_right {
+    border-top: 42px solid transparent;
+    border-bottom: 41px solid transparent;
+    border-right: 60px solid #172D56;
+    float:right;
+    margin-right: -15px;
 }
 
 #navbar {
@@ -492,6 +650,7 @@ header nav {
     -moz-border-radius:6px;
     -webkit-border-radius:6px;
     border-radius:6px;
+
     */
     //border:1px solid #dcdcdc;
     display:inline-block;
@@ -512,8 +671,11 @@ header nav {
 
 
 #main {
-    float: right;
+    /*
+      float: right;
     width: 760px;
+    */
+    width: 960px;
 }
 
 #footer_wrap {
@@ -550,6 +712,34 @@ thead th {
     padding: 20px;
 }
 
+/*form font, button*/
+
+#create_event .field, #create_event input {
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+#create_event label {
+    font-weight: 400;
+}
+
+#create_event input:hover {
+    border: 1px solid #06C;
+}
+#create_event input[type=submit]:hover {
+    border: 0px;
+    background:#ACE768;
+    color: #06C;
+}
+
+/*overwrite sign_up_btn stuff*/
+#create_event input[type=submit] {
+    float: none;
+    width: 100px;
+    padding: 5px 15px;
+    margin:0px 0px 0px 220px;
+    color:white;
+}
 
 
 /*section tag*/
@@ -761,6 +951,8 @@ section {
 #create_event {
     margin: 0 auto;
     width: 360px;
+    background: #F4F4F4;
+
 }
 
 .event_list .event, .no_events, #how, #about, #contact, #home, #sign_up_wrap, #sign_in_wrap, #edit_user_wrap, #create_event_wrap  {

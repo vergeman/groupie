@@ -3,8 +3,10 @@
 <% @place = Place.new %>
 
 <%= form_for(@place, :url => event_places_path(1), :class => "manual_add_place_for", :method => "POST") do |p| %>
-
+<!--
 <%= render 'shared/error_messages', :object => p.object %>
+-->
+<div class="arrow_left"></div>
 
 <p id="venue_container">
   <%= p.label("Enter Venue") %>
@@ -17,7 +19,7 @@
 </p>
 
 <p id="event_container">
-  <%= p.label("Add to Event") %>
+  <%= p.label("Add", "Add to Get Together") %>
   <%= select_tag("event", options_from_collection_for_select(current_user_events, :id, :title), 
       :class=>"manual_place_add_btn") %>
 </p>
@@ -32,7 +34,9 @@
   </span>
 </p>
 
-
+<!--
+<div class="arrow_right"></div>
+-->
 <% end %>
 
 <% end %>

@@ -1,13 +1,19 @@
 <!-- events partial -->
 <div id="create_event_wrap">
 
+    <div class="header_wrapper">
+      <h2 class="header_text">Create a <%= get_project_name %></h2>
+    </div>
+
+    <div class="left_flap"></div>
+    <div class="right_flap"></div>
+
+
   <div id="create_event">
-    <h1>Create a <%= get_project_name %></h1>
 
     <%= form_for(@event) do |e| %>
 
     <%= render 'shared/error_messages', :object => e.object %>
-
 
 
     <div id="event_inputs">
@@ -52,7 +58,7 @@
     <div id="create_event_submit" class="actions">
 
       <div id="create_event_submit_button">
-	<%= e.submit "Create Event" %>
+	<%= e.submit "Create" %>
       </div>
     </div>
 

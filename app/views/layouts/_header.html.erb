@@ -48,26 +48,28 @@
     </div>
 
   <div id="search_wrap">
-      <%= render 'shared/search_header' %>
+    
+    <%= render 'shared/search_header' %>
+    
   </div>
 
   <!-- manual place bar -->
   <!--rmemeber require sign in for click link-->
 
   <div id="manual_wrap">
-
-
-    <% if flash[:add_place_error] %>
-
-      <div id="manual_place_add_error">
-	<%= content_tag(:div, flash[:add_place_error], :class => "flash error") %>
-      </div>
-
-    <% end %>
         
     <%= render 'shared/add_places' %>
 
-
-
   </div>
+
+    <% if flash[:add_place_error] %>
+<!--
+   javascript popup handling for now..
+    <div id="manual_place_add_error">
+	<%= content_tag(:div, flash[:add_place_error], :class => "flash error") %>
+    </div>
+-->
+
+    <% end %>
+
 </header>
