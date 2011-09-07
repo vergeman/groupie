@@ -27,7 +27,7 @@
       </div>
       
       <div id="create_event_description" class="field">
-	<%= label_tag(:description, "Leave a note") %> <br />
+	<%= label_tag(:description, "Leave a brief description") %> <br />
 	<%= e.text_field :description %> <br />
       </div>
 
@@ -38,7 +38,7 @@
 
 
       <div id="create_event_date" class="field">
-	<%= label_tag(:event_date, "Event date") %>
+	<%= label_tag(:event_date, "Select the date") %>
 
 	<div id="datepicker">
 	  <%= e.text_field :event_date %>
@@ -49,8 +49,8 @@
 
 
       <div id="create_event_time" class="field">
-	<%= label_tag(:event_time, "Time") %> <br />
-	<%= select_tag "event_time", options_for_select(@times, " 7:00 PM") %>
+	<%= label_tag(:event_time, "Starting Time") %> <br />
+	<%= select_tag "event_time", options_for_select(@times, " 7:00 PM")  %>
       </div>
       
     </div>

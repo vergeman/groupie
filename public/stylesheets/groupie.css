@@ -162,17 +162,90 @@ img.bg {
 }
 
 
+/*how*/
+#how {
+    border-spacing: 60px 15px;
+}
+
+.how_wrap {
+    width: 200px;
+    height: 300px;
+    padding: 15px;
+    padding-right: 20px;
+    margin: 15px;
+    
+    display:table-cell;
+
+    border: 2px solid #aaa;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+
+    -moz-box-shadow: 1px 2px 3px #ccc;
+    -webkit-box-shadow: 1px 2px 3px #ccc;
+    box-shadow: 1px 2px 3px #ccc;
+
+}
+
+.how_num {
+    position: relative;
+    top: -30px;
+    left: -30px;
+}
+
+.num {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 32px;
+
+    width: 50px;
+    height: 50px;
+
+    background: #172D56;
+
+    -moz-border-radius: 25px;
+    -webkit-border-radius: 25px;
+    border-radius: 25px;
+    
+    box-shadow: 1px 2px 3px #ccc;
+    text-align:center;
+
+    color: white;
+
+}
+
+.how_header {
+    margin-top: -50px;
+    padding: 15px 0px;
+    width: 100%;
+    font-family: 'Cuprum', sans-serif;
+    font-size: 40px;
+
+    text-align: center;
+
+}
+
+.how_icon {
+    width: 100%;
+    padding: 15px 0px;
+    height: 150px;
+    text-align:center;
+
+}
+
+.how_list {
+    padding-left: 35px;
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+.how_list li {
+    display: list-item;
+    list-style-type: disc;
+}
+
 
 /*statics*/
-#how ol {
-    font-size: 22px;
-}
-
-.how_text {
-    font-size: 14px;
-}
-
-.about_text, .contact_text {
+.about_text, .contact_text, .how_text {
     font-family: 'Rosario', Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
@@ -430,9 +503,8 @@ p#search_btn_container, p#search_no_find_container {
     margin-left: 30px;
 }
 
-#search_text_label, #search_neighborhood_label {
+#search_text_label, #search_neighborhood_label, .time_label {
     font-family: 'Rosario', Arial, Helvetica, sans-serif;
-    //font-family: 'Cuprum', sans-serif;
     font-size: 16px;
     font-weight: 400;
 }
@@ -974,9 +1046,6 @@ section {
     font-family: 'Rosario', Arial, Helvetica, sans-serif;
     font-size: 18px;
 }
-
-
-
 
 #create_event, #sign_in {
     margin: 0 auto;
