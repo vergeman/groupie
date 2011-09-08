@@ -102,6 +102,7 @@ img.bg {
     font-size: 28px;
 
     background: #6FCF00;
+
     -moz-border-radius:3px;
     -webkit-border-radius:3px;
     border-radius:3px;
@@ -1054,20 +1055,17 @@ section {
 
 }
 
-.event_list .event, .no_events, #how, #about, #contact, #home, #sign_up_wrap, #sign_in_wrap, #edit_user_wrap, #create_event_wrap  {
+.event_list .event, #event_wrap, .no_events, #how, #about, #contact, #home, #sign_up_wrap, #sign_in_wrap, #edit_user_wrap, #create_event_wrap  {
 
     background: none repeat scroll 0 0 white;
-    border-color: #AAAAAA;
-    border-style: solid;
-    border-width: 1px;
-    //box-shadow: 1px 1px 3px #B4AAA0;
+    border: 1px solid #AAAAAA;
     padding: 10px;
     margin: 10px 2.5px 2.5px;
-
+    margin: 10px auto;
 }
 
-.event {
-    //min-height: 220px;
+.event_list .event {
+    width: 600px;
 }
 
 #voting .event {
@@ -1076,34 +1074,37 @@ section {
 
 }
 
-
+.event_info {
+    float: left;
+    width: 250px;
+    min-height: 110px;
+    margin-top: -10px;
+    margin-left: 30px;
+    word-wrap:break-word;
+}
 .event_name, .event_name a {
 
-    width: 700px;
+    //width: 700px;
     font-size: 30px;
     text-decoration: none;
 
 }
 
 .event_date, .event_date_main {
-    /*
-    margin-top: -173px;
-    margin-left: 580px;
-    margin-right: 20px;
-*/
-    float: right;
+    float: left;
     text-align: center;
+
     font-size: 14px;
-    font-family: 'Limelight', serif;
+    font-family: 'Limelight', sans-serif;
     font-weight: 400;
-    font-style: normal;
-    border-width: 1px;
-    border-style: solid;
-    border-color: black;
+
+    border: 1px solid black;
     color: rgb(18, 30, 52);
+
     padding: 2px;
     box-shadow: 1px 1px 3px #B4AAA0;
     min-width: 80px;
+
 }
 
 .event_date_main {
@@ -1128,19 +1129,12 @@ section {
     margin: 2px;
 }
 
-.event_time {
 
-}
-
-
-.event_organizer {
-
-}
 
 .event_place_thumbnails {
-    width: 575px;
-    //height: 100px;
-    font-size: 16px;
+    float:right;
+    margin-top: 15px;
+    font-size: 14px;
 }
 .thumbnail {
     display: inline;
@@ -1148,26 +1142,55 @@ section {
     height: 75px;
 }
 .empty_thumbnails {
-    font-size: 20px;
-
+    margin-top: 15px;
+    font-size: 14px;
+    font-style: italic;
 }
 
-.event_participant_count {
-    font-size: 20px;
-}
 
 .event_description {
     margin-top: 6px;
-    font-size: 16px;
-    font-style: helvetica;
+    font-size: 20px;
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
 }
 
-.event_votes_remaining {
-    font-size: 20px;
-    text-align: right;
-    margin-right: 15px;
-    //margin-top: -60px;
+.event_organizer {
+    font-size: 14px;
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
+    font-style: italics;
 }
+
+.event_votes_remaining, .event_participants, .event_places {
+    float: right;
+    width: 55px;
+    height: 44px;
+    margin-left: 10px;
+    padding: 4px;
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
+    font-size: 12px;
+
+    
+    text-align: center;
+    border: 1px solid black;
+    box-shadow: 1px 1px 3px #B4AAA0;
+
+    -moz-border-radius:6px;
+    -webkit-border-radius:6px;
+    border-radius:6px;
+}
+
+.event_votes_header, .event_participants_header, .event_places_header {
+    background: #172D56;
+    color: white;
+}
+
+.event_votes_count, .event_participants_count, .event_places_count {
+    margin-top: 2px;
+    font-family: Arial, Helvetica;
+    font-size: 18px;
+    color: black;
+}
+
 
 .place_container, .place_header {
     width: 590px;
