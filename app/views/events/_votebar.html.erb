@@ -1,7 +1,8 @@
 <!-- fixed css vote bar partial -->
 
-<% if user_signed_in? && @participant %>
+<!-- 
 
+-->
 <!-- votebar -->
 <div id="votebar">
 
@@ -36,6 +37,12 @@
 
   </div>
 
+<!-- participants list -->
+<% if signed_in? && @participant %>
+<%= render 'participants' %>
+<% end %>
 
 </div>
-<% end %><!-- end user sign in -->
+
+
+

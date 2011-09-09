@@ -31,7 +31,7 @@ img.bg {
 
 .left_flap {
     left: -22px;
-    top: -71px;
+    top: -56px;
 
     width: 0;
     height: 0;
@@ -44,8 +44,8 @@ img.bg {
 }
 
 .right_flap {
-    right: -944px;
-    top: -83px;
+    right: -517px;
+    top: -68px;
     width:0;
     height:0;
 
@@ -58,7 +58,7 @@ img.bg {
 
 .header_text {
     font-family: 'Cuprum', sans-serif;
-    font-size: 40px;
+    font-size: 30px;
     color: white;
     margin: 0;
     margin: 0px -22px 0 -22px;
@@ -77,13 +77,14 @@ img.bg {
 }
 
 #home {
-    height: 500px;
     margin: 10px auto 20px auto;    
     font-size: 120%;    
 }
 #home_text {
     margin-left: 31px;
 }
+
+
 
 #home .sign_up_btn, #create_event input[type=submit], #sign_up input[type=submit],
 #sign_in input[type=submit] {
@@ -129,9 +130,9 @@ img.bg {
 
 
 .welcome {
-    float:left;
+
     width: 370px;
-    height:270px;
+
 
     border: 2px solid #aaa;
     padding: 15px;
@@ -249,6 +250,7 @@ img.bg {
 .about_text, .contact_text, .how_text {
     font-family: 'Rosario', Arial, Helvetica, sans-serif;
     font-size: 18px;
+    padding: 20px;
 }
 
 
@@ -258,16 +260,23 @@ img.bg {
 
 /*navigation tag */
 #account {
-    /*
-    display: table-cell;
-    vertical-align: middle;
-    */
     float: right;
-    margin-top: 5px;
+    width: 160px;
     font-size: 14px;
     text-align: right;
-    width: 170px;
+    width: 180px;
+    height: 51px;
+    padding-right: 20px;
     overflow:hidden;
+/*
+    background: #ACE768;    
+    box-shadow: 5px 3px #93c55a;
+    -moz-box-shadow: 5px 3px #93c55a;
+    -webkit-box-shadow: 5px 3px #93c55a;
+*/
+}
+.nav_account {
+    margin-top: 5px;
 }
 
 nav ul {
@@ -382,7 +391,7 @@ header h1 {
     background-color: #172d56;
     margin: 0 auto;
     //border-top: 4px solid #DF1F2C;
-    border-bottom: 2px solid #AAA;
+    //border-bottom: 2px solid #AAA;
 }
 
 .search_form {    
@@ -400,7 +409,7 @@ header h1 {
     width: 100px;
     margin-top: 38px;
     font-size: 14px;
-    margin-left: 10px;
+
 }
 
 #search_no_find a:hover {
@@ -488,7 +497,8 @@ p input[type=text] {
 p#search_place_container {
     float: left;
     width: 200px;
-    margin: 0px 30px 0px 80px;
+    margin-left: 239px;
+    margin-right: 25px;
 }
 
 p#search_neighborhood_container {
@@ -501,7 +511,7 @@ p#search_neighborhood_container {
 p#search_btn_container, p#search_no_find_container {
     float: left;
     width: 100px;
-    margin-left: 30px;
+    margin-left: 28px;
 }
 
 #search_text_label, #search_neighborhood_label, .time_label {
@@ -517,14 +527,14 @@ p#search_btn_container, p#search_no_find_container {
     display: none;
     background-color: #172D56;
     //border-top: 4px solid #DF1F2C;
-    border-bottom: 2px solid #AAA;
+    //border-bottom: 2px solid #AAA;
 }
 
 
 p#venue_container {
     float:left;
     width: 200px;
-    margin: 0px 30px 0px 80px;
+    margin: 0px 30px 0px 239px;
 }
 #place_name  {
     font-size: 16px;
@@ -611,8 +621,7 @@ p#manual_submit_container {
 p#manual_back_container {
     float:left;
     width: 20px;
-    margin-top: 38px;
-    margin-left: 76px;
+
 }
 
 #back_no_find {
@@ -629,32 +638,25 @@ hr {
     margin: 0;
     background: none repeat scroll 0 0 transparent;
 }
-#banner {
-    /*display:table-cell;
-    vertical-align: middle;
-    */
-    float:left;
-    width: 251px;
-    margin-top: -5px;
-}
 
 @font-face {
     font-family: CherryCreamSoda;
     src: url("/images/CherryCreamSoda.ttf");
 }
 
+#banner {
+    float:left;
+    margin-top: 2px;
+}
+
+
 #banner a {
     text-decoration: none;
     color: #df1f2c;
     font-family: CherryCreamSoda;
-    font-size: 34px;
+    font-size: 30px;
     text-shadow: white 2px 2px;
 
-}
-
-
-header nav {
-    //text-align: right;
 }
 
 #content {
@@ -666,13 +668,10 @@ header nav {
 #nav_wrap {
     float: left;
     background: #DF1F2C;
-    margin-left: 10px;
+    margin-left: 15px;
     box-shadow: 5px 3px #a61822;
     -moz-box-shadow: 5px 3px #a61822;
     -webkit-box-shadow: 5px 3px #a61822;
-
-    //border-bottom: 1px solid #172D56;
-    //border-radius: 0px 15px 15px 0px;
 }
 
 .arrow {
@@ -825,7 +824,7 @@ thead th {
 
 /*section tag*/
 section {
-    min-height: 600px;
+    min-height: 500px;
     //width: 950px;
 
 }
@@ -844,22 +843,25 @@ section {
 /*events/:id*/
 ._header {
     background: none repeat scroll 0 0 white;
+    border: 1px solid #aaa;
+    width: 527px;
+    //margin-bottom: 10px;
+    /*
     border-color: #AAAAAA;
     border-style: solid;
     border-width: 1px;
     //box-shadow: 1px 1px 3px #B4AAA0;
-    padding: 10px;
-    margin: 10px 2.5px 2.5px;
-    overflow: hidden;
+    */
     font-size: 34px;
 }
 
 ._header_title, ._header_description, ._header_organizer, ._header_timeout {
     width: 500px;
-    
+    word-wrap: break-word;
 }
 
 ._header_description {
+    margin-left: 15px;
     font-size: 16px;
 }
 ._header_organizer {
@@ -874,6 +876,7 @@ section {
 }
 
 ._header_leader {
+    margin-left: 15px;
     font-size: 18px;
 }
 ._header_leader a {
@@ -926,65 +929,42 @@ section {
 
 /*counter*/
 #votebar {
-    width: 270px;
-    margin-left: 175px;
-
-
     position: fixed;
-    bottom: 0px;
-    padding: 5px;
+    width: 120px;
+    padding: 10px;
+    margin-left: 72px;
+    top: 173px;
+
+    //padding: 5px;
     display: block;
 
     background-color: white;
     //box-shadow: 1px 1px 3px #B4AAA0;
     overflow: hidden;
 
-    border-color: #AAAAAA;
-    border-style: solid;
-    border-width: 1px;
-
-}
-
-
-#vote-info {
-    width: 70px;
-    border-color: black;
-    border-style: solid;
-    border-width: 0px 2px 0px 0px;
-    padding-right: 10px;
+    border: 1px solid #aaaaaa;
 }
 
 #timer-info {
-
-    width: 180px;
     border: none;
-
+    text-align:center;
+    font-size: 15px;
+    margin-bottom: 15px;
 }
-#vote-info-lbl, #timer-info-lbl {
+#vote-info-lbl, #timer-info-lbl, .participants_header {
     font-size: 14px;
     text-align: center;
+    background-color: #172D56;
+    color: white;
 }
 
-#votes_remaining {
-    font-size: 30px;
-    text-align: center;
-}
 
-#timer {
-    float: right;
+#time_remaining, #votes_remaining {
+    margin: 10px 0px;
     font-size: 20px;
     text-align: center;
+    text-transform: lowercase; 
 }
-
-#time_remaining {
-    margin-top: 10px;
-    font-size: 20px;
-
-}
-
-.countdown_amount {
-}
-
 
 /*place box voting*/
 /*we should make buttonlike w/ :hover and shiet but...i am lazy*/
@@ -1060,12 +1040,30 @@ section {
     background: none repeat scroll 0 0 white;
     border: 1px solid #AAAAAA;
     padding: 10px;
-    margin: 10px 2.5px 2.5px;
-    margin: 10px auto;
+    width: 507px;
+    margin: 10px 0px 10px 239px;    
 }
 
+
+#event_detail_wrap {
+    margin-top: 10px;
+    margin-left: 239px;
+}
+
+.event_header {
+    //background: #F4F4F4;
+}
 .event_list .event {
-    width: 600px;
+    width: 480px;
+    margin: 0px 0px;
+    border: none;
+    border-top: 1px solid #aaaaaa;
+    padding-bottom: 20px;
+    /*
+    -moz-box-shadow: 1px 2px 4px #aaa;
+    -webkit-box-shadow: 1px 2px 4px #aaa;
+    box-shadow: 1px 2px 4px #aaa;
+    */
 }
 
 #voting .event {
@@ -1076,40 +1074,45 @@ section {
 
 .event_info {
     float: left;
-    width: 250px;
+    width: 330px;
     min-height: 110px;
-    margin-top: -10px;
-    margin-left: 30px;
+    margin-left: 10px;
+    //margin-left: 30px;
     word-wrap:break-word;
 }
-.event_name, .event_name a {
 
-    //width: 700px;
+.event {
+    border-bottom: 1px solid #AAA;
+    width: 529px;
+}
+.event_name, .event_name a {
     font-size: 30px;
     text-decoration: none;
-
 }
 
 .event_date, .event_date_main {
-    float: left;
+    float: right;
+    //float: left;
     text-align: center;
-
+    margin-top: 10px;
+    margin-left: 10px;
     font-size: 14px;
     font-family: 'Limelight', sans-serif;
     font-weight: 400;
 
+    background: white;
     border: 1px solid black;
     color: rgb(18, 30, 52);
 
     padding: 2px;
-    box-shadow: 1px 1px 3px #B4AAA0;
+    //box-shadow: 1px 1px 3px #B4AAA0;
     min-width: 80px;
 
 }
 
 .event_date_main {
-    float: right;
-    margin: 0;
+    float: left;
+    margin: 10px 25px 10px 15px;
     font-size: 14px;
     padding: 5px;
     min-width: 75px;
@@ -1142,14 +1145,14 @@ section {
     height: 75px;
 }
 .empty_thumbnails {
-    margin-top: 15px;
+    margin-top: 5px;
+    font-family: 'Rosario', Arial, Helvetica, sans-serif;
     font-size: 14px;
-    font-style: italic;
 }
 
 
 .event_description {
-    margin-top: 6px;
+    //margin-top: 6px;
     font-size: 20px;
     font-family: 'Rosario', Arial, Helvetica, sans-serif;
 }
@@ -1161,10 +1164,12 @@ section {
 }
 
 .event_votes_remaining, .event_participants, .event_places {
-    float: right;
+    float: left;
+
     width: 55px;
     height: 44px;
     margin-left: 10px;
+    margin-top: 15px;
     padding: 4px;
     font-family: 'Rosario', Arial, Helvetica, sans-serif;
     font-size: 12px;
@@ -1172,7 +1177,7 @@ section {
     
     text-align: center;
     border: 1px solid black;
-    box-shadow: 1px 1px 3px #B4AAA0;
+    //box-shadow: 1px 1px 3px #B4AAA0;
 
     -moz-border-radius:6px;
     -webkit-border-radius:6px;
@@ -1191,25 +1196,37 @@ section {
     color: black;
 }
 
-
+#result {
+    margin-left: 239px;
+    width: 528px;
+    margin-top: 10px;
+    border-bottom: 1px solid #aaa;
+}
 .place_container, .place_header {
-    width: 590px;
+    width: 507px;
+    border-bottom: none;
 }
 
 .place_header {
     min-height: 60px;
 }
+
 .place_container, .search_result, .place_info_detail {
     background: none repeat scroll 0 0 white;
-    border-color: #AAAAAA;
-    border-style: solid;
-    border-width: 1px;
-    //box-shadow: 1px 1px 3px #B4AAA0;
-    margin: 10px 2.5px 2.5px;
+    border: 1px solid #aaaaaa;
+    border-bottom:none;
+    //margin: 10px 2.5px 2.5px;
     padding: 10px;
     overflow: hidden;
 }
 
+
+.place_info_detail {
+    margin-left: 239px;
+    width: 506px;
+    margin-top: 10px;
+    border-bottom: 1px solid #aaa;
+}
 
 section ul li {
     list-style-type: none;
@@ -1273,9 +1290,8 @@ section ul li {
 
 .add_form {
     background-color: #333333;
-    border-radius: 6px 6px 6px 6px;
-    -moz-border-radius: 6px 6px 6px 6px;
-    margin-left: 515px;
+
+
 }
 
 .place_add_btn {
@@ -1327,25 +1343,17 @@ section ul li {
 
 /*participants*/
 #participants {
-    float: right;
-    margin-top: 7px;
-    margin-right: 2px;
-    padding: 5px;
-
-    background: none repeat scroll 0 0 white;
+/*
     border-color: #AAAAAA;
     border-style: solid;
     border-width: 1px;
+*/
     text-align: center;
-    width: 120px;
+
     overflow: hidden;
 
 }
 
-.participants_header {
-    font-size: 16px;
-    font-weight: bold;    
-}
 
 /*footer tag*/
 

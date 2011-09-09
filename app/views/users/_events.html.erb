@@ -45,20 +45,20 @@
 
 	    <% if event.places.empty? %>
 	    <div class="empty_thumbnails">
-	      Lookup places to add!
+	      Lookup places to add
 	    </div>
 	    <% end %>
 
 	    <% if event.participants.count == 1 %>
 	    <div class="empty_thumbnails">
-	      Invite some friends!
+	      Invite some friends
 	    </div>
 	    <% end %>
 
 
 	  </div>
 
-	  
+	  <hr>
 
 	  <!--
  	     <div class="event_votes event_font">
@@ -136,7 +136,7 @@
 	  <% unless place.image_links.nil? %>
 	  <% place.image_links.each do |image| %>
 
-	  <% break if count > 6 %>
+	  <% break if count > 2 %>
 	  <div class="thumbnail">
 	    <%= link_to (image_tag image, :width => "75px", :height => "75px"), event_path(event.id) %>
 	  </div>

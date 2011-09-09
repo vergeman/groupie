@@ -1,6 +1,26 @@
 <!--in div id main-->
 
+<!--events set to public visibiility for now.-->
+<%= render :partial => 'votebar', :layout => false,
+:locals => {:@event => @event, :@participant => @participant} %>
+
+
+<div id="event_detail_wrap">
+<!--
+<div class="header_wrapper">
+  <h2 class="header_text"> <%= @event.title %> </h2>
+</div>
+
+<div class="left_flap"></div>
+<div class="right_flap"></div>
+-->
+
 <!-- event summary -->
+<div class="event_date_main">
+  <%= render :partial => 'shared/date_calendar', :layout => false,
+  :locals => {:event => @event } %>
+</div>
+
 <div class="_header">
 
   <%= render :partial => 'header', :layout => false,
@@ -8,16 +28,6 @@
 
 </div>
 
-<!--events set to public visibiility for now.-->
-
-<%= render :partial => 'votebar', :layout => false,
-:locals => {:@event => @event, :@participant => @participant} %>
-
-
-<!-- participants -->
-<% if signed_in? %>
-<%= render 'participants' %>
-<% end %>
 
 <!-- event detail - places -->
 <ul class="event" data-event=<%= @event.id %>>
@@ -74,7 +84,7 @@
 	</div>
 
       </div>
-
+<!-- move to controller -->
       <div class="place_detail">
 
 	<div class="place_vote_image">
@@ -152,7 +162,7 @@
 </div>
 
 
-
+</div>
 
 
 

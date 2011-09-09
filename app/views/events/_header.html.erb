@@ -1,10 +1,5 @@
 <!--header partial-->
 
-<div class="event_date_main">
-  <%= render :partial => 'shared/date_calendar', :layout => false, 
-  :locals => {:event => @event } %>
-</div>
-
 <div class="_header_title">
   <%= @event.title %>
 </div>
@@ -42,28 +37,26 @@
 
 <div class="_header_timeout"></div>
 
+<hr>
 <!--empty notifications -->
 <% if @event.places.empty? %>
 
-<div class="empty_thumbnails">
+<div class="empty_thumbnails" style="margin: 0px 0px 10px 15px;">
+Find some places!
 <br />
-  Find some places!
-  <p>
-    <span style="font-size:16px;">
-      Search for restaurants or bars, and add them to your Get Together.
-    </span>
+Search for restaurants or bars, and add them to your Get Together.
+    
 </div>
 <% end %>
 
 
 <% if @event.participants.count == 1 %>
 
-<div class="event_participant_count">
-  Invite some friends!
-  <p>
-    <span style="font-size:16px;">
-      Forward your Get Together email so your friends can vote.
-    </span>
+<div class="empty_thumbnails" style="margin: 0px 0px 10px 15px;">
+Invite some friends!
+<br />
+Forward your Get Together email so your friends can vote.
+
 
 </div>
 <% end %>

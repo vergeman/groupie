@@ -20,28 +20,6 @@ $(document).ready(function() {
 	}
     });
 
-/*
-toggle
-    $('input[type="text"]').bind('focus', function() {
-	$(this).toggleClass('p input[type=text]:focus');
-
-    });
-	
-  
-
-
-    $("#tabs").tabs();
-
-    $("#sign_up_btn").button();
-    
-    $("#user_submit").button();
-    
-    $("#event_submit").button();
-
-    $("#place_submit").button();
-
-    $("#search_header_btn").button();
-*/
 
     var event_date = new Date( $('#time_remaining').text() );
 
@@ -77,10 +55,6 @@ toggle
 
 	$('#manual_wrap').slideToggle('slow');
 	$('#search_wrap').slideToggle('slow')
-
-
-	//$(this).show();
-	//$(this).hide();
 
     });
 
@@ -175,9 +149,10 @@ function date_countdown(event_date) {
 
     //Expiry
     if (event_date - currentTime < 0) {
-	$('#votebar').hide();
-	$('._header_timeout').html("Voting is complete");
-
+	//$('#votebar').hide();
+	$('._header_timeout').html("Voting completed");
+	$('#timer-info').html("Voting completed");
+	
 	is_event_expired = true;
 	/*set to no action on event expiry*/
 
@@ -191,7 +166,7 @@ function date_countdown(event_date) {
 
 	$('#time_remaining').countdown({until: event_date, 
 			       format: 'dhms', description: '',
-			       layout: '{dn} {dl} {hn}:{mnn}:{snn}'
+			       layout: '{dn} {dl} <br> {hn}:{mnn}:{snn}'
 			      });			       
 	//onTick: _highlightlast5m( {tickInterval: 1}) });
 
