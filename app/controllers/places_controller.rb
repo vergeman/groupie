@@ -13,14 +13,12 @@ class PlacesController < ApplicationController
 
   require 'thread'
 
-
-
-
   def search
     start_time = Time.now
 
     geocode = geolocate()
 
+    #we should define this in a config..
     #key = 'AIzaSyDfKgIyvLi4KzXAAzZELPO0tWIpwW9fN-Y'
     key = 'AIzaSyABm4PzReSNyCARZYz0HgbD4CSAB-0v5Z8'
 
@@ -41,7 +39,7 @@ class PlacesController < ApplicationController
     @cached_results = Hash.new
 
 
- #   respond_to do |format|
+    #respond_to do |format|
     @search_text = params[:search_text]
     @search_text = search_text_adjust(@search_text)
     
@@ -86,6 +84,7 @@ class PlacesController < ApplicationController
           search_detail = URI.encode("https://maps.googleapis.com/maps/api/place/details/json?reference=#{q.reference}&sensor=false&key=#{key}")
 
           #==update details for place search==
+
           #logger.debug("making connection")
           details = URI_request(search_detail)
           #logger.debug("Ending connection")
@@ -119,30 +118,11 @@ class PlacesController < ApplicationController
     end
 
 
-#      format.html {
-#        logger.debug("search requests took " + (Time.now - start_time).to_s)
-
-#        redirect_to :partial => 'places/search_results', :layout => true, :locals => { :query_results => @query_results, :events => @events, :event_id => @event_id }
-
-#        render :partial => 'places/search_results', :layout => true, :locals => { :query_results => @query_results, :events => @events, :event_id => @event_id }
-#      }
-
-#    end
-
-
-
-    #==save the saved to db for caching==
-    #can this be moved after rendering?
-
-
-
   end
 
 
 
   #==canonical actions
-
-
   def new
     @title = "Add Places"
     @user = User.find(current_user.id)
@@ -157,6 +137,7 @@ class PlacesController < ApplicationController
   def create
     @user = User.find(current_user.id)
     @events = @user.events
+
     #pseudo id from post request as we don't 
     #necessarily know the url before the form is posted
     @event = Event.find(params[:event])
@@ -179,24 +160,6 @@ class PlacesController < ApplicationController
     end
 
 
-    #need to refactor as overrides above
-    #respond_to do |format|
-
-    #format.js {
-    #  if @schedule.save || @place.save
-    #flash[:success] = "Place created."
-    #redirect_to event_path(@event)
-    
-    #   else
-    #flash[:error] = "Oops, there was an error"
-    # redirect_to event_path(@event.id)
-    #   end
-    #   render :nothing => true
-    # }
-
-    #manual addition
-    # format.html {
-
     if @place.save
       #flash[:success] = "Place created."
       redirect_to event_path(@event)
@@ -205,9 +168,6 @@ class PlacesController < ApplicationController
       logger.debug("Error on place creation")
       redirect_to event_path(@event.id)
     end
-
-    #}
-    #end      
 
   end
 
@@ -296,10 +256,12 @@ class PlacesController < ApplicationController
     end
     # logger.debug(@place.image_links)
 
-    #link comments
+    #link comments - for now lets skip reviews
+    #they don't seem to be very useful
+
     place.comments = Array.new
-    #doc.css('.fr-snip').each do |link|
-    #doc.css('.snippet').each do |link|
+    #google plus rollout changed the layout..sneeaky
+
     #doc.css('.pp-story-item .review span').each do |link|
 
     #    place.comments.push(link.content.to_s.gsub(" ...", ""))
@@ -307,7 +269,6 @@ class PlacesController < ApplicationController
     #end
 
   end
-
 
 
   #returns json decoded resutls

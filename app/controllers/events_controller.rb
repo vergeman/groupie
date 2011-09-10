@@ -93,9 +93,6 @@ def show
                          :event_id => params[:id], 
                          :votes_remaining => 
                          Event.find(params[:id]).starting_votes)
-    #else
-    #  add_cookie_event
-
     end
 
 
@@ -106,14 +103,11 @@ def show
     @participant = @participants.find_by_user_id(current_user)
 
     #set if there are nil starting votes - case: user adds an event
-
     if (not @participant.nil?) && @participant.votes_remaining.nil?
       @participant.update_attributes(:votes_remaining => @event.starting_votes)
     end
 
 
-    # @event = @user.events.find(params[:id])
-    # @places = @events.find(params[:id]).places
   end
   #if not signed in, we want to save the event cookie so that we can add it
   #once the user signs up for an account (since we lose the GET)
@@ -128,10 +122,8 @@ def show
   else
     logger.debug("event key did not match -error")
   end
-
   
 end
-
 
 
 #we will define this once the view for events are put in place

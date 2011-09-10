@@ -10,6 +10,7 @@ class VotesController < ApplicationController
     respond_to do |format|
 
       format.js {
+
         #TODO: check if vote for item by participant already exists, redirect to update
         @event = Event.find(params[:event_id])
         @place = Place.find(params[:place_id])
