@@ -547,10 +547,6 @@ hr {
     background: none repeat scroll 0 0 transparent;
 }
 
-@font-face {
-    font-family: CherryCreamSoda;
-    src: url("/images/CherryCreamSoda.ttf");
-}
 
 #banner {
     float:left;
@@ -561,7 +557,7 @@ hr {
 #banner a {
     text-decoration: none;
     color: #df1f2c;
-    font-family: CherryCreamSoda;
+    font-family: 'CherryCreamSoda', Helvetica;
     font-size: 30px;
     text-shadow: white 2px 2px;
 
