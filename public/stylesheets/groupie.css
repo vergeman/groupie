@@ -1057,7 +1057,7 @@ section {
 }
 
 .event_votes_count, .event_participants_count, .event_places_count {
-    margin-top: 2px;
+    //margin-top: 2px;
     font-family: Arial, Helvetica;
     font-size: 18px;
     color: black;
