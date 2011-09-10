@@ -91,7 +91,7 @@
 	  <% count_image = 0 %>
 	  <% place.image_links.each do |image| %>
 	  <% break if count_image > 2 %>
-	  <%= link_to (image_tag image, :width => "75px", :height => "75px"), event_place_path(:event_id => params[:id], :id => place.id) %>
+	  <%= link_to (image_tag image, :width => "85px", :height => "85px"), event_place_path(:event_id => params[:id], :id => place.id) %>
 	  <!--break #set to one image for now -->
 	  <% count_image += 1 %>
 	  <% end %>
