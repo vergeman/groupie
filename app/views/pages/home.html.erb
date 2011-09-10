@@ -9,55 +9,57 @@
 
   <div id="home_text">
 
-<!--old
-    <p> Get Together helps manage preferences when making social plans with your friends.
+    <!--old
+       <p> Get Together helps manage preferences when making social plans with your friends.
 
-    <p> Easily add bars and restaurants, vote on where you want to meet, and avoid the confusion of email chains!
--->
+       <p> Easily add bars and restaurants, vote on where you want to meet, and avoid the confusion of email chains!
+	 -->
 
-<div id="welcome1" class="welcome">
+    <div id="welcome1" class="welcome">
 
-  <div class="welcome_caption">
+      <div class="welcome_caption">
 
-    <span style="font-size:24px;">Organize</span>
-    <p>Plan a night on the town with your friends
-      <br> Suggest places and easily track preferences
-      
-    </p>
+	<span style="font-size:24px;">Organize</span>
+	<p>Plan a night on the town with your friends
+	  <br> Suggest places and easily track preferences
+	  
+	</p>
 
-  </div>
-
-
-  <%= image_tag "/images/welcome-1.png", :alt => "Decide what to do", 
-  :class=>"welcome_border" %>
-
-</div>  
+      </div>
 
 
-<div id="welcome2" class="welcome">
-  <div class="welcome_caption">
-    <span style="font-size:24px;">Vote</span>
-    <p>Everyone gets a chance to choose
-      <br>Up or down-vote where you want to go
-    </p>
-  </div>
+      <%= image_tag "/images/welcome-1.png", :alt => "Decide what to do", 
+      :class=>"welcome_border" %>
 
-  <%= image_tag "/images/welcome-2.png", :alt => "Vote to decide", 
-  :class=>"welcome_border" %>
-
-</div>
+    </div>  
 
 
-  </div>
+    <div id="welcome2" class="welcome">
+      <div class="welcome_caption">
+	<span style="font-size:24px;">Vote</span>
+	<p>Everyone gets a chance to choose
+	  <br>Up or down-vote where you want to go
+	</p>
+      </div>
+
+      <%= image_tag "/images/welcome-2.png", :alt => "Vote to decide", 
+      :class=>"welcome_border" %>
+
+    </div>
 
 
-
-<!--show sign in button -->
+  <!--show sign in button -->
   <% unless user_signed_in? %>
-  <span class="sign_up_btn">
-  <%= link_to "Sign Up", new_user_registration_path, :id => "sign_up_btn" %>
-  </span>
+  <div class="sign_up_btn">
+    <%= link_to "Sign Up", new_user_registration_path, :id => "sign_up_btn" %>
+  </div>
   <% end %>
+
+
+  </div>
+
+
+
 
 </div>
 

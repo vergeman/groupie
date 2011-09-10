@@ -1,13 +1,14 @@
 <!--review information-->
 <br />    
-<br />
+<hr />
     
 <div class="place_info_review_links">
   <% place.external_links.blank? ? "" : %>
-  
-  <span class="place_info_review_header">Reviews</span>
-  <br />
+
+  <div class="place_info_review_header">Reviews</div>
+  <p>
   <% place.external_links.each do |review, link| %>
-  <%= link_to review, link, :target => "_blank" %> <br />
+  <%= link_to review, link, :target => "_blank" %>
   <% end %>
+  </p>
 </div>

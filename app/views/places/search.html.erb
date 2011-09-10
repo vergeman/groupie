@@ -11,7 +11,12 @@
 
   <div id="<%= place.cid %>" class="search_result">
 
+    <!-- place info header -->
     <%= render :partial => 'places/place_info', :layout => false, 
+    :locals => { :place => place } %>
+
+    <!-- review links -->
+    <%= render :partial => 'places/place_review', :layout => false, 
     :locals => { :place => place } %>
 
     <!-- snippet comments -->
