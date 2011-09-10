@@ -50,7 +50,7 @@
 
   <!--show sign in button -->
   <% unless user_signed_in? %>
-  <div class="sign_up_btn">
+  <div class="sign_up_btn" style="margin:0 auto;">
     <%= link_to "Sign Up", new_user_registration_path, :id => "sign_up_btn" %>
   </div>
   <% end %>
