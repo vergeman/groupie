@@ -60,20 +60,7 @@
 
 	  <hr>
 
-	  <!--
- 	     <div class="event_votes event_font">
-
-	       <%= pluralize(event.participants.find_by_user_id(current_user).votes_remaining, "Vote") + " Left" %>
-
-	     </div>
-
-
-	     -->
-
  	  <div class="event_votes_remaining">
-	    <!--
-	       <%= pluralize(event.participants.find_by_user_id(current_user).votes_remaining, "Vote") + " Left" %>
-	       -->
 
 	    <div class="event_votes_header">
 	      Votes Left
@@ -95,11 +82,7 @@
 	      <% if event.participants.count == 1 %>
 	      0
 	      <% else %>
-	      <%= event.participant.count %>
-	      <!--
-		 <%= pluralize(event.participants.count.to_s, "person") + " invited" %>
-		 -->
-
+	      <%= event.participants.count %>
 	      <% end %>
 	    </div>
 
